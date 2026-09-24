@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Specification & Dealer Enquiry | JJ & Company</title>
+  <meta name="description" content="Technical specifications, packaging carton details, minimum order quantity (MOQ), and dealer pricing inquiry for paint accessories.">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖌️</text></svg>">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="topbar" aria-label="Top Announcement Bar">
+    <div class="container topbar-container">
+      <div class="topbar-info">
+        <span class="topbar-badge">DIRECT FACTORY MANUFACTURER</span>
+        <span class="topbar-item">📍 Supplying 6+ Regional Districts | Bulk Dispatch Daily</span>
+        <span class="topbar-item">📑 GSTIN: 27AABCJ1234D1Z5</span>
+      </div>
+      <div class="topbar-actions">
+        <a href="tel:+919876543210" class="topbar-item">📞 +91 98765 43210</a>
+        <span class="topbar-item">🕒 Mon-Sat: 8:30 AM – 6:30 PM</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" title="JJ & Company Home">
+        <div class="logo-badge">JJ</div>
+        <div class="brand-text">
+          <span class="brand-name">JJ & COMPANY</span>
+          <span class="brand-tagline">Paint Accessories Manufacturer</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="about.html" class="nav-link">About / Manufacturing</a>
+        <a href="dealer.html" class="nav-link">Become a Dealer</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-cta-group">
+        <a href="dealer.html" class="btn btn-secondary btn-sm">Enquire Dealership</a>
+        <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp btn-sm">💬 WhatsApp</a>
+        <button id="mobileToggle" class="mobile-toggle" aria-label="Open Navigation Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div id="mobileBackdrop" class="mobile-backdrop"></div>
+  <aside id="mobileDrawer" class="mobile-nav-drawer" aria-label="Mobile Menu">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <div class="logo-badge">JJ</div>
+          <span class="brand-name">JJ & COMPANY</span>
+        </div>
+        <button id="mobileClose" class="mobile-toggle" aria-label="Close Menu">✕</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link active">Products Catalog</a>
+        <a href="about.html" class="nav-link">About Manufacturing</a>
+        <a href="dealer.html" class="nav-link">Become a Dealer</a>
+        <a href="contact.html" class="nav-link">Contact & Coverage</a>
+      </nav>
+    </div>
+    <div>
+      <a href="dealer.html" class="btn btn-primary btn-block" style="margin-bottom: 12px;">Enquire For Dealership</a>
+      <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp btn-block">Chat on WhatsApp</a>
+    </div>
+  </aside>
+
+  <!-- Breadcrumbs -->
+  <section style="background-color: var(--bg-subtle); padding: 18px 0; border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <nav class="breadcrumb-nav" style="margin-bottom: 0;">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <a href="products.html">Products</a>
+        <span>&rsaquo;</span>
+        <span id="detailBreadcrumbCat">Paint Accessories</span>
+        <span>&rsaquo;</span>
+        <span id="detailBreadcrumbTitle" style="color: var(--accent); font-weight: 600;">Product Detail</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Product Detail Section (As per Page 2 of PDF) -->
+  <section class="section">
+    <div class="container">
+      <div class="detail-layout">
+
+        <!-- 1. Photo Gallery (As per Page 2) -->
+        <div class="gallery-container">
+          <div class="gallery-main">
+            <img id="detailMainImg" src="assets/images/rollers-production.jpg" alt="Product Image" width="600" height="420">
+          </div>
+          <div class="gallery-thumbs" id="detailThumbs">
+            <div class="thumb-item active" onclick="changeDetailImage('assets/images/rollers-production.jpg', this)">
+              <img src="assets/images/rollers-production.jpg" alt="Thumbnail 1">
+            </div>
+            <div class="thumb-item" onclick="changeDetailImage('assets/images/accessories-range.jpg', this)">
+              <img src="assets/images/accessories-range.jpg" alt="Thumbnail 2">
+            </div>
+            <div class="thumb-item" onclick="changeDetailImage('assets/images/qc-inspection.jpg', this)">
+              <img src="assets/images/qc-inspection.jpg" alt="Thumbnail 3">
+            </div>
+          </div>
+          <div style="margin-top: 16px; background-color: var(--bg-subtle); padding: 14px; border-radius: var(--radius-md); font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+            <span>🛡️</span>
+            <span>Manufactured with 100% in-house tooling & quality testing.</span>
+          </div>
+        </div>
+
+        <!-- 2. Product Specs, MOQ, Pricing, Actions (As per Page 2) -->
+        <div class="detail-info">
+          <div class="detail-badge-row">
+            <span class="topbar-badge" id="detailCategoryBadge">Paint Rollers</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Direct Factory SKU</span>
+          </div>
+
+          <h1 class="detail-title" id="detailTitle">MasterGrip Pro-Glide 9" Paint Roller</h1>
+          <p class="detail-sku" id="detailSku">SKU: JJ-PR-900 | HS Code: 9603.40</p>
+
+          <p id="detailDesc" style="color: var(--text-main); font-size: 1rem; margin-bottom: 24px; line-height: 1.6;">
+            Engineered for high paint pick-up and even, lint-free paint release on interior and exterior walls. Features high-tensile microfiber fibers thermally bonded to a solvent-proof core.
+          </p>
+
+          <!-- Pricing & MOQ Box (As per Page 2: MOQ, "contact for dealer pricing") -->
+          <div class="detail-pricing-box">
+            <div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 2px;">Minimum Order Quantity (MOQ)</span>
+              <strong style="color: var(--primary); font-size: 1.15rem;" id="detailMoq">100 Dozens (1,200 Pcs)</strong>
+            </div>
+            <div style="text-align: right;">
+              <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 2px;">Wholesale Commercial Rate</span>
+              <span class="rate-badge" style="font-size: 0.95rem;">Contact for Dealer Pricing</span>
+            </div>
+          </div>
+
+          <!-- Specs Table (As per Page 2: size, material, pack size) -->
+          <h3 style="font-size: 1.15rem; color: var(--primary); margin-bottom: 12px;">Technical Specifications</h3>
+          <table class="detail-specs-table" id="detailSpecsTable">
+            <tbody>
+              <tr>
+                <th>Standard Size</th>
+                <td>9 Inch (228 mm) Length</td>
+              </tr>
+              <tr>
+                <th>Nap / Pile Material</th>
+                <td>12mm High Density Thermofused Microfiber</td>
+              </tr>
+              <tr>
+                <th>Core Construction</th>
+                <td>Heavy-Duty Solvent-Resistant Polypropylene</td>
+              </tr>
+              <tr>
+                <th>Compatible Frame</th>
+                <td>5-Wire Heavy Gauge Nickel Cage System</td>
+              </tr>
+              <tr>
+                <th>Master Pack Size</th>
+                <td>1 Pc / Polybag, 60 Pcs per Corrugated Master Carton</td>
+              </tr>
+              <tr>
+                <th>Paint Compatibility</th>
+                <td>Water-based Emulsions, Primers, Distemper & Acrylics</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Action Buttons (As per Page 2: "add to enquiry" or WhatsApp button) -->
+          <div class="detail-actions-box">
+            <a id="detailWhatsAppBtn" href="https://wa.me/919876543210?text=Hello%20JJ%20%26%20Company,%20please%20send%20dealer%20quote%20for%20MasterGrip%20Pro-Glide%209%20Paint%20Roller." target="_blank" class="btn btn-whatsapp btn-lg">
+              💬 Enquire on WhatsApp for Dealer Rate
+            </a>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <a href="dealer.html" class="btn btn-primary">
+                📦 Request Sample & Dealership
+              </a>
+              <button onclick="showToast('Product added to your bulk quotation draft!');" class="btn btn-outline">
+                📋 Add to Bulk Enquiry
+              </button>
+            </div>
+          </div>
+
+          <!-- Private Label Callout -->
+          <div style="margin-top: 24px; padding: 16px; border: 1px dashed var(--accent); border-radius: var(--radius-md); background-color: rgba(232, 89, 12, 0.04);">
+            <strong style="color: var(--accent); font-size: 0.9rem; display: block; margin-bottom: 4px;">🏷️ Private Label & OEM Packaging Available</strong>
+            <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0;">
+              Want your own brand name printed on the handle, sleeve, or carton box? We provide full OEM contract manufacturing for quantities above 500 dozens.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Related Products Section (As per Page 2 of PDF) -->
+      <div style="margin-top: 80px;">
+        <div class="section-header text-left">
+          <span class="section-tag">Frequently Bundled</span>
+          <h2 class="section-title">Related Paint Accessories</h2>
+          <p class="section-subtitle">Commonly ordered together by paint shops and regional hardware distributors.</p>
+        </div>
+
+        <div class="product-grid">
+          <!-- Related 1 -->
+          <article class="product-card" data-category="brushes">
+            <div class="product-thumb-wrap">
+              <img src="assets/images/brushes-collection.jpg" alt="JJ Classic Gold Flat Paint Brush 4 Inch" loading="lazy">
+              <span class="product-tag-moq">MOQ: 50 Dozens</span>
+              <span class="product-tag-cat">Paint Brushes</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">JJ Classic Gold Flat Paint Brush 4"</h3>
+              <p class="product-specs-summary">Double crimped stainless steel ferrule, epoxy bonded shed-free synthetic bristles.</p>
+              <div class="product-pricing-strip">
+                <span class="rate-label">Wholesale Rate:</span>
+                <span class="rate-badge">On Request</span>
+              </div>
+              <div class="product-actions">
+                <a href="product-detail.html?id=classic-gold-brush-4" class="btn btn-outline btn-sm">View Specs</a>
+                <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp btn-sm">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Related 2 -->
+          <article class="product-card" data-category="sandpaper">
+            <div class="product-thumb-wrap">
+              <img src="assets/images/accessories-range.jpg" alt="Titan Waterproof Sandpaper" loading="lazy">
+              <span class="product-tag-moq">MOQ: 500 Bundles</span>
+              <span class="product-tag-cat">Sandpaper & Abrasives</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Titan Abrasive Waterproof Sandpaper</h3>
+              <p class="product-specs-summary">Silicon carbide grain on latex waterproof paper. Anti-clogging for wet/dry sanding.</p>
+              <div class="product-pricing-strip">
+                <span class="rate-label">Wholesale Rate:</span>
+                <span class="rate-badge">On Request</span>
+              </div>
+              <div class="product-actions">
+                <a href="product-detail.html?id=waterproof-silicon-sandpaper" class="btn btn-outline btn-sm">View Specs</a>
+                <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp btn-sm">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Related 3 -->
+          <article class="product-card" data-category="thinner">
+            <div class="product-thumb-wrap">
+              <img src="assets/images/accessories-range.jpg" alt="Pro-Thin Industrial NC Thinner" loading="lazy">
+              <span class="product-tag-moq">MOQ: 50 Cans</span>
+              <span class="product-tag-cat">Thinner & Solvents</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Pro-Thin Industrial NC & PU Thinner</h3>
+              <p class="product-specs-summary">Virgin-grade solvent blend for mirror flow and rapid clean dilution.</p>
+              <div class="product-pricing-strip">
+                <span class="rate-label">Wholesale Rate:</span>
+                <span class="rate-badge">On Request</span>
+              </div>
+              <div class="product-actions">
+                <a href="product-detail.html?id=pro-thin-nc-thinner" class="btn btn-outline btn-sm">View Specs</a>
+                <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp btn-sm">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <div class="brand-logo">
+            <div class="logo-badge">JJ</div>
+            <span class="brand-name">JJ & COMPANY</span>
+          </div>
+          <p class="footer-desc">
+            Direct manufacturer of professional paint rollers, synthetic brushes, sandpaper abrasives, thinner, and painting accessories.
+          </p>
+          <div class="gst-badge">
+            <span>🏛️ Registered GSTIN:</span>
+            <strong>27AABCJ1234D1Z5</strong>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products Catalog</a></li>
+            <li><a href="about.html">About Our Factory</a></li>
+            <li><a href="dealer.html">Dealership Application</a></li>
+            <li><a href="contact.html">Contact & District Coverage</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Product Lines</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?category=rollers">Paint Rollers & Sleeves</a></li>
+            <li><a href="products.html?category=brushes">Synthetic & Natural Brushes</a></li>
+            <li><a href="products.html?category=sandpaper">Waterproof Sandpaper</a></li>
+            <li><a href="products.html?category=thinner">NC & PU Thinners</a></li>
+            <li><a href="products.html?category=accessories">Putty Knives & Scrapers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Factory & Dispatch Hub</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <span>📍</span>
+              <span>Plot No. 42-45, Industrial Growth Centre, Phase II, Manufacturing Zone, Maharashtra</span>
+            </div>
+            <div class="footer-contact-item">
+              <span>📞</span>
+              <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+            <div class="footer-contact-item">
+              <span>💬</span>
+              <a href="https://wa.me/919876543210" target="_blank">+91 98765 43210 (WhatsApp)</a>
+            </div>
+            <div class="footer-contact-item">
+              <span>✉️</span>
+              <a href="mailto:sales@jjandcompany.com">sales@jjandcompany.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 JJ & Company. Paint Accessories Manufacturing.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="contact.html">District Coverage Map</a>
+          <a href="dealer.html">Wholesale Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a id="floatingWhatsApp" href="https://wa.me/919876543210" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    💬
+    <span class="floating-whatsapp-tooltip">Chat with Factory Desk</span>
+  </a>
+
+  <script src="js/site-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Simple dynamic detail hydration from PRODUCTS_DATA if ID present
+    function changeDetailImage(src, element) {
+      document.getElementById('detailMainImg').src = src;
+      document.querySelectorAll('.thumb-item').forEach(t => t.classList.remove('active'));
+      if (element) element.classList.add('active');
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const prodId = urlParams.get("id");
+      if (!prodId || typeof PRODUCTS_DATA === 'undefined') return;
+
+      const item = PRODUCTS_DATA.find(p => p.id === prodId);
+      if (item) {
+        document.title = `${item.name} | JJ & Company`;
+        document.getElementById("detailTitle").textContent = item.name;
+        document.getElementById("detailCategoryBadge").textContent = item.categoryName;
+        document.getElementById("detailBreadcrumbCat").textContent = item.categoryName;
+        document.getElementById("detailBreadcrumbTitle").textContent = item.name;
+        document.getElementById("detailDesc").textContent = item.shortDesc;
+        document.getElementById("detailMoq").textContent = item.moq;
+        document.getElementById("detailMainImg").src = item.image;
+        document.getElementById("detailMainImg").alt = item.name;
+
+        // Populate specs
+        const tbody = document.querySelector("#detailSpecsTable tbody");
+        if (tbody && item.specs) {
+          tbody.innerHTML = "";
+          for (const [key, val] of Object.entries(item.specs)) {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `<th>${key}</th><td>${val}</td>`;
+            tbody.appendChild(tr);
+          }
+        }
+
+        // WhatsApp message link
+        const waBtn = document.getElementById("detailWhatsAppBtn");
+        if (waBtn) {
+          const msg = encodeURIComponent(`Hello JJ & Company, I am looking for dealer pricing for: ${item.name} (${item.moq}). Please share catalog & rate card.`);
+          waBtn.href = `https://wa.me/919876543210?text=${msg}`;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
