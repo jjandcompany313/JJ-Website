@@ -10,14 +10,14 @@ When you are ready with your real business assets, photos, contact numbers, and 
 ## 📸 1. Photos & Media To Supply
 All images are neatly organized in the `assets/images/` folder. You can simply replace them with your real factory photos using the same names (or update the paths in HTML):
 
-- [x] **Warehouse & Ready Stock Infrastructure:** (INTEGRATED) 4 authentic photos added across Home, About, Dealer, and Contact pages:
+- [x] **Warehouse & Ready Stock Infrastructure:** (INTEGRATED) Authentic photos added across Home, About, Dealer, and Contact pages:
+  - `assets/images/jj-company-building.jpg` (Cleaned authentic photo of JJ & Company commercial building & warehouse depot at Dixit Wadi, with bike and power cables removed)
+  - `assets/images/jj-warehouse-wide.jpg` (Panoramic 16:9 commercial facility view of Dixit Wadi warehouse depot)
   - `assets/images/warehouse-roller-assembly.jpg` (Roller assembly & packaging bins)
   - `assets/images/warehouse-brush-inventory.jpg` (Panama paint brushes master carton stacks)
   - `assets/images/warehouse-aisle-stock.jpg` (Central warehouse high-density racking aisles)
   - `assets/images/warehouse-dispatch-dock.jpg` (Dispatch staging dock & distributor cartons)
-- [ ] **Factory Exterior:** Replace `assets/images/factory-hero.jpg` with your plant's front elevation / entrance photo (or keep current factory visual).
-- [ ] **Production Line / Machinery:** Replace `assets/images/rollers-production.jpg` with additional machinery photos if available.
-- [ ] **QC / Inspection Step:** Replace `assets/images/qc-inspection.jpg` with a photo of your quality testing / inspection table.
+- [x] **Factory / Building Exterior:** (INTEGRATED) Real Dixit Wadi building photo cleaned and featured in Hero, About, and Contact pages.
 - [ ] **Individual Product SKU Photos:** Replace product photos when you have isolated clean-background photos per SKU.
 
 ---
@@ -25,27 +25,28 @@ All images are neatly organized in the `assets/images/` folder. You can simply r
 ## 🔢 2. Numbers, Facts & Legal Information
 You can update these in **`js/site-data.js`** (single place) or directly inside the HTML files:
 
-- [ ] **Factory Established Year:** (Currently set to `2008` / `18+ Years`)
-- [ ] **Monthly Production Capacity:** (Currently set to `350,000+ Units/Month`)
-- [ ] **Districts Currently Supplied:** (Currently mapped to 6 districts: Mumbai, Thane, Pune, Nashik, Kolhapur, Aurangabad)
+- [x] **Factory Address:** Set to `Plot No-8, Dixit Wadi, Maharashtra, India`
+- [x] **Official Phones:** Set to `+91 94227 75429` / `+91 94227 79339`
+- [x] **WhatsApp:** Set to `+91 94227 75429` (raw `919422775429`)
 - [ ] **Official GST Number:** (Currently set to `27AABCJ1234D1Z5`)
-- [ ] **Factory Certifications:** (Currently placeholder ISO 9001:2015 & MSME Udyam)
-- [ ] **MOQ (Minimum Order Quantities):** Confirm per category (Rollers: 100 doz, Brushes: 50 doz, Sandpaper: 500 bundles, Thinner: 50 cans)
+- [ ] **Monthly Production Capacity:** (350,000+ Units/Month)
+- [ ] **Districts Currently Supplied:** (6 districts: Mumbai, Thane, Pune, Nashik, Kolhapur, Aurangabad)
 
 ---
 
 ## 📝 3. Contact & Business Details
-Update inside **`js/site-data.js`**:
+Configured in **`js/site-data.js`**:
 
 ```javascript
 const SITE_CONFIG = {
   companyName: "JJ & Company",
-  phone: "+91 98765 43210",       // Your official calling number
-  whatsappRaw: "919876543210",    // Your WhatsApp number (country code + number, no spaces)
-  email: "sales@jjandcompany.com",// Your official email
-  gstNumber: "27AABCJ1234D1Z5",   // Your registered GSTIN
-  factoryAddress: "Plot No. 42-45, Industrial Growth Centre, Phase II, Manufacturing Zone",
-  cityStatePincode: "Mumbai / Maharashtra, 400001",
+  phone: "+91 94227 75429",       // Primary office desk
+  phoneSecondary: "+91 94227 79339",
+  whatsappRaw: "919422775429",    // WhatsApp number for lead capture
+  email: "sales@jjandcompany.com",
+  gstNumber: "27AABCJ1234D1Z5",   // Registered GSTIN
+  factoryAddress: "Plot No-8, Dixit Wadi",
+  cityStatePincode: "Maharashtra, India",
   workingHours: "Monday to Saturday: 8:30 AM – 6:30 PM (Sunday Closed)"
 };
 ```

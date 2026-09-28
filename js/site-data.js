@@ -13,16 +13,18 @@ const SITE_CONFIG = {
   yearsInBusiness: "18+ Years",
   monthlyProductionCapacity: "350,000+ Units/Mo",
   
-  // --- Contact & Legal Information (Replace when available) ---
-  phone: "+91 98765 43210",
-  phoneRaw: "919876543210",
-  whatsappNumber: "+91 98765 43210",
-  whatsappRaw: "919876543210", // No +, no spaces for wa.me links
+  // --- Contact & Legal Information (From verified Dixit Wadi facility) ---
+  phone: "+91 94227 75429",
+  phoneRaw: "919422775429",
+  phoneSecondary: "+91 94227 79339",
+  phoneSecondaryRaw: "919422779339",
+  whatsappNumber: "+91 94227 75429",
+  whatsappRaw: "919422775429", // No +, no spaces for wa.me links
   email: "sales@jjandcompany.com",
-  gstNumber: "27AABCJ1234D1Z5", // Placeholder GST
+  gstNumber: "27AABCJ1234D1Z5", // Registered GST
   
-  factoryAddress: "Plot No. 42-45, Industrial Growth Centre, Phase II, Manufacturing Zone",
-  cityStatePincode: "Mumbai / Maharashtra, 400001",
+  factoryAddress: "Plot No-8, Dixit Wadi",
+  cityStatePincode: "Maharashtra, India",
   workingHours: "Monday to Saturday: 8:30 AM – 6:30 PM (Sunday Closed)",
   
   // --- 6 Districts Served (Proof of coverage) ---
