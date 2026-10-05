@@ -223,6 +223,16 @@ function updateLeadBadges() {
 }
 
 function initLeadExportButtons() {
+  window.exportLeads = exportLeadsToCsv;
+
+  // Discreet keyboard shortcut for owner/admin to download Excel leads: Ctrl + Shift + E
+  document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && e.shiftKey && (e.key === "E" || e.key === "e")) {
+      e.preventDefault();
+      exportLeadsToCsv();
+    }
+  });
+
   const exportBtn = document.getElementById("exportLeadsBtn");
   if (exportBtn) {
     exportBtn.addEventListener("click", (e) => {
@@ -294,12 +304,12 @@ function initDealershipForm() {
       `📦 *Monthly Volume:* ${monthlyVolume}\n` +
       `🎨 *Products Interested In:* ${selectedProducts.join(", ") || "All Accessories"}\n` +
       `---------------------------\n` +
-      `_Saved to Excel Sheet at ${formattedTimestamp}_`;
+      `_Submitted via JJ & Company Dealer Portal_`;
 
     const waUrl = getWhatsAppUrl(leadMessage);
 
     // 4. Visual confirmation
-    showToast("Application saved to Excel sheet! Opening WhatsApp for instant verification...");
+    showToast("Application submitted successfully! Redirecting to WhatsApp...");
 
     setTimeout(() => {
       window.open(waUrl, "_blank");
@@ -345,7 +355,7 @@ function initContactInquiryForm() {
     saveLeadToStorage(leadData);
     syncLeadToSpreadsheet(leadData);
 
-    showToast("Inquiry recorded in spreadsheet! Our team will contact you shortly.");
+    showToast("Inquiry submitted successfully! Our dispatch manager will contact you shortly.");
     form.reset();
   });
 }
