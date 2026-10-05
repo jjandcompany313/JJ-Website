@@ -38,7 +38,13 @@ const SITE_CONFIG = {
   ],
   
   // --- Catalog PDF ---
-  catalogPdfUrl: "assets/docs/JJ_Company_Product_Catalog_2026.pdf"
+  catalogPdfUrl: "assets/docs/JJ_Company_Product_Catalog_2026.pdf",
+
+  // --- Automated Lead Capture & Spreadsheet / Excel Integration ---
+  // To connect a live Google Sheet or Excel Webhook, paste your deployed Google Apps Script URL below:
+  // e.g., "https://script.google.com/macros/s/AKfycb.../exec"
+  // (Leave empty to use built-in browser storage + instant 1-click Excel CSV export)
+  leadWebhookUrl: ""
 };
 
 // --- Product Catalog Items (Paint Accessories) ---

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="Header">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2" ss:Color="#0F172A"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CBD5E1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CBD5E1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CBD5E1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#0F172A" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="DataCell">
+   <Alignment ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#1E293B"/>
+  </Style>
+  <Style ss:ID="StatusNew">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#0369A1" ss:Bold="1"/>
+   <Interior ss:Color="#E0F2FE" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Dealership Applications">
+  <Table ss:DefaultRowHeight="24">
+   <Column ss:Width="130"/>
+   <Column ss:Width="180"/>
+   <Column ss:Width="140"/>
+   <Column ss:Width="140"/>
+   <Column ss:Width="130"/>
+   <Column ss:Width="200"/>
+   <Column ss:Width="250"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="150"/>
+   <Row ss:Height="28">
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Timestamp</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Business / Shop Name</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Contact Person</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">City / District</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Phone / WhatsApp</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Monthly Volume Range</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Products Interested In</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Lead Status</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Source Page</Data></Cell>
+   </Row>
+   <Row ss:Height="24">
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">2026-10-05 10:30:00</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Royal Hardware &amp; Paints</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Ramesh Patel</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Mumbai Metropolitan</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">+91 98765 43210</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">₹50,000 – ₹2,00,000 (Established Paint Dealer)</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Paint Rollers &amp; Sleeves; Paint Brushes</Data></Cell>
+    <Cell ss:StyleID="StatusNew"><Data ss:Type="String">New Lead</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Dealer Application Form</Data></Cell>
+   </Row>
+   <Row ss:Height="24">
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">2026-10-05 11:15:00</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Shree Krishna Paints</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Suresh Deshmukh</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Pune Region</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">+91 98220 12345</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">₹2,00,000 – ₹5,00,000 (Wholesaler / Stockist)</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Paint Rollers &amp; Sleeves; Waterproof Sandpaper; Industrial Thinner</Data></Cell>
+    <Cell ss:StyleID="StatusNew"><Data ss:Type="String">Contacted</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Dealer Application Form</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

@@ -86,18 +86,18 @@
       <nav class="breadcrumb-nav" aria-label="Breadcrumb">
         <a href="index.html">Home</a>
         <span>&rsaquo;</span>
-        <span style="color: #C8923E; font-weight: 600;">Authorized Dealership Application</span>
+        <span style="color: var(--accent); font-weight: 600;">Authorized Dealership Application</span>
       </nav>
       <!-- Header Line as explicitly required on Page 2 of PDF -->
-      <div class="hero-badge" style="margin-bottom: 16px;">
-        <span class="hero-badge-dot"></span>
+      <div class="hero-badge" style="margin-bottom: 14px; color: #38BDF8;">
+        <span class="hero-badge-dot" style="background-color: #38BDF8;"></span>
         Direct-From-Manufacturer Pricing • Bulk Rates • Private Label Available
       </div>
-      <h1 style="font-size: 2.75rem; color: #FFFFFF; margin-bottom: 12px;">
+      <h1 style="font-size: 2.75rem; color: #FFFFFF; margin-bottom: 12px; letter-spacing: -0.025em;">
         Partner Directly with the Manufacturer
       </h1>
-      <p style="color: #CBD5E1; max-width: 680px; font-size: 1.05rem;">
-        Qualifying lead-capture for hardware shops, retail paint dealers, and building material stockists looking for reliable factory supply.
+      <p style="color: #CBD5E1; max-width: 680px; font-size: 1.05rem; line-height: 1.65;">
+        Direct commercial partnership for hardware shops, retail paint dealers, and building material stockists looking for reliable factory supply with protected wholesale margins.
       </p>
     </div>
   </section>
@@ -109,7 +109,7 @@
 
         <!-- Left Column: Value Proposition & Dealer Benefits -->
         <div class="dealer-pitch">
-          <span class="section-tag tag-blue">Wholesale Margins & Growth</span>
+          <span class="section-tag">Wholesale Margins & Growth</span>
           <h2 class="dealer-pitch-title">Why Hardware Stores Make More Profit with JJ & Company</h2>
           <p class="dealer-pitch-sub">
             Skip middlemen markups. Receive direct factory invoices, guaranteed replacement on manufacturing defects, and scheduled regional delivery.
@@ -154,28 +154,38 @@
           </div>
 
           <!-- Real Warehouse Stock Proof -->
-          <div style="background-color: #FFFFFF; border-radius: var(--radius-lg); padding: 22px; margin-bottom: 24px; box-shadow: var(--shadow-card);">
+          <div style="background-color: #FFFFFF; border-radius: var(--radius-lg); padding: 24px; margin-bottom: 24px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-              <strong style="color: var(--primary); font-size: 0.95rem;">📦 Ready Stock In Our Dixit Wadi Depot</strong>
-              <span class="topbar-badge" style="background-color: rgba(16, 185, 129, 0.12); color: #10B981;">● In Stock Daily</span>
+              <strong style="color: var(--text-main); font-size: 0.95rem; font-weight: 700;">📦 Ready Stock In Our Dixit Wadi Depot</strong>
+              <span class="topbar-badge" style="background-color: rgba(16, 185, 129, 0.12); color: #10B981; font-weight: 700;">● In Stock Daily</span>
             </div>
-            <p style="font-size: 0.825rem; color: var(--text-muted); margin-bottom: 14px;">
+            <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.55;">
               We maintain ready master cartons of paint brushes and roller sleeves at Plot No-8, Dixit Wadi so dealer orders dispatch without delay.
             </p>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-              <div style="height: 120px; border-radius: var(--radius-sm); overflow: hidden;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div style="position: relative; height: 110px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-color);">
                 <img src="assets/images/warehouse-roller-assembly.jpg" alt="Roller Assembly Ready Stock" style="width: 100%; height: 100%; object-fit: cover;">
+                <span class="warehouse-badge" style="font-size: 0.65rem; top: 6px; left: 6px; padding: 2px 7px;">Assembly Floor</span>
               </div>
-              <div style="height: 120px; border-radius: var(--radius-sm); overflow: hidden;">
+              <div style="position: relative; height: 110px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-color);">
                 <img src="assets/images/warehouse-brush-inventory.jpg" alt="Brush Master Cartons" style="width: 100%; height: 100%; object-fit: cover;">
+                <span class="warehouse-badge" style="font-size: 0.65rem; top: 6px; left: 6px; padding: 2px 7px;">Brush Cartons</span>
+              </div>
+              <div style="position: relative; height: 110px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-color);">
+                <img src="assets/images/warehouse-aisle-stock.jpg" alt="High-Density Storage Aisles" style="width: 100%; height: 100%; object-fit: cover;">
+                <span class="warehouse-badge" style="font-size: 0.65rem; top: 6px; left: 6px; padding: 2px 7px;">Central Aisles</span>
+              </div>
+              <div style="position: relative; height: 110px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-color);">
+                <img src="assets/images/warehouse-dispatch-dock.jpg" alt="Dispatch Staging Bay" style="width: 100%; height: 100%; object-fit: cover;">
+                <span class="warehouse-badge" style="font-size: 0.65rem; top: 6px; left: 6px; padding: 2px 7px;">Dispatch Bay</span>
               </div>
             </div>
           </div>
 
-          <!-- Secondary Instant Option as required on Page 2 of PDF -->
-          <div style="background-color: #FFFFFF; padding: 24px; border-radius: var(--radius-lg); box-shadow: var(--shadow-card);">
-            <h4 style="color: var(--primary); margin-bottom: 6px;">Need An Instant Response?</h4>
-            <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 14px;">
+          <!-- Secondary Instant Option -->
+          <div style="background-color: #FFFFFF; padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+            <h4 style="color: var(--text-main); margin-bottom: 6px; font-weight: 700;">Need An Instant Response?</h4>
+            <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 16px; line-height: 1.55;">
               Skip the form and chat directly with our factory sales manager on WhatsApp right now.
             </p>
             <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20I%20want%20to%20apply%20for%20a%20dealership%20and%20need%20quick%20rates." target="_blank" class="btn btn-whatsapp btn-block">
@@ -276,10 +286,29 @@
             </button>
           </form>
 
-          <!-- Secondary Option as explicitly quoted on Page 2: "or message directly on WhatsApp for a quick reply" -->
+          <!-- Automated Excel / Sheet Synchronization & Export Bar -->
+          <div class="lead-sync-bar" style="margin-top: 20px; padding: 14px 18px; background: #F8FAFC; border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 1.25rem;">📊</span>
+              <div>
+                <strong style="display: block; font-size: 0.85rem; color: var(--text-main);">Excel &amp; Google Sheet Connected</strong>
+                <span id="leadsSyncStatus" style="font-size: 0.75rem; color: var(--text-muted);">
+                  Submissions are automatically recorded into your spreadsheet.
+                </span>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span id="leadsCountBadge" class="spec-pill" style="background: #E2E8F0; color: #334155; font-size: 0.75rem; font-weight: 600;">3 Leads on File</span>
+              <button type="button" id="exportLeadsBtn" class="btn btn-sm btn-outline" style="font-size: 0.78rem; padding: 6px 12px; background: #FFFFFF;" title="Download all leads in Microsoft Excel CSV format">
+                📥 Download Excel (.csv)
+              </button>
+            </div>
+          </div>
+
+          <!-- Secondary Option -->
           <div class="whatsapp-alt-box">
             <p>Or message directly on WhatsApp for a quick reply</p>
-            <a href="https://wa.me/919876543210?text=Hello%20JJ%20%26%20Company,%20I%20am%20applying%20for%20a%20dealership%20from%20your%20website." target="_blank" class="btn btn-whatsapp btn-block">
+            <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20I%20am%20applying%20for%20a%20dealership%20from%20your%20website." target="_blank" class="btn btn-whatsapp btn-block">
               💬 Open Instant WhatsApp Chat
             </a>
           </div>

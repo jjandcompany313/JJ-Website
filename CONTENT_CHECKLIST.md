@@ -10,9 +10,8 @@ When you are ready with your real business assets, photos, contact numbers, and 
 ## 📸 1. Photos & Media To Supply
 All images are neatly organized in the `assets/images/` folder. You can simply replace them with your real factory photos using the same names (or update the paths in HTML):
 
-- [x] **Warehouse & Ready Stock Infrastructure:** (INTEGRATED) Authentic photos added across Home, About, Dealer, and Contact pages:
+- [x] **Warehouse & Ready Stock Infrastructure:** (INTEGRATED) Authentic photos arranged across Home, About, Dealer, and Contact pages:
   - `assets/images/jj-company-building.jpg` (Cleaned authentic photo of JJ & Company commercial building & warehouse depot at Dixit Wadi, with bike and power cables removed)
-  - `assets/images/jj-warehouse-wide.jpg` (Panoramic 16:9 commercial facility view of Dixit Wadi warehouse depot)
   - `assets/images/warehouse-roller-assembly.jpg` (Roller assembly & packaging bins)
   - `assets/images/warehouse-brush-inventory.jpg` (Panama paint brushes master carton stacks)
   - `assets/images/warehouse-aisle-stock.jpg` (Central warehouse high-density racking aisles)
