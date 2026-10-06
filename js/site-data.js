@@ -23,25 +23,37 @@ const SITE_CONFIG = {
   email: "sales@jjandcompany.com",
   gstNumber: "27AABCJ1234D1Z5", // Registered GST
   
-  factoryAddress: "Plot No-8, Dixit Wadi",
-  cityStatePincode: "Jalgaon, Maharashtra, India",
+  // --- Complete Plant & Warehouse Address (Arranged) ---
+  plusCode: "2H5C+678",
+  plotAndPremises: "Plot No-8, Dixit Wadi",
+  roadStreet: "Swatantrya Chowk - Pande Chowk Rd",
+  city: "Jalgaon",
+  state: "Maharashtra",
+  pincode: "425001",
+  country: "India",
+  fullAddressFormatted: "Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd, Jalgaon, Maharashtra 425001, India",
+  factoryAddress: "Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd",
+  cityStatePincode: "Jalgaon, Maharashtra 425001, India",
   locationCoordinates: "21°00'28.7\"N 75°34'14.2\"E",
   coordinatesDecimal: "21.007972, 75.570611",
   googleMapsUrl: "https://maps.google.com/?q=21.007972,75.570611",
   googleMapsEmbed: "https://maps.google.com/maps?q=21.007972,75.570611&hl=en&z=17&output=embed",
   workingHours: "Monday to Saturday: 8:30 AM – 8:00 PM (Sunday Closed)",
   
-  // --- Verified Supply Territory (Maharashtra & Madhya Pradesh) ---
+  // --- Supply Territories (Active in MH & MP • Pan-India Supply All Over India) ---
+  supplyScope: "Direct Active Supply in Maharashtra & Madhya Pradesh • Supplying Goods All Over India",
   districtsServed: [
     { name: "Jalgaon", state: "Maharashtra", transit: "Same-Day Dispatch", coverage: "Central Manufacturing & Local Depot", badge: "Factory HQ" },
     { name: "Dhule", state: "Maharashtra", transit: "Daily Transport", coverage: "Khandesh West Corridor", badge: "Daily Route" },
     { name: "Nandurbar", state: "Maharashtra", transit: "24-Hour Delivery", coverage: "Scheduled Regional Transport", badge: "Scheduled Route" },
     { name: "Buldhana", state: "Maharashtra", transit: "24-Hour Delivery", coverage: "Vidarbha Gateway Transport", badge: "Scheduled Route" },
-    { name: "Madhya Pradesh (MP)", state: "Madhya Pradesh", transit: "24-48 Hours", coverage: "Interstate Goods Transport & Fleet Carriers", badge: "Interstate Supply" }
+    { name: "Madhya Pradesh (MP)", state: "Madhya Pradesh", transit: "24-48 Hours", coverage: "Interstate Goods Transport Corridor", badge: "Interstate Supply" },
+    { name: "All Over India", state: "Pan-India", transit: "Express Freight Transport", coverage: "Nationwide Wholesale & Bulk Goods Supply", badge: "All India Supply" }
   ],
   
   // --- Catalog PDF ---
-  catalogPdfUrl: "assets/docs/JJ_Company_Product_Catalog_2026.pdf",
+  catalogPdfUrl: "assets/docs/Panama_Paint_Brush_Catalogue_2026.pdf",
+  brushCatalogPdfUrl: "assets/docs/Panama_Paint_Brush_Catalogue_2026.pdf",
 
   // --- Automated Lead Capture & Spreadsheet / Excel Integration ---
   // To connect a live Google Sheet or Excel Webhook, paste your deployed Google Apps Script URL below:
@@ -49,6 +61,23 @@ const SITE_CONFIG = {
   // (Leave empty to use built-in browser storage + instant 1-click Excel CSV export)
   leadWebhookUrl: ""
 };
+
+// --- Official PANAMA Paint Brush Collection (13 Models from Factory Catalog) ---
+const PANAMA_BRUSH_COLLECTION = [
+  { no: "01", name: "Panama Swan Brush", sizes: ["1\"", "1.5\"", "2\"", "2.5\"", "3\"", "4\""], handle: "Yellow & Black Grip", type: "Synthetic Filament", use: "Precision cutting & trim work" },
+  { no: "02", name: "Panama 222 Brush", sizes: ["1\"", "1.5\"", "2\"", "2.5\"", "3\"", "4\""], handle: "Classic Red Finish", type: "Synthetic Filament", use: "Interior wall & trim painting" },
+  { no: "03", name: "Panama 996 PVC Handle Brush", sizes: ["1\"", "1.5\"", "2\"", "2.5\"", "3\"", "4\""], handle: "Orange Durable PVC", type: "Solvent-Resistant Bristle", use: "Commercial & heavy-duty painting" },
+  { no: "04", name: "Panama Tip-Top PVC Handle Brush", sizes: ["1\"", "1.5\"", "2\"", "2.5\"", "3\"", "4\""], handle: "Pink Comfort PVC", type: "Solid Round Tapered", use: "Smooth finish on interior walls" },
+  { no: "05", name: "Panama Winner Brush", sizes: ["1\"", "2\"", "3\""], handle: "Blue Ergonomic Handle", type: "Synthetic Bristle", use: "All-purpose professional brush" },
+  { no: "06", name: "Panama Honda Brush", sizes: ["4\""], handle: "Red Heavy-Duty Handle", type: "Export Quality Bristle", use: "Broad surface wall coverage" },
+  { no: "07", name: "Panama 815 Brush", sizes: ["4\""], handle: "Yellow/Black Export Grip", type: "100% Guaranteed Export Grade", use: "Heavy emulsion & masonry coatings" },
+  { no: "08", name: "Panama 777 PVC Handle Brush", sizes: ["3\"", "4\""], handle: "Pink PVC Handle", type: "Dense Tufted Bristles", use: "Fast broad wall painting" },
+  { no: "09", name: "Panama Apex PVC Handle Brush", sizes: ["4\""], handle: "Yellow Apex PVC Grip", type: "Export Quality Filament", use: "Exterior weather-shield coatings" },
+  { no: "10", name: "Panama Deluxe Long Hair Brush", sizes: ["4\""], handle: "Deluxe Black/Red Grip", type: "Deluxe Long Hair Filaments", use: "High paint pick-up & deep release" },
+  { no: "11", name: "Panama Tynex Wooden Handle Brush", sizes: ["4\"", "5\""], handle: "Lacquered Natural Hardwood", type: "Premium Tynex Filaments", use: "Master painter fine finishes & enamel" },
+  { no: "12", name: "Panama CAT 100% Pure Bristol Brush", sizes: ["4\""], handle: "Black Heavy Grip", type: "100% Pure White Bristol", use: "Zero-shed oil paints & wood polish" },
+  { no: "13", name: "Panama RRR Black & White Brush", sizes: ["4\""], handle: "Black RRR Branded Handle", type: "Export Pure Bristle (Black & White)", use: "High-solvent industrial coatings" }
+];
 
 // --- Product Catalog Items (Paint Accessories) ---
 // --- 3 Core Product Sections (As Requested by Manufacturer) ---
@@ -79,21 +108,23 @@ const PRODUCTS_DATA = [
   {
     id: "brushes",
     aliasId: "classic-gold-brush-4",
-    name: "Paint Brushes & Block Brushes Collection",
+    name: "Panama Paint Brushes Collection (13 Models)",
     category: "brushes",
     categoryName: "2. Brushes",
     image: "assets/images/brushes-collection.jpg",
     thumb: "assets/images/brushes-collection.jpg",
     moq: "50 Dozens (600 Pcs)",
     rateBadge: "Direct Dealer Pricing",
-    shortDesc: "Professional flat paint brushes (1\" to 5\" in red, blue, wooden, black handles) and wide masonry wall block brushes with 100% shed-free epoxy bonding and stainless steel ferrules.",
+    shortDesc: "Official manufacturer of the PANAMA Paint Brush Collection — featuring 13 signature models including Panama Swan, 222, 996 PVC, Tip-Top, Winner, Honda, 815, 777, Apex, Deluxe Long Hair, Tynex Wooden, CAT 100% Pure Bristol, and RRR Black & White. Available from 1\" to 5\" with 100% shed-free epoxy potting.",
     specs: {
-      "Available Sizes": "1.0\", 1.5\", 2.0\", 2.5\", 3.0\", 4.0\", 5.0\" & Masonry Block Brushes",
-      "Bristle Material": "100% Solid Round Tapered Synthetic Filaments & Natural Mix",
-      "Ferrule Type": "Double-Crimped Rust-Proof Stainless Steel",
-      "Handle Options": "Lacquered Natural Hardwood, Ergonomic Red/Blue/Black Polymers",
+      "Brand / Collection": "PANAMA • Official J. J. & COMPANY Brand",
+      "Available Sizes": "1.0\", 1.5\", 2.0\", 2.5\", 3.0\", 4.0\", 5.0\" & Masonry Wall Brushes",
+      "Signature Models": "13 Models (Swan, 222, 996, Tip-Top, Winner, Honda, 815, 777, Apex, Deluxe, Tynex Wooden, CAT Pure Bristol, RRR)",
+      "Bristle Material": "100% Solid Round Tapered Filaments, Pure White Bristol & Tynex Mix",
+      "Ferrule Type": "Double-Crimped Rust-Proof Stainless Steel Ferrule",
+      "Handle Varieties": "Lacquered Natural Hardwood, Ergonomic PVC & Polypropylene (Red, Yellow, Orange, Pink, Blue, Black)",
       "Shed Resistance": "Epoxy Resin Bonded — Guaranteed 100% Shed-Free Under Solvent Use",
-      "Standard Packaging": "Protective Card Sleeves, 12 Pcs Inner Box / 240 Pcs Master Box"
+      "Catalog Download": "Official 15-Page PANAMA Product Catalogue PDF Available"
     }
   },
 
