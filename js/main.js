@@ -69,10 +69,10 @@ const DEFAULT_SAMPLE_LEADS = [
     timestamp: "2026-10-05 10:30:00",
     shopName: "Royal Hardware & Paints",
     contactPerson: "Ramesh Patel",
-    district: "Mumbai Metropolitan",
+    district: "Jalgaon District (MH)",
     phone: "+91 98765 43210",
     monthlyVolume: "₹50,000 – ₹2,00,000 (Established Paint Dealer)",
-    products: "Paint Rollers & Sleeves; Paint Brushes",
+    products: "1. Rollers; 2. Brushes",
     status: "New Lead",
     source: "Dealer Application Form"
   },
@@ -80,10 +80,10 @@ const DEFAULT_SAMPLE_LEADS = [
     timestamp: "2026-10-05 11:15:00",
     shopName: "Shree Krishna Paints",
     contactPerson: "Suresh Deshmukh",
-    district: "Pune Region",
+    district: "Dhule District (MH)",
     phone: "+91 98220 12345",
     monthlyVolume: "₹2,00,000 – ₹5,00,000 (Wholesaler / Stockist)",
-    products: "Paint Rollers & Sleeves; Waterproof Sandpaper; Industrial Thinner",
+    products: "1. Rollers; 3. Thinner, Polish, Paper etc...",
     status: "Contacted",
     source: "Dealer Application Form"
   },
@@ -91,11 +91,22 @@ const DEFAULT_SAMPLE_LEADS = [
     timestamp: "2026-10-05 12:00:00",
     shopName: "Ambika Hardware Mart",
     contactPerson: "Vijay Jadhav",
-    district: "Nashik Region",
+    district: "Buldhana District (MH)",
     phone: "+91 94220 56789",
     monthlyVolume: "₹25,000 – ₹50,000 (Starter / Retail Shop)",
-    products: "Paint Brushes; Putty Knives & Scrapers",
+    products: "2. Brushes; 3. Thinner, Polish, Paper etc...",
     status: "Pending Review",
+    source: "Dealer Application Form"
+  },
+  {
+    timestamp: "2026-10-05 14:20:00",
+    shopName: "Central India Paint Suppliers",
+    contactPerson: "Mahesh Agrawal",
+    district: "Madhya Pradesh (MP Interstate)",
+    phone: "+91 97550 44321",
+    monthlyVolume: "₹5,00,000+ (Regional Distributor / OEM)",
+    products: "1. Rollers; 2. Brushes; 3. Thinner, Polish, Paper etc...",
+    status: "New Lead",
     source: "Dealer Application Form"
   }
 ];
