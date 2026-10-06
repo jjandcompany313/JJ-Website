@@ -16,12 +16,13 @@ const SITE_CONFIG = {
   // --- Contact & Legal Information (From verified Dixit Wadi facility) ---
   phone: "+91 94227 75429",
   phoneRaw: "919422775429",
-  phoneSecondary: "+91 94227 79339",
-  phoneSecondaryRaw: "919422779339",
+  phoneSecondary: "+91 98900 03539",
+  phoneSecondaryRaw: "919890003539",
   whatsappNumber: "+91 94227 75429",
   whatsappRaw: "919422775429", // No +, no spaces for wa.me links
-  email: "sales@jjandcompany.com",
-  gstNumber: "27AABCJ1234D1Z5", // Registered GST
+  email: "jjandcompany313@gmail.com",
+  gstNumber: "27ACXPN6682N1ZC", // Registered GST
+  logoUrl: "assets/images/jj-company-logo.png",
   
   // --- Complete Plant & Warehouse Address (Arranged) ---
   plusCode: "2H5C+678",
