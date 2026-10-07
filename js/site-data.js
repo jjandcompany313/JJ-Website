@@ -52,8 +52,9 @@ const SITE_CONFIG = {
     { name: "All Over India", state: "Pan-India", transit: "Express Freight Transport", coverage: "Nationwide Wholesale & Bulk Goods Supply", badge: "All India Supply" }
   ],
   
-  // --- Catalog PDF ---
-  catalogPdfUrl: "assets/docs/Panama_Paint_Brush_Catalogue_2026.pdf",
+  // --- Catalog PDFs ---
+  catalogPdfUrl: "assets/docs/Wall_Fin_Paint_Roller_Catalogue_2026.pdf",
+  rollerCatalogPdfUrl: "assets/docs/Wall_Fin_Paint_Roller_Catalogue_2026.pdf",
   brushCatalogPdfUrl: "assets/docs/Panama_Paint_Brush_Catalogue_2026.pdf",
 
   // --- Automated Lead Capture & Spreadsheet / Excel Integration ---
@@ -78,6 +79,22 @@ const PANAMA_BRUSH_COLLECTION = [
   { no: "11", name: "Panama Tynex Wooden Handle Brush", sizes: ["4\"", "5\""], handle: "Lacquered Natural Hardwood", type: "Premium Tynex Filaments", use: "Master painter fine finishes & enamel" },
   { no: "12", name: "Panama CAT 100% Pure Bristol Brush", sizes: ["4\""], handle: "Black Heavy Grip", type: "100% Pure White Bristol", use: "Zero-shed oil paints & wood polish" },
   { no: "13", name: "Panama RRR Black & White Brush", sizes: ["4\""], handle: "Black RRR Branded Handle", type: "Export Pure Bristle (Black & White)", use: "High-solvent industrial coatings" }
+];
+
+// --- Official WALL FIN Paint Roller Collection (12 Families / 33 Variants from Factory Catalog) ---
+const WALL_FIN_ROLLER_COLLECTION = [
+  { no: "01", name: "Wall Fin Blue Line Paint Roller", sizes: ["2\"", "4\"", "6\"", "9\""], construction: "Standard • 20 mm diameter" },
+  { no: "02", name: "Wall Fin Yellow Line Paint Roller", sizes: ["2\"", "4\"", "6\"", "9\""], construction: "Standard • 20 mm diameter" },
+  { no: "03", name: "Wall Fin Brown Line Paint Roller", sizes: ["2\"", "4\"", "6\"", "9\""], construction: "Standard • 20 mm diameter" },
+  { no: "04", name: "Wall Fin Green Paint Roller", sizes: ["2\"", "4\"", "6\""], construction: "Standard • 20 mm diameter" },
+  { no: "05", name: "Wall Fin Green Thread 38MM Paint Roller", sizes: ["2\"", "4\"", "6\"", "7\"", "9\""], construction: "38 mm diameter" },
+  { no: "06", name: "Wall Fin Yellow Line 38MM Paint Roller", sizes: ["2\"", "4\"", "6\"", "7\"", "9\""], construction: "38 mm diameter" },
+  { no: "07", name: "Wall Fin Tiger 38MM Paint Roller", sizes: ["2\"", "4\"", "6\"", "7\"", "9\""], construction: "38 mm diameter" },
+  { no: "08", name: "Wall Fin Texture Roller 38MM Paint Roller", sizes: ["7\"", "9\""], construction: "38 mm diameter" },
+  { no: "09", name: "Wall Fin Epoxy Paint Roller", sizes: ["2\"", "4\"", "6\"", "9\""], construction: "Epoxy" },
+  { no: "10", name: "Wall Fin Foam Fix Roller", sizes: ["2\"", "4\"", "6\"", "9\""], construction: "Standard • 20 mm diameter" },
+  { no: "11", name: "Wall Fin Foam Fix 38MM Roller", sizes: ["6\"", "9\""], construction: "38 mm diameter" },
+  { no: "12", name: "Wall Fin Yellow Line 18MM Fixed Roller", sizes: ["2\"", "4\"", "6\""], construction: "18 mm diameter" }
 ];
 
 // --- Product Catalog Items (Paint Accessories) ---
