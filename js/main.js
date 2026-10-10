@@ -36,6 +36,12 @@ function initMobileNav() {
   toggleBtn.addEventListener("click", openMenu);
   if (closeBtn) closeBtn.addEventListener("click", closeMenu);
   if (backdrop) backdrop.addEventListener("click", closeMenu);
+
+  // Close drawer when any internal navigation link or button is clicked
+  const drawerLinks = drawer.querySelectorAll("a, button:not(#mobileClose)");
+  drawerLinks.forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
 }
 
 /* --- WhatsApp Message Router --- */

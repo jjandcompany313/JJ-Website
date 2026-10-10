@@ -2351,43 +2351,351 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* --- Responsive Component Utilities (Desktop Defaults) --- */
+.master-catalog-banner {
+  margin-top: 36px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.catalog-spotlight-card {
+  background: #FFFFFF;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 56px;
+}
+
+.product-inquiry-cta-card {
+  background-color: var(--bg-section);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-header {
+  background-color: var(--primary);
+  padding: 56px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-header-title {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.page-header-sub {
+  color: #D1E3DB;
+  max-width: 640px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-stats-row {
+  display: flex;
+  gap: 32px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 28px;
+}
+
+.about-stat-val {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.about-stat-lbl {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+.mobile-jump-pill {
+  display: none;
+}
+
+/* ==========================================================================
+   MOBILE PHONES & TABLETS (<= 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
+  /* Global Resets */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .btn {
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .btn-lg {
+    padding: 13px 20px;
+    font-size: 0.95rem;
+  }
+
   .topbar {
     display: none;
   }
 
-  .nav-menu, .header-cta-group .btn-secondary {
+  /* Header & Navigation */
+  .site-header {
+    height: 64px;
+  }
+
+  .header-container {
+    height: 64px;
+  }
+
+  .brand-logo {
+    gap: 8px;
+  }
+
+  .logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .brand-tagline {
     display: none;
   }
 
+  .nav-menu, 
+  .header-cta-group .btn-secondary {
+    display: none;
+  }
+
+  .header-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header-cta-group .btn-whatsapp {
+    padding: 7px 11px;
+    font-size: 0.8rem;
+    height: 38px;
+  }
+
   .mobile-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    font-size: 1.35rem;
+    border-radius: var(--radius-sm);
+    background: var(--bg-section);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    color: var(--text-main);
+  }
+
+  .mobile-nav-drawer {
+    width: 85%;
+    max-width: 320px;
+    height: 100vh;
+    height: 100dvh;
+    padding: 20px 18px;
+  }
+
+  .mobile-nav-links {
+    margin: 16px 0;
+  }
+
+  .mobile-nav-links .nav-link {
+    font-size: 1.05rem;
+    padding: 12px 10px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 32px 0 44px 0;
+  }
+
+  .hero-grid {
+    gap: 28px;
+  }
+
+  .hero-badge {
+    font-size: 0.72rem;
+    padding: 6px 12px;
+    line-height: 1.4;
+    display: inline-flex;
+    flex-wrap: wrap;
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-sm);
   }
 
   .hero-title {
-    font-size: 2.2rem;
-  }
-
-  .hero-metrics {
-    flex-wrap: wrap;
-    gap: 24px;
+    font-size: clamp(1.7rem, 6.5vw, 2.15rem);
+    line-height: 1.18;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
   }
 
   .hero-subline {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  /* Metric stats card on mobile */
+  .hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 14px 8px;
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 22px;
+    text-align: center;
+  }
+
+  .metric-item {
+    padding: 0 4px;
+  }
+
+  .metric-value {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.1;
+  }
+
+  .metric-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    margin-top: 3px;
+    line-height: 1.25;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 18px;
+    font-size: 0.92rem;
+  }
+
+  /* Hero image and plant frame */
+  .hero-visual {
+    margin-top: 8px;
+  }
+
+  .hero-image-frame {
+    border-radius: var(--radius-md);
+  }
+
+  .hero-image-frame img {
+    height: 220px;
+    object-position: center;
+  }
+
+  .hero-float-card {
+    position: static;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    padding: 12px 14px;
+    gap: 10px;
+    background: #FFFFFF;
+    border-top: 1px solid var(--border-color);
+    box-shadow: none;
+  }
+
+  .float-icon {
+    width: 32px;
+    height: 32px;
     font-size: 1rem;
   }
 
+  .float-text h5 {
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+  }
+
+  .float-text p {
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  /* Section Spacing */
   .section {
-    padding: 64px 0;
+    padding: 44px 0;
+  }
+
+  .section-sm {
+    padding: 32px 0;
+  }
+
+  .section-header {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .section-tag {
+    font-size: 0.72rem;
+    margin-bottom: 6px;
   }
 
   .section-title {
-    font-size: 1.85rem;
+    font-size: clamp(1.4rem, 5vw, 1.75rem);
+    line-height: 1.25;
+    margin-bottom: 8px;
   }
 
-  .category-grid, .product-grid, .dealer-reviews-grid, .factory-features-grid {
+  .section-subtitle {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  /* Category & Product Cards */
+  .category-grid, 
+  .product-grid, 
+  .dealer-reviews-grid, 
+  .factory-features-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 14px;
     background-color: transparent;
     border: none;
     border-radius: 0;
@@ -2396,21 +2704,180 @@ h1, h2, h3, h4, h5, h6 {
   .category-card {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    margin-bottom: 16px;
+    margin-bottom: 0;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
   }
 
+  .category-image-wrap {
+    height: 175px;
+  }
+
+  .category-content {
+    padding: 16px;
+  }
+
+  .category-title {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+
+  .category-desc {
+    font-size: 0.86rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .category-specs-list {
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .spec-pill {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+  }
+
+  /* Master Catalog Download Banners */
+  .master-catalog-banner {
+    padding: 22px 16px;
+    border-radius: var(--radius-md);
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .master-catalog-banner h3 {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+  }
+
+  .master-catalog-banner p {
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .master-catalog-banner div:last-child {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .master-catalog-banner .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .catalog-spotlight-card {
+    padding: 22px 16px;
+    border-radius: var(--radius-md);
+    margin-bottom: 32px;
+  }
+
+  .catalog-spotlight-card h2 {
+    font-size: 1.35rem;
+  }
+
+  .catalog-spotlight-card p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .catalog-spotlight-card div:last-child {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .product-inquiry-cta-card {
+    padding: 24px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .product-inquiry-cta-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .product-inquiry-cta-card p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .product-inquiry-cta-card div:last-child {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .product-inquiry-cta-card .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .page-header {
+    padding: 32px 0 28px 0;
+  }
+
+  .page-header-title {
+    font-size: clamp(1.6rem, 5.8vw, 2rem);
+    margin-bottom: 8px;
+  }
+
+  .page-header-sub {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .about-stats-row {
+    gap: 12px;
+    padding: 16px 0;
+    justify-content: space-between;
+  }
+
+  .about-stat-val {
+    font-size: 1.45rem;
+  }
+
+  .about-stat-lbl {
+    font-size: 0.68rem;
+  }
+
+  /* Warehouse & Facility Photos */
   .warehouse-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .warehouse-card {
+    border-radius: var(--radius-md);
+  }
+
+  .warehouse-img-wrap img {
+    height: 180px;
+  }
+
+  .warehouse-caption {
+    padding: 12px 14px;
+  }
+
+  .warehouse-caption h4 {
+    font-size: 0.92rem;
+  }
+
+  .warehouse-caption p {
+    font-size: 0.8rem;
   }
 
   .warehouse-trust-bar {
     grid-template-columns: 1fr;
-    padding: 20px;
-    gap: 16px;
+    padding: 16px;
+    gap: 14px;
   }
 
   .stats-grid-3 {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .process-strip {
@@ -2420,49 +2887,239 @@ h1, h2, h3, h4, h5, h6 {
 
   .factory-duo-grid {
     grid-template-columns: 1fr;
-  }
-
-  .factory-photo-card.single-facility-card img {
-    height: 280px;
-    object-position: center 30%;
+    gap: 14px;
   }
 
   .districts-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  /* Dealership Layout */
+  .dealer-lead-grid {
+    gap: 24px;
+  }
+
+  .dealer-pitch-title {
+    font-size: 1.45rem;
+  }
+
+  .perk-cards-col {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .perk-card {
+    padding: 14px;
+    gap: 12px;
+    border-radius: var(--radius-md);
+  }
+
+  .dealer-form-card {
+    padding: 20px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .dealer-form-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .dealer-form-card .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Form Elements on Mobile */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .form-group label {
+    font-size: 0.82rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  /* 16px font-size prevents iOS Safari from automatically zooming into the page */
+  .form-control {
+    font-size: 16px !important;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    min-height: 46px;
+    box-sizing: border-box;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 13px;
+    background: var(--bg-section);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    min-height: 48px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  #submitInquiryBtn {
+    width: 100%;
+    min-height: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+  }
+
+  /* Contact Page Optimization */
+  .contact-grid {
+    gap: 24px;
   }
 
   .contact-cards-row {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
   }
 
-  .form-row, .checkbox-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .catalog-footer-strip {
+  .contact-card-box {
+    padding: 12px 10px;
+    gap: 8px;
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-card-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .contact-card-text h4 {
+    font-size: 0.82rem;
+    margin-bottom: 2px;
+  }
+
+  .contact-card-text p, 
+  .contact-card-text a {
+    font-size: 0.76rem;
+    line-height: 1.35;
+  }
+
+  .mobile-jump-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 16px;
+    background: #E8F5E9;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.86rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(5, 138, 94, 0.25);
+    margin-bottom: 20px;
+    text-decoration: none;
     text-align: center;
+  }
+
+  /* Footer & Floating WhatsApp */
+  .site-footer {
+    padding: 44px 0 24px 0;
   }
 
   .footer-top-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .compliance-box {
+  .footer-bottom {
     flex-direction: column;
     text-align: center;
+    gap: 10px;
+    padding-top: 18px;
   }
 
-  .compliance-badges {
-    flex-wrap: wrap;
-    justify-content: center;
+  .floating-whatsapp {
+    bottom: 18px;
+    right: 18px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   }
 
-  .cta-banner-card {
-    padding: 48px 28px;
+  .floating-whatsapp-tooltip {
+    display: none !important;
+  }
+}
+
+/* Extra small mobile adjustments (<= 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
-  .cta-banner-card h2 {
-    font-size: 1.65rem;
+  .header-container {
+    height: 60px;
+  }
+
+  .logo-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-name {
+    font-size: 0.96rem;
+  }
+
+  .contact-cards-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .contact-card-box {
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .hero-metrics {
+    padding: 12px 6px;
+    gap: 6px;
+  }
+
+  .metric-value {
+    font-size: 1.25rem;
+  }
+
+  .metric-label {
+    font-size: 0.58rem;
+  }
+
+  .modal-card {
+    padding: 24px 16px;
+    width: 94%;
   }
 }
