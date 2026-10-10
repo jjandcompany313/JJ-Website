@@ -58,11 +58,8 @@ const SITE_CONFIG = {
   catalogPdfUrl: "assets/docs/JJ_Company_Master_Catalogue_2026.pdf",
   masterCatalogPdfUrl: "assets/docs/JJ_Company_Master_Catalogue_2026.pdf",
 
-  // --- Automated Lead Capture & Spreadsheet / Excel Integration ---
-  // To connect a live Google Sheet or Excel Webhook, paste your deployed Google Apps Script URL below:
-  // e.g., "https://script.google.com/macros/s/AKfycb.../exec"
-  // (Leave empty to use built-in browser storage + instant 1-click Excel CSV export)
-  leadWebhookUrl: ""
+  // --- Automated Lead Capture & Direct Google Sheet Integration ---
+  leadWebhookUrl: "https://script.google.com/macros/s/AKfycby0nwelzPOT-bg97Wc-lLWMUbuY1_FPOFOxjRUtQdIPAbF59VMZ403KjiZWdIbuqSaz/exec"
 };
 
 // --- Official PANAMA Paint Brush Collection (13 Models from Factory Catalog) ---
