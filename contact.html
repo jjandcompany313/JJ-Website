@@ -192,48 +192,81 @@
           </div>
         </div>
 
-        <!-- Right Column: Clean Inquiry Form -->
-        <div class="dealer-form-card" style="height: fit-content;">
+        <!-- Right Column: The ONE Master Inquiry & Dealership Form -->
+        <div id="inquiryForm" class="dealer-form-card" style="height: fit-content;">
           <div class="form-header">
-            <h3>Send an Inquiry</h3>
-            <p>Fill out the form below and our sales desk will reply promptly.</p>
+            <h3>Factory Inquiry &amp; Dealership Form</h3>
+            <p>Direct communication with the manufacturer for dealer accounts, wholesale bulk supply, or sample orders.</p>
           </div>
 
-          <form id="contactInquiryForm">
-            <div class="form-group">
-              <label for="contactName">Your Name *</label>
-              <input type="text" id="contactName" class="form-control" placeholder="Full Name" required>
-            </div>
-
-            <div class="form-group">
-              <label for="contactCompany">Shop / Company Name</label>
-              <input type="text" id="contactCompany" class="form-control" placeholder="e.g. Modern Hardware">
+          <form id="masterInquiryForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactPerson">Contact Person Name *</label>
+                <input type="text" id="contactPerson" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <label for="shopName">Business / Shop Name</label>
+                <input type="text" id="shopName" class="form-control" placeholder="e.g. Royal Hardware &amp; Paints">
+              </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="contactPhone">Phone / WhatsApp Number *</label>
-                <input type="tel" id="contactPhone" class="form-control" placeholder="+91 98765 00000" required>
+                <label for="phone">Phone / WhatsApp Number *</label>
+                <input type="tel" id="phone" class="form-control" placeholder="+91 98765 00000" required>
               </div>
               <div class="form-group">
-                <label for="contactDistrict">City &amp; State *</label>
-                <input type="text" id="contactDistrict" class="form-control" placeholder="e.g. Jalgaon, MH" required>
+                <label for="district">City &amp; State *</label>
+                <input type="text" id="district" class="form-control" placeholder="e.g. Jalgaon, Maharashtra" required>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="contactMessage">Requirement / Message *</label>
-              <textarea id="contactMessage" class="form-control" rows="4" placeholder="Let us know what products you require (Rollers, Brushes, Thinner/Polish/Paper, or Catalog/Price list)..." required></textarea>
+              <label for="inquiryType">Purpose of Inquiry *</label>
+              <select id="inquiryType" class="form-control" required>
+                <option value="Dealership &amp; Wholesale Supply" selected>Dealership &amp; Wholesale Partnership</option>
+                <option value="Bulk Order / Price List Request">Bulk Order / Price List Request</option>
+                <option value="Product Samples Request">Product Samples Request</option>
+                <option value="General Commercial Inquiry">General Commercial Inquiry</option>
+              </select>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 10px;">
-              Submit Message
+            <div class="form-group">
+              <label>Products Interested In *</label>
+              <div class="checkbox-grid">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="products" value="1. Rollers (Wall Fin Range)" checked>
+                  <span>1. Rollers (Wall Fin)</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="products" value="2. Brushes (Panama Collection)" checked>
+                  <span>2. Brushes (Panama)</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="products" value="3. Thinner, Polish, Paper &amp; Pata" checked>
+                  <span>3. Thinner, Polish, Paper</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="products" value="Full Master Catalog Range">
+                  <span>Complete Range</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Requirement / Message (Optional)</label>
+              <textarea id="message" class="form-control" rows="3" placeholder="Expected monthly quantity, specific roller/brush models, or questions..."></textarea>
+            </div>
+
+            <button type="submit" id="submitInquiryBtn" class="btn btn-primary btn-block btn-lg" style="margin-top: 10px;">
+              Submit Inquiry &amp; Save Details
             </button>
           </form>
 
           <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color); text-align: center;">
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Prefer instant messaging?</p>
-            <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20I%20am%20inquiring%20from%20your%20website."
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Prefer instant messaging directly with the factory desk?</p>
+            <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20I%20am%20inquiring%20directly%20from%20your%20website."
               target="_blank" class="btn btn-whatsapp btn-block">💬 Message Directly on WhatsApp</a>
           </div>
         </div>
@@ -312,9 +345,10 @@
         <div>
           &copy; <span id="currentYear">2026</span> JJ & Company. All rights reserved. Direct Factory Supply.
         </div>
-        <div style="display: flex; gap: 20px;">
+        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
           <span>Based in Maharashtra</span>
           <span>Supplying All Over India</span>
+          <a href="leads.html" style="color: var(--text-muted); font-size: 0.8rem; text-decoration: underline;">📊 Owner Leads Portal</a>
         </div>
       </div>
     </div>

@@ -155,72 +155,57 @@
           </div>
         </div>
 
-        <!-- Right Column: The Clean Form -->
-        <div class="dealer-form-card">
+        <!-- Right Column: Dealership Partnership & Direct Action -->
+        <div class="dealer-form-card" style="height: fit-content;">
           <div class="form-header">
-            <h3>Dealership Application Form</h3>
-            <p>Please share your business details below to receive commercial tier rates and sample catalogs.</p>
+            <h3>Direct Dealership Partnership</h3>
+            <p>Direct manufacturer supply, guaranteed dealer profit margins, and regular goods transport.</p>
           </div>
 
-          <form id="dealerApplicationForm">
-            <div class="form-group">
-              <label for="shopName">Business / Shop Name *</label>
-              <input type="text" id="shopName" class="form-control" placeholder="e.g. Royal Hardware & Paints" required>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="contactPerson">Contact Person *</label>
-                <input type="text" id="contactPerson" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone / WhatsApp Number *</label>
-                <input type="tel" id="phone" class="form-control" placeholder="+91 98765 00000" required>
+          <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <span style="font-size: 1.25rem;">🏭</span>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem;">Direct Factory Margins</strong>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 2px 0 0 0;">Zero middleman cuts. Direct dispatch from our Jalgaon manufacturing plant.</p>
               </div>
             </div>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label for="district">City &amp; State *</label>
-                <input type="text" id="district" class="form-control" placeholder="e.g. Jalgaon, Maharashtra" required>
-              </div>
-              <div class="form-group">
-                <label for="monthlyVolume">Monthly Volume Requirement</label>
-                <select id="monthlyVolume" class="form-control">
-                  <option value="Retail Store (₹25,000 – ₹50,000/mo)">Retail Store (₹25,000 – ₹50,000/mo)</option>
-                  <option value="Established Paint Dealer (₹50,000 – ₹2,00,000/mo)" selected>Established Paint Dealer (₹50,000 – ₹2,00,000/mo)</option>
-                  <option value="Wholesaler / Stockist (₹2,00,000 – ₹5,00,000/mo)">Wholesaler / Stockist (₹2,00,000 – ₹5,00,000/mo)</option>
-                  <option value="Regional Distributor (₹5,00,000+/mo)">Regional Distributor (₹5,00,000+/mo)</option>
-                </select>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <span style="font-size: 1.25rem;">🚚</span>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem;">Reliable Transport Routes</strong>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 2px 0 0 0;">Active supply in Jalgaon, Dhule, Nandurbar, Buldhana, Madhya Pradesh, and pan-India freight.</p>
               </div>
             </div>
 
-            <div class="form-group">
-              <label>Products Interested In *</label>
-              <div class="checkbox-grid">
-                <label class="custom-checkbox">
-                  <input type="checkbox" name="products" value="1. Rollers" checked>
-                  <span>1. Rollers (Wall Fin Range)</span>
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" name="products" value="2. Brushes" checked>
-                  <span>2. Brushes (Panama Collection)</span>
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" name="products" value="3. Thinner, Polish, Paper" checked>
-                  <span>3. Thinner, Polish, Paper</span>
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" name="products" value="Full Catalog Range">
-                  <span>Complete Range</span>
-                </label>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <span style="font-size: 1.25rem;">📦</span>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem;">Standing Ready Inventory</strong>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 2px 0 0 0;">350,000+ units monthly production capacity for timely dealer order fulfillment.</p>
               </div>
             </div>
+          </div>
 
-            <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 12px;">
-              Submit Application
-            </button>
-          </form>
+          <div style="background-color: var(--bg-section); padding: 22px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 20px;">
+            <h4 style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">Ready to Partner with Us?</h4>
+            <p style="font-size: 0.88rem; color: var(--text-body); margin-bottom: 16px; line-height: 1.5;">
+              Fill our single business inquiry form to receive commercial dealer discount tiers, sample packs, and dispatch schedules.
+            </p>
+            <a href="contact.html#inquiryForm" class="btn btn-primary btn-block btn-lg" style="text-align: center;">
+              📝 Fill Factory Inquiry Form &rarr;
+            </a>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20I%20am%20interested%20in%20becoming%20a%20dealer." target="_blank" class="btn btn-whatsapp btn-block">
+              💬 Direct WhatsApp Application
+            </a>
+            <a href="assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-outline btn-block">
+              📥 Download Master Catalogue (PDF)
+            </a>
+          </div>
         </div>
 
       </div>
@@ -297,9 +282,10 @@
         <div>
           &copy; <span id="currentYear">2026</span> JJ & Company. All rights reserved. Direct Factory Supply.
         </div>
-        <div style="display: flex; gap: 20px;">
+        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
           <span>Based in Maharashtra</span>
           <span>Supplying All Over India</span>
+          <a href="leads.html" style="color: var(--text-muted); font-size: 0.8rem; text-decoration: underline;">📊 Owner Leads Portal</a>
         </div>
       </div>
     </div>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Inquiries &amp; Excel Management | JJ &amp; Company</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="assets/images/jj-company-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .leads-portal-wrap {
+      padding: 40px 0 80px 0;
+      background-color: var(--bg-body);
+      min-height: calc(100vh - 200px);
+    }
+    .leads-stats-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .leads-table-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 32px;
+    }
+    .leads-table-container {
+      overflow-x: auto;
+      max-width: 100%;
+    }
+    .leads-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+    .leads-table th {
+      background-color: var(--bg-section);
+      color: var(--text-main);
+      font-weight: 700;
+      padding: 14px 16px;
+      border-bottom: 2px solid var(--border-color);
+      white-space: nowrap;
+    }
+    .leads-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+    .leads-table tr:hover td {
+      background-color: #F8FAF9;
+    }
+    .sync-guide-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .step-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Clean Top Bar -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/jj-company-logo.png" alt="JJ &amp; Company" class="logo-img" width="44" height="44">
+        <div class="brand-text">
+          <span class="brand-name">JJ &amp; COMPANY</span>
+          <span class="brand-tagline">Paint Tools &amp; Accessories Manufacturer</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products &amp; Catalog</a>
+        <a href="dealer.html" class="nav-link">Dealership</a>
+        <a href="about.html" class="nav-link">About Plant</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div style="display: flex; gap: 10px;">
+        <button onclick="exportLeads()" class="btn btn-primary btn-sm">
+          📥 Download Excel Sheet (.CSV)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="leads-portal-wrap">
+    <div class="container">
+
+      <!-- Breadcrumb & Portal Title -->
+      <div style="margin-bottom: 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">
+          <a href="index.html" style="color: var(--primary); text-decoration: underline;">Home</a>
+          <span>&rsaquo;</span>
+          <span>Owner Administration</span>
+          <span>&rsaquo;</span>
+          <span>Inquiries &amp; Excel Leads</span>
+        </div>
+        <h1 style="font-size: 1.85rem; color: var(--text-main); font-weight: 800; margin-bottom: 6px;">
+          Customer Inquiries &amp; Excel Management Portal
+        </h1>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">
+          All business inquiries and dealership applications submitted through the website are saved here. You can download the complete list into Microsoft Excel (.CSV) anytime.
+        </p>
+      </div>
+
+      <!-- Actions & Stats Card -->
+      <div class="leads-stats-card">
+        <div>
+          <span id="portalTotalCount" style="background: #E8F5E9; color: var(--primary); font-weight: 700; font-size: 0.95rem; padding: 6px 14px; border-radius: 20px; display: inline-block;">
+            Loading Inquiries...
+          </span>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 6px 0 0 2px;">
+            Format: Microsoft Excel compatible (.CSV with UTF-8 BOM encoding)
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button onclick="exportLeads()" class="btn btn-primary btn-lg">
+            📥 Download Complete Excel Sheet (.CSV)
+          </button>
+          <button id="resetSampleLeadsBtn" class="btn btn-outline btn-sm" title="Restore sample leads for testing">
+            🔄 Load Sample Leads
+          </button>
+          <button id="clearLeadsBtn" class="btn btn-outline btn-sm" style="color: #c53030; border-color: #feb2b2;">
+            🗑️ Clear Leads
+          </button>
+        </div>
+      </div>
+
+      <!-- Search & Filter Bar -->
+      <div style="margin-bottom: 16px;">
+        <input type="text" id="leadsSearchInput" class="form-control" placeholder="🔍 Search inquiries by person name, shop/business name, phone, city, or product..." style="padding: 12px 18px; font-size: 0.95rem; background: #FFFFFF;">
+      </div>
+
+      <!-- Inquiries Table Card -->
+      <div class="leads-table-card">
+        <div class="leads-table-container">
+          <table class="leads-table">
+            <thead>
+              <tr>
+                <th>Date &amp; Time</th>
+                <th>Contact Person</th>
+                <th>Shop / Business</th>
+                <th>Phone / WhatsApp</th>
+                <th>City &amp; State</th>
+                <th>Inquiry Purpose</th>
+                <th>Products of Interest</th>
+                <th>Message / Notes</th>
+              </tr>
+            </thead>
+            <tbody id="leadsTableBody">
+              <!-- Dynamically populated by js/main.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Google Sheets Live Webhook Setup Guide -->
+      <div class="sync-guide-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 18px;">
+          <div>
+            <h3 style="font-size: 1.25rem; color: var(--text-main); font-weight: 700; margin-bottom: 4px;">
+              📊 Optional: Automatic Real-Time Google Sheet Cloud Sync
+            </h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
+              Want inquiries to automatically appear in your Google Sheet on your mobile phone or laptop the exact moment someone submits the form?
+            </p>
+          </div>
+          <span style="background: #E8F5E9; color: var(--primary); font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 4px;">
+            100% Free • Takes 2 Minutes
+          </span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-bottom: 20px;">
+          <div class="step-item">
+            <span class="step-num">1</span>
+            <div>
+              <strong style="color: var(--text-main); font-size: 0.9rem;">Create Google Sheet</strong>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin: 2px 0 0 0;">Open <a href="https://sheets.new" target="_blank" style="color: var(--primary); text-decoration: underline;">sheets.new</a> and name it "JJ &amp; Company Inquiries".</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <span class="step-num">2</span>
+            <div>
+              <strong style="color: var(--text-main); font-size: 0.9rem;">Open Apps Script</strong>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin: 2px 0 0 0;">In the top menu, click <em>Extensions &rarr; Apps Script</em>.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <span class="step-num">3</span>
+            <div>
+              <strong style="color: var(--text-main); font-size: 0.9rem;">Paste Script</strong>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin: 2px 0 0 0;">Paste the code from <code style="background: var(--bg-section); padding: 2px 6px; border-radius: 3px;">google-sheets-script.js</code> file.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <span class="step-num">4</span>
+            <div>
+              <strong style="color: var(--text-main); font-size: 0.9rem;">Deploy as Web App</strong>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin: 2px 0 0 0;">Click <em>Deploy &rarr; New Deployment &rarr; Web App</em>. Set Access to <strong>Anyone</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-section); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px 18px; font-size: 0.85rem; color: var(--text-body);">
+          <strong>Final Step:</strong> Copy the generated Web App URL and paste it into <code style="background: #FFFFFF; padding: 2px 6px; border: 1px solid var(--border-color); border-radius: 3px;">js/site-data.js</code> inside <code style="color: var(--primary); font-weight: bold;">SITE_CONFIG.leadWebhookUrl</code>. That's it!
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Clean Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 JJ &amp; Company. All rights reserved. Direct Factory Supply.
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="contact.html" style="color: var(--text-muted);">Contact &amp; Inquiry Form</a>
+          <a href="index.html" style="color: var(--text-muted);">Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
