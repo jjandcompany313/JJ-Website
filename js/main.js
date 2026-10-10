@@ -7,11 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initWhatsAppLinks();
   initMasterInquiryForm();
-  initLeadExportButtons();
   initCategoryFilter();
   initProductSearch();
   initCatalogDownload();
-  initLeadsPortalPage();
 });
 
 /* --- Mobile Navigation Drawer --- */
@@ -61,208 +59,35 @@ function initWhatsAppLinks() {
   }
 }
 
-/* --- Lead Data & Spreadsheet Synchronization Helpers --- */
+/* --- Master Inquiry Form & Direct Google Sheet Cloud Sync --- */
 
-// Pre-seeded sample leads so the Excel sheet is never empty when downloaded
-const DEFAULT_SAMPLE_LEADS = [
-  {
-    timestamp: "2026-10-05 10:30:00",
-    contactPerson: "Ramesh Patel",
-    shopName: "Royal Hardware & Paints",
-    phone: "+91 98765 43210",
-    district: "Jalgaon, Maharashtra",
-    inquiryType: "Dealership & Wholesale Partnership",
-    products: "1. Rollers (Wall Fin); 2. Brushes (Panama)",
-    message: "Requirement for 500 pcs 9\" rollers and 20 dozen 4\" Panama brushes per month.",
-    status: "New Lead",
-    source: "Website Master Form"
-  },
-  {
-    timestamp: "2026-10-05 11:15:00",
-    contactPerson: "Suresh Deshmukh",
-    shopName: "Shree Krishna Paints",
-    phone: "+91 98220 12345",
-    district: "Dhule, Maharashtra",
-    inquiryType: "Bulk Order / Price List Request",
-    products: "1. Rollers (Wall Fin); 3. Thinner, Polish, Paper",
-    message: "Need bulk pricing list for NC thinners (20L drums) and waterproof sandpaper P120.",
-    status: "Contacted",
-    source: "Website Master Form"
-  },
-  {
-    timestamp: "2026-10-05 12:00:00",
-    contactPerson: "Vijay Jadhav",
-    shopName: "Ambika Hardware Mart",
-    phone: "+91 94220 56789",
-    district: "Buldhana, Maharashtra",
-    inquiryType: "Product Samples Request",
-    products: "2. Brushes (Panama); 3. Thinner, Polish, Paper",
-    message: "Please send sample pack for Panama 222 and Swan brushes before wholesale order.",
-    status: "Sample Dispatched",
-    source: "Website Master Form"
-  },
-  {
-    timestamp: "2026-10-05 14:20:00",
-    contactPerson: "Mahesh Agrawal",
-    shopName: "Central India Paint Suppliers",
-    phone: "+91 97550 44321",
-    district: "Indore, Madhya Pradesh",
-    inquiryType: "Dealership & Wholesale Partnership",
-    products: "Full Master Catalog Range",
-    message: "Interested in regional stockist distribution across Western MP. Direct factory transport required.",
-    status: "In Negotiation",
-    source: "Website Master Form"
-  }
-];
-
-function getStoredLeads() {
-  try {
-    const raw = localStorage.getItem("jj_inquiry_leads") || localStorage.getItem("jj_dealer_leads");
-    if (!raw) {
-      localStorage.setItem("jj_inquiry_leads", JSON.stringify(DEFAULT_SAMPLE_LEADS));
-      localStorage.setItem("jj_dealer_leads", JSON.stringify(DEFAULT_SAMPLE_LEADS));
-      return DEFAULT_SAMPLE_LEADS;
-    }
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) && parsed.length > 0 ? parsed : DEFAULT_SAMPLE_LEADS;
-  } catch (e) {
-    return DEFAULT_SAMPLE_LEADS;
-  }
-}
-
-function saveLeadToStorage(lead) {
-  try {
-    const list = getStoredLeads();
-    list.unshift(lead); // Prepend new lead at top
-    localStorage.setItem("jj_inquiry_leads", JSON.stringify(list));
-    localStorage.setItem("jj_dealer_leads", JSON.stringify(list));
-    updateLeadBadges();
-  } catch (e) {
-    console.warn("Could not save to localStorage", e);
-  }
-}
-
-async function syncLeadToSpreadsheet(lead) {
-  const webhookUrl = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.leadWebhookUrl) ? SITE_CONFIG.leadWebhookUrl : "";
+/**
+ * Sends customer submission directly to the owner's Google Sheet webhook.
+ * 100% confidential. Does not trigger any downloads or expose database records.
+ */
+async function sendToGoogleSheet(payload) {
+  const webhookUrl = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.leadWebhookUrl) ? SITE_CONFIG.leadWebhookUrl.trim() : "";
+  
   if (!webhookUrl) {
-    console.log("No cloud webhook configured in SITE_CONFIG. Data preserved in browser storage & downloaded as Excel CSV.");
-    return { synced: false, reason: "No webhook URL configured" };
+    console.warn("No Google Sheets webhook URL set in SITE_CONFIG.leadWebhookUrl.");
+    return { success: false, reason: "No webhook URL configured" };
   }
 
   try {
-    // Mode "no-cors" is required for Google Apps Script Web App endpoints called from browser
+    // Mode "no-cors" with text/plain prevents CORS preflight blocks from browsers to Google Apps Script
     await fetch(webhookUrl, {
       method: "POST",
       mode: "no-cors",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "text/plain;charset=utf-8"
       },
-      body: JSON.stringify(lead)
+      body: JSON.stringify(payload)
     });
-    return { synced: true };
-  } catch (err) {
-    console.error("Webhook synchronization error:", err);
-    return { synced: false, error: err };
+    return { success: true };
+  } catch (error) {
+    console.error("Direct sheet sync error:", error);
+    return { success: false, error: error };
   }
-}
-
-function exportLeadsToCsv(filename) {
-  const leads = getStoredLeads();
-  const headers = [
-    "Submission Date",
-    "Contact Person",
-    "Business / Shop Name",
-    "Phone / WhatsApp",
-    "City & State",
-    "Purpose of Inquiry",
-    "Products of Interest",
-    "Message / Requirements",
-    "Lead Status",
-    "Source Page"
-  ];
-
-  const escapeCsv = (val) => {
-    if (val === undefined || val === null) return '""';
-    const str = String(val).replace(/"/g, '""');
-    return `"${str}"`;
-  };
-
-  const csvRows = [headers.map(escapeCsv).join(",")];
-
-  leads.forEach(lead => {
-    const row = [
-      escapeCsv(lead.timestamp || new Date().toISOString().replace("T", " ").substring(0, 19)),
-      escapeCsv(lead.contactPerson || lead.name || "N/A"),
-      escapeCsv(lead.shopName || lead.businessName || "Direct Inquiry"),
-      escapeCsv(lead.phone || "N/A"),
-      escapeCsv(lead.district || lead.city || "N/A"),
-      escapeCsv(lead.inquiryType || lead.monthlyVolume || "General Inquiry"),
-      escapeCsv(lead.products || lead.inquiry || "All Products Range"),
-      escapeCsv(lead.message || "N/A"),
-      escapeCsv(lead.status || "New Lead"),
-      escapeCsv(lead.source || "Website")
-    ];
-    csvRows.push(row.join(","));
-  });
-
-  // Prepend UTF-8 BOM (\uFEFF) so Microsoft Excel opens the CSV with perfect character encoding
-  const csvContent = "\uFEFF" + csvRows.join("\r\n");
-  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-  const url = URL.createObjectURL(blob);
-  
-  const today = new Date().toISOString().split("T")[0];
-  const downloadName = filename || `JJ_Company_Inquiries_${today}.csv`;
-  
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = downloadName;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-
-  showToast(`Downloaded ${leads.length} inquiries into Microsoft Excel (.CSV)!`);
-}
-
-function updateLeadBadges() {
-  const countSpan = document.getElementById("leadsCountBadge");
-  const syncStatus = document.getElementById("leadsSyncStatus");
-  const leads = getStoredLeads();
-  
-  if (countSpan) {
-    countSpan.textContent = `${leads.length} Inquiries on File`;
-  }
-  
-  if (syncStatus) {
-    const hasWebhook = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.leadWebhookUrl && SITE_CONFIG.leadWebhookUrl.length > 5);
-    if (hasWebhook) {
-      syncStatus.innerHTML = `✅ Live Google Sheet Webhook Connected • <strong>${leads.length}</strong> inquiries recorded`;
-    } else {
-      syncStatus.innerHTML = `Every submission is saved to Excel sheet (<strong>${leads.length}</strong> inquiries on file).`;
-    }
-  }
-}
-
-function initLeadExportButtons() {
-  window.exportLeads = exportLeadsToCsv;
-
-  // Keyboard shortcut for owner to download Excel leads: Ctrl + Shift + E
-  document.addEventListener("keydown", (e) => {
-    if (e.ctrlKey && e.shiftKey && (e.key === "E" || e.key === "e")) {
-      e.preventDefault();
-      exportLeadsToCsv();
-    }
-  });
-
-  const exportBtns = document.querySelectorAll(".btn-export-leads, #exportLeadsBtn");
-  exportBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      exportLeadsToCsv();
-    });
-  });
-
-  updateLeadBadges();
 }
 
 function escapeHtml(text) {
@@ -272,7 +97,12 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
-function showInquirySuccessModal(lead) {
+/**
+ * Confidential Inquiry Confirmation Modal.
+ * Displays simple thank you confirmation with WhatsApp quick-connect.
+ * NEVER triggers downloads or displays customer database records.
+ */
+function showConfidentialSuccessModal(lead) {
   let modal = document.getElementById("inquirySuccessModal");
   if (!modal) {
     modal = document.createElement("div");
@@ -283,69 +113,50 @@ function showInquirySuccessModal(lead) {
 
   const waLeadMessage =
     `*NEW INQUIRY (From JJ & Company Website)*\n` +
-    `👤 *Contact Person:* ${lead.contactPerson}\n` +
-    `🏢 *Business / Shop:* ${lead.shopName || "Direct"}\n` +
+    `👤 *Name:* ${lead.contactPerson}\n` +
+    `🏢 *Business / Shop:* ${lead.shopName || "Direct Inquiry"}\n` +
     `📞 *Phone / WhatsApp:* ${lead.phone}\n` +
     `📍 *Location:* ${lead.district}\n` +
     `🎯 *Purpose:* ${lead.inquiryType}\n` +
     `🎨 *Products:* ${lead.products}\n` +
-    `📝 *Message:* ${lead.message || "None"}\n` +
-    `---------------------------\n` +
-    `_Details auto-saved to JJ & Company Excel Sheet_`;
+    `📝 *Message:* ${lead.message || "None"}`;
 
   const waUrl = getWhatsAppUrl(waLeadMessage);
 
   modal.innerHTML = `
-    <div class="modal-card" style="max-width: 520px; text-align: center; padding: 32px 26px;">
+    <div class="modal-card" style="max-width: 480px; text-align: center; padding: 36px 28px;">
       <button class="modal-close" id="closeSuccessModalBtn" aria-label="Close" style="top: 14px; right: 16px;">&times;</button>
-      <div style="width: 58px; height: 58px; border-radius: 50%; background: #E8F5E9; color: #058A5E; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 14px auto; font-weight: bold;">
+      <div style="width: 58px; height: 58px; border-radius: 50%; background: #E8F5E9; color: #058A5E; display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 16px auto; font-weight: bold;">
         ✓
       </div>
-      <h3 style="font-size: 1.4rem; color: var(--text-main); margin-bottom: 6px; font-weight: 800;">
-        Inquiry Submitted &amp; Saved!
+      <h3 style="font-size: 1.4rem; color: var(--text-main); margin-bottom: 8px; font-weight: 800;">
+        Inquiry Submitted Successfully!
       </h3>
-      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.5;">
-        Your inquiry details have been saved, and an updated <strong>Microsoft Excel (.CSV)</strong> sheet was automatically downloaded to your computer.
+      <p style="font-size: 0.92rem; color: var(--text-body); margin-bottom: 24px; line-height: 1.5;">
+        Thank you, <strong>${escapeHtml(lead.contactPerson)}</strong>. Your requirement has been saved directly to our factory sales desk. Our team will contact you shortly with commercial rates.
       </p>
 
-      <div style="background: var(--bg-section); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 18px; text-align: left; font-size: 0.86rem; margin-bottom: 22px; line-height: 1.6;">
-        <div style="margin-bottom: 4px;"><strong>👤 Name:</strong> <span>${escapeHtml(lead.contactPerson)}</span></div>
-        <div style="margin-bottom: 4px;"><strong>🏢 Business / Shop:</strong> <span>${escapeHtml(lead.shopName || "Direct Inquiry")}</span></div>
-        <div style="margin-bottom: 4px;"><strong>📞 Phone / WhatsApp:</strong> <span>${escapeHtml(lead.phone)}</span></div>
-        <div style="margin-bottom: 4px;"><strong>📍 City &amp; State:</strong> <span>${escapeHtml(lead.district)}</span></div>
-        <div style="margin-bottom: 4px;"><strong>🎯 Inquiry Purpose:</strong> <span>${escapeHtml(lead.inquiryType)}</span></div>
-        <div><strong>📦 Products:</strong> <span>${escapeHtml(lead.products)}</span></div>
-      </div>
-
       <div style="display: flex; flex-direction: column; gap: 10px;">
-        <button id="downloadExcelModalBtn" class="btn btn-primary btn-block btn-lg" style="justify-content: center;">
-          📥 Download Excel Sheet (.CSV) Again
-        </button>
         <a href="${waUrl}" target="_blank" class="btn btn-whatsapp btn-block btn-lg" style="justify-content: center;">
-          💬 Confirm &amp; Chat on WhatsApp
+          💬 Connect Instantly on WhatsApp
         </a>
-        <a href="leads.html" class="btn btn-outline btn-block" style="font-size: 0.85rem; justify-content: center;">
-          📊 View All Inquiries in Owner Portal
-        </a>
+        <button id="closeModalActionBtn" class="btn btn-outline btn-block" style="justify-content: center;">
+          Done
+        </button>
       </div>
     </div>
   `;
 
   modal.classList.add("open");
 
-  // Wire modal buttons
   document.getElementById("closeSuccessModalBtn")?.addEventListener("click", () => {
     modal.classList.remove("open");
   });
-
-  document.getElementById("downloadExcelModalBtn")?.addEventListener("click", () => {
-    exportLeadsToCsv();
+  document.getElementById("closeModalActionBtn")?.addEventListener("click", () => {
+    modal.classList.remove("open");
   });
-
   modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.remove("open");
-    }
+    if (e.target === modal) modal.classList.remove("open");
   });
 }
 
@@ -358,6 +169,9 @@ function initMasterInquiryForm() {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : "Submit Inquiry";
 
     const contactPerson = (
       document.getElementById("contactPerson")?.value ||
@@ -406,13 +220,23 @@ function initMasterInquiryForm() {
       return;
     }
 
+    // Set UI to loading state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = "Submitting directly to sheet... ⏳";
+    }
+
     const now = new Date();
-    const formattedTimestamp = now.getFullYear() + "-" +
-      String(now.getMonth() + 1).padStart(2, "0") + "-" +
-      String(now.getDate()).padStart(2, "0") + " " +
-      String(now.getHours()).padStart(2, "0") + ":" +
-      String(now.getMinutes()).padStart(2, "0") + ":" +
-      String(now.getSeconds()).padStart(2, "0");
+    const formattedTimestamp = now.toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false
+    });
 
     const leadData = {
       timestamp: formattedTimestamp,
@@ -427,106 +251,19 @@ function initMasterInquiryForm() {
       source: "Website Master Form"
     };
 
-    // 1. Save directly into spreadsheet/CSV dataset (localStorage)
-    saveLeadToStorage(leadData);
+    // Directly send data to Google Sheet webhook (100% confidential, NO downloads)
+    await sendToGoogleSheet(leadData);
 
-    // 2. Synchronize to live cloud spreadsheet if webhook is configured
-    syncLeadToSpreadsheet(leadData);
-
-    // 3. Immediately generate and download the updated Microsoft Excel (.CSV) file
-    exportLeadsToCsv();
-
-    // 4. Show modal confirmation with action buttons
-    showInquirySuccessModal(leadData);
-
-    // 5. Reset the form
+    // Reset form & restore button
     form.reset();
-  });
-}
-
-/* --- Owner Leads Management Portal (for leads.html) --- */
-function initLeadsPortalPage() {
-  const tableBody = document.getElementById("leadsTableBody");
-  if (!tableBody) return; // Only runs when viewing leads.html
-
-  function renderRows(filteredLeads) {
-    const list = filteredLeads || getStoredLeads();
-    tableBody.innerHTML = "";
-
-    if (!list.length) {
-      tableBody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 36px; color: var(--text-muted); font-size: 0.95rem;">No customer inquiries recorded yet.</td></tr>`;
-      return;
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
     }
 
-    list.forEach(lead => {
-      const tr = document.createElement("tr");
-      const cleanPhone = (lead.phone || "").replace(/[^\d]/g, "");
-      const waNumber = cleanPhone.startsWith("91") ? cleanPhone : ("91" + cleanPhone);
-
-      tr.innerHTML = `
-        <td style="font-size: 0.8rem; color: var(--text-muted); white-space: nowrap;">${escapeHtml(lead.timestamp || "")}</td>
-        <td><strong>${escapeHtml(lead.contactPerson || "N/A")}</strong></td>
-        <td>${escapeHtml(lead.shopName || "Direct Inquiry")}</td>
-        <td>
-          <a href="tel:${escapeHtml(lead.phone || "")}" style="color: var(--primary); font-weight: 600;">${escapeHtml(lead.phone || "")}</a>
-          <br>
-          <a href="https://wa.me/${waNumber}?text=Hello%20${encodeURIComponent(lead.contactPerson || "")},%20regarding%20your%20inquiry%20with%20JJ%20%26%20Company..." target="_blank" style="font-size: 0.75rem; color: var(--whatsapp); font-weight: 600;">💬 WhatsApp</a>
-        </td>
-        <td>${escapeHtml(lead.district || "N/A")}</td>
-        <td><span class="badge" style="background: #E8F5E9; color: var(--primary); font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; font-weight: 600;">${escapeHtml(lead.inquiryType || "Inquiry")}</span></td>
-        <td style="font-size: 0.82rem; color: var(--text-body); max-width: 180px;">${escapeHtml(lead.products || "")}</td>
-        <td style="font-size: 0.82rem; color: var(--text-muted); max-width: 220px;">${escapeHtml(lead.message || "—")}</td>
-      `;
-      tableBody.appendChild(tr);
-    });
-
-    const totalBadge = document.getElementById("portalTotalCount");
-    if (totalBadge) totalBadge.textContent = `${list.length} Inquiries on File`;
-  }
-
-  renderRows();
-
-  // Search input filter
-  const searchInput = document.getElementById("leadsSearchInput");
-  if (searchInput) {
-    searchInput.addEventListener("input", (e) => {
-      const q = e.target.value.toLowerCase().trim();
-      const all = getStoredLeads();
-      const filtered = all.filter(l =>
-        (l.contactPerson || "").toLowerCase().includes(q) ||
-        (l.shopName || "").toLowerCase().includes(q) ||
-        (l.phone || "").toLowerCase().includes(q) ||
-        (l.district || "").toLowerCase().includes(q) ||
-        (l.products || "").toLowerCase().includes(q) ||
-        (l.message || "").toLowerCase().includes(q)
-      );
-      renderRows(filtered);
-    });
-  }
-
-  // Clear leads button
-  const clearBtn = document.getElementById("clearLeadsBtn");
-  if (clearBtn) {
-    clearBtn.addEventListener("click", () => {
-      if (confirm("Are you sure you want to clear all inquiries? Make sure you have downloaded your Excel file first!")) {
-        localStorage.removeItem("jj_inquiry_leads");
-        localStorage.removeItem("jj_dealer_leads");
-        renderRows([]);
-        showToast("All inquiries cleared.");
-      }
-    });
-  }
-
-  // Reset to sample leads button
-  const resetSampleBtn = document.getElementById("resetSampleLeadsBtn");
-  if (resetSampleBtn) {
-    resetSampleBtn.addEventListener("click", () => {
-      localStorage.setItem("jj_inquiry_leads", JSON.stringify(DEFAULT_SAMPLE_LEADS));
-      localStorage.setItem("jj_dealer_leads", JSON.stringify(DEFAULT_SAMPLE_LEADS));
-      renderRows(DEFAULT_SAMPLE_LEADS);
-      showToast("Reset to sample inquiries.");
-    });
-  }
+    // Show confidential confirmation popup
+    showConfidentialSuccessModal(leadData);
+  });
 }
 
 /* --- Category Filter on Products Page --- */

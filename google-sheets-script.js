@@ -1,33 +1,35 @@
 /**
  * =========================================================================
- * JJ & COMPANY — GOOGLE APPS SCRIPT FOR REAL-TIME SPREADSHEET SYNC
+ * JJ & COMPANY — GOOGLE APPS SCRIPT FOR DIRECT GOOGLE SHEET CAPTURE
  * =========================================================================
  * 
- * Follow these 5 quick steps to have all website inquiries automatically
- * added to a live Google Sheet in real time:
+ * Follow these 5 quick steps to have all website inquiries saved
+ * directly into your private Google Sheet in real time:
  * 
  * 1. Open Google Sheets (https://sheets.new) and name the spreadsheet
- *    "JJ & Company Inquiries".
+ *    "JJ & Company Customer Inquiries".
  * 
  * 2. In Google Sheets, click the top menu:
  *    Extensions -> Apps Script
  * 
- * 3. Delete any default code inside the Apps Script editor, and PASTE THIS
- *    ENTIRE FILE into Code.gs.
+ * 3. Delete any code inside Code.gs, and PASTE THIS ENTIRE FILE.
  * 
  * 4. In the top right of Apps Script, click:
  *    Deploy -> New deployment
- *    - Click the gear icon next to "Select type" and choose "Web app"
- *    - Description: "JJ Website Lead Capture"
- *    - Execute as: "Me"
- *    - Who has access: "Anyone" (Crucial for receiving submissions from the website)
- *    - Click "Deploy", authorize permissions when prompted.
+ *    - Click the gear icon next to "Select type" and select "Web app"
+ *    - Description: "JJ Website Inquiry Webhook"
+ *    - Execute as: "Me" (your Google account)
+ *    - Who has access: "Anyone" (Required so your website can send inquiries)
+ *    - Click "Deploy", and authorize permissions.
  * 
- * 5. Copy the generated "Web App URL" (ends in /exec), and paste it in:
+ * 5. Copy the generated "Web App URL" (ends in /exec), and send it to me
+ *    OR paste it in:
  *    js/site-data.js -> SITE_CONFIG.leadWebhookUrl
  *    
- * That's it! Every time someone submits the form on your website, a new row
- * will immediately appear in your Google Sheet!
+ * That's it! Every time someone submits the form on your website:
+ * - A new row is instantly added to your private Google Sheet.
+ * - No files are downloaded.
+ * - All inquiry data remains 100% confidential.
  * =========================================================================
  */
 
@@ -38,10 +40,10 @@ function doPost(e) {
   try {
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     
-    // Create header row if sheet is currently blank
+    // Create header row automatically if sheet is brand new
     if (sheet.getLastRow() === 0) {
       sheet.appendRow([
-        "Timestamp",
+        "Timestamp (IST)",
         "Contact Person",
         "Business / Shop Name",
         "Phone / WhatsApp",
@@ -53,7 +55,7 @@ function doPost(e) {
         "Source"
       ]);
       
-      // Format headers with bold text and dark green background
+      // Format headers with dark green company brand color
       var headerRange = sheet.getRange(1, 1, 1, 10);
       headerRange.setFontWeight("bold");
       headerRange.setBackground("#06392A");
@@ -61,9 +63,17 @@ function doPost(e) {
       sheet.setFrozenRows(1);
     }
 
-    // Parse incoming JSON data
-    var rawData = e.postData.contents;
-    var data = JSON.parse(rawData);
+    // Parse incoming data safely
+    var data = {};
+    if (e && e.postData && e.postData.contents) {
+      try {
+        data = JSON.parse(e.postData.contents);
+      } catch (err) {
+        data = e.parameter || {};
+      }
+    } else if (e && e.parameter) {
+      data = e.parameter;
+    }
 
     var timestamp = data.timestamp || Utilities.formatDate(new Date(), "Asia/Kolkata", "yyyy-MM-dd HH:mm:ss");
     var contactPerson = data.contactPerson || data.name || "N/A";
@@ -71,12 +81,12 @@ function doPost(e) {
     var phone = data.phone || "N/A";
     var district = data.district || data.city || "N/A";
     var inquiryType = data.inquiryType || data.monthlyVolume || "General Inquiry";
-    var products = data.products || "All Range";
-    var message = data.message || "None";
+    var products = data.products || "All Products Range";
+    var message = data.message || "—";
     var status = data.status || "New Lead";
     var source = data.source || "Website Form";
 
-    // Append new lead as row
+    // Append inquiry as a new row
     sheet.appendRow([
       timestamp,
       contactPerson,
@@ -90,7 +100,7 @@ function doPost(e) {
       source
     ]);
 
-    // Return success JSON
+    // Return success response
     return ContentService
       .createTextOutput(JSON.stringify({ result: "success", row: sheet.getLastRow() }))
       .setMimeType(ContentService.MimeType.JSON);
