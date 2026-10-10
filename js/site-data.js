@@ -52,10 +52,11 @@ const SITE_CONFIG = {
     { name: "All Over India", state: "Pan-India", transit: "Express Freight Transport", coverage: "Nationwide Wholesale & Bulk Goods Supply", badge: "All India Supply" }
   ],
   
-  // --- Catalog PDFs ---
-  catalogPdfUrl: "assets/docs/Wall_Fin_Paint_Roller_Catalogue_2026.pdf",
-  rollerCatalogPdfUrl: "assets/docs/Wall_Fin_Paint_Roller_Catalogue_2026.pdf",
-  brushCatalogPdfUrl: "assets/docs/Panama_Paint_Brush_Catalogue_2026.pdf",
+  ownerName: "Jafar Hanif Nagavadriya",
+  
+  // --- Master Catalog PDF ---
+  catalogPdfUrl: "assets/docs/JJ_Company_Master_Catalogue_2026.pdf",
+  masterCatalogPdfUrl: "assets/docs/JJ_Company_Master_Catalogue_2026.pdf",
 
   // --- Automated Lead Capture & Spreadsheet / Excel Integration ---
   // To connect a live Google Sheet or Excel Webhook, paste your deployed Google Apps Script URL below:
