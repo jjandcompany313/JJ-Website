@@ -11,5 +11,6 @@ desktop.ini
 
 # Temporary & Log files
 *.log
+*.zip
 scratch/
 .system_generated/
