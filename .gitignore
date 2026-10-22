@@ -12,6 +12,7 @@ desktop.ini
 # Temporary & Log files
 *.log
 *.zip
+/JJ Intro.mp4
 .agents/
 scratch/
 .system_generated/

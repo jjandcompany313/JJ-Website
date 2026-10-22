@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCategoryFilter();
   initProductSearch();
   initCatalogDownload();
+  initCompanyIntroVideo();
 });
 
 /* --- Mobile Navigation Drawer --- */
@@ -386,4 +387,48 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.remove("show");
   }, 3500);
+}
+
+/* --- Company Intro Video Player Controller --- */
+function initCompanyIntroVideo() {
+  const video = document.getElementById("companyIntroVideo");
+  const overlay = document.getElementById("videoOverlayCover");
+  const playBtn = document.getElementById("videoPlayOverlayBtn");
+
+  if (!video || !overlay) return;
+
+  function playVideo() {
+    video.play().then(() => {
+      overlay.classList.add("is-hidden");
+    }).catch(err => {
+      console.warn("Playback prevented:", err);
+      overlay.classList.add("is-hidden");
+    });
+  }
+
+  overlay.addEventListener("click", (e) => {
+    e.stopPropagation();
+    playVideo();
+  });
+
+  if (playBtn) {
+    playBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      playVideo();
+    });
+  }
+
+  video.addEventListener("play", () => {
+    overlay.classList.add("is-hidden");
+  });
+
+  video.addEventListener("pause", () => {
+    if (!video.seeking && video.currentTime < (video.duration - 0.5)) {
+      overlay.classList.remove("is-hidden");
+    }
+  });
+
+  video.addEventListener("ended", () => {
+    overlay.classList.remove("is-hidden");
+  });
 }
