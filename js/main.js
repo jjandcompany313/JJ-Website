@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initProductSearch();
   initCatalogDownload();
   initCompanyIntroVideo();
+  initFacilityMediaToggle();
 });
 
 /* --- Mobile Navigation Drawer --- */
@@ -431,4 +432,43 @@ function initCompanyIntroVideo() {
   video.addEventListener("ended", () => {
     overlay.classList.remove("is-hidden");
   });
+}
+
+/* --- Facility Media Toggle (Image vs Video) --- */
+function initFacilityMediaToggle() {
+  const btnImages = document.getElementById("btnShowImages");
+  const btnVideo = document.getElementById("btnShowVideo");
+  const paneImages = document.getElementById("paneFacilityImages");
+  const paneVideo = document.getElementById("paneFacilityVideo");
+  const video = document.getElementById("companyIntroVideo");
+
+  if (!btnImages || !btnVideo || !paneImages || !paneVideo) return;
+
+  function showImages() {
+    btnImages.classList.add("active");
+    btnImages.setAttribute("aria-selected", "true");
+    btnVideo.classList.remove("active");
+    btnVideo.setAttribute("aria-selected", "false");
+
+    paneImages.classList.add("active");
+    paneVideo.classList.remove("active");
+
+    // Pause video if currently playing
+    if (video && !video.paused) {
+      video.pause();
+    }
+  }
+
+  function showVideo() {
+    btnVideo.classList.add("active");
+    btnVideo.setAttribute("aria-selected", "true");
+    btnImages.classList.remove("active");
+    btnImages.setAttribute("aria-selected", "false");
+
+    paneVideo.classList.add("active");
+    paneImages.classList.remove("active");
+  }
+
+  btnImages.addEventListener("click", showImages);
+  btnVideo.addEventListener("click", showVideo);
 }
