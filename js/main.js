@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCategoryFilter();
   initProductSearch();
   initCatalogDownload();
-  initCompanyIntroVideo();
-  initFacilityMediaToggle();
+  initCompanyVideoModal();
 });
 
 /* --- Mobile Navigation Drawer --- */
@@ -390,85 +389,56 @@ function showToast(message) {
   }, 3500);
 }
 
-/* --- Company Intro Video Player Controller --- */
-function initCompanyIntroVideo() {
-  const video = document.getElementById("companyIntroVideo");
-  const overlay = document.getElementById("videoOverlayCover");
-  const playBtn = document.getElementById("videoPlayOverlayBtn");
+/* --- Company Intro Video Modal Controller --- */
+function initCompanyVideoModal() {
+  const modal = document.getElementById("companyVideoModal");
+  const closeBtn = document.getElementById("closeCompanyVideoModal");
+  const video = document.getElementById("modalVideoElement");
+  const triggerBtns = document.querySelectorAll(".btn-video-trigger");
 
-  if (!video || !overlay) return;
+  if (!modal || !triggerBtns.length) return;
 
-  function playVideo() {
-    video.play().then(() => {
-      overlay.classList.add("is-hidden");
-    }).catch(err => {
-      console.warn("Playback prevented:", err);
-      overlay.classList.add("is-hidden");
-    });
-  }
-
-  overlay.addEventListener("click", (e) => {
-    e.stopPropagation();
-    playVideo();
-  });
-
-  if (playBtn) {
-    playBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      playVideo();
-    });
-  }
-
-  video.addEventListener("play", () => {
-    overlay.classList.add("is-hidden");
-  });
-
-  video.addEventListener("pause", () => {
-    if (!video.seeking && video.currentTime < (video.duration - 0.5)) {
-      overlay.classList.remove("is-hidden");
+  function openModal() {
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+    if (video) {
+      video.currentTime = 0;
+      video.play().catch(err => {
+        console.warn("Autoplay in modal blocked by browser:", err);
+      });
     }
-  });
+  }
 
-  video.addEventListener("ended", () => {
-    overlay.classList.remove("is-hidden");
-  });
-}
-
-/* --- Facility Media Toggle (Image vs Video) --- */
-function initFacilityMediaToggle() {
-  const btnImages = document.getElementById("btnShowImages");
-  const btnVideo = document.getElementById("btnShowVideo");
-  const paneImages = document.getElementById("paneFacilityImages");
-  const paneVideo = document.getElementById("paneFacilityVideo");
-  const video = document.getElementById("companyIntroVideo");
-
-  if (!btnImages || !btnVideo || !paneImages || !paneVideo) return;
-
-  function showImages() {
-    btnImages.classList.add("active");
-    btnImages.setAttribute("aria-selected", "true");
-    btnVideo.classList.remove("active");
-    btnVideo.setAttribute("aria-selected", "false");
-
-    paneImages.classList.add("active");
-    paneVideo.classList.remove("active");
-
-    // Pause video if currently playing
-    if (video && !video.paused) {
+  function closeModal() {
+    modal.classList.remove("open");
+    document.body.style.overflow = "";
+    if (video) {
       video.pause();
     }
   }
 
-  function showVideo() {
-    btnVideo.classList.add("active");
-    btnVideo.setAttribute("aria-selected", "true");
-    btnImages.classList.remove("active");
-    btnImages.setAttribute("aria-selected", "false");
+  triggerBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
 
-    paneVideo.classList.add("active");
-    paneImages.classList.remove("active");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeModal);
   }
 
-  btnImages.addEventListener("click", showImages);
-  btnVideo.addEventListener("click", showVideo);
+  // Click outside card to close
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // ESC key to close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("open")) {
+      closeModal();
+    }
+  });
 }

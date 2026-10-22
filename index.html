@@ -319,198 +319,75 @@
         </div>
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
           <a href="assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-primary btn-lg">📥 Download Master Catalogue (PDF)</a>
+          <button type="button" class="btn btn-outline-white btn-lg btn-video-trigger">▶ Watch Factory Video</button>
           <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20please%20send%20wholesale%20price%20list." target="_blank" class="btn btn-outline-white btn-lg">💬 Request Price List</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Real Warehouse Stock & Plant Reality (Image vs Video Toggle) -->
-  <section class="section" id="facility-showcase">
+  <!-- Real Warehouse Stock & Facility Reality -->
+  <section class="section" id="warehouse-facility">
     <div class="container">
-      <div class="section-header" style="margin-bottom: 24px;">
+      <div class="section-header">
         <span class="section-tag">Manufacturing Facility</span>
         <h2 class="section-title">Direct Plant Output &amp; Standing Inventory</h2>
         <p class="section-subtitle">
-          Explore our Jalgaon manufacturing floor, standing inventory of over 50,000 units, and nationwide dispatch logistics through photos or our official video intro.
+          Over 50,000 units maintained in ready stock at our Jalgaon central depot. Daily dispatches across Maharashtra, Madhya Pradesh, and all over India.
         </p>
-
-        <!-- Media Switcher Toggle Button -->
-        <div class="media-toggle-wrapper">
-          <div class="media-toggle-bar" role="tablist" aria-label="Facility Media Views">
-            <button type="button" 
-                    class="media-toggle-btn active" 
-                    id="btnShowImages" 
-                    role="tab" 
-                    aria-selected="true" 
-                    aria-controls="paneFacilityImages">
-              <span class="toggle-icon">🖼️</span> Warehouse Photos
-            </button>
-            <button type="button" 
-                    class="media-toggle-btn" 
-                    id="btnShowVideo" 
-                    role="tab" 
-                    aria-selected="false" 
-                    aria-controls="paneFacilityVideo">
-              <span class="toggle-icon">▶</span> Company Intro Video
-              <span class="toggle-tag">32s</span>
-            </button>
-          </div>
+        <div style="margin-top: 18px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+          <button type="button" class="btn btn-secondary btn-video-trigger" aria-haspopup="dialog">
+            ▶ Watch 32s Factory Intro Video
+          </button>
         </div>
       </div>
 
-      <!-- View 1: Warehouse Images Grid -->
-      <div class="media-view-pane active" id="paneFacilityImages" role="tabpanel" aria-labelledby="btnShowImages">
-        <div class="warehouse-grid">
-          <!-- Photo 1: Roller Assembly -->
-          <div class="warehouse-card">
-            <div class="warehouse-img-wrap">
-              <img src="assets/images/warehouse-roller-assembly.jpg" alt="Roller Assembly Floor" loading="lazy">
-              <span class="warehouse-badge">Assembly Floor</span>
-            </div>
-            <div class="warehouse-caption">
-              <h4>Roller Assembly Floor</h4>
-              <p>Cage frame assembly and high-density microfiber sleeve packaging lines.</p>
-            </div>
+      <div class="warehouse-grid">
+        <!-- Photo 1: Roller Assembly -->
+        <div class="warehouse-card">
+          <div class="warehouse-img-wrap">
+            <img src="assets/images/warehouse-roller-assembly.jpg" alt="Roller Assembly Floor" loading="lazy">
+            <span class="warehouse-badge">Assembly Floor</span>
           </div>
-
-          <!-- Photo 2: Brush Inventory -->
-          <div class="warehouse-card">
-            <div class="warehouse-img-wrap">
-              <img src="assets/images/warehouse-brush-inventory.jpg" alt="Panama Brush Master Cartons" loading="lazy">
-              <span class="warehouse-badge">Brush Inventory</span>
-            </div>
-            <div class="warehouse-caption">
-              <h4>Brush Master Cartons</h4>
-              <p>Ready master cartons of Panama paint brushes stored for immediate wholesale dispatch.</p>
-            </div>
-          </div>
-
-          <!-- Photo 3: Central Aisles -->
-          <div class="warehouse-card">
-            <div class="warehouse-img-wrap">
-              <img src="assets/images/warehouse-aisle-stock.jpg" alt="High-Density Storage Aisles" loading="lazy">
-              <span class="warehouse-badge">Storage Aisles</span>
-            </div>
-            <div class="warehouse-caption">
-              <h4>Central Storage Aisles</h4>
-              <p>High-density racking holding roller refills, sandpaper, scrapers, and consumables.</p>
-            </div>
-          </div>
-
-          <!-- Photo 4: Dispatch Bay -->
-          <div class="warehouse-card">
-            <div class="warehouse-img-wrap">
-              <img src="assets/images/warehouse-dispatch-dock.jpg" alt="Dispatch & Logistics Bay" loading="lazy">
-              <span class="warehouse-badge">Dispatch Bay</span>
-            </div>
-            <div class="warehouse-caption">
-              <h4>Dispatch &amp; Loading Bay</h4>
-              <p>Consignments staged for daily scheduled route transport and pan-India freight.</p>
-            </div>
+          <div class="warehouse-caption">
+            <h4>Roller Assembly Floor</h4>
+            <p>Cage frame assembly and high-density microfiber sleeve packaging lines.</p>
           </div>
         </div>
-      </div>
 
-      <!-- View 2: Company Intro Video Showcase -->
-      <div class="media-view-pane" id="paneFacilityVideo" role="tabpanel" aria-labelledby="btnShowVideo">
-        <div class="company-intro-grid" style="background: var(--bg-section); padding: 48px 40px; border-radius: var(--radius-xl); border: 1px solid var(--border-color);">
-          <!-- Story & Value Proposition (Left) -->
-          <div class="intro-content-wrap">
-            <div class="intro-badge">
-              <span class="intro-badge-play">&#9654;</span>
-              <span>Direct Manufacturer Story</span>
-            </div>
-            <h3 class="intro-title" style="font-size: 2.1rem;">
-              Direct Factory Supply.<br>Zero Middlemen. Maximum Margins.
-            </h3>
-            <p class="intro-lead">
-              Watch our 32-second company introduction to see how <strong>J. J. &amp; COMPANY</strong> solves paint dealers' biggest challenges: inflated middleman pricing, shed bristles, and stock shortages during peak painting seasons.
-            </p>
-
-            <div class="intro-pillars">
-              <div class="intro-pillar-item">
-                <div class="intro-pillar-icon">🏭</div>
-                <div class="intro-pillar-text">
-                  <h4>100% In-House Plant in Jalgaon</h4>
-                  <p>Manufactured on-site at Plot No-8, Dixit Wadi. Every rupee goes into raw material density, not broker commissions.</p>
-                </div>
-              </div>
-
-              <div class="intro-pillar-item">
-                <div class="intro-pillar-icon">📦</div>
-                <div class="intro-pillar-text">
-                  <h4>50,000+ Units Ready Standing Stock</h4>
-                  <p>Wall Fin paint rollers and Panama paint brushes kept packed in master cartons for continuous same-day dispatch.</p>
-                </div>
-              </div>
-
-              <div class="intro-pillar-item">
-                <div class="intro-pillar-icon">🛡️</div>
-                <div class="intro-pillar-text">
-                  <h4>Contractor-Tested &amp; Zero-Shed Potting</h4>
-                  <p>Epoxy-locked bristles and solvent-welded cores that guarantee zero customer complaints and repeat painter walk-ins.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="intro-actions">
-              <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20I%20watched%20your%20company%20intro%20video%20and%20would%20like%20to%20get%20direct%20factory%20rates." 
-                 target="_blank" class="btn btn-primary btn-lg">
-                💬 Get Direct Factory Rates
-              </a>
-              <a href="dealer.html" class="btn btn-secondary btn-lg">
-                🤝 Partner as Stockist
-              </a>
-            </div>
-
-            <div class="intro-meta-note">
-              <span>⏱ 32-Second Factory Tour</span>
-              <span>•</span>
-              <span>📍 Plot No-8, Dixit Wadi, Jalgaon</span>
-              <span>•</span>
-              <span>🔊 Hindi Audio</span>
-            </div>
+        <!-- Photo 2: Brush Inventory -->
+        <div class="warehouse-card">
+          <div class="warehouse-img-wrap">
+            <img src="assets/images/warehouse-brush-inventory.jpg" alt="Panama Brush Master Cartons" loading="lazy">
+            <span class="warehouse-badge">Brush Inventory</span>
           </div>
+          <div class="warehouse-caption">
+            <h4>Brush Master Cartons</h4>
+            <p>Ready master cartons of Panama paint brushes stored for immediate wholesale dispatch.</p>
+          </div>
+        </div>
 
-          <!-- Sleek Vertical Phone Reel Frame (Right) -->
-          <div class="intro-video-container">
-            <div class="phone-mockup-frame">
-              <div class="phone-speaker-notch"></div>
-              
-              <div class="phone-screen" id="introPhoneScreen">
-                <!-- Live Plant Tag -->
-                <div class="video-floating-badge">
-                  <span class="badge-live-pulse"></span>
-                  <span>JJ &amp; COMPANY Plant</span>
-                </div>
+        <!-- Photo 3: Central Aisles -->
+        <div class="warehouse-card">
+          <div class="warehouse-img-wrap">
+            <img src="assets/images/warehouse-aisle-stock.jpg" alt="High-Density Storage Aisles" loading="lazy">
+            <span class="warehouse-badge">Storage Aisles</span>
+          </div>
+          <div class="warehouse-caption">
+            <h4>Central Storage Aisles</h4>
+            <p>High-density racking holding roller refills, sandpaper, scrapers, and consumables.</p>
+          </div>
+        </div>
 
-                <!-- Native HTML5 Video Element -->
-                <video 
-                  id="companyIntroVideo"
-                  class="company-video-element"
-                  controls
-                  loading="lazy"
-                  preload="metadata"
-                  playsinline
-                  width="360"
-                  height="640"
-                  poster="assets/images/jj-intro-poster.jpg"
-                  aria-label="JJ & Company 32-Second Factory Introduction Video">
-                  <source src="assets/videos/jj-company-intro.mp4" type="video/mp4">
-                  Your browser does not support HTML5 video playback.
-                </video>
-
-                <!-- Interactive Click-to-Play Overlay -->
-                <div class="video-overlay-cover" id="videoOverlayCover" aria-label="Play JJ & Company Intro Video">
-                  <button type="button" class="video-play-btn" id="videoPlayOverlayBtn" aria-label="Play Video">
-                    &#9654;
-                  </button>
-                  <span class="video-play-label">Watch Company Intro</span>
-                  <span class="video-play-subtext">32s • Direct Plant Tour</span>
-                </div>
-              </div>
-            </div>
+        <!-- Photo 4: Dispatch Bay -->
+        <div class="warehouse-card">
+          <div class="warehouse-img-wrap">
+            <img src="assets/images/warehouse-dispatch-dock.jpg" alt="Dispatch & Logistics Bay" loading="lazy">
+            <span class="warehouse-badge">Dispatch Bay</span>
+          </div>
+          <div class="warehouse-caption">
+            <h4>Dispatch &amp; Loading Bay</h4>
+            <p>Consignments staged for daily scheduled route transport and pan-India freight.</p>
           </div>
         </div>
       </div>
@@ -695,6 +572,41 @@
       </div>
     </div>
   </footer>
+
+  <!-- Company Intro Video Lightbox Modal -->
+  <div id="companyVideoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="companyVideoModalTitle">
+    <div class="modal-video-card">
+      <div class="modal-video-header">
+        <div class="modal-video-title" id="companyVideoModalTitle">
+          <span style="display: inline-block; width: 8px; height: 8px; background: #25D366; border-radius: 50%;"></span>
+          JJ &amp; COMPANY — Factory Tour (32s)
+        </div>
+        <button type="button" class="modal-video-close" id="closeCompanyVideoModal" aria-label="Close Video">✕</button>
+      </div>
+      <div class="modal-video-body">
+        <video 
+          id="modalVideoElement" 
+          controls 
+          playsinline 
+          preload="none" 
+          poster="assets/images/jj-intro-poster.jpg"
+          width="360" 
+          height="640">
+          <source src="assets/videos/jj-company-intro.mp4" type="video/mp4">
+          Your browser does not support HTML5 video playback.
+        </video>
+      </div>
+      <div style="padding: 10px 4px 2px 4px; text-align: center;">
+        <p style="color: #CBD5E1; font-size: 0.78rem; margin: 0 0 10px 0;">
+          📍 Plot No-8, Dixit Wadi, Jalgaon • Direct Factory Dispatch
+        </p>
+        <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20I%20watched%20your%20company%20intro%20video%20and%20would%20like%20factory%20rates." 
+           target="_blank" class="btn btn-whatsapp btn-sm btn-block">
+          💬 Get Direct Factory Rates on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Floating WhatsApp -->
   <a id="floatingWhatsApp" href="https://wa.me/919422775429" target="_blank" class="floating-whatsapp"
