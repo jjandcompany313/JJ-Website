@@ -396,16 +396,26 @@ function initCompanyVideoModal() {
   const video = document.getElementById("modalVideoElement");
   const triggerBtns = document.querySelectorAll(".btn-video-trigger");
 
-  if (!modal || !triggerBtns.length) return;
+  if (!modal) return;
 
   function openModal() {
     modal.classList.add("open");
     document.body.style.overflow = "hidden";
     if (video) {
-      video.currentTime = 0;
-      video.play().catch(err => {
-        console.warn("Autoplay in modal blocked by browser:", err);
-      });
+      if (!video.src || video.src === "") {
+        video.src = "assets/videos/jj-company-intro.mp4";
+      }
+      try {
+        video.currentTime = 0;
+      } catch (e) {
+        // Ignored if metadata not loaded yet
+      }
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.log("Browser requires user gesture to play unmuted audio:", err);
+        });
+      }
     }
   }
 
@@ -414,8 +424,17 @@ function initCompanyVideoModal() {
     document.body.style.overflow = "";
     if (video) {
       video.pause();
+      try {
+        video.currentTime = 0;
+      } catch (e) {
+        // Ignored
+      }
     }
   }
+
+  // Expose globally for inline onclick handlers
+  window.openCompanyVideoModal = openModal;
+  window.closeCompanyVideoModal = closeModal;
 
   triggerBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {

@@ -9,7 +9,7 @@
     content="Direct manufacturer of paint rollers, Panama paint brushes, thinner, polish, and paper. Based in Jalgaon, Maharashtra — supplying dealers and stockists all over India.">
 
   <link rel="canonical" href="https://jjandcompany.net/">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2.4">
   
   <!-- Standard Favicons & Google Search Icons (Multiples of 48px as required by Google) -->
   <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -319,7 +319,7 @@
         </div>
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
           <a href="assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-primary btn-lg">📥 Download Master Catalogue (PDF)</a>
-          <button type="button" class="btn btn-outline-white btn-lg btn-video-trigger">▶ Watch Introduction Video</button>
+          <button type="button" class="btn btn-outline-white btn-lg btn-video-trigger" onclick="openCompanyVideoModal()">▶ Watch Introduction Video</button>
           <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20please%20send%20wholesale%20price%20list." target="_blank" class="btn btn-outline-white btn-lg">💬 Request Price List</a>
         </div>
       </div>
@@ -336,7 +336,7 @@
           Over 50,000 units maintained in ready stock at our Jalgaon central depot. Daily dispatches across Maharashtra, Madhya Pradesh, and all over India.
         </p>
         <div style="margin-top: 18px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-          <button type="button" class="btn btn-secondary btn-video-trigger" aria-haspopup="dialog">
+          <button type="button" class="btn btn-secondary btn-video-trigger" aria-haspopup="dialog" onclick="openCompanyVideoModal()">
             ▶ Watch Introduction Video
           </button>
         </div>
@@ -574,21 +574,22 @@
   </footer>
 
   <!-- Company Intro Video Lightbox Modal -->
-  <div id="companyVideoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="companyVideoModalTitle">
-    <div class="modal-video-card">
+  <div id="companyVideoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="companyVideoModalTitle" onclick="if(event.target === this) closeCompanyVideoModal();">
+    <div class="modal-video-card" onclick="event.stopPropagation();">
       <div class="modal-video-header">
         <div class="modal-video-title" id="companyVideoModalTitle">
           <span style="display: inline-block; width: 8px; height: 8px; background: #25D366; border-radius: 50%;"></span>
           JJ &amp; COMPANY — Introduction Video
         </div>
-        <button type="button" class="modal-video-close" id="closeCompanyVideoModal" aria-label="Close Video">✕</button>
+        <button type="button" class="modal-video-close" id="closeCompanyVideoModal" onclick="closeCompanyVideoModal()" aria-label="Close Video">✕</button>
       </div>
       <div class="modal-video-body">
         <video 
           id="modalVideoElement" 
+          src="assets/videos/jj-company-intro.mp4"
           controls 
           playsinline 
-          preload="none" 
+          preload="metadata" 
           poster="assets/images/jj-intro-poster.jpg"
           width="360" 
           height="640">
@@ -615,10 +616,52 @@
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script src="js/site-data.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/site-data.js?v=2.4"></script>
+  <script src="js/main.js?v=2.4"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    function openCompanyVideoModal() {
+      var modal = document.getElementById("companyVideoModal");
+      var video = document.getElementById("modalVideoElement");
+      if (!modal) return;
+      modal.classList.add("open");
+      document.body.style.overflow = "hidden";
+      if (video) {
+        if (!video.src || video.src === "" || video.src.indexOf("jj-company-intro.mp4") === -1) {
+          video.src = "assets/videos/jj-company-intro.mp4";
+        }
+        try {
+          video.currentTime = 0;
+        } catch (e) {}
+        var p = video.play();
+        if (p !== undefined) {
+          p.catch(function(err) {
+            console.log("Play gesture required by browser:", err);
+          });
+        }
+      }
+    }
+
+    function closeCompanyVideoModal() {
+      var modal = document.getElementById("companyVideoModal");
+      var video = document.getElementById("modalVideoElement");
+      if (!modal) return;
+      modal.classList.remove("open");
+      document.body.style.overflow = "";
+      if (video) {
+        video.pause();
+        try {
+          video.currentTime = 0;
+        } catch (e) {}
+      }
+    }
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        closeCompanyVideoModal();
+      }
+    });
   </script>
 </body>
 
