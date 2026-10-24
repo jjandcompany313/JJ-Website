@@ -173,3 +173,35 @@ Each page also includes synchronized `og:type`, `og:title`, `og:description`, `o
 6. **Automation & Maintenance:**
    - Created `build-products.js` to deterministically regenerate all product pages from single source of truth `products.json`.
    - Created `scripts/verify-products.js` automated test suite to validate all 38 HTML files.
+
+---
+
+## 5. Panama Brush Catalogue Integration (Implemented)
+
+**Date:** October 24, 2026  
+**File Provided:** `JJ_Company_Panama_Brush_Catalog.pdf`  
+**Deliverables:**
+1. **Asset Management:**
+   - Copied master PDF to `/assets/docs/JJ_Company_Panama_Brush_Catalog.pdf`.
+   - Extracted and rendered all 15 catalogue pages in high-resolution into `/assets/images/brushes/` (`panama-page-01.jpg` to `panama-page-15.jpg`).
+2. **Product Pages & Database (`products.json`):**
+   - Mapped each of the 13 Panama brushes to its official catalogue page visual:
+     - Panama Swan Brush &rarr; `panama-page-03.jpg` (1", 1.5", 2", 2.5", 3", 4")
+     - Panama 222 Brush &rarr; `panama-page-04.jpg` (1", 1.5", 2", 2.5", 3", 4")
+     - Panama 996 PVC Handle &rarr; `panama-page-05.jpg` (1", 1.5", 2", 2.5", 3", 4")
+     - Panama Tip-Top PVC Handle &rarr; `panama-page-06.jpg` (1", 1.5", 2", 2.5", 3")
+     - Panama Winner Brush &rarr; `panama-page-07.jpg` (1", 2", 3")
+     - Panama Honda Brush &rarr; `panama-page-08.jpg` (4")
+     - Panama 815 Brush &rarr; `panama-page-09.jpg` (4")
+     - Panama 777 PVC Handle &rarr; `panama-page-10.jpg` (3", 4")
+     - Panama Apex PVC Handle &rarr; `panama-page-11.jpg` (4")
+     - Panama Deluxe Long Hair &rarr; `panama-page-12.jpg` (4")
+     - Panama Tynex Wooden Handle &rarr; `panama-page-13.jpg` (4", 5")
+     - Panama CAT 100% Pure Bristol &rarr; `panama-page-14.jpg` (4")
+     - Panama RRR Black & White &rarr; `panama-page-15.jpg` (4")
+   - Updated size variant specifications to match the official catalogue exactly (e.g. Tip-Top 1" to 3").
+3. **Dedicated Download Action Across Site:**
+   - Added `Download Panama Brush Catalogue (PDF)` button to all 13 brush product detail pages.
+   - Updated Category Hub (`/products/brushes.html`) with direct Panama Brush Catalogue download.
+   - Added direct download link in the Main Products page (`/products.html`) under Category 2: Brushes card.
+   - Updated global footer across all pages with quick access to all 3 official PDF catalogues: Master Catalogue, Wall Fin Catalogue, and Panama Brush Catalogue.

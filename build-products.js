@@ -142,6 +142,7 @@ function getFooterHtml() {
             <li><a href="/products/accessories.html">3. Thinners, Polish &amp; Abrasives</a></li>
             <li><a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download><span aria-hidden="true">📥</span> Master Catalogue (PDF)</a></li>
             <li><a href="/assets/docs/Wall_Fin_Paint_Roller_Catalogue_2026.pdf" download><span aria-hidden="true">📥</span> Wall Fin Catalogue (PDF)</a></li>
+            <li><a href="/assets/docs/JJ_Company_Panama_Brush_Catalog.pdf" download><span aria-hidden="true">📥</span> Panama Brush Catalogue (PDF)</a></li>
           </ul>
         </div>
 
@@ -401,6 +402,7 @@ data.products.forEach(p => {
               <span aria-hidden="true">📥</span> Download Master Catalogue (PDF)
             </a>
             ${p.category === 'paint-rollers' ? '<a href="/assets/docs/Wall_Fin_Paint_Roller_Catalogue_2026.pdf" download class="btn btn-outline btn-sm"><span aria-hidden="true">📥</span> Download Wall Fin Catalogue (PDF)</a>' : ''}
+            ${p.category === 'panama-brushes' ? '<a href="/assets/docs/JJ_Company_Panama_Brush_Catalog.pdf" download class="btn btn-outline btn-sm"><span aria-hidden="true">📥</span> Download Panama Brush Catalogue (PDF)</a>' : ''}
           </div>
         </div>
 
@@ -470,8 +472,8 @@ const categoriesDef = [
     badge: 'Direct Import • 13 Signature Models',
     intro: 'Directly imported from specialized brush manufacturing partners and distributed at direct wholesale rates. Built with 100% computerized epoxy bristle potting, stainless steel ferrules, and ergonomic handles to eliminate bristle shedding.',
     filterCat: 'panama-brushes',
-    catalogDownload: '/assets/docs/JJ_Company_Master_Catalogue_2026.pdf',
-    catalogName: 'Master Product Catalogue (PDF)'
+    catalogDownload: '/assets/docs/JJ_Company_Panama_Brush_Catalog.pdf',
+    catalogName: 'Panama Paint Brush Catalogue (PDF)'
   },
   {
     id: 'accessories',

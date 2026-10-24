@@ -20,7 +20,9 @@
       "description": "13 signature imported Panama paint brush models from 1\" to 5\" sizes with stainless steel ferrules, ergonomic grips, and computerized epoxy bristle potting to guarantee zero bristle shed on oil, enamel, and emulsion applications.",
       "manufactured": "Imported Directly from Specialized Partner Manufacturer",
       "brand": "Panama",
-      "trademark": "Imported Range"
+      "trademark": "Imported Range",
+      "catalogDownload": "/assets/docs/JJ_Company_Panama_Brush_Catalog.pdf",
+      "catalogName": "Panama Paint Brush Catalogue (PDF)"
     },
     {
       "id": "accessories",
@@ -44,7 +46,12 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-03.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-03.jpg",
-      "availableSizes": ["2 Inch", "4 Inch", "6 Inch", "9 Inch"],
+      "availableSizes": [
+        "2 Inch",
+        "4 Inch",
+        "6 Inch",
+        "9 Inch"
+      ],
       "construction": "Standard • 20 mm core diameter",
       "fabricType": "High-Density Woven Microfiber Blue Stripe",
       "handleGrip": "Ergonomic Heavy-Duty Polymer Cage Handle",
@@ -60,7 +67,11 @@
         "Compatible Paints": "Emulsions, Primers, Distempers, Acrylic Latex",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-yellow-line-paint-roller", "wallfin-brown-line-paint-roller", "wallfin-green-thread-38mm-paint-roller"]
+      "related": [
+        "wallfin-yellow-line-paint-roller",
+        "wallfin-brown-line-paint-roller",
+        "wallfin-green-thread-38mm-paint-roller"
+      ]
     },
     {
       "id": "wallfin-yellow-line-paint-roller",
@@ -71,7 +82,12 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-04.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-04.jpg",
-      "availableSizes": ["2 Inch", "4 Inch", "6 Inch", "9 Inch"],
+      "availableSizes": [
+        "2 Inch",
+        "4 Inch",
+        "6 Inch",
+        "9 Inch"
+      ],
       "construction": "Standard • 20 mm core diameter",
       "fabricType": "Yellow Line Woven High-Nap Microfiber",
       "handleGrip": "Ergonomic Heavy-Duty Polymer Cage Handle",
@@ -87,7 +103,11 @@
         "Compatible Paints": "Plastic Emulsion, Oil Bound Distemper, Wall Putty Primers",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-blue-line-paint-roller", "wallfin-yellow-line-38mm-paint-roller", "wallfin-tiger-38mm-paint-roller"]
+      "related": [
+        "wallfin-blue-line-paint-roller",
+        "wallfin-yellow-line-38mm-paint-roller",
+        "wallfin-tiger-38mm-paint-roller"
+      ]
     },
     {
       "id": "wallfin-brown-line-paint-roller",
@@ -98,7 +118,12 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-05.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-05.jpg",
-      "availableSizes": ["2 Inch", "4 Inch", "6 Inch", "9 Inch"],
+      "availableSizes": [
+        "2 Inch",
+        "4 Inch",
+        "6 Inch",
+        "9 Inch"
+      ],
       "construction": "Standard • 20 mm core diameter",
       "fabricType": "Brown Stripe Extra-Dense Synthetic Nap",
       "handleGrip": "Comfort Yellow Handle Cage",
@@ -114,7 +139,11 @@
         "Compatible Paints": "Interior Acrylic Emulsions, Distempers",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-blue-line-paint-roller", "wallfin-green-paint-roller", "wallfin-tiger-38mm-paint-roller"]
+      "related": [
+        "wallfin-blue-line-paint-roller",
+        "wallfin-green-paint-roller",
+        "wallfin-tiger-38mm-paint-roller"
+      ]
     },
     {
       "id": "wallfin-green-paint-roller",
@@ -125,7 +154,11 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-06.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-06.jpg",
-      "availableSizes": ["2 Inch", "4 Inch", "6 Inch"],
+      "availableSizes": [
+        "2 Inch",
+        "4 Inch",
+        "6 Inch"
+      ],
       "construction": "Standard • 20 mm core diameter",
       "fabricType": "Green Plush High-Resilience Pile",
       "handleGrip": "Reinforced Steel Shank with Ergonomic Grip",
@@ -141,7 +174,11 @@
         "Compatible Paints": "Interior Emulsion, Wood Finishes, Primers",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-green-thread-38mm-paint-roller", "wallfin-yellow-line-18mm-fixed-roller", "wallfin-foam-fix-roller"]
+      "related": [
+        "wallfin-green-thread-38mm-paint-roller",
+        "wallfin-yellow-line-18mm-fixed-roller",
+        "wallfin-foam-fix-roller"
+      ]
     },
     {
       "id": "wallfin-green-thread-38mm-paint-roller",
@@ -152,7 +189,13 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-07.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-07.jpg",
-      "availableSizes": ["2 Inch", "4 Inch", "6 Inch", "7 Inch", "9 Inch"],
+      "availableSizes": [
+        "2 Inch",
+        "4 Inch",
+        "6 Inch",
+        "7 Inch",
+        "9 Inch"
+      ],
       "construction": "Heavy-Duty • 38 mm core diameter",
       "fabricType": "Green Thread High-Output Industrial Pile",
       "handleGrip": "Heavy-Duty 8mm Wire Cage Frame",
@@ -168,7 +211,11 @@
         "Compatible Paints": "Exterior Weatherproof Emulsions, High-Build Acrylics, Primers",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-yellow-line-38mm-paint-roller", "wallfin-tiger-38mm-paint-roller", "wallfin-texture-38mm-paint-roller"]
+      "related": [
+        "wallfin-yellow-line-38mm-paint-roller",
+        "wallfin-tiger-38mm-paint-roller",
+        "wallfin-texture-38mm-paint-roller"
+      ]
     },
     {
       "id": "wallfin-yellow-line-38mm-paint-roller",
@@ -179,7 +226,13 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-08.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-08.jpg",
-      "availableSizes": ["2 Inch", "4 Inch", "6 Inch", "7 Inch", "9 Inch"],
+      "availableSizes": [
+        "2 Inch",
+        "4 Inch",
+        "6 Inch",
+        "7 Inch",
+        "9 Inch"
+      ],
       "construction": "Heavy-Duty • 38 mm core diameter",
       "fabricType": "Yellow Line Premium Microfiber",
       "handleGrip": "Heavy-Duty Steel Rod Frame with Polymer Grip",
@@ -195,7 +248,11 @@
         "Compatible Paints": "Interior & Exterior Emulsions, Putty Primers",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-green-thread-38mm-paint-roller", "wallfin-tiger-38mm-paint-roller", "wallfin-foam-fix-38mm-roller"]
+      "related": [
+        "wallfin-green-thread-38mm-paint-roller",
+        "wallfin-tiger-38mm-paint-roller",
+        "wallfin-foam-fix-38mm-roller"
+      ]
     },
     {
       "id": "wallfin-tiger-38mm-paint-roller",
@@ -206,7 +263,13 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-09.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-09.jpg",
-      "availableSizes": ["2 Inch", "4 Inch", "6 Inch", "7 Inch", "9 Inch"],
+      "availableSizes": [
+        "2 Inch",
+        "4 Inch",
+        "6 Inch",
+        "7 Inch",
+        "9 Inch"
+      ],
       "construction": "Heavy-Duty • 38 mm core diameter",
       "fabricType": "Tiger Pattern Reinforced Poly-Acrylic Nap",
       "handleGrip": "Ergonomic Contractor Frame",
@@ -222,7 +285,11 @@
         "Compatible Paints": "Rough Surface Exterior Emulsions, Cement Paints, Waterproof Primers",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-green-thread-38mm-paint-roller", "wallfin-texture-38mm-paint-roller", "wallfin-epoxy-paint-roller"]
+      "related": [
+        "wallfin-green-thread-38mm-paint-roller",
+        "wallfin-texture-38mm-paint-roller",
+        "wallfin-epoxy-paint-roller"
+      ]
     },
     {
       "id": "wallfin-texture-38mm-paint-roller",
@@ -233,7 +300,10 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-10.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-10.jpg",
-      "availableSizes": ["7 Inch", "9 Inch"],
+      "availableSizes": [
+        "7 Inch",
+        "9 Inch"
+      ],
       "construction": "Heavy-Duty • 38 mm core diameter",
       "fabricType": "Open-Cell Textured Pattern Foam / Coarse Fabric",
       "handleGrip": "Reinforced Cage Frame",
@@ -249,7 +319,11 @@
         "Compatible Paints": "Textured Finishes, Relief Base Coats, High-Build Acrylic Textures",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-tiger-38mm-paint-roller", "wallfin-green-thread-38mm-paint-roller", "wallfin-foam-fix-38mm-roller"]
+      "related": [
+        "wallfin-tiger-38mm-paint-roller",
+        "wallfin-green-thread-38mm-paint-roller",
+        "wallfin-foam-fix-38mm-roller"
+      ]
     },
     {
       "id": "wallfin-epoxy-paint-roller",
@@ -260,7 +334,12 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-11.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-11.jpg",
-      "availableSizes": ["2 Inch", "4 Inch", "6 Inch", "9 Inch"],
+      "availableSizes": [
+        "2 Inch",
+        "4 Inch",
+        "6 Inch",
+        "9 Inch"
+      ],
       "construction": "Solvent-Proof Epoxy Resistant Core",
       "fabricType": "Lint-Free Solvent-Proof White Woven Pile",
       "handleGrip": "Heavy-Duty Solvent-Resistant Polymer Handle",
@@ -276,7 +355,11 @@
         "Compatible Paints": "Epoxy Floor Paints, PU Coatings, Marine Enamels, Aggressive Solvents",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-blue-line-paint-roller", "wallfin-foam-fix-roller", "wallfin-green-thread-38mm-paint-roller"]
+      "related": [
+        "wallfin-blue-line-paint-roller",
+        "wallfin-foam-fix-roller",
+        "wallfin-green-thread-38mm-paint-roller"
+      ]
     },
     {
       "id": "wallfin-foam-fix-roller",
@@ -287,7 +370,12 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-12.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-12.jpg",
-      "availableSizes": ["2 Inch", "4 Inch", "6 Inch", "9 Inch"],
+      "availableSizes": [
+        "2 Inch",
+        "4 Inch",
+        "6 Inch",
+        "9 Inch"
+      ],
       "construction": "Standard • 20 mm core diameter",
       "fabricType": "High-Density Seamless Polyurethane Foam",
       "handleGrip": "Standard Ergonomic Handle",
@@ -303,7 +391,11 @@
         "Compatible Paints": "Synthetic Enamels, Oil Paints, Metal Primers, Clear Varnishes",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-foam-fix-38mm-roller", "wallfin-epoxy-paint-roller", "wallfin-yellow-line-paint-roller"]
+      "related": [
+        "wallfin-foam-fix-38mm-roller",
+        "wallfin-epoxy-paint-roller",
+        "wallfin-yellow-line-paint-roller"
+      ]
     },
     {
       "id": "wallfin-foam-fix-38mm-roller",
@@ -314,7 +406,10 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-13.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-13.jpg",
-      "availableSizes": ["6 Inch", "9 Inch"],
+      "availableSizes": [
+        "6 Inch",
+        "9 Inch"
+      ],
       "construction": "Heavy-Duty • 38 mm core diameter",
       "fabricType": "Thick-Wall High-Density Foam Sleeve",
       "handleGrip": "Reinforced Contractor Cage Frame",
@@ -330,7 +425,11 @@
         "Compatible Paints": "Gloss Enamels, PU Floor Topcoats, Lacquers",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-foam-fix-roller", "wallfin-epoxy-paint-roller", "wallfin-texture-38mm-paint-roller"]
+      "related": [
+        "wallfin-foam-fix-roller",
+        "wallfin-epoxy-paint-roller",
+        "wallfin-texture-38mm-paint-roller"
+      ]
     },
     {
       "id": "wallfin-yellow-line-18mm-fixed-roller",
@@ -341,7 +440,11 @@
       "inHouseManufactured": true,
       "pageImage": "/assets/images/rollers/wallfin-page-14.jpg",
       "thumbnail": "/assets/images/rollers/wallfin-page-14.jpg",
-      "availableSizes": ["2 Inch", "4 Inch", "6 Inch"],
+      "availableSizes": [
+        "2 Inch",
+        "4 Inch",
+        "6 Inch"
+      ],
       "construction": "Slim Profile • 18 mm core diameter (Fixed Frame)",
       "fabricType": "Yellow Stripe Woven Microfiber",
       "handleGrip": "Fixed Solid Frame Wire Construction",
@@ -357,7 +460,11 @@
         "Compatible Paints": "Emulsions, Enamels, Anti-Rust Primers",
         "Packaging": "Standard Master Cartons (Bulk Wholesale)"
       },
-      "related": ["wallfin-green-paint-roller", "wallfin-yellow-line-paint-roller", "wallfin-foam-fix-roller"]
+      "related": [
+        "wallfin-green-paint-roller",
+        "wallfin-yellow-line-paint-roller",
+        "wallfin-foam-fix-roller"
+      ]
     },
     {
       "id": "panama-swan-paint-brush",
@@ -365,9 +472,16 @@
       "name": "Panama Swan Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["1 Inch", "1.5 Inch", "2 Inch", "2.5 Inch", "3 Inch", "4 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-03.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-03.jpg",
+      "availableSizes": [
+        "1 Inch",
+        "1.5 Inch",
+        "2 Inch",
+        "2.5 Inch",
+        "3 Inch",
+        "4 Inch"
+      ],
       "handleGrip": "Yellow & Black Comfort Polymer Grip",
       "bristleType": "100% Solid Round Tapered Synthetic Filament",
       "ferrule": "Corrosion-Resistant Stainless Steel",
@@ -376,14 +490,18 @@
       "specs": {
         "Brand": "Panama (Imported Collection)",
         "Sourcing": "Direct Factory Import & Wholesale Distribution",
-        "Available Sizes": "1\", 1.5\", 2\", 2.5\", 3\", 4\"",
+        "Available Sizes": "1 Inch, 1.5 Inch, 2 Inch, 2.5 Inch, 3 Inch, 4 Inch",
         "Handle Material": "Yellow & Black Dual-Tone Ergonomic Polymer",
         "Bristle Material": "High-Flex Synthetic Filaments",
         "Potting": "100% Computerized Epoxy Potting (Zero Shed)",
         "Ferrule": "Rust-Proof Stainless Steel",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-222-paint-brush", "panama-996-pvc-paint-brush", "panama-tip-top-paint-brush"]
+      "related": [
+        "panama-222-paint-brush",
+        "panama-996-pvc-paint-brush",
+        "panama-tip-top-paint-brush"
+      ]
     },
     {
       "id": "panama-222-paint-brush",
@@ -391,9 +509,16 @@
       "name": "Panama 222 Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["1 Inch", "1.5 Inch", "2 Inch", "2.5 Inch", "3 Inch", "4 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-04.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-04.jpg",
+      "availableSizes": [
+        "1 Inch",
+        "1.5 Inch",
+        "2 Inch",
+        "2.5 Inch",
+        "3 Inch",
+        "4 Inch"
+      ],
       "handleGrip": "Classic Red Lacquered Finish",
       "bristleType": "High-Grade Synthetic Filament Blend",
       "ferrule": "Heavy-Duty Steel Ferrule",
@@ -402,13 +527,17 @@
       "specs": {
         "Brand": "Panama (Imported Collection)",
         "Sourcing": "Direct Factory Import & Wholesale Distribution",
-        "Available Sizes": "1\", 1.5\", 2\", 2.5\", 3\", 4\"",
+        "Available Sizes": "1 Inch, 1.5 Inch, 2 Inch, 2.5 Inch, 3 Inch, 4 Inch",
         "Handle Material": "Classic Red Finish Polymer Handle",
         "Bristle Material": "Synthetic Filament Blend",
         "Potting": "100% Epoxy Potting (Zero Bristle Shed)",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-swan-paint-brush", "panama-996-pvc-paint-brush", "panama-winner-paint-brush"]
+      "related": [
+        "panama-swan-paint-brush",
+        "panama-996-pvc-paint-brush",
+        "panama-winner-paint-brush"
+      ]
     },
     {
       "id": "panama-996-pvc-paint-brush",
@@ -416,9 +545,16 @@
       "name": "Panama 996 PVC Handle Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["1 Inch", "1.5 Inch", "2 Inch", "2.5 Inch", "3 Inch", "4 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-05.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-05.jpg",
+      "availableSizes": [
+        "1 Inch",
+        "1.5 Inch",
+        "2 Inch",
+        "2.5 Inch",
+        "3 Inch",
+        "4 Inch"
+      ],
       "handleGrip": "Orange Solvent-Resistant Heavy PVC",
       "bristleType": "Solvent-Resistant Bristle Blend",
       "ferrule": "Stainless Steel Riveted Ferrule",
@@ -427,13 +563,17 @@
       "specs": {
         "Brand": "Panama (Imported Collection)",
         "Sourcing": "Direct Factory Import & Wholesale Distribution",
-        "Available Sizes": "1\", 1.5\", 2\", 2.5\", 3\", 4\"",
+        "Available Sizes": "1 Inch, 1.5 Inch, 2 Inch, 2.5 Inch, 3 Inch, 4 Inch",
         "Handle Material": "High-Impact Orange PVC",
         "Bristle Type": "Solvent-Resistant Bristle Blend",
         "Potting": "100% Epoxy Potting",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-tip-top-paint-brush", "panama-777-pvc-paint-brush", "panama-815-paint-brush"]
+      "related": [
+        "panama-tip-top-paint-brush",
+        "panama-777-pvc-paint-brush",
+        "panama-815-paint-brush"
+      ]
     },
     {
       "id": "panama-tip-top-paint-brush",
@@ -441,9 +581,15 @@
       "name": "Panama Tip-Top PVC Handle Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["1 Inch", "1.5 Inch", "2 Inch", "2.5 Inch", "3 Inch", "4 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-06.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-06.jpg",
+      "availableSizes": [
+        "1 Inch",
+        "1.5 Inch",
+        "2 Inch",
+        "2.5 Inch",
+        "3 Inch"
+      ],
       "handleGrip": "Pink Comfort Lightweight PVC Grip",
       "bristleType": "Solid Round Tapered Smooth Filaments",
       "ferrule": "Polished Stainless Steel",
@@ -452,13 +598,17 @@
       "specs": {
         "Brand": "Panama (Imported Collection)",
         "Sourcing": "Direct Factory Import & Wholesale Distribution",
-        "Available Sizes": "1\", 1.5\", 2\", 2.5\", 3\", 4\"",
+        "Available Sizes": "1 Inch, 1.5 Inch, 2 Inch, 2.5 Inch, 3 Inch",
         "Handle Material": "Pink Ergonomic PVC Handle",
         "Bristle Type": "Solid Round Tapered (SRT) Synthetic",
         "Potting": "100% Epoxy Potting",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-996-pvc-paint-brush", "panama-777-pvc-paint-brush", "panama-winner-paint-brush"]
+      "related": [
+        "panama-996-pvc-paint-brush",
+        "panama-777-pvc-paint-brush",
+        "panama-winner-paint-brush"
+      ]
     },
     {
       "id": "panama-winner-paint-brush",
@@ -466,9 +616,13 @@
       "name": "Panama Winner Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["1 Inch", "2 Inch", "3 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-07.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-07.jpg",
+      "availableSizes": [
+        "1 Inch",
+        "2 Inch",
+        "3 Inch"
+      ],
       "handleGrip": "Blue Ergonomic Handle",
       "bristleType": "All-Purpose Synthetic Bristles",
       "ferrule": "Steel Plated Ferrule",
@@ -477,13 +631,17 @@
       "specs": {
         "Brand": "Panama (Imported Collection)",
         "Sourcing": "Direct Factory Import & Wholesale Distribution",
-        "Available Sizes": "1\", 2\", 3\"",
+        "Available Sizes": "1 Inch, 2 Inch, 3 Inch",
         "Handle Material": "Blue Polymer Grip",
         "Bristle Type": "Synthetic Bristle Blend",
         "Potting": "100% Epoxy Potting",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-swan-paint-brush", "panama-222-paint-brush", "panama-honda-paint-brush"]
+      "related": [
+        "panama-swan-paint-brush",
+        "panama-222-paint-brush",
+        "panama-honda-paint-brush"
+      ]
     },
     {
       "id": "panama-honda-paint-brush",
@@ -491,9 +649,11 @@
       "name": "Panama Honda Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["4 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-08.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-08.jpg",
+      "availableSizes": [
+        "4 Inch"
+      ],
       "handleGrip": "Red Heavy-Duty Wide Handle",
       "bristleType": "Export-Quality Extra-Dense Bristles",
       "ferrule": "Heavy Gauge Steel",
@@ -502,13 +662,17 @@
       "specs": {
         "Brand": "Panama (Imported Collection)",
         "Sourcing": "Direct Factory Import & Wholesale Distribution",
-        "Available Sizes": "4 Inch Broad Wall Format",
+        "Available Sizes": "4 Inch",
         "Handle Material": "Heavy-Duty Red Polymer",
         "Bristle Type": "Export Quality Bristle Blend",
         "Potting": "100% Epoxy Potting",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-815-paint-brush", "panama-apex-pvc-paint-brush", "panama-777-pvc-paint-brush"]
+      "related": [
+        "panama-815-paint-brush",
+        "panama-apex-pvc-paint-brush",
+        "panama-777-pvc-paint-brush"
+      ]
     },
     {
       "id": "panama-815-paint-brush",
@@ -516,9 +680,11 @@
       "name": "Panama 815 Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["4 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-09.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-09.jpg",
+      "availableSizes": [
+        "4 Inch"
+      ],
       "handleGrip": "Yellow/Black Export Grip",
       "bristleType": "100% Guaranteed Export Grade Dense Bristles",
       "ferrule": "Anti-Rust Plated Heavy Steel",
@@ -533,7 +699,11 @@
         "Potting": "100% Epoxy Potting",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-honda-paint-brush", "panama-apex-pvc-paint-brush", "panama-deluxe-long-hair-paint-brush"]
+      "related": [
+        "panama-honda-paint-brush",
+        "panama-apex-pvc-paint-brush",
+        "panama-deluxe-long-hair-paint-brush"
+      ]
     },
     {
       "id": "panama-777-pvc-paint-brush",
@@ -541,9 +711,12 @@
       "name": "Panama 777 PVC Handle Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["3 Inch", "4 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-10.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-10.jpg",
+      "availableSizes": [
+        "3 Inch",
+        "4 Inch"
+      ],
       "handleGrip": "Pink Heavy PVC Handle",
       "bristleType": "Dense Tufted Synthetic Bristles",
       "ferrule": "Stainless Steel Riveted",
@@ -552,13 +725,17 @@
       "specs": {
         "Brand": "Panama (Imported Collection)",
         "Sourcing": "Direct Factory Import & Wholesale Distribution",
-        "Available Sizes": "3\", 4\"",
+        "Available Sizes": "3 Inch, 4 Inch",
         "Handle Material": "Pink Heavy-Duty PVC",
         "Bristle Type": "Dense Tufted Filaments",
         "Potting": "100% Epoxy Potting",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-tip-top-paint-brush", "panama-996-pvc-paint-brush", "panama-815-paint-brush"]
+      "related": [
+        "panama-tip-top-paint-brush",
+        "panama-996-pvc-paint-brush",
+        "panama-815-paint-brush"
+      ]
     },
     {
       "id": "panama-apex-pvc-paint-brush",
@@ -566,9 +743,11 @@
       "name": "Panama Apex PVC Handle Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["4 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-11.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-11.jpg",
+      "availableSizes": [
+        "4 Inch"
+      ],
       "handleGrip": "Yellow Apex PVC Grip",
       "bristleType": "Apex Export Quality Weatherproof Filament",
       "ferrule": "Heavy-Duty Steel Ferrule",
@@ -583,7 +762,11 @@
         "Potting": "100% Epoxy Potting",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-815-paint-brush", "panama-honda-paint-brush", "panama-deluxe-long-hair-paint-brush"]
+      "related": [
+        "panama-815-paint-brush",
+        "panama-honda-paint-brush",
+        "panama-deluxe-long-hair-paint-brush"
+      ]
     },
     {
       "id": "panama-deluxe-long-hair-paint-brush",
@@ -591,9 +774,11 @@
       "name": "Panama Deluxe Long Hair Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["4 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-12.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-12.jpg",
+      "availableSizes": [
+        "4 Inch"
+      ],
       "handleGrip": "Deluxe Black & Red Grip",
       "bristleType": "Extra-Long Natural & Synthetic Bristle Filaments",
       "ferrule": "Heavy Gauge Mirror-Finish Ferrule",
@@ -608,7 +793,11 @@
         "Potting": "100% Epoxy Potting",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-tynex-wooden-paint-brush", "panama-cat-pure-bristol-paint-brush", "panama-815-paint-brush"]
+      "related": [
+        "panama-tynex-wooden-paint-brush",
+        "panama-cat-pure-bristol-paint-brush",
+        "panama-815-paint-brush"
+      ]
     },
     {
       "id": "panama-tynex-wooden-paint-brush",
@@ -616,9 +805,12 @@
       "name": "Panama Tynex Wooden Handle Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["4 Inch", "5 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-13.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-13.jpg",
+      "availableSizes": [
+        "4 Inch",
+        "5 Inch"
+      ],
       "handleGrip": "Lacquered Natural Hardwood Handle",
       "bristleType": "Premium Tynex Synthetic Filaments",
       "ferrule": "Stainless Steel Seamless Ferrule",
@@ -627,13 +819,17 @@
       "specs": {
         "Brand": "Panama (Imported Collection)",
         "Sourcing": "Direct Factory Import & Wholesale Distribution",
-        "Available Sizes": "4\", 5\"",
+        "Available Sizes": "4 Inch, 5 Inch",
         "Handle Material": "Natural Lacquered Hardwood",
         "Bristle Type": "Premium Tynex Filaments",
         "Potting": "100% Epoxy Potting",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-cat-pure-bristol-paint-brush", "panama-deluxe-long-hair-paint-brush", "panama-rrr-paint-brush"]
+      "related": [
+        "panama-cat-pure-bristol-paint-brush",
+        "panama-deluxe-long-hair-paint-brush",
+        "panama-rrr-paint-brush"
+      ]
     },
     {
       "id": "panama-cat-pure-bristol-paint-brush",
@@ -641,9 +837,11 @@
       "name": "Panama CAT 100% Pure Bristol Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["4 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-14.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-14.jpg",
+      "availableSizes": [
+        "4 Inch"
+      ],
       "handleGrip": "Black Heavy Grip",
       "bristleType": "100% Pure White Natural Bristol",
       "ferrule": "Heavy-Duty Stainless Steel",
@@ -658,7 +856,11 @@
         "Potting": "100% Epoxy Potting (Zero Shed)",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-tynex-wooden-paint-brush", "panama-rrr-paint-brush", "panama-deluxe-long-hair-paint-brush"]
+      "related": [
+        "panama-tynex-wooden-paint-brush",
+        "panama-rrr-paint-brush",
+        "panama-deluxe-long-hair-paint-brush"
+      ]
     },
     {
       "id": "panama-rrr-paint-brush",
@@ -666,9 +868,11 @@
       "name": "Panama RRR Black & White Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes-collection.jpg",
-      "thumbnail": "/assets/images/brushes-collection.jpg",
-      "availableSizes": ["4 Inch"],
+      "pageImage": "/assets/images/brushes/panama-page-15.jpg",
+      "thumbnail": "/assets/images/brushes/panama-page-15.jpg",
+      "availableSizes": [
+        "4 Inch"
+      ],
       "handleGrip": "Black RRR Branded Handle",
       "bristleType": "Export Pure Bristle (Black & White Available)",
       "ferrule": "Reinforced Steel Ferrule",
@@ -683,7 +887,11 @@
         "Potting": "100% Solvent-Proof Epoxy Potting",
         "Packaging": "Master Wholesale Cartons"
       },
-      "related": ["panama-cat-pure-bristol-paint-brush", "panama-tynex-wooden-paint-brush", "panama-815-paint-brush"]
+      "related": [
+        "panama-cat-pure-bristol-paint-brush",
+        "panama-tynex-wooden-paint-brush",
+        "panama-815-paint-brush"
+      ]
     },
     {
       "id": "maruti-auto-gloss-thinner",
@@ -693,7 +901,14 @@
       "inHouseManufactured": false,
       "pageImage": "/assets/images/accessories-range.jpg",
       "thumbnail": "/assets/images/accessories-range.jpg",
-      "availableSizes": ["250 ml", "500 ml", "1 Litre", "3 Litres", "5 Litres", "20 Litres (Cans & Barrels)"],
+      "availableSizes": [
+        "250 ml",
+        "500 ml",
+        "1 Litre",
+        "3 Litres",
+        "5 Litres",
+        "20 Litres (Cans & Barrels)"
+      ],
       "recommendedUse": "Paint thinning, NC auto finishes, wood polish dilution, spray gun cleaning, and surface degreasing.",
       "shortDesc": "Maruti Auto Gloss Thinner available in packs from 250ml bottles to 20L commercial drums. Direct wholesale dispatch for hardware and automotive paint shops.",
       "specs": {
@@ -704,7 +919,11 @@
         "Uses": "Paint thinning, degreasing, spray gun cleaning",
         "Packaging": "Tin Cans, HDPE Bottles, and Master Drums"
       },
-      "related": ["nico-wood-polish", "cumi-abrasives-machine-paper", "wooden-steel-pata"]
+      "related": [
+        "nico-wood-polish",
+        "cumi-abrasives-machine-paper",
+        "wooden-steel-pata"
+      ]
     },
     {
       "id": "nico-wood-polish",
@@ -714,7 +933,11 @@
       "inHouseManufactured": false,
       "pageImage": "/assets/images/accessories-range.jpg",
       "thumbnail": "/assets/images/accessories-range.jpg",
-      "availableSizes": ["250 ml", "500 ml", "1 Litre"],
+      "availableSizes": [
+        "250 ml",
+        "500 ml",
+        "1 Litre"
+      ],
       "recommendedUse": "Natural timber finishes, furniture polishing, antique restoration, and carpentry coatings.",
       "shortDesc": "Nico Wood Polish in 250ml, 500ml, and 1L bottles. Delivers deep grain enhancement and rich gloss protection on natural hardwood and plywood.",
       "specs": {
@@ -725,7 +948,11 @@
         "Compatible Solvents": "Denatured Spirit / NC Thinner",
         "Packaging": "Standard Master Cartons"
       },
-      "related": ["maruti-auto-gloss-thinner", "cumi-abrasives-machine-paper", "panama-cat-pure-bristol-paint-brush"]
+      "related": [
+        "maruti-auto-gloss-thinner",
+        "cumi-abrasives-machine-paper",
+        "panama-cat-pure-bristol-paint-brush"
+      ]
     },
     {
       "id": "cumi-abrasives-machine-paper",
@@ -735,7 +962,12 @@
       "inHouseManufactured": false,
       "pageImage": "/assets/images/accessories-range.jpg",
       "thumbnail": "/assets/images/accessories-range.jpg",
-      "availableSizes": ["Cut Sheets (Various Grits)", "Dry Sheets", "Waterproof Sheets", "230 mm Machine Paper Discs"],
+      "availableSizes": [
+        "Cut Sheets (Various Grits)",
+        "Dry Sheets",
+        "Waterproof Sheets",
+        "230 mm Machine Paper Discs"
+      ],
       "recommendedUse": "Wall putty sanding, wood smoothing, metal rust removal, and motorized orbital sander prep.",
       "shortDesc": "Cumi Abrasives full product series: Silicon carbide waterproof sheets, dry sandpaper, cut sheets, and 230mm circular machine sanding paper.",
       "specs": {
@@ -746,7 +978,11 @@
         "Substrates": "Putty, Plaster, Wood, Metal & Automobile Panels",
         "Packaging": "Bulk Bundles & Master Packs"
       },
-      "related": ["wooden-steel-pata", "maruti-auto-gloss-thinner", "wallfin-texture-38mm-paint-roller"]
+      "related": [
+        "wooden-steel-pata",
+        "maruti-auto-gloss-thinner",
+        "wallfin-texture-38mm-paint-roller"
+      ]
     },
     {
       "id": "wooden-steel-pata",
@@ -771,7 +1007,11 @@
         "Blade Material": "High-Tensile Spring Steel / Seasoned Hardwood",
         "Packaging": "Wholesale Bundles"
       },
-      "related": ["cumi-abrasives-machine-paper", "wallfin-blue-line-paint-roller", "maruti-auto-gloss-thinner"]
+      "related": [
+        "cumi-abrasives-machine-paper",
+        "wallfin-blue-line-paint-roller",
+        "maruti-auto-gloss-thinner"
+      ]
     }
   ]
 }
