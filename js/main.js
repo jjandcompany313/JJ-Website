@@ -118,12 +118,18 @@ function showConfidentialSuccessModal(lead) {
     document.body.appendChild(modal);
   }
 
-  const waLeadMessage =
+  let waLeadMessage =
     `*NEW INQUIRY (From JJ & Company Website)*\n` +
     `👤 *Name:* ${lead.contactPerson}\n` +
     `🏢 *Business / Shop:* ${lead.shopName || "Direct Inquiry"}\n` +
     `📞 *Phone / WhatsApp:* ${lead.phone}\n` +
-    `📍 *Location:* ${lead.district}\n` +
+    `📍 *Location:* ${lead.district}\n`;
+
+  if (lead.monthlyVolume) {
+    waLeadMessage += `📦 *Est. Monthly Volume:* ${lead.monthlyVolume}\n`;
+  }
+
+  waLeadMessage +=
     `🎯 *Purpose:* ${lead.inquiryType}\n` +
     `🎨 *Products:* ${lead.products}\n` +
     `📝 *Message:* ${lead.message || "None"}`;
@@ -169,107 +175,112 @@ function showConfidentialSuccessModal(lead) {
 
 /* --- The Single Unified Master Inquiry Form --- */
 function initMasterInquiryForm() {
-  const form = document.getElementById("masterInquiryForm") ||
-               document.getElementById("dealerApplicationForm") ||
-               document.getElementById("contactInquiryForm");
-  if (!form) return;
+  const forms = document.querySelectorAll("#masterInquiryForm, #dealerApplicationForm, #contactInquiryForm");
+  if (!forms.length) return;
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  forms.forEach(form => {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn ? submitBtn.innerHTML : "Submit Inquiry";
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : "Submit Inquiry";
 
-    const contactPerson = (
-      document.getElementById("contactPerson")?.value ||
-      document.getElementById("contactName")?.value ||
-      ""
-    ).trim();
+      const contactPerson = (
+        form.querySelector("#contactPerson")?.value ||
+        form.querySelector("#contactName")?.value ||
+        ""
+      ).trim();
 
-    const shopName = (
-      document.getElementById("shopName")?.value ||
-      document.getElementById("contactCompany")?.value ||
-      ""
-    ).trim();
+      const shopName = (
+        form.querySelector("#shopName")?.value ||
+        form.querySelector("#contactCompany")?.value ||
+        ""
+      ).trim();
 
-    const phone = (
-      document.getElementById("phone")?.value ||
-      document.getElementById("contactPhone")?.value ||
-      ""
-    ).trim();
+      const phone = (
+        form.querySelector("#phone")?.value ||
+        form.querySelector("#contactPhone")?.value ||
+        ""
+      ).trim();
 
-    const district = (
-      document.getElementById("district")?.value ||
-      document.getElementById("contactDistrict")?.value ||
-      ""
-    ).trim();
+      const district = (
+        form.querySelector("#district")?.value ||
+        form.querySelector("#contactDistrict")?.value ||
+        ""
+      ).trim();
 
-    const inquiryType = (
-      document.getElementById("inquiryType")?.value ||
-      document.getElementById("monthlyVolume")?.value ||
-      "Dealership & Wholesale Partnership"
-    );
+      const inquiryType = (
+        form.querySelector("#inquiryType")?.value ||
+        "Dealership & Wholesale Partnership"
+      );
 
-    // Products Checkboxes
-    const selectedProducts = [];
-    document.querySelectorAll('input[name="products"]:checked').forEach(cb => {
-      selectedProducts.push(cb.value);
+      const monthlyVolume = (
+        form.querySelector("#monthlyVolume")?.value ||
+        ""
+      ).trim();
+
+      // Products Checkboxes
+      const selectedProducts = [];
+      form.querySelectorAll('input[name="products"]:checked').forEach(cb => {
+        selectedProducts.push(cb.value);
+      });
+
+      const message = (
+        form.querySelector("#message")?.value ||
+        form.querySelector("#contactMessage")?.value ||
+        ""
+      ).trim();
+
+      if (!contactPerson || !phone) {
+        showToast("Please enter your Contact Person Name and Phone / WhatsApp Number.");
+        return;
+      }
+
+      // Set UI to loading state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = "Submitting directly to sheet... ⏳";
+      }
+
+      const now = new Date();
+      const formattedTimestamp = now.toLocaleString("en-IN", {
+        timeZone: "Asia/Kolkata",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false
+      });
+
+      const leadData = {
+        timestamp: formattedTimestamp,
+        contactPerson: contactPerson,
+        shopName: shopName || "Direct Business Inquiry",
+        phone: phone,
+        district: district || "Maharashtra / All India",
+        inquiryType: inquiryType,
+        monthlyVolume: monthlyVolume || "Not specified",
+        products: selectedProducts.join("; ") || "Complete Master Catalogue Range",
+        message: message || "Direct factory inquiry submitted via website.",
+        status: "New Lead",
+        source: form.id === "dealerApplicationForm" ? "Dealer Page Application" : "Website Master Form"
+      };
+
+      // Directly send data to Google Sheet webhook (100% confidential, NO downloads)
+      await sendToGoogleSheet(leadData);
+
+      // Reset form & restore button
+      form.reset();
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
+
+      // Show confidential confirmation popup
+      showConfidentialSuccessModal(leadData);
     });
-
-    const message = (
-      document.getElementById("message")?.value ||
-      document.getElementById("contactMessage")?.value ||
-      ""
-    ).trim();
-
-    if (!contactPerson || !phone) {
-      showToast("Please enter your Contact Person Name and Phone / WhatsApp Number.");
-      return;
-    }
-
-    // Set UI to loading state
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = "Submitting directly to sheet... ⏳";
-    }
-
-    const now = new Date();
-    const formattedTimestamp = now.toLocaleString("en-IN", {
-      timeZone: "Asia/Kolkata",
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: false
-    });
-
-    const leadData = {
-      timestamp: formattedTimestamp,
-      contactPerson: contactPerson,
-      shopName: shopName || "Direct Business Inquiry",
-      phone: phone,
-      district: district || "Maharashtra / All India",
-      inquiryType: inquiryType,
-      products: selectedProducts.join("; ") || "Complete Master Catalogue Range",
-      message: message || "Direct factory inquiry submitted via website.",
-      status: "New Lead",
-      source: "Website Master Form"
-    };
-
-    // Directly send data to Google Sheet webhook (100% confidential, NO downloads)
-    await sendToGoogleSheet(leadData);
-
-    // Reset form & restore button
-    form.reset();
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnText;
-    }
-
-    // Show confidential confirmation popup
-    showConfidentialSuccessModal(leadData);
   });
 }
 

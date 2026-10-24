@@ -5,12 +5,13 @@
  */
 
 const SITE_CONFIG = {
-  // --- Company Profile (Replace when available) ---
+  // --- Company Profile ---
   companyName: "JJ & Company",
+  legalName: "J. J. & Company",
   tagline: "Paint Tools & Accessories Manufacturer",
   businessType: "Direct Factory Manufacturer",
-  establishedYear: "2008",
-  yearsInBusiness: "18+ Years",
+  establishedYear: "2016",
+  yearsInBusiness: "10+ Years",
   monthlyProductionCapacity: "350,000+ Units/Mo",
   
   // --- Contact & Legal Information (From verified Dixit Wadi facility) ---
@@ -22,7 +23,13 @@ const SITE_CONFIG = {
   whatsappRaw: "919422775429", // No +, no spaces for wa.me links
   email: "jjandcompany313@gmail.com",
   gstNumber: "27ACXPN6682N1ZC", // Registered GST
-  logoUrl: "assets/images/jj-company-logo.png",
+  logoUrl: "/assets/images/jj-company-logo.png",
+
+  // --- Official Social & Directory Profiles ---
+  googleBusinessProfile: "https://www.google.com/search?q=J.+J.+%26+COMPANY&stick=H4sIAAAAAAAA_-NgU1I1qDBOSrE0SEu0sDA2MUpJNrK0MqhINjU3SUk0S7EwTjNNNjRIXMTK76WnAERqCs7-vgGOfpEA_DQrHTsAAAA&hl=en",
+  indiamartUrl: "https://www.indiamart.com/kgn-works-pune/",
+  facebookUrl: "https://www.facebook.com/profile.php?id=61594625407272",
+  instagramUrl: "https://www.instagram.com/jjandcompany313/",
   
   // --- Complete Plant & Warehouse Address (Arranged) ---
   plusCode: "2H5C+678",
@@ -37,19 +44,18 @@ const SITE_CONFIG = {
   cityStatePincode: "Jalgaon, Maharashtra 425001, India",
   locationCoordinates: "21°00'28.7\"N 75°34'14.2\"E",
   coordinatesDecimal: "21.007972, 75.570611",
-  googleMapsUrl: "https://maps.google.com/?q=21.007972,75.570611",
+  googleMapsUrl: "https://www.google.com/search?q=J.+J.+%26+COMPANY&stick=H4sIAAAAAAAA_-NgU1I1qDBOSrE0SEu0sDA2MUpJNrK0MqhINjU3SUk0S7EwTjNNNjRIXMTK76WnAERqCs7-vgGOfpEA_DQrHTsAAAA&hl=en",
   googleMapsEmbed: "https://maps.google.com/maps?q=21.007972,75.570611&hl=en&z=17&output=embed",
-  workingHours: "Monday to Saturday: 8:30 AM – 8:00 PM (Sunday Closed)",
+  workingHours: "Monday to Saturday: 8:30 AM – 6:30 PM (Sunday Closed)",
   
-  // --- Supply Territories (Active in MH & MP • Pan-India Supply All Over India) ---
-  supplyScope: "Direct Active Supply in Maharashtra & Madhya Pradesh • Supplying Goods All Over India",
+  // --- Supply Territories ---
+  supplyScope: "Active supply in Jalgaon, Dhule, Nandurbar, Buldhana and Madhya Pradesh; other regions by transport on request.",
   districtsServed: [
     { name: "Jalgaon", state: "Maharashtra", transit: "Same-Day Dispatch", coverage: "Central Manufacturing & Local Depot", badge: "Factory HQ" },
     { name: "Dhule", state: "Maharashtra", transit: "Daily Transport", coverage: "Khandesh West Corridor", badge: "Daily Route" },
     { name: "Nandurbar", state: "Maharashtra", transit: "24-Hour Delivery", coverage: "Scheduled Regional Transport", badge: "Scheduled Route" },
     { name: "Buldhana", state: "Maharashtra", transit: "24-Hour Delivery", coverage: "Vidarbha Gateway Transport", badge: "Scheduled Route" },
-    { name: "Madhya Pradesh (MP)", state: "Madhya Pradesh", transit: "24-48 Hours", coverage: "Interstate Goods Transport Corridor", badge: "Interstate Supply" },
-    { name: "All Over India", state: "Pan-India", transit: "Express Freight Transport", coverage: "Nationwide Wholesale & Bulk Goods Supply", badge: "All India Supply" }
+    { name: "Madhya Pradesh (MP)", state: "Madhya Pradesh", transit: "24-48 Hours", coverage: "Interstate Goods Transport Corridor", badge: "Interstate Supply" }
   ],
   
   ownerName: "Jafar Hanif Nagavadriya",
