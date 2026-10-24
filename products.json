@@ -6,7 +6,7 @@
       "name": "Wallfin™ Paint Rollers & Refills",
       "shortName": "Wallfin™ Paint Rollers",
       "tagline": "In-House Manufactured in Jalgaon • Registered Brand (TM App ID: 8027912)",
-      "description": "Standard 20mm & 38mm diameter core paint rollers, epoxy white, high-density foam fix, and texture rollers across 12 product families and 33 variants. Engineered for professional painter efficiency and zero nap-shedding.",
+      "description": "Standard 20mm & 38mm diameter core paint rollers, epoxy white, high-density foam fix, and texture rollers. Engineered for professional painter efficiency and zero nap-shedding.",
       "manufactured": "In-House (Jalgaon, Maharashtra)",
       "brand": "Wallfin™",
       "trademark": "Application ID: 8027912"
@@ -17,7 +17,7 @@
       "name": "Panama Paint Brushes Collection",
       "shortName": "Panama Paint Brushes",
       "tagline": "Direct Import & Wholesale Distribution • 100% Epoxy Bristle Potting",
-      "description": "13 signature imported Panama paint brush models from 1\" to 5\" sizes with stainless steel ferrules, ergonomic grips, and computerized epoxy bristle potting to guarantee zero bristle shed on oil, enamel, and emulsion applications.",
+      "description": "Imported Panama paint brush collection from 1\" to 5\" sizes with stainless steel ferrules, ergonomic grips, and computerized epoxy bristle potting to guarantee zero bristle shed on oil, enamel, and emulsion applications.",
       "manufactured": "Imported Directly from Specialized Partner Manufacturer",
       "brand": "Panama",
       "trademark": "Imported Range",
@@ -472,8 +472,8 @@
       "name": "Panama Swan Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-03.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-03.jpg",
+      "pageImage": "/assets/images/brushes/panama-swan.png",
+      "thumbnail": "/assets/images/brushes/panama-swan.png",
       "availableSizes": [
         "1 Inch",
         "1.5 Inch",
@@ -509,8 +509,8 @@
       "name": "Panama 222 Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-04.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-04.jpg",
+      "pageImage": "/assets/images/brushes/panama-222.png",
+      "thumbnail": "/assets/images/brushes/panama-222.png",
       "availableSizes": [
         "1 Inch",
         "1.5 Inch",
@@ -545,8 +545,8 @@
       "name": "Panama 996 PVC Handle Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-05.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-05.jpg",
+      "pageImage": "/assets/images/brushes/panama-996-pvc.png",
+      "thumbnail": "/assets/images/brushes/panama-996-pvc.png",
       "availableSizes": [
         "1 Inch",
         "1.5 Inch",
@@ -581,8 +581,8 @@
       "name": "Panama Tip-Top PVC Handle Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-06.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-06.jpg",
+      "pageImage": "/assets/images/brushes/panama-tip-top.png",
+      "thumbnail": "/assets/images/brushes/panama-tip-top.png",
       "availableSizes": [
         "1 Inch",
         "1.5 Inch",
@@ -616,8 +616,8 @@
       "name": "Panama Winner Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-07.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-07.jpg",
+      "pageImage": "/assets/images/brushes/panama-winner.png",
+      "thumbnail": "/assets/images/brushes/panama-winner.png",
       "availableSizes": [
         "1 Inch",
         "2 Inch",
@@ -649,8 +649,8 @@
       "name": "Panama Honda Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-08.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-08.jpg",
+      "pageImage": "/assets/images/brushes/panama-honda.jpg",
+      "thumbnail": "/assets/images/brushes/panama-honda.jpg",
       "availableSizes": [
         "4 Inch"
       ],
@@ -680,8 +680,8 @@
       "name": "Panama 815 Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-09.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-09.jpg",
+      "pageImage": "/assets/images/brushes/panama-815.jpg",
+      "thumbnail": "/assets/images/brushes/panama-815.jpg",
       "availableSizes": [
         "4 Inch"
       ],
@@ -711,8 +711,8 @@
       "name": "Panama 777 PVC Handle Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-10.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-10.jpg",
+      "pageImage": "/assets/images/brushes/panama-777-pvc.jpg",
+      "thumbnail": "/assets/images/brushes/panama-777-pvc.jpg",
       "availableSizes": [
         "3 Inch",
         "4 Inch"
@@ -743,8 +743,8 @@
       "name": "Panama Apex PVC Handle Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-11.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-11.jpg",
+      "pageImage": "/assets/images/brushes/panama-apex-pvc.png",
+      "thumbnail": "/assets/images/brushes/panama-apex-pvc.png",
       "availableSizes": [
         "4 Inch"
       ],
@@ -774,8 +774,8 @@
       "name": "Panama Deluxe Long Hair Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-12.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-12.jpg",
+      "pageImage": "/assets/images/brushes/panama-deluxe-long-hair.jpg",
+      "thumbnail": "/assets/images/brushes/panama-deluxe-long-hair.jpg",
       "availableSizes": [
         "4 Inch"
       ],
@@ -805,8 +805,8 @@
       "name": "Panama Tynex Wooden Handle Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-13.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-13.jpg",
+      "pageImage": "/assets/images/brushes/panama-tynex-wooden.png",
+      "thumbnail": "/assets/images/brushes/panama-tynex-wooden.png",
       "availableSizes": [
         "4 Inch",
         "5 Inch"
@@ -837,8 +837,8 @@
       "name": "Panama CAT 100% Pure Bristol Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-14.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-14.jpg",
+      "pageImage": "/assets/images/brushes/panama-cat-pure-bristol.png",
+      "thumbnail": "/assets/images/brushes/panama-cat-pure-bristol.png",
       "availableSizes": [
         "4 Inch"
       ],
@@ -868,8 +868,8 @@
       "name": "Panama RRR Black & White Paint Brush",
       "brand": "Panama",
       "inHouseManufactured": false,
-      "pageImage": "/assets/images/brushes/panama-page-15.jpg",
-      "thumbnail": "/assets/images/brushes/panama-page-15.jpg",
+      "pageImage": "/assets/images/brushes/panama-rrr.png",
+      "thumbnail": "/assets/images/brushes/panama-rrr.png",
       "availableSizes": [
         "4 Inch"
       ],

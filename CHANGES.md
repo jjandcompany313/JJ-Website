@@ -205,3 +205,34 @@ Each page also includes synchronized `og:type`, `og:title`, `og:description`, `o
    - Updated Category Hub (`/products/brushes.html`) with direct Panama Brush Catalogue download.
    - Added direct download link in the Main Products page (`/products.html`) under Category 2: Brushes card.
    - Updated global footer across all pages with quick access to all 3 official PDF catalogues: Master Catalogue, Wall Fin Catalogue, and Panama Brush Catalogue.
+
+---
+
+## 6. Panama Brush Studio Photos & Count Removal (Implemented)
+
+**Date:** October 24, 2026  
+**Deliverables:**
+1. **Panama Studio Brush Photos Integration:**
+   - Imported 13 high-resolution studio photos from user-provided `Panama Brushes` folder into `/assets/images/brushes/`:
+     - Panama Swan (`panama-swan.png`)
+     - Panama 222 (`panama-222.png`)
+     - Panama 996 PVC (`panama-996-pvc.png`)
+     - Panama Tip-Top (`panama-tip-top.png`)
+     - Panama Winner (`panama-winner.png`)
+     - Panama Honda (`panama-honda.jpg`)
+     - Panama 815 (`panama-815.jpg`)
+     - Panama 777 PVC (`panama-777-pvc.jpg`)
+     - Panama Apex PVC (`panama-apex-pvc.png`)
+     - Panama Deluxe Long Hair (`panama-deluxe-long-hair.jpg`)
+     - Panama Tynex Wooden (`panama-tynex-wooden.png`)
+     - Panama CAT Pure Bristol (`panama-cat-pure-bristol.png`)
+     - Panama RRR (`panama-rrr.png`)
+   - Mapped all individual brush product pages and category cards directly to these studio photos.
+2. **Category Cover Photo Created:**
+   - Generated composite studio cover photo `/assets/images/brushes-collection.jpg` showcasing real Panama brushes arranged on clean studio background with official direct-import branding.
+3. **Count Text Removal (Sitewide):**
+   - Omitted all count numbers ("12 Wallfin rollers", "12 families", "33 variants", "13 Panama brushes", "13 models", "All 12", "All 13") across titles, meta tags, badges, buttons, and body copy across all pages.
+   - Retained clean, professional category names:
+     - `Wallfin™ Paint Rollers & Refills`
+     - `Panama Paint Brushes Collection`
+     - `Thinners, Polish, Abrasives & Putty Pata`
