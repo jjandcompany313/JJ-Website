@@ -9,10 +9,18 @@ const SITE_CONFIG = {
   companyName: "JJ & Company",
   legalName: "J. J. & Company",
   tagline: "Paint Tools & Accessories Manufacturer",
-  businessType: "Direct Factory Manufacturer",
+  businessType: "Direct Factory Manufacturer & Importer",
   establishedYear: "2016",
   yearsInBusiness: "10+ Years",
   monthlyProductionCapacity: "350,000+ Units/Mo",
+  
+  // --- Trademark & Brand Registrations ---
+  registeredBrand: "Wallfin",
+  trademarkAppId: "8027912",
+  brandDetails: {
+    rollers: "Wallfin™ (Registered Brand, Trademark Application ID: 8027912 — In-House Manufactured)",
+    brushes: "Panama Paint Brushes (Directly Imported from specialized manufacturer)"
+  },
   
   // --- Contact & Legal Information (From verified Dixit Wadi facility) ---
   phone: "+91 94227 75429",
@@ -68,7 +76,7 @@ const SITE_CONFIG = {
   leadWebhookUrl: "https://script.google.com/macros/s/AKfycby0nwelzPOT-bg97Wc-lLWMUbuY1_FPOFOxjRUtQdIPAbF59VMZ403KjiZWdIbuqSaz/exec"
 };
 
-// --- Official PANAMA Paint Brush Collection (13 Models from Factory Catalog) ---
+// --- Official PANAMA Paint Brush Collection (13 Models — Directly Imported from Specialized Manufacturer) ---
 const PANAMA_BRUSH_COLLECTION = [
   { no: "01", name: "Panama Swan Brush", sizes: ["1\"", "1.5\"", "2\"", "2.5\"", "3\"", "4\""], handle: "Yellow & Black Grip", type: "Synthetic Filament", use: "Precision cutting & trim work" },
   { no: "02", name: "Panama 222 Brush", sizes: ["1\"", "1.5\"", "2\"", "2.5\"", "3\"", "4\""], handle: "Classic Red Finish", type: "Synthetic Filament", use: "Interior wall & trim painting" },
@@ -85,7 +93,7 @@ const PANAMA_BRUSH_COLLECTION = [
   { no: "13", name: "Panama RRR Black & White Brush", sizes: ["4\""], handle: "Black RRR Branded Handle", type: "Export Pure Bristle (Black & White)", use: "High-solvent industrial coatings" }
 ];
 
-// --- Official WALL FIN Paint Roller Collection (12 Families / 33 Variants from Factory Catalog) ---
+// --- Official WALLFIN Paint Roller Collection (12 Families / 33 Variants — In-House Manufactured • TM App No. 8027912) ---
 const WALL_FIN_ROLLER_COLLECTION = [
   { no: "01", name: "Wall Fin Blue Line Paint Roller", sizes: ["2\"", "4\"", "6\"", "9\""], construction: "Standard • 20 mm diameter" },
   { no: "02", name: "Wall Fin Yellow Line Paint Roller", sizes: ["2\"", "4\"", "6\"", "9\""], construction: "Standard • 20 mm diameter" },

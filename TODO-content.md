@@ -6,19 +6,21 @@ This document tracks items that require owner confirmation, official records, or
 
 ## 1. Company & Factory Facts
 - [x] **Founding Year**: Confirmed **2016** (10+ Years experience).
+- [x] **Registered Brand / Trademark**: Confirmed **Wallfin™** (Trademark Application ID: **8027912**).
 - [x] **Factory Address**: Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd, Jalgaon, Maharashtra 425001.
 - [x] **Factory Coordinates**: `21.007972, 75.570611`.
 - [x] **GSTIN**: `27ACXPN6682N1ZC`.
 - [x] **Operating Hours**: Monday – Saturday 08:30 – 18:30 (Sunday Closed).
-- [ ] **Registrations & Certifications**: MSME / Udyam registration number, ISO certification, or Trademark registrations (to be added once registration certificates are provided).
-- [ ] **Founding Timeline Milestones**: Key years for factory expansion, mold machinery addition, and Panama brush line launch.
+- [ ] **Registrations & Certifications**: MSME / Udyam registration number or ISO certification (to be added once registration certificates are provided).
+- [ ] **Founding Timeline Milestones**: Additional specific dates for machinery additions.
 
 ---
 
-## 2. Supply Territories & Commercial Terms
+## 2. Sourcing, Manufacturing Scope & Commercial Terms
 - [x] **Primary Active Supply Scope**: Jalgaon, Dhule, Nandurbar, Buldhana (Maharashtra), and Madhya Pradesh. Other regions dispatched via transport on request.
-- [x] **Manufacturing Scope**:
-  - **In-House Manufactured**: Wall Fin paint rollers (18mm, 20mm, 38mm, epoxy, foam fix) and Panama paint brushes (13 models).
+- [x] **Product Sourcing & Manufacturing Classification**:
+  - **In-House Manufactured**: Wallfin™ paint rollers and refills (18mm, 20mm, 38mm, epoxy, foam fix, texture) under registered trademark Application ID: `8027912`.
+  - **Directly Imported**: Authentic Panama paint brushes (13 models imported directly from specialized manufacturing partner).
   - **Available Traded / Partner Products**: Maruti Auto Gloss thinners, Nico wood polish, Cumi abrasive sheets & machine paper, steel & wooden pata.
 - [ ] **Minimum Order Quantity (MOQ)**: Formal master carton MOQ per SKU or consignment value for new stockists (currently handled on request via WhatsApp).
 - [ ] **Sample Packs**: Process and terms for dealers requesting physical sample packs.

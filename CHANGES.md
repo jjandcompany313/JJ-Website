@@ -60,9 +60,11 @@ Each page also includes synchronized `og:type`, `og:title`, `og:description`, `o
      > *"Ready stock on most lines. Some items may be on pre-booking in peak season. Message us for current availability."*
 3. **Production Capacity:**
    - Relabeled `"350,000+ units monthly"` from "standing ready stock" to `"Production capacity"`.
-4. **Manufacturing Line Classification:**
+4. **Manufacturing Line Classification & Registered Trademark:**
    - Renamed `"Three Core Manufacturing Lines"` to `"Our Product Range"`.
-   - Explicitly clarified that **Wall Fin paint rollers** and **Panama paint brushes** are manufactured in-house in Jalgaon, while **Maruti thinners**, **Nico polish**, **Cumi abrasives**, and **wooden/steel pata** are companion available ranges.
+   - **Wallfin™ Registered Trademark**: Formally integrated **Wallfin™** as the registered brand name for in-house manufactured paint rollers and refills (**Trademark Application ID: 8027912**). Added official trademark badges, schema tags, and product labels across all pages.
+   - **Panama Paint Brushes**: Corrected manufacturing claim &mdash; Panama brushes are **directly imported** from specialized manufacturing partners with 100% epoxy potting, supplied at wholesale direct distributor rates.
+   - Clarified that **Maruti thinners**, **Nico polish**, **Cumi abrasives**, and **wooden/steel pata** are companion available ranges.
 5. **Roller Sizing Consistency:**
    - Standardized roller sizing across descriptions to match the physical catalogue (2", 4", 6", 7", 8", 9").
 6. **Years in Business:**
