@@ -130,3 +130,46 @@ Each page also includes synchronized `og:type`, `og:title`, `og:description`, `o
 | **JSON-LD Schema** | PASSED | `Organization` + `LocalBusiness` on Home; `BreadcrumbList` on inner pages. |
 | **Fabricated Facts** | PASSED | Zero fake reviews, zero fake awards; pending items tracked in `TODO-content.md`. |
 | **Form Functionality** | PASSED | Direct Google Sheets cloud sync + WhatsApp modal fallback active on all forms. |
+
+---
+
+## 4. Phase 2 — Product Pages Hub & Individual Product Pages (Implemented)
+
+**Date:** October 24, 2026  
+**Deliverables:**
+1. **Master Product Catalog (`/products.html`):**
+   - Replaced temporary/generic cards with 3 dedicated category pathways:
+     - Wallfin™ Paint Rollers & Refills (12 families / 33 variants)
+     - Panama Paint Brushes (13 signature models)
+     - Surface Finishing Accessories (Thinners, Polish, Abrasives, Pata)
+   - Direct download links for both master catalog and the dedicated 2026 Wallfin catalogue.
+   - Comprehensive alphabetical/family directory linking to all 29 individual product URLs.
+2. **Dedicated Category Hub Pages (3 pages):**
+   - `/products/rollers.html`
+   - `/products/brushes.html`
+   - `/products/accessories.html`
+   - Each page features category breadcrumbs, ItemList structured data, direct inquiry actions, and individual model cards with size pills and quick WhatsApp inquiry buttons.
+3. **Dedicated Individual Product Pages (29 pages):**
+   - **12 Wallfin™ Roller Pages** (`/products/wallfin-*.html`):
+     - Blue Line, Yellow Line, Brown Line, Green, Green Thread 38mm, Yellow Line 38mm, Tiger 38mm, Texture 38mm, Epoxy, Foam Fix (Standard), Foam Fix (38mm), Yellow Line 18mm Fixed.
+     - Brand clearly stated: `Wallfin™ (Registered Brand • TM App ID: 8027912)`.
+     - In-house manufactured at Jalgaon factory with high-resolution page extracts from the official 2026 catalogue (`assets/images/rollers/`).
+   - **13 Panama Paint Brush Pages** (`/products/panama-*.html`):
+     - Swan, 222, 996 PVC, Tip Top, Winner, Honda, 815, 777 PVC, Apex PVC, Deluxe Long Hair, Tynex Wooden, CAT Pure Bristol, RRR.
+     - Brand clearly stated: `Panama (Direct Import)`.
+   - **4 Companion Line Pages** (`/products/maruti-auto-gloss-thinner.html`, `/products/nico-wood-polish.html`, `/products/cumi-abrasives-machine-paper.html`, `/products/wooden-steel-pata.html`).
+   - Every product page contains:
+     - Exactly 1 `<h1>` tag with product name.
+     - Complete technical specification table (Material, Core Diameter, Nap/Pile Length, Solvent Compatibility, Handle Type, Available Sizes, Brand & Manufacturer).
+     - **Strict zero MOQ mention** (per owner instruction: flexible trial & mixed carton orders accommodated).
+     - Direct WhatsApp inquiry button pre-filled with the exact model name.
+     - Dealership application CTA linking to `/dealer.html`.
+     - 3-4 recommended companion/related products.
+     - Both `BreadcrumbList` and `Product` JSON-LD schema (with Brand, Manufacturer, Image, Description).
+4. **Sitemap (`sitemap.xml`):**
+   - Updated from 6 URLs to 38 total indexable URLs with modern syntax (no deprecated tags).
+5. **Favicon & Icon Consistency:**
+   - Standardized `rel="shortcut icon"` fallback on all 38 pages for Google Search bots.
+6. **Automation & Maintenance:**
+   - Created `build-products.js` to deterministically regenerate all product pages from single source of truth `products.json`.
+   - Created `scripts/verify-products.js` automated test suite to validate all 38 HTML files.

@@ -22,7 +22,7 @@ This document tracks items that require owner confirmation, official records, or
   - **In-House Manufactured**: Wallfin™ paint rollers and refills (18mm, 20mm, 38mm, epoxy, foam fix, texture) under registered trademark Application ID: `8027912`.
   - **Directly Imported**: Authentic Panama paint brushes (13 models imported directly from specialized manufacturing partner).
   - **Available Traded / Partner Products**: Maruti Auto Gloss thinners, Nico wood polish, Cumi abrasive sheets & machine paper, steel & wooden pata.
-- [ ] **Minimum Order Quantity (MOQ)**: Formal master carton MOQ per SKU or consignment value for new stockists (currently handled on request via WhatsApp).
+- [x] **Minimum Order Quantity (MOQ)**: Per owner confirmation ("There is no MOQ right now do not mention it"), all MOQ mentions and tables have been omitted across all pages. Flexible order sizes and mixed carton assortments supported.
 - [ ] **Sample Packs**: Process and terms for dealers requesting physical sample packs.
 
 ---

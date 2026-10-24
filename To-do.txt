@@ -1,0 +1,89 @@
+You are working on the static website for JJ & Company (https://jjandcompany.net), a paint-accessories manufacturer in Jalgaon, Maharashtra. Goal: organic SEO and trust improvements to win wholesale/dealer enquiries. Existing files: index.html, products.html, dealer.html, about.html, contact.html, sitemap.xml, robots.txt, and the PDF catalogue at /assets/docs/JJ_Company_Master_Catalogue_2026.pdf.
+
+RULES
+- Keep the current design, logo, phone numbers, GSTIN, WhatsApp links and form handler working.
+- Never invent facts, specs, prices, reviews, ratings, certifications or years. If a fact is missing, add <!-- TODO: ... --> and list it in /TODO-content.md. Read specs from the PDF catalogue where possible.
+- All content must be in static HTML, crawlable without JavaScript. A data file plus build script is fine if it outputs plain HTML.
+- Brand name everywhere: "JJ & Company" (legal name "J. J. & Company" only in footer/about/schema).
+- Each page needs unique, useful copy. No keyword stuffing.
+
+1. URLs and canonicals
+- Canonical host: https://jjandcompany.net (no www). 301 redirect www to non-www, http to https, and /index.html to /.
+- Make all internal links root-relative, with no www and no /index.html.
+- Each page gets one self-referencing canonical and <html lang="en-IN">.
+- If you rename any URL, 301 the old one.
+
+2. Titles and meta descriptions (replace; unique per page; titles up to about 65 chars, descriptions up to 155)
+- Home: "Paint Rollers & Brushes Manufacturer, Jalgaon | JJ & Company" / "Direct manufacturer of paint rollers, Panama brushes, thinner and polish in Jalgaon, Maharashtra. Dealer rates, catalogue and sample packs on WhatsApp."
+- Products: "Paint Rollers, Panama Brushes & Thinner Catalog | JJ & Company" / "Browse Wall Fin rollers, 13 Panama brush models, thinner, polish and abrasives. Wholesale catalogue from our Jalgaon factory."
+- Dealer: "Become a Paint Accessories Dealer in Maharashtra | JJ & Company" / "Apply for dealership: direct factory rates on rollers, brushes and thinner for hardware shops and paint stockists in Jalgaon, Dhule, Nandurbar, Buldhana and MP."
+- About: "About JJ & Company | Paint Tool Manufacturer in Jalgaon" (write the description from the About page facts)
+- Contact: "Contact JJ & Company | Factory & Dealer Enquiries, Jalgaon" / "Factory address, phone, WhatsApp and dealer enquiry form. Mon–Sat 8:30 AM–6:30 PM."
+- Write equivalents for all new pages. Add unique og:title/og:description per page, a 1200x630 og:image, and twitter:card.
+
+3. Fix inaccurate claims (use one config/partial so they can be edited in one place)
+- Replace "50,000+ units ready stock", "eliminate stockouts" and "without seasonal delays" with: "Ready stock on most lines. Some items may be on pre-booking in peak season. Message us for current availability."
+- On dealer.html, relabel "350,000+ units monthly" (currently under "Standing Ready Inventory") as "Production capacity".
+- Replace the sitewide "Supplying All Over India" boilerplate (header strip, footer, meta) with: "Active supply in Jalgaon, Dhule, Nandurbar, Buldhana and Madhya Pradesh; other regions by transport on request." <!-- TODO owner to confirm -->
+- Rename "Three Core Manufacturing Lines" to "Our Product Range". Do not say we manufacture thinner, polish or abrasives (Maruti, Nico, Cumi). Use "available range" wording until the owner confirms.
+- Make roller size ranges consistent everywhere, per the catalogue.
+
+4. Product pages (highest SEO impact)
+- Turn /products.html into a hub linking to three category pages: paint rollers, Panama paint brushes, thinner/polish/abrasives.
+- Create one page per roller family (from the catalogue) and per Panama model: Swan, 222, 996 PVC, Tip Top, Winner, Honda, 815, 777, Tynex Wooden, CAT Pure Bristol, Apex, RRR Black, RRR White. Also create pages for the thinner, polish, abrasive sheets and wooden/steel pata ranges.
+- Each page has: one H1, a unique short description, a specs table (sizes, material, pack size, MOQ), a photo with descriptive alt text, a "Get dealer rate on WhatsApp" button with the product name prefilled, a catalogue download link, related products, and breadcrumbs.
+- Generate pages from one products.json so adding products is easy.
+- Add Product JSON-LD (name, description, image, brand, manufacturer). No price, no ratings, no reviews.
+
+5. Location pages
+- Create pages for wholesale paint accessories in Jalgaon, Dhule, Nandurbar, Buldhana and Madhya Pradesh.
+- Each needs at least 350 words of unique content: who it serves, product range, dispatch/transport details, enquiry CTA. Do not just swap the city name.
+- Use only real facts. If you lack them, skip that page and list it in TODO.
+- Link them from the footer and the dealer page.
+
+6. Structured data (validate with Google's Rich Results Test)
+- Home: Organization + LocalBusiness with these details:
+  - name: JJ & Company; legalName: "J. J. & Company"
+  - telephone: +91-94227-75429 and +91-98900-03539
+  - address: Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd, Jalgaon, Maharashtra 425001, IN
+  - geo: 21.007972, 75.570611
+  - hours: Mon–Sat 08:30–18:30
+  - taxID: 27ACXPN6682N1ZC
+  - areaServed
+  - sameAs: Google Maps, IndiaMART, Facebook, Instagram, YouTube (URLs are TODO)
+- BreadcrumbList on all inner pages.
+- No FAQPage schema and no fake review or rating markup.
+
+7. Content additions
+- Headings: exactly one H1 per page, logical H2/H3 (the home page currently jumps to H5). Mark decorative emojis aria-hidden.
+- Dealer page: embed the enquiry form (reuse the existing handler) with name, shop name, phone/WhatsApp, city+district, monthly volume range (dropdown), products interested and message. Add the same volume field to the contact form. Add a visible FAQ: how to become a dealer, sample packs, dispatch process, MOQ <!-- TODO -->.
+- Contact page: embed a lazy-loaded Google Map iframe for the coordinates above, with a title attribute. Keep the "Open in Google Maps" link.
+- About page: add the founding year (TODO), a short timeline, a founder section, and registrations/certifications (TODO). Add a "What dealers say" block that reads from testimonials.json and stays hidden while the file is empty. Add a link to the Google Maps reviews page (TODO URL).
+- Footer: add links to the location pages, a Privacy Policy and the catalogue.
+- Create a simple Privacy Policy page (forms collect names and phone numbers) and mark it for owner/legal review.
+
+8. Performance and technical
+- Convert images to WebP with width/height attributes. Lazy-load images below the fold. Preload the hero image with fetchpriority="high".
+- Intro video: add a poster image and preload="none".
+- Defer non-critical JS, minify CSS/JS, enable gzip/brotli and long cache headers for /assets (via .htaccess or the host's equivalent).
+- Add a custom 404 page (noindex) with links to the main sections, plus a favicon set and web manifest.
+- Lighthouse targets on mobile: Performance 90+, SEO 100, Accessibility 90+, LCP under 2.5 s, CLS under 0.1.
+
+9. Sitemap and robots
+- Regenerate sitemap.xml with all indexable pages as https non-www URLs and real lastmod dates. Drop changefreq and priority. Exclude the 404 page and drafts. Keep robots.txt pointing to the sitemap.
+
+10. Analytics
+- Add GA4 (measurement ID is TODO) with events: whatsapp_click (include page and product), form_submit, catalogue_download, phone_click. Add a disabled placeholder for a Meta Pixel.
+
+11. Hindi and Marathi (do last)
+- Create /hi/ and /mr/ versions of Home and Dealership with correct lang attributes and hreflang (en-IN, hi-IN, mr-IN, x-default).
+- Set them to noindex until the owner has reviewed the translations.
+
+12. Internal linking
+- Breadcrumbs everywhere. Link category pages to model pages and to the dealer page. Add related-product links. The home page links to every category and location page.
+
+DELIVERABLES
+- All changes implemented in logical commits.
+- /TODO-content.md listing every missing fact.
+- /CHANGES.md summarising the work.
+- Verification report: no broken internal links; no duplicate titles or descriptions; each page has one H1 and one canonical; redirects tested (www, http, /index.html); JSON-LD validates; Lighthouse scores.
