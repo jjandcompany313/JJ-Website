@@ -3,11 +3,13 @@ const path = require('path');
 
 const rootDir = path.join(__dirname, '..');
 const productsDir = path.join(rootDir, 'products');
+const locationsDir = path.join(rootDir, 'locations');
 
 const rootHtmlFiles = fs.readdirSync(rootDir).filter(f => f.endsWith('.html')).map(f => path.join(rootDir, f));
 const productHtmlFiles = fs.readdirSync(productsDir).filter(f => f.endsWith('.html')).map(f => path.join(productsDir, f));
+const locationHtmlFiles = fs.existsSync(locationsDir) ? fs.readdirSync(locationsDir).filter(f => f.endsWith('.html')).map(f => path.join(locationsDir, f)) : [];
 
-const allFiles = [...rootHtmlFiles, ...productHtmlFiles];
+const allFiles = [...rootHtmlFiles, ...productHtmlFiles, ...locationHtmlFiles];
 console.log(`Checking ${allFiles.length} HTML files across website...`);
 
 let errors = [];
@@ -68,5 +70,5 @@ if (errors.length > 0) {
   errors.forEach(e => console.error(' - ' + e));
   process.exit(1);
 } else {
-  console.log('ALL 38 HTML pages PASSED verification successfully!');
+  console.log(`ALL ${passed} HTML pages PASSED verification successfully!`);
 }

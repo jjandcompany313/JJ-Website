@@ -264,3 +264,36 @@ Each page also includes synchronized `og:type`, `og:title`, `og:description`, `o
 3. **Product Catalog Specs (`products.json` & `build-products.js`):**
    - Brushes sourcing specification updated from "Direct Factory Import" to clean "Direct Import & Wholesale Distribution".
    - Regenerated all 29 product pages and 3 category hubs with zero remaining "factory" text occurrences.
+
+---
+
+## 8. Phase 3 — Location Pages & Regional Distribution Network (Implemented)
+
+**Date:** October 24, 2026  
+**User Direct Inputs:**
+- Local dispatches in Jalgaon: all orders delivered via local delivery / tempo (no self-pickup).
+- Transport transit timeline: 2 to 3 days delivery via regular regional parcel transport.
+- Transport agencies: various regular regional transport parcel services (e.g. Khandesh & MP line transport).
+
+**Deliverables:**
+1. **5 Dedicated Regional Landing Pages (over 800+ words each of grounded copy):**
+   - **Jalgaon** (`/locations/jalgaon.html`): Home operating base, local delivery & tempo transport across Jalgaon city, Bhusawal, Chalisgaon, Amalner, and district talukas.
+   - **Dhule** (`/locations/dhule.html`): NH-52 / NH-53 junction, regular parcel dispatches (2 to 3 days) to Dhule city, Shirpur, Sakri, and Dondaicha.
+   - **Nandurbar** (`/locations/nandurbar.html`): North Maharashtra trade corridor, serving hardware retailers in Nandurbar town, Shahada, Taloda, and Nawapur.
+   - **Buldhana** (`/locations/buldhana.html`): Vidarbha connecting route, servicing hardware dealers in Malkapur, Khamgaon, Shegaon, and Buldhana.
+   - **Madhya Pradesh** (`/locations/madhya-pradesh.html`): Interstate border corridor, servicing Burhanpur (~75 km), Khandwa, and Indore transit with full GST e-way bill compliance.
+2. **Page Structure & SEO Assets:**
+   - Exactly 1 `<h1>` title per location page.
+   - Self-referencing canonical tag (`https://jjandcompany.net/locations/...`).
+   - BreadcrumbList and WholesaleStore (LocalBusiness) JSON-LD structured data schemas on each page.
+   - Local dealer FAQs with structured accordion formatting.
+   - Embedded direct Dealership Application Form linked to Google Sheets lead logging.
+   - Pre-filled WhatsApp direct inquiry button customized per city.
+   - Direct download links for all 3 official PDF catalogues.
+   - Inter-location cross-links connecting all 5 regions.
+3. **Internal Linking & Navigation:**
+   - Added `Primary Wholesale Supply Network` section in `/dealer.html` linking to all 5 location pages.
+   - Added `Supply Locations` footer column across all 43 website pages.
+   - Updated `sitemap.xml` to 43 total URLs.
+4. **Validation:**
+   - All 43 pages verified via `scripts/verify-products.js` (H1, canonical, lang, shortcut icon, zero MOQ, valid schemas).

@@ -44,9 +44,9 @@ This document tracks items that require owner confirmation, official records, or
 ---
 
 ## 5. Regional Landing Pages (Phase 3)
-- [ ] Unique dispatch and local transport hub details for:
-  - Jalgaon
-  - Dhule
-  - Nandurbar
-  - Buldhana
-  - Madhya Pradesh
+- [x] Unique dispatch and local transport details completed for all 5 target regions (confirmed 2 to 3 days delivery via regular regional parcel transport; local delivery/tempo across Jalgaon):
+  - [x] **Jalgaon** (`/locations/jalgaon.html`)
+  - [x] **Dhule** (`/locations/dhule.html`)
+  - [x] **Nandurbar** (`/locations/nandurbar.html`)
+  - [x] **Buldhana** (`/locations/buldhana.html`)
+  - [x] **Madhya Pradesh** (`/locations/madhya-pradesh.html`)
