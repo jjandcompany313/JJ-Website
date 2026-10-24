@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   companyName: "JJ & Company",
   legalName: "J. J. & Company",
   tagline: "Paint Tools & Accessories Manufacturer",
-  businessType: "Direct Factory Manufacturer & Importer",
+  businessType: "Direct Brand Supply & Importer",
   establishedYear: "2016",
   yearsInBusiness: "10+ Years",
   monthlyProductionCapacity: "350,000+ Units/Mo",
@@ -59,7 +59,7 @@ const SITE_CONFIG = {
   // --- Supply Territories ---
   supplyScope: "Active supply in Jalgaon, Dhule, Nandurbar, Buldhana and Madhya Pradesh; other regions by transport on request.",
   districtsServed: [
-    { name: "Jalgaon", state: "Maharashtra", transit: "Same-Day Dispatch", coverage: "Central Manufacturing & Local Depot", badge: "Factory HQ" },
+    { name: "Jalgaon", state: "Maharashtra", transit: "Same-Day Dispatch", coverage: "Central Depo & Assembly", badge: "Central Depo" },
     { name: "Dhule", state: "Maharashtra", transit: "Daily Transport", coverage: "Khandesh West Corridor", badge: "Daily Route" },
     { name: "Nandurbar", state: "Maharashtra", transit: "24-Hour Delivery", coverage: "Scheduled Regional Transport", badge: "Scheduled Route" },
     { name: "Buldhana", state: "Maharashtra", transit: "24-Hour Delivery", coverage: "Vidarbha Gateway Transport", badge: "Scheduled Route" },

@@ -31,7 +31,7 @@ function getHeaderHtml(activeNav = 'products') {
   <aside class="topbar" aria-label="Top Announcement Bar">
     <div class="container topbar-container">
       <div class="topbar-info">
-        <span class="topbar-badge">DIRECT FACTORY</span>
+        <span class="topbar-badge">DIRECT DEPO</span>
         <span class="topbar-item"><span aria-hidden="true">📍</span> Plot No-8, Dixit Wadi, Jalgaon, Maharashtra 425001</span>
       </div>
       <div class="topbar-actions">
@@ -110,7 +110,7 @@ function getFooterHtml() {
             <span class="brand-name">JJ &amp; COMPANY</span>
           </div>
           <p class="footer-desc">
-            Direct manufacturer of Wallfin™ paint rollers (TM Application ID: 8027912), direct importer of authentic Panama paint brushes, and distributor of finishing accessories in Jalgaon, Maharashtra.
+            Direct distributor & brand supplier of Wallfin™ paint rollers (TM Application ID: 8027912), direct importer of authentic Panama paint brushes, and distributor of finishing accessories at our Jalgaon Depo, Maharashtra.
           </p>
           <div class="gst-badge">
             <span><span aria-hidden="true">🏛️</span> GSTIN:</span>
@@ -147,7 +147,7 @@ function getFooterHtml() {
         </div>
 
         <div>
-          <h4 class="footer-heading">Factory &amp; Head Office</h4>
+          <h4 class="footer-heading">Depo &amp; Head Office</h4>
           <div class="footer-contact-list">
             <div class="footer-contact-item">
               <span aria-hidden="true">📍</span>
@@ -175,7 +175,7 @@ function getFooterHtml() {
 
       <div class="footer-bottom">
         <div>
-          &copy; <span id="currentYear">2026</span> JJ &amp; Company. All rights reserved. Direct Factory Supply.
+          &copy; <span id="currentYear">2026</span> JJ &amp; Company. All rights reserved. Direct Depo Supply.
         </div>
         <div style="display: flex; gap: 20px; flex-wrap: wrap;">
           <span>Active supply in Jalgaon, Dhule, Nandurbar, Buldhana and Madhya Pradesh; other regions by transport on request.</span>
@@ -385,7 +385,7 @@ data.products.forEach(p => {
           <div style="background: var(--bg-section); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 24px;">
             <h3 style="font-size: 0.95rem; color: var(--text-main); font-weight: 700; margin-bottom: 8px;">Wholesale &amp; Dealer Inquiries</h3>
             <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.5; margin-bottom: 16px;">
-              Direct factory supply for hardware shops, paint counters, and regional stockists. Message our sales desk with your requirements for trade rates and dispatch schedules.
+              Direct depo supply for hardware shops, paint counters, and regional stockists. Message our sales desk with your requirements for trade rates and dispatch schedules.
             </p>
             <div style="display: flex; gap: 12px; flex-wrap: wrap;">
               <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg" style="flex: 1; text-align: center; justify-content: center;">
@@ -455,7 +455,7 @@ const categoriesDef = [
     id: 'paint-rollers',
     fileName: 'rollers.html',
     title: 'Wallfin Paint Rollers & Refills Catalog | JJ & Company',
-    metaDesc: 'Explore Wallfin paint rollers and refills manufactured in Jalgaon. Registered brand (TM: 8027912). Standard, 38mm, epoxy and foam rollers.',
+    metaDesc: 'Explore Wallfin paint rollers and refills supplied from our Jalgaon Depo. Registered brand (TM: 8027912). Standard, 38mm, epoxy and foam rollers.',
     h1: 'Wallfin™ Paint Rollers &amp; Refills Range',
     badge: 'In-House Manufactured • TM: 8027912',
     intro: 'Manufactured directly at our Jalgaon plant under registered brand <strong>Wallfin™</strong> (Trademark Application ID: <strong>8027912</strong>). Built with solvent-proof polypropylene cores, high-density microfiber, and heavy-gauge cage frames across standard 20mm and heavy 38mm diameters.',
@@ -467,7 +467,7 @@ const categoriesDef = [
     id: 'panama-brushes',
     fileName: 'brushes.html',
     title: 'Panama Paint Brushes Wholesale Catalog | JJ & Company',
-    metaDesc: 'Browse imported Panama paint brushes from 1 to 5 inch sizes with 100% shed-free epoxy potting. Direct wholesale supply from Jalgaon.',
+    metaDesc: 'Browse imported Panama paint brushes from 1 to 5 inch sizes with 100% shed-free epoxy potting. Direct wholesale supply from our Jalgaon Depo.',
     h1: 'Panama Paint Brushes Collection',
     badge: 'Direct Import • Signature Collection',
     intro: 'Directly imported from specialized brush manufacturing partners and distributed at direct wholesale rates. Built with 100% computerized epoxy bristle potting, stainless steel ferrules, and ergonomic handles to eliminate bristle shedding.',

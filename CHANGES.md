@@ -236,3 +236,31 @@ Each page also includes synchronized `og:type`, `og:title`, `og:description`, `o
      - `Wallfin™ Paint Rollers & Refills`
      - `Panama Paint Brushes Collection`
      - `Thinners, Polish, Abrasives & Putty Pata`
+
+---
+
+## 7. Facility Realism: "Factory" to "Depo" Transition (Implemented)
+
+**Date:** October 24, 2026  
+**User Direct Instruction:** *"Change 'factory' To 'Depo' coz we don't have heavy machinnery yet so be real."*  
+**Deliverables:**
+1. **Terminology Alignment Across All 38 HTML Pages & Configs:**
+   - Replaced all operational and marketing claims using "Factory" with truthful, grounded "Depo" terminology:
+     - `DIRECT FACTORY` &rarr; `DIRECT DEPO`
+     - `Direct Factory Supply` &rarr; `Direct Depo Supply`
+     - `Direct Factory Rates` &rarr; `Direct Depo Rates`
+     - `Direct Factory Pricing` &rarr; `Direct Depo Pricing`
+     - `Direct Factory Dispatch` &rarr; `Direct Depo Dispatch`
+     - `Factory & Head Office` &rarr; `Depo & Head Office`
+     - `Factory Address & Office` &rarr; `Depo Address & Office`
+     - `Factory Coordinates` &rarr; `Depo Coordinates`
+     - `Factory Desk` &rarr; `Depo Desk`
+     - `Factory Inquiry & Dealership Form` &rarr; `Depo Inquiry & Dealership Form`
+     - `Factory Founded` &rarr; `Depo Founded`
+     - `our Jalgaon factory` &rarr; `our Jalgaon Depo`
+2. **Interactive JavaScript & Forms Synchronized:**
+   - Pre-filled WhatsApp button text updated to request "direct depo rates".
+   - Submission confirmation modal updated to confirm routing to "depo sales desk".
+3. **Product Catalog Specs (`products.json` & `build-products.js`):**
+   - Brushes sourcing specification updated from "Direct Factory Import" to clean "Direct Import & Wholesale Distribution".
+   - Regenerated all 29 product pages and 3 category hubs with zero remaining "factory" text occurrences.

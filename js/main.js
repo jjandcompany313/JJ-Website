@@ -56,7 +56,7 @@ function initWhatsAppLinks() {
   // Update floating button
   const floatBtn = document.getElementById("floatingWhatsApp");
   if (floatBtn) {
-    floatBtn.href = getWhatsAppUrl("Hello JJ & Company, I am looking for direct factory rates for paint rollers and brushes.");
+    floatBtn.href = getWhatsAppUrl("Hello JJ & Company, I am looking for direct depo rates for paint rollers and brushes.");
   }
 
   // Update hero whatsapp button if present
@@ -146,7 +146,7 @@ function showConfidentialSuccessModal(lead) {
         Inquiry Submitted Successfully!
       </h3>
       <p style="font-size: 0.92rem; color: var(--text-body); margin-bottom: 24px; line-height: 1.5;">
-        Thank you, <strong>${escapeHtml(lead.contactPerson)}</strong>. Your requirement has been saved directly to our factory sales desk. Our team will contact you shortly with commercial rates.
+        Thank you, <strong>${escapeHtml(lead.contactPerson)}</strong>. Your requirement has been saved directly to our depo sales desk. Our team will contact you shortly with commercial rates.
       </p>
 
       <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -263,7 +263,7 @@ function initMasterInquiryForm() {
         inquiryType: inquiryType,
         monthlyVolume: monthlyVolume || "Not specified",
         products: selectedProducts.join("; ") || "Complete Master Catalogue Range",
-        message: message || "Direct factory inquiry submitted via website.",
+        message: message || "Direct depo inquiry submitted via website.",
         status: "New Lead",
         source: form.id === "dealerApplicationForm" ? "Dealer Page Application" : "Website Master Form"
       };
