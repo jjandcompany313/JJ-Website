@@ -175,7 +175,7 @@ function generateFooter() {
             </div>
             <div class="footer-contact-item" style="margin-top: 6px;">
               <span aria-hidden="true">🌐</span>
-              <a href="https://www.google.com/search?q=J.+J.+%26+COMPANY&stick=H4sIAAAAAAAA_-NgU1I1qDBOSrE0SEu0sDA2MUpJNrK0MqhINjU3SUk0S7EwTjNNNjRIXMTK76WnAERqCs7-vgGOfpEA_DQrHTsAAAA&hl=en" target="_blank" rel="noopener">Google Business Profile &rarr;</a>
+              <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener">Google Business Profile &rarr;</a>
             </div>
           </div>
         </div>
@@ -266,6 +266,21 @@ locationsData.forEach(loc => {
       "@type": "AdministrativeArea",
       "name": `${loc.name}, ${loc.state}`
     },
+    "sameAs": [
+      "https://g.page/r/CQrB9YNt2nTFEBM",
+      "https://www.indiamart.com/kgn-works-pune/",
+      "https://www.facebook.com/profile.php?id=61594625407272",
+      "https://www.instagram.com/jjandcompany313/"
+    ],
+    "knowsAbout": [
+      "Paint accessories manufacturer",
+      "Paint accessories wholesale",
+      "Paint roller manufacturer in India",
+      "Panama paint brush supplier",
+      "Painting tools wholesale dealer",
+      "Paint roller refills",
+      "Texture painting tools"
+    ],
     "parentOrganization": {
       "@type": "Organization",
       "name": "JJ & Company",
@@ -393,6 +408,9 @@ locationsData.forEach(loc => {
       <div style="display: flex; gap: 12px; flex-wrap: wrap;">
         <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
           <span aria-hidden="true">💬</span> Get Wholesale Rates on WhatsApp
+        </a>
+        <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg" style="display: inline-flex; align-items: center; gap: 6px;">
+          <span aria-hidden="true">⭐</span> Google Verified Profile
         </a>
         <a href="#inquiryForm" class="btn btn-secondary btn-lg">
           <span aria-hidden="true">📝</span> Apply for Dealership

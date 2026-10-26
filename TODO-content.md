@@ -28,7 +28,8 @@ This document tracks items that require owner confirmation, official records, or
 ---
 
 ## 3. Profiles & Online Listings
-- [x] **Google Business Profile**: `https://www.google.com/search?q=J.+J.+%26+COMPANY&stick=H4sIAAAAAAAA_-NgU1I1qDBOSrE0SEu0sDA2MUpJNrK0MqhINjU3SUk0S7EwTjNNNjRIXMTK76WnAERqCs7-vgGOfpEA_DQrHTsAAAA&hl=en`
+- [x] **Google Business Profile**: `https://g.page/r/CQrB9YNt2nTFEBM`
+- [x] **Google Reviews Direct Link**: `https://g.page/r/CQrB9YNt2nTFEBM/review`
 - [x] **IndiaMART**: `https://www.indiamart.com/kgn-works-pune/`
 - [x] **Facebook**: `https://www.facebook.com/profile.php?id=61594625407272`
 - [x] **Instagram**: `https://www.instagram.com/jjandcompany313/`

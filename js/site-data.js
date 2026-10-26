@@ -34,7 +34,8 @@ const SITE_CONFIG = {
   logoUrl: "/assets/images/jj-company-logo.png",
 
   // --- Official Social & Directory Profiles ---
-  googleBusinessProfile: "https://www.google.com/search?q=J.+J.+%26+COMPANY&stick=H4sIAAAAAAAA_-NgU1I1qDBOSrE0SEu0sDA2MUpJNrK0MqhINjU3SUk0S7EwTjNNNjRIXMTK76WnAERqCs7-vgGOfpEA_DQrHTsAAAA&hl=en",
+  googleBusinessProfile: "https://g.page/r/CQrB9YNt2nTFEBM",
+  googleReviewUrl: "https://g.page/r/CQrB9YNt2nTFEBM/review",
   indiamartUrl: "https://www.indiamart.com/kgn-works-pune/",
   facebookUrl: "https://www.facebook.com/profile.php?id=61594625407272",
   instagramUrl: "https://www.instagram.com/jjandcompany313/",
@@ -52,7 +53,7 @@ const SITE_CONFIG = {
   cityStatePincode: "Jalgaon, Maharashtra 425001, India",
   locationCoordinates: "21°00'28.7\"N 75°34'14.2\"E",
   coordinatesDecimal: "21.007972, 75.570611",
-  googleMapsUrl: "https://www.google.com/search?q=J.+J.+%26+COMPANY&stick=H4sIAAAAAAAA_-NgU1I1qDBOSrE0SEu0sDA2MUpJNrK0MqhINjU3SUk0S7EwTjNNNjRIXMTK76WnAERqCs7-vgGOfpEA_DQrHTsAAAA&hl=en",
+  googleMapsUrl: "https://g.page/r/CQrB9YNt2nTFEBM",
   googleMapsEmbed: "https://maps.google.com/maps?q=21.007972,75.570611&hl=en&z=17&output=embed",
   workingHours: "Monday to Saturday: 8:30 AM – 6:30 PM (Sunday Closed)",
   
