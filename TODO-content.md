@@ -39,6 +39,7 @@ This document tracks items that require owner confirmation, official records, or
 
 ## 4. Analytics & Tracking
 - [x] **Google Analytics (GA4)**: `G-T22MWNL11C` installed.
+- [x] **Google Search Console**: Domain verified & sitemap submitted (`https://jjandcompany.net/sitemap.xml`).
 - [ ] **Meta (Facebook) Pixel ID**: Placeholder ready; provide Pixel ID when running Meta ads.
 
 ---
@@ -50,3 +51,13 @@ This document tracks items that require owner confirmation, official records, or
   - [x] **Nandurbar** (`/locations/nandurbar.html`)
   - [x] **Buldhana** (`/locations/buldhana.html`)
   - [x] **Madhya Pradesh** (`/locations/madhya-pradesh.html`)
+
+---
+
+## 6. Real Imagery, WebP Compression & 404 Routing (Phase 4A)
+- [x] **Real Wallfin™ Roller Imagery**: 28 real studio photos from `Wall Fin Roller` compressed by 97% into WebP and mapped to all 12 roller models.
+- [x] **Authentic Studio Covers**:
+  - `master-showcase-cover.webp` & `.jpg`: Combined studio composition of real Wallfin Rollers & authentic Panama Brushes on Home Hero.
+  - `rollers-collection.webp` & `.jpg`: Studio arrangement of real Wallfin rollers for category cards.
+- [x] **Sitewide WebP Conversion**: 93 site assets converted to modern WebP with `<picture>` tags.
+- [x] **Custom 404 Error Page**: `404.html` with directory links, `noindex`, and `.htaccess` routing `ErrorDocument 404 /404.html`.

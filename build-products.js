@@ -240,7 +240,10 @@ data.products.forEach(p => {
     if (!rel) return '';
     return `
       <div style="background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-color); padding: 18px; display: flex; flex-direction: column;">
-        <img src="${rel.thumbnail}" alt="${escapeHtml(rel.name)}" style="width: 100%; height: 180px; object-fit: contain; background: #FAFAFA; border-radius: var(--radius-sm); margin-bottom: 12px;" loading="lazy">
+        <picture>
+          <source srcset="${rel.thumbnail.endsWith('.webp') ? rel.thumbnail : rel.thumbnail.replace(/\.(png|jpe?g)$/i, '.webp')}" type="image/webp">
+          <img src="${rel.thumbnail.endsWith('.webp') ? rel.thumbnail.replace(/\.webp$/i, '.png') : rel.thumbnail}" alt="${escapeHtml(rel.name)}" style="width: 100%; height: 180px; object-fit: contain; background: #FAFAFA; border-radius: var(--radius-sm); margin-bottom: 12px;" loading="lazy" width="280" height="180">
+        </picture>
         <h4 style="font-size: 1rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">${escapeHtml(rel.name)}</h4>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; flex-grow: 1;">${escapeHtml(rel.shortDesc.slice(0, 110))}...</p>
         <a href="/products/${rel.id}.html" class="btn btn-outline btn-sm" style="text-align: center;">View Specifications &rarr;</a>
@@ -371,7 +374,10 @@ data.products.forEach(p => {
         <!-- Product Image & Preview -->
         <div>
           <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); background: #FFFFFF; box-shadow: var(--shadow-card); padding: 16px;">
-            <img src="${p.pageImage}" alt="${escapeHtml(p.name)} - JJ &amp; Company Jalgaon" style="width: 100%; height: auto; display: block; border-radius: var(--radius-md);" loading="eager" fetchpriority="high">
+            <picture>
+              <source srcset="${p.pageImage.endsWith('.webp') ? p.pageImage : p.pageImage.replace(/\.(png|jpe?g)$/i, '.webp')}" type="image/webp">
+              <img src="${p.pageImage.endsWith('.webp') ? p.pageImage.replace(/\.webp$/i, '.png') : p.pageImage}" alt="${escapeHtml(p.name)} - JJ &amp; Company Jalgaon" style="width: 100%; height: auto; display: block; border-radius: var(--radius-md);" loading="eager" fetchpriority="high" width="800" height="800">
+            </picture>
           </div>
           <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
             ${p.inHouseManufactured ? '<span class="topbar-badge" style="background:#E0F2FE; color:#0369A1; font-weight:700;">IN-HOUSE MANUFACTURED • JALGAON PLANT</span>' : ''}
@@ -507,7 +513,10 @@ categoriesDef.forEach(cat => {
   const cardsHtml = catProducts.map(p => `
     <article class="category-card" style="display: flex; flex-direction: column;">
       <div class="category-image-wrap">
-        <img src="${p.thumbnail}" alt="${escapeHtml(p.name)}" loading="lazy">
+        <picture>
+          <source srcset="${p.thumbnail.endsWith('.webp') ? p.thumbnail : p.thumbnail.replace(/\.(png|jpe?g)$/i, '.webp')}" type="image/webp">
+          <img src="${p.thumbnail.endsWith('.webp') ? p.thumbnail.replace(/\.webp$/i, '.png') : p.thumbnail}" alt="${escapeHtml(p.name)}" loading="lazy" width="400" height="260">
+        </picture>
         <span class="category-badge">${p.inHouseManufactured ? 'Wallfin™ (TM: 8027912)' : (p.category === 'panama-brushes' ? 'Direct Import' : 'Available Range')}</span>
       </div>
       <div class="category-content" style="display: flex; flex-direction: column; flex-grow: 1;">

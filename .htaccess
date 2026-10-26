@@ -18,7 +18,13 @@
   # 1c. Redirect /index.html to /
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
   RewriteRule ^index\.html$ https://jjandcompany.net/ [R=301,L]
+
+  # 1d. Legacy product-detail.html redirect
+  RewriteRule ^product-detail\.html$ https://jjandcompany.net/products.html [R=301,L]
 </IfModule>
+
+# Custom 404 Error Page
+ErrorDocument 404 /404.html
 
 # 2. Correct MIME Types
 <IfModule mod_mime.c>

@@ -19,9 +19,9 @@ for (const filePath of allFiles) {
   const relPath = path.relative(rootDir, filePath).replace(/\\/g, '/');
   const content = fs.readFileSync(filePath, 'utf8');
 
-  // Skip redirect stubs
-  if (content.includes('http-equiv="refresh"')) {
-    console.log(`Skipping redirect stub: ${relPath}`);
+  // Skip redirect stubs & 404 error page
+  if (content.includes('http-equiv="refresh"') || relPath === '404.html') {
+    console.log(`Skipping special file: ${relPath}`);
     continue;
   }
 

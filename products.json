@@ -9,7 +9,8 @@
       "description": "Standard 20mm & 38mm diameter core paint rollers, epoxy white, high-density foam fix, and texture rollers. Engineered for professional painter efficiency and zero nap-shedding.",
       "manufactured": "In-House (Jalgaon, Maharashtra)",
       "brand": "Wallfin™",
-      "trademark": "Application ID: 8027912"
+      "trademark": "Application ID: 8027912",
+      "image": "/assets/images/rollers-collection.jpg"
     },
     {
       "id": "panama-brushes",
@@ -44,8 +45,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-03.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-03.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-blue-9-inch.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-blue-9-inch.webp",
       "availableSizes": [
         "2 Inch",
         "4 Inch",
@@ -71,7 +72,8 @@
         "wallfin-yellow-line-paint-roller",
         "wallfin-brown-line-paint-roller",
         "wallfin-green-thread-38mm-paint-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-03.jpg"
     },
     {
       "id": "wallfin-yellow-line-paint-roller",
@@ -80,8 +82,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-04.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-04.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-yellow-9-inch.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-yellow-9-inch.webp",
       "availableSizes": [
         "2 Inch",
         "4 Inch",
@@ -107,7 +109,8 @@
         "wallfin-blue-line-paint-roller",
         "wallfin-yellow-line-38mm-paint-roller",
         "wallfin-tiger-38mm-paint-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-04.jpg"
     },
     {
       "id": "wallfin-brown-line-paint-roller",
@@ -116,8 +119,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-05.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-05.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-brown-9-inch.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-brown-9-inch.webp",
       "availableSizes": [
         "2 Inch",
         "4 Inch",
@@ -143,7 +146,8 @@
         "wallfin-blue-line-paint-roller",
         "wallfin-green-paint-roller",
         "wallfin-tiger-38mm-paint-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-05.jpg"
     },
     {
       "id": "wallfin-green-paint-roller",
@@ -152,8 +156,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-06.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-06.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-green-6-inch.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-green-6-inch.webp",
       "availableSizes": [
         "2 Inch",
         "4 Inch",
@@ -178,7 +182,8 @@
         "wallfin-green-thread-38mm-paint-roller",
         "wallfin-yellow-line-18mm-fixed-roller",
         "wallfin-foam-fix-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-06.jpg"
     },
     {
       "id": "wallfin-green-thread-38mm-paint-roller",
@@ -187,8 +192,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-07.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-07.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-green-9-inch-38mm.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-green-9-inch-38mm.webp",
       "availableSizes": [
         "2 Inch",
         "4 Inch",
@@ -215,7 +220,8 @@
         "wallfin-yellow-line-38mm-paint-roller",
         "wallfin-tiger-38mm-paint-roller",
         "wallfin-texture-38mm-paint-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-07.jpg"
     },
     {
       "id": "wallfin-yellow-line-38mm-paint-roller",
@@ -224,8 +230,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-08.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-08.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-yellow-9-inch-38mm.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-yellow-9-inch-38mm.webp",
       "availableSizes": [
         "2 Inch",
         "4 Inch",
@@ -252,7 +258,8 @@
         "wallfin-green-thread-38mm-paint-roller",
         "wallfin-tiger-38mm-paint-roller",
         "wallfin-foam-fix-38mm-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-08.jpg"
     },
     {
       "id": "wallfin-tiger-38mm-paint-roller",
@@ -261,8 +268,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-09.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-09.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-tiger-9-inch-38mm.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-tiger-9-inch-38mm.webp",
       "availableSizes": [
         "2 Inch",
         "4 Inch",
@@ -289,7 +296,8 @@
         "wallfin-green-thread-38mm-paint-roller",
         "wallfin-texture-38mm-paint-roller",
         "wallfin-epoxy-paint-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-09.jpg"
     },
     {
       "id": "wallfin-texture-38mm-paint-roller",
@@ -298,8 +306,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-10.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-10.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-texture-9-inch.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-texture-9-inch.webp",
       "availableSizes": [
         "7 Inch",
         "9 Inch"
@@ -323,7 +331,8 @@
         "wallfin-tiger-38mm-paint-roller",
         "wallfin-green-thread-38mm-paint-roller",
         "wallfin-foam-fix-38mm-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-10.jpg"
     },
     {
       "id": "wallfin-epoxy-paint-roller",
@@ -332,8 +341,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-11.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-11.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-green-7-inch-38mm.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-green-7-inch-38mm.webp",
       "availableSizes": [
         "2 Inch",
         "4 Inch",
@@ -359,7 +368,8 @@
         "wallfin-blue-line-paint-roller",
         "wallfin-foam-fix-roller",
         "wallfin-green-thread-38mm-paint-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-11.jpg"
     },
     {
       "id": "wallfin-foam-fix-roller",
@@ -368,8 +378,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-12.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-12.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-foam-4-inch.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-foam-4-inch.webp",
       "availableSizes": [
         "2 Inch",
         "4 Inch",
@@ -395,7 +405,8 @@
         "wallfin-foam-fix-38mm-roller",
         "wallfin-epoxy-paint-roller",
         "wallfin-yellow-line-paint-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-12.jpg"
     },
     {
       "id": "wallfin-foam-fix-38mm-roller",
@@ -404,8 +415,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-13.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-13.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-foam-6-inch.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-foam-6-inch.webp",
       "availableSizes": [
         "6 Inch",
         "9 Inch"
@@ -429,7 +440,8 @@
         "wallfin-foam-fix-roller",
         "wallfin-epoxy-paint-roller",
         "wallfin-texture-38mm-paint-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-13.jpg"
     },
     {
       "id": "wallfin-yellow-line-18mm-fixed-roller",
@@ -438,8 +450,8 @@
       "brand": "Wallfin",
       "trademarkAppId": "8027912",
       "inHouseManufactured": true,
-      "pageImage": "/assets/images/rollers/wallfin-page-14.jpg",
-      "thumbnail": "/assets/images/rollers/wallfin-page-14.jpg",
+      "pageImage": "/assets/images/rollers/wallfin-yellow-fix-4-inch-18mm.webp",
+      "thumbnail": "/assets/images/rollers/wallfin-yellow-fix-4-inch-18mm.webp",
       "availableSizes": [
         "2 Inch",
         "4 Inch",
@@ -464,7 +476,8 @@
         "wallfin-green-paint-roller",
         "wallfin-yellow-line-paint-roller",
         "wallfin-foam-fix-roller"
-      ]
+      ],
+      "catalogPage": "/assets/images/rollers/wallfin-page-14.jpg"
     },
     {
       "id": "panama-swan-paint-brush",
