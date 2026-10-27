@@ -526,7 +526,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
   position: relative;
   background: var(--bg-main);
-  padding: 44px 0 60px 0;
+  padding: 80px 0 100px 0;
   overflow: hidden;
 }
 
@@ -543,8 +543,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -559,15 +559,12 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(6, 57, 42, 0.08);
-  color: var(--primary);
-  font-size: 0.78rem;
+  color: var(--accent);
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  margin-bottom: 18px;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
 }
 
 .hero-badge-dot {
@@ -579,72 +576,62 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: 2.85rem;
-  line-height: 1.14;
-  margin-bottom: 18px;
+  font-size: 3.2rem;
+  line-height: 1.12;
+  margin-bottom: 24px;
   color: var(--text-main);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
   font-weight: 800;
 }
 
 .hero-title .highlight {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .hero-subline {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--text-body);
-  line-height: 1.65;
-  margin-bottom: 24px;
-  max-width: 540px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 520px;
 }
 
-/* Hero Metrics — Inline clean bar */
+/* Hero Metrics — Inline, minimal */
 .hero-metrics {
-  display: inline-flex;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 28px;
-  padding: 12px 20px;
-  background: #F8FAFC;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .metric-item {
-  display: flex;
-  flex-direction: column;
   padding: 0;
-}
-
-.metric-divider {
-  width: 1px;
-  height: 28px;
-  background: var(--border-color);
 }
 
 .metric-value {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-weight: 800;
-  color: var(--primary);
+  color: var(--text-main);
   line-height: 1;
 }
 
 .metric-label {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
-  margin-top: 3px;
-  letter-spacing: 0.04em;
+  margin-top: 4px;
+  letter-spacing: 0.06em;
 }
 
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
 }
 
 .hero-visual {
@@ -656,16 +643,14 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-lg);
   background-color: #E8ECF1;
 }
 
 .hero-image-frame img {
   width: 100%;
-  height: 440px;
+  height: 520px;
   object-fit: cover;
-  object-position: center bottom;
-  display: block;
   transition: transform 0.6s ease;
 }
 
@@ -673,48 +658,19 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.02);
 }
 
-.hero-image-badge-top {
+.hero-float-card {
   position: absolute;
-  top: 14px;
-  right: 14px;
-  background: rgba(6, 57, 42, 0.9);
-  backdrop-filter: blur(8px);
-  color: #FFFFFF;
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 6px 14px;
-  border-radius: 20px;
-  letter-spacing: 0.04em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  display: inline-flex;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  display: flex;
   align-items: center;
-  gap: 6px;
-  z-index: 3;
-}
-
-.hero-image-caption-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.92) 80%);
-  padding: 24px 18px 14px;
-  color: #FFFFFF;
-  z-index: 3;
-}
-
-.hero-image-caption-bottom h2,
-.hero-image-caption-bottom h3 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin: 0 0 2px 0;
-  color: #FFFFFF;
-}
-
-.hero-image-caption-bottom p {
-  font-size: 0.78rem;
-  color: #CBD5E1;
-  margin: 0;
+  gap: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .float-icon {
