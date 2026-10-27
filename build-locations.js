@@ -19,20 +19,6 @@ function escapeHtml(str) {
 
 function generateHeader(activeNav = 'dealer') {
   return `
-  <!-- Top Utility Bar -->
-  <aside class="topbar" aria-label="Top Announcement Bar">
-    <div class="container topbar-container">
-      <div class="topbar-info">
-        <span class="topbar-badge">DIRECT DEPO</span>
-        <span class="topbar-item">📍 Plot No-8, Dixit Wadi, Jalgaon, Maharashtra 425001</span>
-      </div>
-      <div class="topbar-actions">
-        <span class="topbar-item" style="color: var(--accent-gold); font-weight: 600;">🇮🇳 Active supply in Jalgaon, Dhule, Nandurbar, Buldhana &amp; MP; other regions by transport on request</span>
-        <a href="tel:+919422775429" class="topbar-item">📞 +91 94227 75429</a>
-      </div>
-    </div>
-  </aside>
-
   <!-- Main Header -->
   <header class="site-header">
     <div class="container header-container">
