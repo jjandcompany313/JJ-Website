@@ -42,6 +42,9 @@ const SITE_CONFIG = {
   indiamartUrl: "https://www.indiamart.com/kgn-works-pune/",
   facebookUrl: "https://www.facebook.com/profile.php?id=61594625407272",
   instagramUrl: "https://www.instagram.com/jjandcompany313/",
+  youtubeUrl: "https://www.youtube.com/@jjandcompany313",
+  linkedinUrl: "https://www.linkedin.com/company/jjandcompany",
+  twitterUrl: "https://x.com/jjandcompany313",
   
   // --- Complete Plant & Warehouse Address (Arranged) ---
   plusCode: "2H5C+678",

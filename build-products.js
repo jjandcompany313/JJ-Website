@@ -106,10 +106,19 @@ function getFooterHtml() {
             <span><span aria-hidden="true">®️</span> Registered Brand:</span>
             <strong>Wallfin (TM: 8027912)</strong>
           </div>
+          <div style="margin-top: 14px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+            <a href="https://www.facebook.com/profile.php?id=61594625407272" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Facebook">Facebook</a>
+            <span style="color: #475569;">•</span>
+            <a href="https://www.instagram.com/jjandcompany313/" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Instagram">Instagram</a>
+            <span style="color: #475569;">•</span>
+            <a href="https://www.indiamart.com/kgn-works-pune/" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="IndiaMART">IndiaMART</a>
+            <span style="color: #475569;">•</span>
+            <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Google Maps">Google Maps</a>
+          </div>
         </div>
 
         <div>
-          <h4 class="footer-heading">Navigation</h4>
+          <h3 class="footer-heading">Navigation</h3>
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
             <li><a href="/products.html">Product Catalog</a></li>
@@ -121,7 +130,7 @@ function getFooterHtml() {
         </div>
 
         <div>
-          <h4 class="footer-heading">Product Lines</h4>
+          <h3 class="footer-heading">Product Lines</h3>
           <ul class="footer-links">
             <li><a href="/products/rollers.html">1. Wallfin™ Paint Rollers</a></li>
             <li><a href="/products/brushes.html">2. Panama Paint Brushes</a></li>
@@ -133,7 +142,7 @@ function getFooterHtml() {
         </div>
 
         <div>
-          <h4 class="footer-heading">Supply Locations</h4>
+          <h3 class="footer-heading">Supply Locations</h3>
           <ul class="footer-links">
             <li><a href="/locations/jalgaon.html">Jalgaon (Central Depo)</a></li>
             <li><a href="/locations/dhule.html">Dhule Commercial Hub</a></li>
@@ -144,7 +153,7 @@ function getFooterHtml() {
         </div>
 
         <div>
-          <h4 class="footer-heading">Depo &amp; Head Office</h4>
+          <h3 class="footer-heading">Depo &amp; Head Office</h3>
           <div class="footer-contact-list">
             <div class="footer-contact-item">
               <span aria-hidden="true">📍</span>
@@ -196,8 +205,8 @@ function getFooterHtml() {
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script src="/js/site-data.js?v=2.4"></script>
-  <script src="/js/main.js?v=2.4"></script>
+  <script defer src="/js/site-data.js?v=2.6"></script>
+  <script defer src="/js/main.js?v=2.6"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
@@ -238,7 +247,7 @@ data.products.forEach(p => {
           <source srcset="${rel.thumbnail.endsWith('.webp') ? rel.thumbnail : rel.thumbnail.replace(/\.(png|jpe?g)$/i, '.webp')}" type="image/webp">
           <img src="${rel.thumbnail.endsWith('.webp') ? rel.thumbnail.replace(/\.webp$/i, '.png') : rel.thumbnail}" alt="${escapeHtml(rel.name)}" style="width: 100%; height: 180px; object-fit: contain; background: #FAFAFA; border-radius: var(--radius-sm); margin-bottom: 12px;" loading="lazy" width="280" height="180">
         </picture>
-        <h4 style="font-size: 1rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">${escapeHtml(rel.name)}</h4>
+        <h3 style="font-size: 1rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">${escapeHtml(rel.name)}</h3>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; flex-grow: 1;">${escapeHtml(rel.shortDesc.slice(0, 110))}...</p>
         <a href="/products/${rel.id}.html" class="btn btn-outline btn-sm" style="text-align: center;">View Specifications &rarr;</a>
       </div>
@@ -302,7 +311,9 @@ data.products.forEach(p => {
   <meta name="description" content="${escapeHtml(p.shortDesc.slice(0, 155))}">
 
   <link rel="canonical" href="${pageUrl}">
-  <link rel="stylesheet" href="/css/style.css?v=2.4">
+  <link rel="alternate" hreflang="en-IN" href="${pageUrl}">
+  <link rel="alternate" hreflang="x-default" href="${pageUrl}">
+  <link rel="stylesheet" href="/css/style.css?v=2.6">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -394,7 +405,7 @@ data.products.forEach(p => {
           </p>
 
           <div style="background: var(--bg-section); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 24px;">
-            <h3 style="font-size: 0.95rem; color: var(--text-main); font-weight: 700; margin-bottom: 8px;">Wholesale &amp; Dealer Inquiries</h3>
+            <h2 style="font-size: 1.15rem; color: var(--text-main); font-weight: 700; margin-bottom: 8px;">Wholesale &amp; Dealer Inquiries</h2>
             <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.5; margin-bottom: 16px;">
               Direct depo supply for hardware shops, paint counters, and regional stockists. Message our sales desk with your requirements for trade rates and dispatch schedules.
             </p>
@@ -578,7 +589,9 @@ categoriesDef.forEach(cat => {
   <meta name="description" content="${escapeHtml(cat.metaDesc)}">
 
   <link rel="canonical" href="${pageUrl}">
-  <link rel="stylesheet" href="/css/style.css?v=2.4">
+  <link rel="alternate" hreflang="en-IN" href="${pageUrl}">
+  <link rel="alternate" hreflang="x-default" href="${pageUrl}">
+  <link rel="stylesheet" href="/css/style.css?v=2.6">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -663,13 +676,18 @@ categoriesDef.forEach(cat => {
   <!-- Products Grid Section -->
   <main class="section">
     <div class="container">
+      <div class="section-header" style="text-align: left; margin-bottom: 28px;">
+        <h2 style="font-size: 1.45rem; color: var(--text-main); font-weight: 800; margin: 0;">
+          All ${escapeHtml(cat.name)} Models &amp; Specifications
+        </h2>
+      </div>
       <div class="category-grid" style="margin-bottom: 48px;">
         ${cardsHtml}
       </div>
 
       <!-- Quick Category Switcher -->
       <div style="background: var(--bg-section); padding: 28px; border-radius: var(--radius-md); border: 1px solid var(--border-color); text-align: center;">
-        <h3 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 12px; font-weight: 700;">Explore Other Product Categories</h3>
+        <h2 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 12px; font-weight: 700;">Explore Other Product Categories</h2>
         <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
           <a href="/products/rollers.html" class="btn btn-outline btn-sm">1. Wallfin™ Paint Rollers</a>
           <a href="/products/brushes.html" class="btn btn-outline btn-sm">2. Panama Paint Brushes</a>
@@ -695,31 +713,7 @@ categoriesDef.forEach(cat => {
 const sitemapPath = path.join(__dirname, 'sitemap.xml');
 const dateToday = '2026-10-24';
 
-const allUrls = [
-  'https://jjandcompany.net/',
-  'https://jjandcompany.net/products.html',
-  'https://jjandcompany.net/dealer.html',
-  'https://jjandcompany.net/about.html',
-  'https://jjandcompany.net/contact.html',
-  'https://jjandcompany.net/privacy-policy.html',
-  // Category hubs
-  'https://jjandcompany.net/products/rollers.html',
-  'https://jjandcompany.net/products/brushes.html',
-  'https://jjandcompany.net/products/accessories.html',
-  // Individual products
-  ...data.products.map(p => `https://jjandcompany.net/products/${p.id}.html`)
-];
-
-const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allUrls.map(u => `  <url>
-    <loc>${u}</loc>
-    <lastmod>${dateToday}</lastmod>
-  </url>`).join('\n')}
-</urlset>
-`;
-
-fs.writeFileSync(sitemapPath, sitemapXml);
-console.log(`Updated sitemap.xml with ${allUrls.length} total URLs.`);
+// Regenerate full standard sitemap with all 43 URLs
+require('./scripts/generate-sitemap.js');
 
 console.log('Build completed successfully!');

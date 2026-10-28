@@ -99,10 +99,19 @@ function generateFooter() {
             <span><span aria-hidden="true">®️</span> Registered Brand:</span>
             <strong>Wallfin (TM: 8027912)</strong>
           </div>
+          <div style="margin-top: 14px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+            <a href="https://www.facebook.com/profile.php?id=61594625407272" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Facebook">Facebook</a>
+            <span style="color: #475569;">•</span>
+            <a href="https://www.instagram.com/jjandcompany313/" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Instagram">Instagram</a>
+            <span style="color: #475569;">•</span>
+            <a href="https://www.indiamart.com/kgn-works-pune/" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="IndiaMART">IndiaMART</a>
+            <span style="color: #475569;">•</span>
+            <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Google Maps">Google Maps</a>
+          </div>
         </div>
 
         <div>
-          <h4 class="footer-heading">Navigation</h4>
+          <h3 class="footer-heading">Navigation</h3>
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
             <li><a href="/products.html">Product Catalog</a></li>
@@ -114,7 +123,7 @@ function generateFooter() {
         </div>
 
         <div>
-          <h4 class="footer-heading">Product Lines</h4>
+          <h3 class="footer-heading">Product Lines</h3>
           <ul class="footer-links">
             <li><a href="/products/rollers.html">1. Wallfin™ Paint Rollers</a></li>
             <li><a href="/products/brushes.html">2. Panama Paint Brushes</a></li>
@@ -126,7 +135,7 @@ function generateFooter() {
         </div>
 
         <div>
-          <h4 class="footer-heading">Supply Locations</h4>
+          <h3 class="footer-heading">Supply Locations</h3>
           <ul class="footer-links">
             <li><a href="/locations/jalgaon.html">Jalgaon (Central Depo)</a></li>
             <li><a href="/locations/dhule.html">Dhule Commercial Hub</a></li>
@@ -137,7 +146,7 @@ function generateFooter() {
         </div>
 
         <div>
-          <h4 class="footer-heading">Depo &amp; Head Office</h4>
+          <h3 class="footer-heading">Depo &amp; Head Office</h3>
           <div class="footer-contact-list">
             <div class="footer-contact-item">
               <span aria-hidden="true">📍</span>
@@ -190,8 +199,8 @@ function generateFooter() {
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script src="/js/site-data.js?v=2.5"></script>
-  <script src="/js/main.js?v=2.5"></script>
+  <script defer src="/js/site-data.js?v=2.6"></script>
+  <script defer src="/js/main.js?v=2.6"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
@@ -348,7 +357,9 @@ locationsData.forEach(loc => {
   <meta name="description" content="${escapeHtml(loc.metaDesc)}">
 
   <link rel="canonical" href="${pageUrl}">
-  <link rel="stylesheet" href="/css/style.css?v=2.5">
+  <link rel="alternate" hreflang="en-IN" href="${pageUrl}">
+  <link rel="alternate" hreflang="x-default" href="${pageUrl}">
+  <link rel="stylesheet" href="/css/style.css?v=2.6">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -592,9 +603,9 @@ locationsData.forEach(loc => {
 
           <!-- Other Supply Locations -->
           <section style="border-top: 1px solid var(--border-color); padding-top: 24px; margin-bottom: 30px;">
-            <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700; margin-bottom: 12px;">
+            <h2 style="font-size: 1.15rem; color: var(--text-main); font-weight: 700; margin-bottom: 12px;">
               Explore Other Supply Hubs in Our Active Territory:
-            </h3>
+            </h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
               ${otherLocationsHtml}
             </div>
@@ -606,9 +617,9 @@ locationsData.forEach(loc => {
         <aside id="inquiryForm" style="position: sticky; top: 90px; background: #FFFFFF; padding: 32px 28px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-card);">
           <div style="margin-bottom: 20px;">
             <span class="section-tag" style="margin-bottom: 6px;">Wholesale Dealership</span>
-            <h3 style="font-size: 1.4rem; color: var(--text-main); font-weight: 800; margin-bottom: 6px;">
+            <h2 style="font-size: 1.4rem; color: var(--text-main); font-weight: 800; margin-bottom: 6px;">
               Apply for Dealership in ${escapeHtml(loc.name)}
-            </h3>
+            </h2>
             <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
               Direct depo trade rates on Wallfin™ rollers, Panama brushes, thinners, and polish for retail shops in ${escapeHtml(loc.name)}.
             </p>
@@ -681,19 +692,7 @@ locationsData.forEach(loc => {
 });
 
 // Update sitemap.xml to include the 5 location pages
-const sitemapPath = path.join(rootDir, 'sitemap.xml');
-let sitemapContent = fs.readFileSync(sitemapPath, 'utf8');
-
-locationsData.forEach(loc => {
-  const locUrl = `https://jjandcompany.net/locations/${loc.slug}.html`;
-  if (!sitemapContent.includes(locUrl)) {
-    const entry = `  <url>\n    <loc>${locUrl}</loc>\n    <lastmod>2026-10-24</lastmod>\n  </url>\n`;
-    sitemapContent = sitemapContent.replace('</urlset>', `${entry}</urlset>`);
-  }
-});
-
-fs.writeFileSync(sitemapPath, sitemapContent, 'utf8');
-const totalUrls = (sitemapContent.match(/<url>/g) || []).length;
-console.log(`Updated sitemap.xml with ${totalUrls} total URLs.`);
+// Regenerate full standard sitemap with all 43 URLs
+require('./scripts/generate-sitemap.js');
 
 console.log('All 5 location pages generated successfully!');
