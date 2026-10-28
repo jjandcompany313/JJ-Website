@@ -36,6 +36,9 @@ const SITE_CONFIG = {
   // --- Official Social & Directory Profiles ---
   googleBusinessProfile: "https://g.page/r/CQrB9YNt2nTFEBM",
   googleReviewUrl: "https://g.page/r/CQrB9YNt2nTFEBM/review",
+  googleMapsPlaceUrl: "https://www.google.com/maps/place/J.+J.+%26+COMPANY/@21.0080644,75.5706007,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd90fa88342dc29:0xc574da6d83f5c10a!8m2!3d21.0080644!4d75.5706007!16s%2Fg%2F11vdgxdypk",
+  googleCid: "0xc574da6d83f5c10a",
+  googleMid: "/g/11vdgxdypk",
   indiamartUrl: "https://www.indiamart.com/kgn-works-pune/",
   facebookUrl: "https://www.facebook.com/profile.php?id=61594625407272",
   instagramUrl: "https://www.instagram.com/jjandcompany313/",
@@ -51,10 +54,10 @@ const SITE_CONFIG = {
   fullAddressFormatted: "Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd, Jalgaon, Maharashtra 425001, India",
   factoryAddress: "Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd",
   cityStatePincode: "Jalgaon, Maharashtra 425001, India",
-  locationCoordinates: "21°00'28.7\"N 75°34'14.2\"E",
-  coordinatesDecimal: "21.007972, 75.570611",
-  googleMapsUrl: "https://g.page/r/CQrB9YNt2nTFEBM",
-  googleMapsEmbed: "https://maps.google.com/maps?q=21.007972,75.570611&hl=en&z=17&output=embed",
+  locationCoordinates: "21°00'29.0\"N 75°34'14.2\"E",
+  coordinatesDecimal: "21.0080644, 75.5706007",
+  googleMapsUrl: "https://www.google.com/maps/place/J.+J.+%26+COMPANY/@21.0080644,75.5706007,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd90fa88342dc29:0xc574da6d83f5c10a!8m2!3d21.0080644!4d75.5706007!16s%2Fg%2F11vdgxdypk",
+  googleMapsEmbed: "https://maps.google.com/maps?q=21.0080644,75.5706007&hl=en&z=17&output=embed",
   workingHours: "Monday to Saturday: 8:30 AM – 6:30 PM (Sunday Closed)",
   
   // --- Supply Territories ---

@@ -144,7 +144,7 @@ function generateFooter() {
               <span>
                 Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd,<br>
                 Jalgaon, Maharashtra 425001, India<br>
-                <small style="color:var(--text-muted);">(Plus Code: 2H5C+678 | GPS: 21°00'28.7"N 75°34'14.2"E)</small>
+                <small style="color:var(--text-muted);">(Plus Code: 2H5C+678 | GPS: 21.0080644, 75.5706007)</small>
               </span>
             </div>
             <div class="footer-contact-item">
@@ -160,6 +160,10 @@ function generateFooter() {
               <a href="mailto:jjandcompany313@gmail.com">jjandcompany313@gmail.com</a>
             </div>
             <div class="footer-contact-item" style="margin-top: 6px;">
+              <span aria-hidden="true">⭐</span>
+              <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener">Read &amp; Post Google Reviews &rarr;</a>
+            </div>
+            <div class="footer-contact-item">
               <span aria-hidden="true">🌐</span>
               <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener">Google Business Profile &rarr;</a>
             </div>
@@ -228,13 +232,14 @@ locationsData.forEach(loc => {
   // Structured Data: Wholesale Local Business / Service
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
-    "@type": "WholesaleStore",
+    "@type": ["WholesaleStore", "LocalBusiness"],
     "name": `JJ & Company - ${loc.name} Wholesale Paint Tools Supply`,
     "description": loc.metaDesc,
     "url": pageUrl,
     "telephone": "+91-94227-75429",
-    "priceRange": "$$",
+    "priceRange": "₹₹",
     "image": "https://jjandcompany.net/assets/images/factory-hero.jpg",
+    "hasMap": "https://www.google.com/maps/place/J.+J.+%26+COMPANY/@21.0080644,75.5706007,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd90fa88342dc29:0xc574da6d83f5c10a!8m2!3d21.0080644!4d75.5706007!16s%2Fg%2F11vdgxdypk",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd",
@@ -245,8 +250,15 @@ locationsData.forEach(loc => {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 21.007972,
-      "longitude": 75.570611
+      "latitude": 21.0080644,
+      "longitude": 75.5706007
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "12",
+      "bestRating": "5",
+      "worstRating": "1"
     },
     "areaServed": {
       "@type": "AdministrativeArea",
@@ -254,18 +266,35 @@ locationsData.forEach(loc => {
     },
     "sameAs": [
       "https://g.page/r/CQrB9YNt2nTFEBM",
+      "https://www.google.com/maps/place/J.+J.+%26+COMPANY/@21.0080644,75.5706007,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd90fa88342dc29:0xc574da6d83f5c10a!8m2!3d21.0080644!4d75.5706007!16s%2Fg%2F11vdgxdypk",
       "https://www.indiamart.com/kgn-works-pune/",
       "https://www.facebook.com/profile.php?id=61594625407272",
       "https://www.instagram.com/jjandcompany313/"
     ],
     "knowsAbout": [
-      "Paint accessories manufacturer",
-      "Paint accessories wholesale",
+      "Paint accessories manufacturer in India",
+      "Painting tools manufacturer in India",
       "Paint roller manufacturer in India",
-      "Panama paint brush supplier",
-      "Painting tools wholesale dealer",
+      "Paint accessories wholesale",
+      "Paint tools wholesale market",
+      "Paint roller wholesale",
+      "Paint brush wholesale",
+      "Painting tools wholesale suppliers",
+      "Paint accessories bulk suppliers",
+      "Paint accessories distributor",
+      "Paint tools wholesale dealer",
+      "Paint accessories dealer",
+      "Painting tools dealer near me",
+      "Paint roller dealers",
+      "Paint brush dealers",
+      "Paint accessories supplier in India",
+      "Paint tools dealers in Maharashtra",
+      "Paint accessories dealership",
+      "Wallfin paint rollers",
+      "Panama paint brushes",
       "Paint roller refills",
-      "Texture painting tools"
+      "Texture painting tools",
+      "Wall paint roller"
     ],
     "parentOrganization": {
       "@type": "Organization",
@@ -447,6 +476,48 @@ locationsData.forEach(loc => {
         <!-- Left Column: Rich Local Copy -->
         <article style="line-height: 1.75; color: var(--text-body);">
           
+          <!-- AEO Direct Answer Block for AI Search & Featured Snippets -->
+          <section class="aeo-summary-box" style="background: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 100%); border: 1.5px solid #A7F3D0; border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 32px; box-shadow: 0 2px 6px rgba(6, 78, 59, 0.05);">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+              <span style="display: inline-block; width: 10px; height: 10px; background: #10B981; border-radius: 50%;" aria-hidden="true"></span>
+              <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #065F46;">Quick Wholesale Summary • AEO &amp; AI Search Verified</span>
+            </div>
+            <h2 style="font-size: 1.25rem; color: #064E3B; font-weight: 800; margin-bottom: 12px; line-height: 1.35;">
+              Direct Paint Accessories Manufacturer &amp; Wholesale Supplier in ${escapeHtml(loc.name)}
+            </h2>
+            <p style="font-size: 0.96rem; color: #064E3B; line-height: 1.65; margin-bottom: 16px;">
+              <strong>JJ &amp; Company</strong> is a direct manufacturer of <strong>Wallfin™ paint rollers</strong> (Trademark Application ID: 8027912) and wholesale supplier of <strong>Panama paint brushes</strong>, headquartered at Plot No-8, Dixit Wadi, Jalgaon, Maharashtra 425001. We supply hardware retail shops, paint stockists, and contractors in ${escapeHtml(loc.name)} with direct factory rates, zero middleman markups, and reliable ${escapeHtml(loc.transitTime)}.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.85rem; color: #047857;">
+              <div><strong>✓ Brand:</strong> Wallfin™ (TM: 8027912) &amp; Panama</div>
+              <div><strong>✓ Facility:</strong> Plot No-8, Dixit Wadi, Jalgaon</div>
+              <div><strong>✓ Dispatch:</strong> ${escapeHtml(loc.transitTime)}</div>
+              <div><strong>✓ Contact:</strong> +91 94227 75429 (WhatsApp/Call)</div>
+            </div>
+          </section>
+
+          <!-- Verified Google Review & Local Entity Grounding Card -->
+          <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px 22px; margin-bottom: 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <span style="font-size: 2rem;" aria-hidden="true">⭐</span>
+              <div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <strong style="color: var(--text-main); font-size: 1.02rem;">5.0 ★★★★★ Verified on Google Maps</strong>
+                  <span style="background: #E0F2FE; color: #0369A1; font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; font-weight: 700;">Verified Business</span>
+                </div>
+                <p style="font-size: 0.84rem; color: var(--text-muted); margin: 3px 0 0 0;">J. J. &amp; COMPANY — Trusted by hardware dealers, retail paint counters &amp; contractors.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                ⭐ Read / Leave Reviews
+              </a>
+              <a href="https://www.google.com/maps/place/J.+J.+%26+COMPANY/@21.0080644,75.5706007,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd90fa88342dc29:0xc574da6d83f5c10a!8m2!3d21.0080644!4d75.5706007!16s%2Fg%2F11vdgxdypk" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                🗺️ Google Maps Profile
+              </a>
+            </div>
+          </div>
+
           <section style="margin-bottom: 40px;">
             <h2 style="font-size: 1.55rem; color: var(--text-main); font-weight: 800; margin-bottom: 14px;">
               Wholesale Paint Supply for ${escapeHtml(loc.name)} Hardware Dealers
