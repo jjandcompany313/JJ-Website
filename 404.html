@@ -16,7 +16,11 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#06392A">
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <!-- High-Priority Font Preconnections (Eliminates Render Blocking & FCP Delay) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=2.7">
 </head>
 
 <body>
@@ -25,7 +29,10 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="/" class="brand-logo" title="JJ &amp; Company Home">
-        <img src="/assets/images/jj-company-logo.png" alt="JJ &amp; Company Logo" class="logo-img" width="44" height="44">
+        <picture>
+          <source srcset="/assets/images/jj-company-logo-nav.webp" type="image/webp">
+          <img src="/assets/images/jj-company-logo-nav.png" alt="JJ &amp; Company Logo" class="logo-img" width="44" height="44">
+        </picture>
         <div class="brand-text">
           <span class="brand-name">JJ &amp; COMPANY</span>
           <span class="brand-tagline">Paint Accessories Manufacturer</span>
@@ -96,7 +103,10 @@
     <div class="container footer-container">
       <div class="footer-col brand-col">
         <div class="brand-logo footer-logo">
-          <img src="/assets/images/jj-company-logo.png" alt="JJ &amp; Company Logo" class="logo-img" width="44" height="44">
+          <picture>
+            <source srcset="/assets/images/jj-company-logo-nav.webp" type="image/webp">
+            <img src="/assets/images/jj-company-logo-nav.png" alt="JJ &amp; Company Logo" class="logo-img" width="44" height="44">
+          </picture>
           <div class="brand-text">
             <span class="brand-name">JJ &amp; COMPANY</span>
             <span class="brand-tagline">Paint Accessories Manufacturer</span>

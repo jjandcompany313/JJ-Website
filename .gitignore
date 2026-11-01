@@ -9,6 +9,10 @@ desktop.ini
 *.sublime-project
 *.sublime-workspace
 
+# Node modules & npm
+node_modules/
+package-lock.json
+
 # Temporary & Log files
 *.log
 *.zip

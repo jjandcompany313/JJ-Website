@@ -31,7 +31,10 @@ function getHeaderHtml(activeNav = 'products') {
   <header class="site-header">
     <div class="container header-container">
       <a href="/" class="brand-logo" title="JJ &amp; Company Home">
-        <img src="/assets/images/jj-company-logo.png" alt="JJ &amp; Company Logo" class="logo-img" width="44" height="44">
+        <picture>
+          <source srcset="/assets/images/jj-company-logo-nav.webp" type="image/webp">
+          <img src="/assets/images/jj-company-logo-nav.png" alt="JJ &amp; Company Logo" class="logo-img" width="44" height="44">
+        </picture>
         <div class="brand-text">
           <span class="brand-name">JJ &amp; COMPANY</span>
           <span class="brand-tagline">Paint Accessories Manufacturer</span>
@@ -63,7 +66,10 @@ function getHeaderHtml(activeNav = 'products') {
     <div>
       <div class="mobile-drawer-header">
         <div class="brand-logo">
-          <img src="/assets/images/jj-company-logo.png" alt="JJ &amp; Company Logo" class="logo-img" width="40" height="40">
+          <picture>
+            <source srcset="/assets/images/jj-company-logo-nav.webp" type="image/webp">
+            <img src="/assets/images/jj-company-logo-nav.png" alt="JJ &amp; Company Logo" class="logo-img" width="40" height="40">
+          </picture>
           <span class="brand-name">JJ &amp; COMPANY</span>
         </div>
         <button id="mobileClose" class="mobile-toggle" aria-label="Close Menu">✕</button>
@@ -92,7 +98,10 @@ function getFooterHtml() {
       <div class="footer-top-grid">
         <div class="footer-col-brand">
           <div class="brand-logo">
-            <img src="/assets/images/jj-company-logo.png" alt="JJ &amp; Company Logo" class="logo-img" width="44" height="44">
+            <picture>
+              <source srcset="/assets/images/jj-company-logo-nav.webp" type="image/webp">
+              <img src="/assets/images/jj-company-logo-nav.png" alt="JJ &amp; Company Logo" class="logo-img" width="44" height="44">
+            </picture>
             <span class="brand-name">JJ &amp; COMPANY</span>
           </div>
           <p class="footer-desc">
@@ -205,8 +214,8 @@ function getFooterHtml() {
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script defer src="/js/site-data.js?v=2.6"></script>
-  <script defer src="/js/main.js?v=2.6"></script>
+  <script defer src="/js/site-data.js?v=2.7"></script>
+  <script defer src="/js/main.js?v=2.7"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
@@ -313,7 +322,12 @@ data.products.forEach(p => {
   <link rel="canonical" href="${pageUrl}">
   <link rel="alternate" hreflang="en-IN" href="${pageUrl}">
   <link rel="alternate" hreflang="x-default" href="${pageUrl}">
-  <link rel="stylesheet" href="/css/style.css?v=2.6">
+
+  <!-- High-Priority Font Preconnections (Eliminates Render Blocking & FCP Delay) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=2.7">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -591,7 +605,12 @@ categoriesDef.forEach(cat => {
   <link rel="canonical" href="${pageUrl}">
   <link rel="alternate" hreflang="en-IN" href="${pageUrl}">
   <link rel="alternate" hreflang="x-default" href="${pageUrl}">
-  <link rel="stylesheet" href="/css/style.css?v=2.6">
+
+  <!-- High-Priority Font Preconnections (Eliminates Render Blocking & FCP Delay) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=2.7">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">

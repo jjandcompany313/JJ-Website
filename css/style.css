@@ -3,8 +3,7 @@
    Clean, Modern & High-Trust Design System
    ========================================================================== */
 
-/* --- Google Fonts Import: Clean, Modern Plus Jakarta Sans --- */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+/* Note: Google Fonts Plus Jakarta Sans is loaded via high-priority preconnected <link> tags in HTML <head> for fast non-blocking render */
 
 /* --- Root Variables / Design Tokens (Fresh, High-Trust Industrial Palette) --- */
 :root {
@@ -214,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-dark .section-subtitle {
-  color: #94A3B8;
+  color: #CBD5E1;
 }
 
 /* --- Buttons --- */
@@ -1157,7 +1156,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-banner-card p {
-  color: #94A3B8;
+  color: #CBD5E1;
   max-width: 580px;
   margin: 0 auto 30px auto;
   font-size: 1.02rem;
@@ -1189,7 +1188,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 8px;
   font-size: 0.85rem;
-  color: #94A3B8;
+  color: #CBD5E1;
   margin-bottom: 16px;
 }
 
@@ -1403,7 +1402,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .catalog-strip-text p {
-  color: #94A3B8;
+  color: #CBD5E1;
   font-size: 0.9rem;
 }
 
@@ -2105,7 +2104,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 5px 12px;
   border-radius: var(--radius-sm);
   font-size: 0.75rem;
-  color: #94A3B8;
+  color: #CBD5E1;
 }
 
 .footer-heading {
