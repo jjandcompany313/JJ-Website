@@ -52,7 +52,7 @@ function getHeaderHtml(activeNav = 'products') {
       <div class="header-cta-group">
         <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-secondary btn-sm"><span aria-hidden="true">📥</span> Master Catalogue</a>
         <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20I%20am%20inquiring%20about%20your%20products."
-          target="_blank" class="btn btn-whatsapp btn-sm" aria-label="WhatsApp Direct Support">
+          target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-sm" aria-label="WhatsApp Direct Support">
           <span aria-hidden="true">💬</span> WhatsApp
         </a>
         <button id="mobileToggle" class="mobile-toggle" aria-label="Open Navigation Menu">☰</button>
@@ -84,7 +84,7 @@ function getHeaderHtml(activeNav = 'products') {
     </div>
     <div>
       <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-primary btn-block" style="margin-bottom: 10px;"><span aria-hidden="true">📥</span> Download Master Catalogue (PDF)</a>
-      <a href="https://wa.me/919422775429" target="_blank" class="btn btn-whatsapp btn-block"><span aria-hidden="true">💬</span> Chat on WhatsApp</a>
+      <a href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-block"><span aria-hidden="true">💬</span> Chat on WhatsApp</a>
     </div>
   </aside>
   `;
@@ -116,13 +116,13 @@ function getFooterHtml() {
             <strong>Wallfin (TM: 8027912)</strong>
           </div>
           <div style="margin-top: 14px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-            <a href="https://www.facebook.com/profile.php?id=61594625407272" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Facebook">Facebook</a>
+            <a href="https://www.facebook.com/profile.php?id=61594625407272" target="_blank" rel="noopener noreferrer nofollow" style="color: #CBD5E1; font-size: 0.85rem;" title="Facebook">Facebook</a>
             <span style="color: #475569;">•</span>
-            <a href="https://www.instagram.com/jjandcompany313/" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Instagram">Instagram</a>
+            <a href="https://www.instagram.com/jjandcompany313/" target="_blank" rel="noopener noreferrer nofollow" style="color: #CBD5E1; font-size: 0.85rem;" title="Instagram">Instagram</a>
             <span style="color: #475569;">•</span>
-            <a href="https://www.indiamart.com/kgn-works-pune/" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="IndiaMART">IndiaMART</a>
+            <a href="https://www.indiamart.com/kgn-works-pune/" target="_blank" rel="noopener noreferrer nofollow" style="color: #CBD5E1; font-size: 0.85rem;" title="IndiaMART">IndiaMART</a>
             <span style="color: #475569;">•</span>
-            <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Google Maps">Google Maps</a>
+            <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener noreferrer nofollow" style="color: #CBD5E1; font-size: 0.85rem;" title="Google Maps">Google Maps</a>
           </div>
         </div>
 
@@ -178,7 +178,7 @@ function getFooterHtml() {
             </div>
             <div class="footer-contact-item">
               <span aria-hidden="true">💬</span>
-              <a href="https://wa.me/919422775429" target="_blank">WhatsApp: +91 94227 75429</a>
+              <a href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow">WhatsApp: +91 94227 75429</a>
             </div>
             <div class="footer-contact-item">
               <span aria-hidden="true">✉️</span>
@@ -186,11 +186,11 @@ function getFooterHtml() {
             </div>
             <div class="footer-contact-item" style="margin-top: 6px;">
               <span aria-hidden="true">⭐</span>
-              <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener">Read &amp; Post Google Reviews &rarr;</a>
+              <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener noreferrer nofollow">Read &amp; Post Google Reviews &rarr;</a>
             </div>
             <div class="footer-contact-item">
               <span aria-hidden="true">🌐</span>
-              <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener">Google Business Profile &rarr;</a>
+              <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener noreferrer nofollow">Google Business Profile &rarr;</a>
             </div>
           </div>
         </div>
@@ -208,7 +208,7 @@ function getFooterHtml() {
   </footer>
 
   <!-- Floating WhatsApp -->
-  <a id="floatingWhatsApp" href="https://wa.me/919422775429" target="_blank" class="floating-whatsapp"
+  <a id="floatingWhatsApp" href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow" class="floating-whatsapp"
     aria-label="Chat on WhatsApp">
     <span aria-hidden="true">💬</span>
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
@@ -237,6 +237,21 @@ data.products.forEach(p => {
 
   const waText = encodeURIComponent(`Hello JJ & Company, I am interested in wholesale dealer rates for: ${p.name}. Please share pricing.`);
   const waUrl = `https://wa.me/919422775429?text=${waText}`;
+
+  // Concise title strictly under 55 chars / 520px for Google SERP
+  const cleanName = p.name.replace(/&amp;/g, '&');
+  const pageTitle = cleanName.length > 32
+    ? `${cleanName.slice(0, 30).trim()}... | JJ & Company`
+    : `${cleanName} | JJ & Company`;
+
+  // Concise meta description strictly under 145 chars for Google SERP
+  let cleanMeta = p.shortDesc.replace(/"/g, '&quot;').replace(/\s+/g, ' ').trim();
+  if (cleanMeta.length > 138) {
+    cleanMeta = cleanMeta.slice(0, 135).replace(/\s+\S*$/, '') + '...';
+  }
+
+  // Short product label for H2s to guarantee strictly <= 60 chars
+  const shortProdLabel = p.name.length > 28 ? p.name.slice(0, 26).trim() + '...' : p.name;
 
   // Build specs rows (NO MOQ anywhere)
   const specsRowsHtml = Object.entries(p.specs).map(([key, val]) => `
@@ -316,8 +331,8 @@ data.products.forEach(p => {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${escapeHtml(p.name)} | JJ &amp; Company Jalgaon</title>
-  <meta name="description" content="${escapeHtml(p.shortDesc.slice(0, 155))}">
+  <title>${escapeHtml(pageTitle)}</title>
+  <meta name="description" content="${escapeHtml(cleanMeta)}">
 
   <link rel="canonical" href="${pageUrl}">
   <link rel="alternate" hreflang="en-IN" href="${pageUrl}">
@@ -419,12 +434,12 @@ data.products.forEach(p => {
           </p>
 
           <div style="background: var(--bg-section); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 24px;">
-            <h2 style="font-size: 1.15rem; color: var(--text-main); font-weight: 700; margin-bottom: 8px;">Wholesale &amp; Dealer Inquiries</h2>
+            <h2 style="font-size: 1.15rem; color: var(--text-main); font-weight: 700; margin-bottom: 8px;">Wholesale Supply for ${escapeHtml(shortProdLabel)}</h2>
             <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.5; margin-bottom: 16px;">
               Direct depo supply for hardware shops, paint counters, and regional stockists. Message our sales desk with your requirements for trade rates and dispatch schedules.
             </p>
             <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-              <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg" style="flex: 1; text-align: center; justify-content: center;">
+              <a href="${waUrl}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-lg" style="flex: 1; text-align: center; justify-content: center;">
                 <span aria-hidden="true">💬</span> Get Dealer Rate on WhatsApp
               </a>
               <a href="/dealer.html" class="btn btn-secondary btn-lg" style="flex: 1; text-align: center; justify-content: center;">
@@ -447,7 +462,7 @@ data.products.forEach(p => {
       <!-- Full Specifications Table -->
       <section style="margin-bottom: 56px;">
         <h2 style="font-size: 1.5rem; color: var(--text-main); font-weight: 800; margin-bottom: 18px;">
-          Product Specifications
+          ${escapeHtml(shortProdLabel)} Specifications
         </h2>
         <div style="overflow-x: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
           <table style="width: 100%; border-collapse: collapse; background: #FFFFFF;">
@@ -463,7 +478,7 @@ data.products.forEach(p => {
       <section style="border-top: 1px solid var(--border-color); padding-top: 40px; margin-bottom: 40px;">
         <div class="section-header" style="text-align: left; margin-bottom: 24px;">
           <span class="section-tag">Related Models</span>
-          <h2 style="font-size: 1.5rem; color: var(--text-main); font-weight: 800;">Recommended Companion Products</h2>
+          <h2 style="font-size: 1.5rem; color: var(--text-main); font-weight: 800;">Companion Products for ${escapeHtml(shortProdLabel)}</h2>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
           ${relatedHtml}
@@ -489,8 +504,9 @@ data.products.forEach(p => {
 const categoriesDef = [
   {
     id: 'paint-rollers',
+    name: 'Wallfin™ Paint Rollers',
     fileName: 'rollers.html',
-    title: 'Wallfin Paint Rollers & Refills Catalog | JJ & Company',
+    title: 'Wallfin Paint Rollers & Refills | JJ & Company',
     metaDesc: 'Explore Wallfin paint rollers and refills supplied from our Jalgaon Depo. Registered brand (TM: 8027912). Standard, 38mm, epoxy and foam rollers.',
     h1: 'Wallfin™ Paint Rollers &amp; Refills Range',
     badge: 'In-House Manufactured • TM: 8027912',
@@ -501,8 +517,9 @@ const categoriesDef = [
   },
   {
     id: 'panama-brushes',
+    name: 'Panama Paint Brushes',
     fileName: 'brushes.html',
-    title: 'Panama Paint Brushes Wholesale Catalog | JJ & Company',
+    title: 'Panama Paint Brushes Wholesale | JJ & Company',
     metaDesc: 'Browse imported Panama paint brushes from 1 to 5 inch sizes with 100% shed-free epoxy potting. Direct wholesale supply from our Jalgaon Depo.',
     h1: 'Panama Paint Brushes Collection',
     badge: 'Direct Import • Signature Collection',
@@ -513,8 +530,9 @@ const categoriesDef = [
   },
   {
     id: 'accessories',
+    name: 'Finishing Accessories & Tools',
     fileName: 'accessories.html',
-    title: 'Thinners, Polish, Abrasives & Pata Catalog | JJ & Company',
+    title: 'Thinners, Polish & Abrasives Catalog | JJ & Company',
     metaDesc: 'Wholesale companion range: Maruti Auto Gloss thinners, Nico wood polish, Cumi abrasives and wooden/steel putty pata for hardware dealers.',
     h1: 'Thinners, Polish, Abrasives &amp; Putty Pata',
     badge: 'Available Companion Range',
@@ -548,7 +566,7 @@ categoriesDef.forEach(cat => {
         </div>
         <div style="margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap;">
           <a href="/products/${p.id}.html" class="btn btn-primary btn-sm" style="flex: 1; text-align: center;">View Specs</a>
-          <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20please%20send%20wholesale%20rates%20for%20${encodeURIComponent(p.name)}." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" style="text-align: center;">💬 WhatsApp</a>
+          <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20please%20send%20wholesale%20rates%20for%20${encodeURIComponent(p.name)}." target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-sm" style="text-align: center;">💬 WhatsApp</a>
         </div>
       </div>
     </article>
@@ -706,7 +724,7 @@ categoriesDef.forEach(cat => {
 
       <!-- Quick Category Switcher -->
       <div style="background: var(--bg-section); padding: 28px; border-radius: var(--radius-md); border: 1px solid var(--border-color); text-align: center;">
-        <h2 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 12px; font-weight: 700;">Explore Other Product Categories</h2>
+        <h2 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 12px; font-weight: 700;">Explore Categories Outside ${escapeHtml(cat.name)}</h2>
         <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
           <a href="/products/rollers.html" class="btn btn-outline btn-sm">1. Wallfin™ Paint Rollers</a>
           <a href="/products/brushes.html" class="btn btn-outline btn-sm">2. Panama Paint Brushes</a>

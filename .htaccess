@@ -64,19 +64,27 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 <IfModule mod_headers.c>
-  # HTML Documents: revalidate
+  # 1. Security Headers (Fixes Screaming Frog / Lighthouse Security Audits)
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Content-Security-Policy "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; media-src 'self' https: data: blob:; font-src 'self' https: data:;"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+  # 2. HTML Documents: revalidate
   <FilesMatch "\.(html|htm)$">
     Header set Cache-Control "no-cache, no-store, must-revalidate"
     Header set Pragma "no-cache"
     Header set Expires "0"
   </FilesMatch>
 
-  # Static Assets: 1 year cache
+  # 3. Static Assets: 1 year cache
   <FilesMatch "\.(ico|pdf|jpg|jpeg|png|webp|css|js|woff|woff2)$">
     Header set Cache-Control "max-age=31536000, public"
   </FilesMatch>
 
-  # Video Streaming
+  # 4. Video Streaming
   <FilesMatch "\.(mp4|webm|ogg)$">
     Header set Accept-Ranges "bytes"
     Header set Cache-Control "max-age=31536000, public"

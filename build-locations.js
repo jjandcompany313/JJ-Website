@@ -45,7 +45,7 @@ function generateHeader(activeNav = 'dealer') {
       <div class="header-cta-group">
         <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-secondary btn-sm"><span aria-hidden="true">📥</span> Master Catalogue</a>
         <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20I%20am%20inquiring%20about%20your%20products."
-          target="_blank" class="btn btn-whatsapp btn-sm" aria-label="WhatsApp Direct Support">
+          target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-sm" aria-label="WhatsApp Direct Support">
           <span aria-hidden="true">💬</span> WhatsApp
         </a>
         <button id="mobileToggle" class="mobile-toggle" aria-label="Open Navigation Menu">☰</button>
@@ -77,7 +77,7 @@ function generateHeader(activeNav = 'dealer') {
     </div>
     <div>
       <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-primary btn-block" style="margin-bottom: 10px;"><span aria-hidden="true">📥</span> Download Master Catalogue (PDF)</a>
-      <a href="https://wa.me/919422775429" target="_blank" class="btn btn-whatsapp btn-block"><span aria-hidden="true">💬</span> Chat on WhatsApp</a>
+      <a href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-block"><span aria-hidden="true">💬</span> Chat on WhatsApp</a>
     </div>
   </aside>
   `;
@@ -109,13 +109,13 @@ function generateFooter() {
             <strong>Wallfin (TM: 8027912)</strong>
           </div>
           <div style="margin-top: 14px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-            <a href="https://www.facebook.com/profile.php?id=61594625407272" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Facebook">Facebook</a>
+            <a href="https://www.facebook.com/profile.php?id=61594625407272" target="_blank" rel="noopener noreferrer nofollow" style="color: #CBD5E1; font-size: 0.85rem;" title="Facebook">Facebook</a>
             <span style="color: #475569;">•</span>
-            <a href="https://www.instagram.com/jjandcompany313/" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Instagram">Instagram</a>
+            <a href="https://www.instagram.com/jjandcompany313/" target="_blank" rel="noopener noreferrer nofollow" style="color: #CBD5E1; font-size: 0.85rem;" title="Instagram">Instagram</a>
             <span style="color: #475569;">•</span>
-            <a href="https://www.indiamart.com/kgn-works-pune/" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="IndiaMART">IndiaMART</a>
+            <a href="https://www.indiamart.com/kgn-works-pune/" target="_blank" rel="noopener noreferrer nofollow" style="color: #CBD5E1; font-size: 0.85rem;" title="IndiaMART">IndiaMART</a>
             <span style="color: #475569;">•</span>
-            <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1; font-size: 0.85rem;" title="Google Maps">Google Maps</a>
+            <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener noreferrer nofollow" style="color: #CBD5E1; font-size: 0.85rem;" title="Google Maps">Google Maps</a>
           </div>
         </div>
 
@@ -171,7 +171,7 @@ function generateFooter() {
             </div>
             <div class="footer-contact-item">
               <span aria-hidden="true">💬</span>
-              <a href="https://wa.me/919422775429" target="_blank">WhatsApp: +91 94227 75429</a>
+              <a href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow">WhatsApp: +91 94227 75429</a>
             </div>
             <div class="footer-contact-item">
               <span aria-hidden="true">✉️</span>
@@ -179,11 +179,11 @@ function generateFooter() {
             </div>
             <div class="footer-contact-item" style="margin-top: 6px;">
               <span aria-hidden="true">⭐</span>
-              <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener">Read &amp; Post Google Reviews &rarr;</a>
+              <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener noreferrer nofollow">Read &amp; Post Google Reviews &rarr;</a>
             </div>
             <div class="footer-contact-item">
               <span aria-hidden="true">🌐</span>
-              <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener">Google Business Profile &rarr;</a>
+              <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener noreferrer nofollow">Google Business Profile &rarr;</a>
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@ function generateFooter() {
   </footer>
 
   <!-- Floating WhatsApp -->
-  <a id="floatingWhatsApp" href="https://wa.me/919422775429" target="_blank" class="floating-whatsapp"
+  <a id="floatingWhatsApp" href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow" class="floating-whatsapp"
     aria-label="Chat on WhatsApp">
     💬
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
@@ -446,10 +446,10 @@ locationsData.forEach(loc => {
       </p>
 
       <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+        <a href="${waUrl}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-lg">
           <span aria-hidden="true">💬</span> Get Wholesale Rates on WhatsApp
         </a>
-        <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg" style="display: inline-flex; align-items: center; gap: 6px;">
+        <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-outline btn-lg" style="display: inline-flex; align-items: center; gap: 6px;">
           <span aria-hidden="true">⭐</span> Google Verified Profile
         </a>
         <a href="#inquiryForm" class="btn btn-secondary btn-lg">
@@ -508,7 +508,7 @@ locationsData.forEach(loc => {
               <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #065F46;">Quick Wholesale Summary • AEO &amp; AI Search Verified</span>
             </div>
             <h2 style="font-size: 1.25rem; color: #064E3B; font-weight: 800; margin-bottom: 12px; line-height: 1.35;">
-              Direct Paint Accessories Manufacturer &amp; Wholesale Supplier in ${escapeHtml(loc.name)}
+              Paint Accessories Wholesale &amp; Depo in ${escapeHtml(loc.name)}
             </h2>
             <p style="font-size: 0.96rem; color: #064E3B; line-height: 1.65; margin-bottom: 16px;">
               <strong>JJ &amp; Company</strong> is a direct manufacturer of <strong>Wallfin™ paint rollers</strong> (Trademark Application ID: 8027912) and wholesale supplier of <strong>Panama paint brushes</strong>, headquartered at Plot No-8, Dixit Wadi, Jalgaon, Maharashtra 425001. We supply hardware retail shops, paint stockists, and contractors in ${escapeHtml(loc.name)} with direct factory rates, zero middleman markups, and reliable ${escapeHtml(loc.transitTime)}.
@@ -534,10 +534,10 @@ locationsData.forEach(loc => {
               </div>
             </div>
             <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-              <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary btn-sm">
                 ⭐ Read / Leave Reviews
               </a>
-              <a href="https://www.google.com/maps/place/J.+J.+%26+COMPANY/@21.0080644,75.5706007,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd90fa88342dc29:0xc574da6d83f5c10a!8m2!3d21.0080644!4d75.5706007!16s%2Fg%2F11vdgxdypk" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <a href="https://www.google.com/maps/place/J.+J.+%26+COMPANY/@21.0080644,75.5706007,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd90fa88342dc29:0xc574da6d83f5c10a!8m2!3d21.0080644!4d75.5706007!16s%2Fg%2F11vdgxdypk" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-outline btn-sm">
                 🗺️ Google Maps Profile
               </a>
             </div>
@@ -618,7 +618,7 @@ locationsData.forEach(loc => {
           <!-- Other Supply Locations -->
           <section style="border-top: 1px solid var(--border-color); padding-top: 24px; margin-bottom: 30px;">
             <h2 style="font-size: 1.15rem; color: var(--text-main); font-weight: 700; margin-bottom: 12px;">
-              Explore Other Supply Hubs in Our Active Territory:
+              Connected Wholesale Hubs &amp; Transport Routes from ${escapeHtml(loc.name)}
             </h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
               ${otherLocationsHtml}
@@ -684,7 +684,7 @@ locationsData.forEach(loc => {
 
           <div style="margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border-color); text-align: center;">
             <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px;">Need immediate trade rates?</p>
-            <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block" style="width: 100%; text-align: center;">
+            <a href="${waUrl}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-sm btn-block" style="width: 100%; text-align: center;">
               <span aria-hidden="true">💬</span> Chat Directly on WhatsApp
             </a>
           </div>
