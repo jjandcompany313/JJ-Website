@@ -238,8 +238,8 @@ function getFooterHtml() {
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script defer src="/js/site-data.js?v=4.1"></script>
-  <script defer src="/js/main.js?v=4.1"></script>
+  <script defer src="/js/site-data.js?v=4.2"></script>
+  <script defer src="/js/main.js?v=4.2"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
@@ -450,7 +450,7 @@ data.products.forEach(p => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.1">
+  <link rel="stylesheet" href="/css/style.css?v=4.2">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -677,30 +677,26 @@ categoriesDef.forEach(cat => {
   const catProducts = data.products.filter(p => p.category === cat.filterCat);
   const pageUrl = `https://jjandcompany.net/products/${cat.fileName}`;
 
-  const cardsHtml = catProducts.map(p => `
-    <article class="category-card" style="display: flex; flex-direction: column;">
-      <div class="category-image-wrap">
+  const cardsHtml = catProducts.map(p => {
+    const webpThumb = p.thumbnail.endsWith('.webp') ? p.thumbnail : p.thumbnail.replace(/\.(png|jpe?g)$/i, '.webp');
+    const fallbackThumb = p.thumbnail.endsWith('.webp') ? p.thumbnail.replace(/\.webp$/i, '.png') : p.thumbnail;
+    const descriptor = (p.availableSizes && p.availableSizes.length > 0)
+      ? p.availableSizes.slice(0, 3).join(' • ')
+      : (p.shortDesc ? p.shortDesc.slice(0, 45) : 'Trade Standard');
+
+    return `
+    <a href="/products/${p.id}.html" class="wooster-product-item" aria-label="${escapeHtml(p.name)}">
+      <div class="wooster-product-visual">
         <picture>
-          <source srcset="${p.thumbnail.endsWith('.webp') ? p.thumbnail : p.thumbnail.replace(/\.(png|jpe?g)$/i, '.webp')}" type="image/webp">
-          <img src="${p.thumbnail.endsWith('.webp') ? p.thumbnail.replace(/\.webp$/i, '.png') : p.thumbnail}" alt="${escapeHtml(p.name)}" loading="lazy" width="400" height="260">
+          <source srcset="${webpThumb}" type="image/webp">
+          <img src="${fallbackThumb}" alt="${escapeHtml(p.name)}" class="wooster-product-img" loading="lazy" width="280" height="240">
         </picture>
-        <span class="category-badge">${p.inHouseManufactured ? 'Wallfin™ (TM: 8027912)' : (p.category === 'panama-brushes' ? 'Direct Import' : 'Available Range')}</span>
       </div>
-      <div class="category-content" style="display: flex; flex-direction: column; flex-grow: 1;">
-        <h3 class="category-title" style="font-size: 1.15rem;">${escapeHtml(p.name)}</h3>
-        <p class="category-desc" style="font-size: 0.9rem; margin-bottom: 16px;">
-          ${escapeHtml(p.shortDesc.slice(0, 140))}...
-        </p>
-        <div class="category-specs-list" style="margin-bottom: 18px;">
-          ${(p.availableSizes || []).slice(0, 4).map(s => `<span class="spec-pill">${escapeHtml(s)}</span>`).join('')}
-        </div>
-        <div style="margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap;">
-          <a href="/products/${p.id}.html" class="btn btn-primary btn-sm" style="flex: 1; text-align: center;">View Specs</a>
-          <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20please%20send%20wholesale%20rates%20for%20${encodeURIComponent(p.name)}." target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-sm" style="text-align: center;">${SVG_WA} <span>WhatsApp</span></a>
-        </div>
-      </div>
-    </article>
-  `).join('');
+      <h3 class="wooster-product-name">${escapeHtml(p.name)}</h3>
+      <p class="wooster-product-desc">${escapeHtml(descriptor)}</p>
+      <span class="wooster-product-view">View &rarr;</span>
+    </a>`;
+  }).join('');
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -758,7 +754,7 @@ categoriesDef.forEach(cat => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.1">
+  <link rel="stylesheet" href="/css/style.css?v=4.2">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -848,7 +844,7 @@ categoriesDef.forEach(cat => {
           All ${escapeHtml(cat.name)} Models &amp; Specifications
         </h2>
       </div>
-      <div class="category-grid" style="margin-bottom: 48px;">
+      <div class="wooster-products-grid" style="margin-bottom: 56px;">
         ${cardsHtml}
       </div>
 

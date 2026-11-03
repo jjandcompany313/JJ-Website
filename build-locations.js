@@ -222,8 +222,8 @@ function generateFooter() {
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script defer src="/js/site-data.js?v=4.1"></script>
-  <script defer src="/js/main.js?v=4.1"></script>
+  <script defer src="/js/site-data.js?v=4.2"></script>
+  <script defer src="/js/main.js?v=4.2"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
@@ -387,7 +387,7 @@ locationsData.forEach(loc => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.1">
+  <link rel="stylesheet" href="/css/style.css?v=4.2">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
