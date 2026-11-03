@@ -120,40 +120,40 @@ function showConfidentialSuccessModal(lead) {
 
   let waLeadMessage =
     `*NEW INQUIRY (From JJ & Company Website)*\n` +
-    `👤 *Name:* ${lead.contactPerson}\n` +
-    `🏢 *Business / Shop:* ${lead.shopName || "Direct Inquiry"}\n` +
-    `📞 *Phone / WhatsApp:* ${lead.phone}\n` +
-    `📍 *Location:* ${lead.district}\n`;
+    `*Name:* ${lead.contactPerson}\n` +
+    `*Business / Shop:* ${lead.shopName || "Direct Inquiry"}\n` +
+    `*Phone / WhatsApp:* ${lead.phone}\n` +
+    `*Location:* ${lead.district}\n`;
 
   if (lead.monthlyVolume) {
-    waLeadMessage += `📦 *Est. Monthly Volume:* ${lead.monthlyVolume}\n`;
+    waLeadMessage += `*Est. Monthly Volume:* ${lead.monthlyVolume}\n`;
   }
 
   waLeadMessage +=
-    `🎯 *Purpose:* ${lead.inquiryType}\n` +
-    `🎨 *Products:* ${lead.products}\n` +
-    `📝 *Message:* ${lead.message || "None"}`;
+    `*Purpose:* ${lead.inquiryType}\n` +
+    `*Products:* ${lead.products}\n` +
+    `*Message:* ${lead.message || "None"}`;
 
   const waUrl = getWhatsAppUrl(waLeadMessage);
 
   modal.innerHTML = `
-    <div class="modal-card" style="max-width: 480px; text-align: center; padding: 36px 28px;">
-      <button class="modal-close" id="closeSuccessModalBtn" aria-label="Close" style="top: 14px; right: 16px;">&times;</button>
-      <div style="width: 58px; height: 58px; border-radius: 50%; background: #E8F5E9; color: #058A5E; display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 16px auto; font-weight: bold;">
-        ✓
+    <div class="modal-card" style="max-width: 480px; text-align: center; padding: 36px 28px; background: #0D0518; border: 1px solid rgba(147, 112, 219, 0.3);">
+      <button class="modal-close" id="closeSuccessModalBtn" aria-label="Close" style="top: 14px; right: 16px; color: #FFFFFF;">&times;</button>
+      <div style="width: 58px; height: 58px; border-radius: 50%; background: rgba(147, 112, 219, 0.15); color: #FF00FF; border: 1px solid rgba(255, 0, 255, 0.4); display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 16px auto; font-weight: bold;">
+        &check;
       </div>
-      <h3 style="font-size: 1.4rem; color: var(--text-main); margin-bottom: 8px; font-weight: 800;">
-        Inquiry Submitted Successfully!
+      <h3 style="font-size: 1.4rem; color: #FFFFFF; margin-bottom: 8px; font-weight: 800;">
+        Inquiry Submitted Successfully
       </h3>
-      <p style="font-size: 0.92rem; color: var(--text-body); margin-bottom: 24px; line-height: 1.5;">
-        Thank you, <strong>${escapeHtml(lead.contactPerson)}</strong>. Your requirement has been saved directly to our depo sales desk. Our team will contact you shortly with commercial rates.
+      <p style="font-size: 0.92rem; color: #CBD5E1; margin-bottom: 24px; line-height: 1.5;">
+        Thank you, <strong>${escapeHtml(lead.contactPerson)}</strong>. Your requirement has been saved directly to our sales desk. Our team will contact you shortly with commercial rates.
       </p>
 
       <div style="display: flex; flex-direction: column; gap: 10px;">
-        <a href="${waUrl}" target="_blank" class="btn btn-whatsapp btn-block btn-lg" style="justify-content: center;">
-          💬 Connect Instantly on WhatsApp
+        <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-block btn-lg" style="justify-content: center;">
+          Connect Instantly on WhatsApp
         </a>
-        <button id="closeModalActionBtn" class="btn btn-outline btn-block" style="justify-content: center;">
+        <button id="closeModalActionBtn" class="btn btn-outline btn-block" style="justify-content: center; border-color: rgba(147, 112, 219, 0.4); color: #CBD5E1;">
           Done
         </button>
       </div>

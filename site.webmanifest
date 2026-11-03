@@ -4,8 +4,8 @@
   "description": "Direct manufacturer of paint rollers, Panama paint brushes, thinner, polish, and paper. Based in Jalgaon, Maharashtra.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#06392A",
-  "theme_color": "#06392A",
+  "background_color": "#08030E",
+  "theme_color": "#08030E",
   "icons": [
     {
       "src": "/assets/icons/favicon-48x48.png",

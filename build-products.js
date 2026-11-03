@@ -221,15 +221,6 @@ function getFooterHtml() {
       </div>
     </div>
   </footer>
-            </a>
-            <a href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow" class="wooster-social-btn" aria-label="WhatsApp">
-              ${SVG_WA}
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <!-- Floating WhatsApp -->
   <a id="floatingWhatsApp" href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow" class="floating-whatsapp"
@@ -238,8 +229,8 @@ function getFooterHtml() {
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script defer src="/js/site-data.js?v=4.3"></script>
-  <script defer src="/js/main.js?v=4.3"></script>
+  <script defer src="/js/site-data.js?v=4.4"></script>
+  <script defer src="/js/main.js?v=4.4"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
@@ -364,24 +355,24 @@ data.products.forEach(p => {
   // Build specs rows (NO MOQ anywhere)
   const specsRowsHtml = Object.entries(p.specs).map(([key, val]) => `
     <tr>
-      <th style="padding: 12px 16px; border: 1px solid var(--border-color); background: #F8FAFC; text-align: left; width: 35%; font-weight: 600; color: var(--text-main); font-size: 0.9rem;">${escapeHtml(key)}</th>
-      <td style="padding: 12px 16px; border: 1px solid var(--border-color); color: var(--text-body); font-size: 0.9rem;">${escapeHtml(val)}</td>
+      <th style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.16); background: rgba(147, 112, 219, 0.08); text-align: left; width: 35%; font-weight: 700; color: var(--medium-purple); font-size: 0.9rem;">${escapeHtml(key)}</th>
+      <td style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.12); color: #FFFFFF; font-size: 0.9rem;">${escapeHtml(val)}</td>
     </tr>
   `).join('');
 
-  // Related products
+  // Related products (Unboxed, floating with drop-shadow)
   const relatedHtml = (p.related || []).map(relId => {
     const rel = data.products.find(x => x.id === relId);
     if (!rel) return '';
     return `
-      <div style="background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-color); padding: 18px; display: flex; flex-direction: column;">
+      <div style="background: rgba(147, 112, 219, 0.04); border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.16); padding: 18px; display: flex; flex-direction: column;">
         <picture>
           <source srcset="${rel.thumbnail.endsWith('.webp') ? rel.thumbnail : rel.thumbnail.replace(/\.(png|jpe?g)$/i, '.webp')}" type="image/webp">
-          <img src="${rel.thumbnail.endsWith('.webp') ? rel.thumbnail.replace(/\.webp$/i, '.png') : rel.thumbnail}" alt="${escapeHtml(rel.name)}" style="width: 100%; height: 180px; object-fit: contain; background: #FAFAFA; border-radius: var(--radius-sm); margin-bottom: 12px;" loading="lazy" width="280" height="180">
+          <img src="${rel.thumbnail.endsWith('.webp') ? rel.thumbnail.replace(/\.webp$/i, '.png') : rel.thumbnail}" alt="${escapeHtml(rel.name)}" style="width: 100%; height: 180px; object-fit: contain; background: transparent; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6)); margin-bottom: 12px;" loading="lazy" width="280" height="180">
         </picture>
-        <h3 style="font-size: 1rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">${escapeHtml(rel.name)}</h3>
+        <h3 style="font-size: 1rem; color: #FFFFFF; margin-bottom: 6px; font-weight: 700;">${escapeHtml(rel.name)}</h3>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; flex-grow: 1;">${escapeHtml(rel.shortDesc.slice(0, 110))}...</p>
-        <a href="/products/${rel.id}.html" class="btn btn-outline btn-sm" style="text-align: center;">View Specifications </a>
+        <a href="/products/${rel.id}.html" class="btn btn-outline btn-sm" style="text-align: center;">View Specifications</a>
       </div>
     `;
   }).filter(Boolean).join('');
@@ -450,7 +441,7 @@ data.products.forEach(p => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.3">
+  <link rel="stylesheet" href="/css/style.css?v=4.4">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -492,15 +483,29 @@ data.products.forEach(p => {
   </script>
 
   <style>
-    /* Hallmark · theme: minimal · genre: modern-minimal */
     :root {
+      --fuchsia: #FF00FF;
+      --deep-pink: #FF1493;
+      --medium-purple: #9370DB;
       --accent: #FF1493;
+      --accent-hover: #FF00FF;
+      --bg-main: #08030E;
+      --text-main: #FFFFFF;
+      --text-body: #E4D9F5;
+      --text-muted: #B8A7D4;
+      --border-color: rgba(147, 112, 219, 0.18);
     }
     html, body {
+      background-color: var(--bg-main);
+      color: var(--text-body);
       overflow-x: clip;
     }
+    ::selection {
+      background-color: #FF00FF;
+      color: #FFFFFF;
+    }
     :focus-visible {
-      outline: 2px solid var(--accent);
+      outline: 2px solid #FF1493;
       outline-offset: 2px;
     }
     .btn:active, button:active, a:active {
@@ -517,15 +522,15 @@ data.products.forEach(p => {
   ${getHeaderHtml('products')}
 
   <!-- Breadcrumbs Bar -->
-  <nav class="breadcrumb-nav" aria-label="Breadcrumbs" style="background: #F1F5F9; border-bottom: 1px solid var(--border-color); padding: 12px 0;">
+  <nav class="breadcrumb-nav" aria-label="Breadcrumbs" style="background: transparent; border-bottom: 1px solid rgba(147, 112, 219, 0.16); padding: 14px 0;">
     <div class="container" style="font-size: 0.85rem; color: var(--text-muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-      <a href="/" style="color: var(--primary); text-decoration: none;">Home</a>
+      <a href="/" style="color: var(--medium-purple); text-decoration: none;">Home</a>
       <span>&rsaquo;</span>
-      <a href="/products.html" style="color: var(--primary); text-decoration: none;">Catalog</a>
+      <a href="/products.html" style="color: var(--medium-purple); text-decoration: none;">Catalog</a>
       <span>&rsaquo;</span>
-      <a href="${categoryUrl}" style="color: var(--primary); text-decoration: none;">${escapeHtml(categoryObj.shortName)}</a>
+      <a href="${categoryUrl}" style="color: var(--medium-purple); text-decoration: none;">${escapeHtml(categoryObj.shortName)}</a>
       <span>&rsaquo;</span>
-      <span style="color: var(--text-main); font-weight: 600;">${escapeHtml(p.name)}</span>
+      <span style="color: #FFFFFF; font-weight: 600;">${escapeHtml(p.name)}</span>
     </div>
   </nav>
 
@@ -534,18 +539,18 @@ data.products.forEach(p => {
     <div class="container">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: start; margin-bottom: 56px;">
 
-        <!-- Product Image & Preview -->
+        <!-- Product Image & Preview (Unboxed, Floating) -->
         <div>
-          <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); background: #FFFFFF; box-shadow: var(--shadow-card); padding: 16px;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; background: transparent; padding: 20px; display: flex; align-items: center; justify-content: center;">
             <picture>
               <source srcset="${p.pageImage.endsWith('.webp') ? p.pageImage : p.pageImage.replace(/\.(png|jpe?g)$/i, '.webp')}" type="image/webp">
-              <img src="${p.pageImage.endsWith('.webp') ? p.pageImage.replace(/\.webp$/i, '.png') : p.pageImage}" alt="${escapeHtml(p.name)} - JJ &amp; Company Jalgaon" style="width: 100%; height: auto; display: block; border-radius: var(--radius-md);" loading="eager" fetchpriority="high" width="800" height="800">
+              <img src="${p.pageImage.endsWith('.webp') ? p.pageImage.replace(/\.webp$/i, '.png') : p.pageImage}" alt="${escapeHtml(p.name)} - JJ &amp; Company Jalgaon" style="max-width: 100%; max-height: 440px; width: auto; height: auto; display: block; object-fit: contain; filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.75));" loading="eager" fetchpriority="high" width="800" height="800">
             </picture>
           </div>
           <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-            ${p.inHouseManufactured ? '<span class="topbar-badge" style="background:#E0F2FE; color:#0369A1; font-weight:700;">IN-HOUSE MANUFACTURED • JALGAON PLANT</span>' : ''}
-            ${p.trademarkAppId ? '<span class="topbar-badge" style="background:#FEF3C7; color:#B45309; font-weight:700;">REGISTERED TRADEMARK: ' + p.trademarkAppId + '</span>' : ''}
-            ${p.category === 'panama-brushes' ? '<span class="topbar-badge" style="background:#DCFCE7; color:#15803D; font-weight:700;">AUTHENTIC DIRECT IMPORT</span>' : ''}
+            ${p.inHouseManufactured ? '<span class="topbar-badge" style="background: rgba(255, 20, 147, 0.15); color: #FF1493; border: 1px solid rgba(255, 20, 147, 0.35); font-weight:700;">IN-HOUSE MANUFACTURED • JALGAON PLANT</span>' : ''}
+            ${p.trademarkAppId ? '<span class="topbar-badge" style="background: rgba(255, 0, 255, 0.15); color: #FF00FF; border: 1px solid rgba(255, 0, 255, 0.35); font-weight:700;">REGISTERED TRADEMARK: ' + p.trademarkAppId + '</span>' : ''}
+            ${p.category === 'panama-brushes' ? '<span class="topbar-badge" style="background: rgba(147, 112, 219, 0.18); color: #9370DB; border: 1px solid rgba(147, 112, 219, 0.35); font-weight:700;">AUTHENTIC DIRECT IMPORT</span>' : ''}
           </div>
         </div>
 
@@ -553,7 +558,7 @@ data.products.forEach(p => {
         <div>
           <div style="margin-bottom: 8px;">
             <span class="section-tag" style="margin-bottom: 6px;">${escapeHtml(categoryObj.name)}</span>
-            <h1 style="font-size: 2.1rem; color: var(--text-main); font-weight: 800; line-height: 1.25; margin-bottom: 12px;">
+            <h1 style="font-size: 2.1rem; color: #FFFFFF; font-weight: 800; line-height: 1.25; margin-bottom: 12px;">
               ${escapeHtml(p.name)}
             </h1>
           </div>
@@ -564,8 +569,8 @@ data.products.forEach(p => {
 
           ${getWoosterMatrixHtml(p)}
 
-          <div style="background: var(--bg-section); padding: 22px; border-radius: var(--radius-md); border: 1.5px solid var(--border-color); margin-bottom: 24px;">
-            <h2 style="font-size: 1.15rem; color: var(--text-main); font-weight: 700; margin-bottom: 8px;">Wholesale Supply for ${escapeHtml(shortProdLabel)}</h2>
+          <div style="background: rgba(147, 112, 219, 0.05); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.18); margin-bottom: 24px;">
+            <h2 style="font-size: 1.15rem; color: #FFFFFF; font-weight: 700; margin-bottom: 8px;">Wholesale Supply for ${escapeHtml(shortProdLabel)}</h2>
             <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.5; margin-bottom: 16px;">
               Direct depo supply for hardware shops, paint counters, and regional stockists. Message our sales desk with your requirements for trade rates and dispatch schedules.
             </p>
@@ -592,11 +597,11 @@ data.products.forEach(p => {
 
       <!-- Full Specifications Table -->
       <section style="margin-bottom: 56px;">
-        <h2 style="font-size: 1.5rem; color: var(--text-main); font-weight: 800; margin-bottom: 18px;">
+        <h2 style="font-size: 1.5rem; color: #FFFFFF; font-weight: 800; margin-bottom: 18px;">
           ${escapeHtml(shortProdLabel)} Specifications
         </h2>
-        <div style="overflow-x: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
-          <table style="width: 100%; border-collapse: collapse; background: #FFFFFF;">
+        <div style="overflow-x: auto; border-radius: var(--radius-md);">
+          <table style="width: 100%; border-collapse: collapse; background: rgba(147, 112, 219, 0.04); border: 1px solid rgba(147, 112, 219, 0.18);">
             <tbody>
               ${specsRowsHtml}
             </tbody>
@@ -754,7 +759,7 @@ categoriesDef.forEach(cat => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.3">
+  <link rel="stylesheet" href="/css/style.css?v=4.4">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -796,27 +801,55 @@ categoriesDef.forEach(cat => {
     gtag('js', new Date());
     gtag('config', 'G-T22MWNL11C');
   </script>
+
+  <style>
+    :root {
+      --fuchsia: #FF00FF;
+      --deep-pink: #FF1493;
+      --medium-purple: #9370DB;
+      --accent: #FF1493;
+      --accent-hover: #FF00FF;
+      --bg-main: #08030E;
+      --text-main: #FFFFFF;
+      --text-body: #E4D9F5;
+      --text-muted: #B8A7D4;
+      --border-color: rgba(147, 112, 219, 0.18);
+    }
+    html, body {
+      background-color: var(--bg-main);
+      color: var(--text-body);
+      overflow-x: clip;
+    }
+    ::selection {
+      background-color: #FF00FF;
+      color: #FFFFFF;
+    }
+    :focus-visible {
+      outline: 2px solid #FF1493;
+      outline-offset: 2px;
+    }
+  </style>
 </head>
 
 <body>
   ${getHeaderHtml('products')}
 
   <!-- Breadcrumbs Bar -->
-  <nav class="breadcrumb-nav" aria-label="Breadcrumbs" style="background: #F1F5F9; border-bottom: 1px solid var(--border-color); padding: 12px 0;">
+  <nav class="breadcrumb-nav" aria-label="Breadcrumbs" style="background: transparent; border-bottom: 1px solid rgba(147, 112, 219, 0.16); padding: 14px 0;">
     <div class="container" style="font-size: 0.85rem; color: var(--text-muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-      <a href="/" style="color: var(--primary); text-decoration: none;">Home</a>
+      <a href="/" style="color: var(--medium-purple); text-decoration: none;">Home</a>
       <span>&rsaquo;</span>
-      <a href="/products.html" style="color: var(--primary); text-decoration: none;">Catalog</a>
+      <a href="/products.html" style="color: var(--medium-purple); text-decoration: none;">Catalog</a>
       <span>&rsaquo;</span>
-      <span style="color: var(--text-main); font-weight: 600;">${cat.h1}</span>
+      <span style="color: #FFFFFF; font-weight: 600;">${cat.h1}</span>
     </div>
   </nav>
 
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <div class="hero-badge" style="color: var(--accent-lime); margin-bottom: 12px;">
-        <span class="hero-badge-dot" style="background-color: var(--accent-lime);" aria-hidden="true"></span>
+      <div class="hero-badge" style="color: #FFFFFF; background: rgba(147, 112, 219, 0.15); border: 1px solid rgba(147, 112, 219, 0.3); margin-bottom: 12px;">
+        <span class="hero-badge-dot" style="background-color: var(--fuchsia);" aria-hidden="true"></span>
         ${cat.badge}
       </div>
       <h1 class="page-header-title">
@@ -840,7 +873,7 @@ categoriesDef.forEach(cat => {
   <main class="section">
     <div class="container">
       <div class="section-header" style="text-align: left; margin-bottom: 28px;">
-        <h2 style="font-size: 1.45rem; color: var(--text-main); font-weight: 800; margin: 0;">
+        <h2 style="font-size: 1.45rem; color: #FFFFFF; font-weight: 800; margin: 0;">
           All ${escapeHtml(cat.name)} Models &amp; Specifications
         </h2>
       </div>
@@ -849,8 +882,8 @@ categoriesDef.forEach(cat => {
       </div>
 
       <!-- Quick Category Switcher -->
-      <div style="background: var(--bg-section); padding: 28px; border-radius: var(--radius-md); border: 1px solid var(--border-color); text-align: center;">
-        <h2 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 12px; font-weight: 700;">Explore Categories Outside ${escapeHtml(cat.name)}</h2>
+      <div style="background: rgba(147, 112, 219, 0.04); padding: 28px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.18); text-align: center;">
+        <h2 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 12px; font-weight: 700;">Explore Categories Outside ${escapeHtml(cat.name)}</h2>
         <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
           <a href="/products/rollers.html" class="btn btn-outline btn-sm">1. Wallfin™ Paint Rollers</a>
           <a href="/products/brushes.html" class="btn btn-outline btn-sm">2. Panama Paint Brushes</a>

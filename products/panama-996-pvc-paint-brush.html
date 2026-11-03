@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.3">
+  <link rel="stylesheet" href="/css/style.css?v=4.4">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -100,15 +100,29 @@
   </script>
 
   <style>
-    /* Hallmark · theme: minimal · genre: modern-minimal */
     :root {
+      --fuchsia: #FF00FF;
+      --deep-pink: #FF1493;
+      --medium-purple: #9370DB;
       --accent: #FF1493;
+      --accent-hover: #FF00FF;
+      --bg-main: #08030E;
+      --text-main: #FFFFFF;
+      --text-body: #E4D9F5;
+      --text-muted: #B8A7D4;
+      --border-color: rgba(147, 112, 219, 0.18);
     }
     html, body {
+      background-color: var(--bg-main);
+      color: var(--text-body);
       overflow-x: clip;
     }
+    ::selection {
+      background-color: #FF00FF;
+      color: #FFFFFF;
+    }
     :focus-visible {
-      outline: 2px solid var(--accent);
+      outline: 2px solid #FF1493;
       outline-offset: 2px;
     }
     .btn:active, button:active, a:active {
@@ -182,15 +196,15 @@
   
 
   <!-- Breadcrumbs Bar -->
-  <nav class="breadcrumb-nav" aria-label="Breadcrumbs" style="background: #F1F5F9; border-bottom: 1px solid var(--border-color); padding: 12px 0;">
+  <nav class="breadcrumb-nav" aria-label="Breadcrumbs" style="background: transparent; border-bottom: 1px solid rgba(147, 112, 219, 0.16); padding: 14px 0;">
     <div class="container" style="font-size: 0.85rem; color: var(--text-muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-      <a href="/" style="color: var(--primary); text-decoration: none;">Home</a>
+      <a href="/" style="color: var(--medium-purple); text-decoration: none;">Home</a>
       <span>&rsaquo;</span>
-      <a href="/products.html" style="color: var(--primary); text-decoration: none;">Catalog</a>
+      <a href="/products.html" style="color: var(--medium-purple); text-decoration: none;">Catalog</a>
       <span>&rsaquo;</span>
-      <a href="/products/brushes.html" style="color: var(--primary); text-decoration: none;">Panama Paint Brushes</a>
+      <a href="/products/brushes.html" style="color: var(--medium-purple); text-decoration: none;">Panama Paint Brushes</a>
       <span>&rsaquo;</span>
-      <span style="color: var(--text-main); font-weight: 600;">Panama 996 PVC Handle Paint Brush</span>
+      <span style="color: #FFFFFF; font-weight: 600;">Panama 996 PVC Handle Paint Brush</span>
     </div>
   </nav>
 
@@ -199,18 +213,18 @@
     <div class="container">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: start; margin-bottom: 56px;">
 
-        <!-- Product Image & Preview -->
+        <!-- Product Image & Preview (Unboxed, Floating) -->
         <div>
-          <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); background: #FFFFFF; box-shadow: var(--shadow-card); padding: 16px;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; background: transparent; padding: 20px; display: flex; align-items: center; justify-content: center;">
             <picture>
               <source srcset="/assets/images/brushes/panama-996-pvc.webp" type="image/webp">
-              <img src="/assets/images/brushes/panama-996-pvc.png" alt="Panama 996 PVC Handle Paint Brush - JJ &amp; Company Jalgaon" style="width: 100%; height: auto; display: block; border-radius: var(--radius-md);" loading="eager" fetchpriority="high" width="800" height="800">
+              <img src="/assets/images/brushes/panama-996-pvc.png" alt="Panama 996 PVC Handle Paint Brush - JJ &amp; Company Jalgaon" style="max-width: 100%; max-height: 440px; width: auto; height: auto; display: block; object-fit: contain; filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.75));" loading="eager" fetchpriority="high" width="800" height="800">
             </picture>
           </div>
           <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
             
             
-            <span class="topbar-badge" style="background:#DCFCE7; color:#15803D; font-weight:700;">AUTHENTIC DIRECT IMPORT</span>
+            <span class="topbar-badge" style="background: rgba(147, 112, 219, 0.18); color: #9370DB; border: 1px solid rgba(147, 112, 219, 0.35); font-weight:700;">AUTHENTIC DIRECT IMPORT</span>
           </div>
         </div>
 
@@ -218,7 +232,7 @@
         <div>
           <div style="margin-bottom: 8px;">
             <span class="section-tag" style="margin-bottom: 6px;">Panama Paint Brushes Collection</span>
-            <h1 style="font-size: 2.1rem; color: var(--text-main); font-weight: 800; line-height: 1.25; margin-bottom: 12px;">
+            <h1 style="font-size: 2.1rem; color: #FFFFFF; font-weight: 800; line-height: 1.25; margin-bottom: 12px;">
               Panama 996 PVC Handle Paint Brush
             </h1>
           </div>
@@ -246,8 +260,8 @@
     </div>
   
 
-          <div style="background: var(--bg-section); padding: 22px; border-radius: var(--radius-md); border: 1.5px solid var(--border-color); margin-bottom: 24px;">
-            <h2 style="font-size: 1.15rem; color: var(--text-main); font-weight: 700; margin-bottom: 8px;">Wholesale Supply for Panama 996 PVC Handle Pain...</h2>
+          <div style="background: rgba(147, 112, 219, 0.05); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.18); margin-bottom: 24px;">
+            <h2 style="font-size: 1.15rem; color: #FFFFFF; font-weight: 700; margin-bottom: 8px;">Wholesale Supply for Panama 996 PVC Handle Pain...</h2>
             <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.5; margin-bottom: 16px;">
               Direct depo supply for hardware shops, paint counters, and regional stockists. Message our sales desk with your requirements for trade rates and dispatch schedules.
             </p>
@@ -274,46 +288,46 @@
 
       <!-- Full Specifications Table -->
       <section style="margin-bottom: 56px;">
-        <h2 style="font-size: 1.5rem; color: var(--text-main); font-weight: 800; margin-bottom: 18px;">
+        <h2 style="font-size: 1.5rem; color: #FFFFFF; font-weight: 800; margin-bottom: 18px;">
           Panama 996 PVC Handle Pain... Specifications
         </h2>
-        <div style="overflow-x: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
-          <table style="width: 100%; border-collapse: collapse; background: #FFFFFF;">
+        <div style="overflow-x: auto; border-radius: var(--radius-md);">
+          <table style="width: 100%; border-collapse: collapse; background: rgba(147, 112, 219, 0.04); border: 1px solid rgba(147, 112, 219, 0.18);">
             <tbody>
               
     <tr>
-      <th style="padding: 12px 16px; border: 1px solid var(--border-color); background: #F8FAFC; text-align: left; width: 35%; font-weight: 600; color: var(--text-main); font-size: 0.9rem;">Brand</th>
-      <td style="padding: 12px 16px; border: 1px solid var(--border-color); color: var(--text-body); font-size: 0.9rem;">Panama (Imported Collection)</td>
+      <th style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.16); background: rgba(147, 112, 219, 0.08); text-align: left; width: 35%; font-weight: 700; color: var(--medium-purple); font-size: 0.9rem;">Brand</th>
+      <td style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.12); color: #FFFFFF; font-size: 0.9rem;">Panama (Imported Collection)</td>
     </tr>
   
     <tr>
-      <th style="padding: 12px 16px; border: 1px solid var(--border-color); background: #F8FAFC; text-align: left; width: 35%; font-weight: 600; color: var(--text-main); font-size: 0.9rem;">Sourcing</th>
-      <td style="padding: 12px 16px; border: 1px solid var(--border-color); color: var(--text-body); font-size: 0.9rem;">Direct Import &amp; Wholesale Distribution</td>
+      <th style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.16); background: rgba(147, 112, 219, 0.08); text-align: left; width: 35%; font-weight: 700; color: var(--medium-purple); font-size: 0.9rem;">Sourcing</th>
+      <td style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.12); color: #FFFFFF; font-size: 0.9rem;">Direct Import &amp; Wholesale Distribution</td>
     </tr>
   
     <tr>
-      <th style="padding: 12px 16px; border: 1px solid var(--border-color); background: #F8FAFC; text-align: left; width: 35%; font-weight: 600; color: var(--text-main); font-size: 0.9rem;">Available Sizes</th>
-      <td style="padding: 12px 16px; border: 1px solid var(--border-color); color: var(--text-body); font-size: 0.9rem;">1 Inch, 1.5 Inch, 2 Inch, 2.5 Inch, 3 Inch, 4 Inch</td>
+      <th style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.16); background: rgba(147, 112, 219, 0.08); text-align: left; width: 35%; font-weight: 700; color: var(--medium-purple); font-size: 0.9rem;">Available Sizes</th>
+      <td style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.12); color: #FFFFFF; font-size: 0.9rem;">1 Inch, 1.5 Inch, 2 Inch, 2.5 Inch, 3 Inch, 4 Inch</td>
     </tr>
   
     <tr>
-      <th style="padding: 12px 16px; border: 1px solid var(--border-color); background: #F8FAFC; text-align: left; width: 35%; font-weight: 600; color: var(--text-main); font-size: 0.9rem;">Handle Material</th>
-      <td style="padding: 12px 16px; border: 1px solid var(--border-color); color: var(--text-body); font-size: 0.9rem;">High-Impact Orange PVC</td>
+      <th style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.16); background: rgba(147, 112, 219, 0.08); text-align: left; width: 35%; font-weight: 700; color: var(--medium-purple); font-size: 0.9rem;">Handle Material</th>
+      <td style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.12); color: #FFFFFF; font-size: 0.9rem;">High-Impact Orange PVC</td>
     </tr>
   
     <tr>
-      <th style="padding: 12px 16px; border: 1px solid var(--border-color); background: #F8FAFC; text-align: left; width: 35%; font-weight: 600; color: var(--text-main); font-size: 0.9rem;">Bristle Type</th>
-      <td style="padding: 12px 16px; border: 1px solid var(--border-color); color: var(--text-body); font-size: 0.9rem;">Solvent-Resistant Bristle Blend</td>
+      <th style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.16); background: rgba(147, 112, 219, 0.08); text-align: left; width: 35%; font-weight: 700; color: var(--medium-purple); font-size: 0.9rem;">Bristle Type</th>
+      <td style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.12); color: #FFFFFF; font-size: 0.9rem;">Solvent-Resistant Bristle Blend</td>
     </tr>
   
     <tr>
-      <th style="padding: 12px 16px; border: 1px solid var(--border-color); background: #F8FAFC; text-align: left; width: 35%; font-weight: 600; color: var(--text-main); font-size: 0.9rem;">Potting</th>
-      <td style="padding: 12px 16px; border: 1px solid var(--border-color); color: var(--text-body); font-size: 0.9rem;">100% Epoxy Potting</td>
+      <th style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.16); background: rgba(147, 112, 219, 0.08); text-align: left; width: 35%; font-weight: 700; color: var(--medium-purple); font-size: 0.9rem;">Potting</th>
+      <td style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.12); color: #FFFFFF; font-size: 0.9rem;">100% Epoxy Potting</td>
     </tr>
   
     <tr>
-      <th style="padding: 12px 16px; border: 1px solid var(--border-color); background: #F8FAFC; text-align: left; width: 35%; font-weight: 600; color: var(--text-main); font-size: 0.9rem;">Packaging</th>
-      <td style="padding: 12px 16px; border: 1px solid var(--border-color); color: var(--text-body); font-size: 0.9rem;">Master Wholesale Cartons</td>
+      <th style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.16); background: rgba(147, 112, 219, 0.08); text-align: left; width: 35%; font-weight: 700; color: var(--medium-purple); font-size: 0.9rem;">Packaging</th>
+      <td style="padding: 12px 16px; border-bottom: 1px solid rgba(147, 112, 219, 0.12); color: #FFFFFF; font-size: 0.9rem;">Master Wholesale Cartons</td>
     </tr>
   
             </tbody>
@@ -329,34 +343,34 @@
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
           
-      <div style="background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-color); padding: 18px; display: flex; flex-direction: column;">
+      <div style="background: rgba(147, 112, 219, 0.04); border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.16); padding: 18px; display: flex; flex-direction: column;">
         <picture>
           <source srcset="/assets/images/brushes/panama-tip-top.webp" type="image/webp">
-          <img src="/assets/images/brushes/panama-tip-top.png" alt="Panama Tip-Top PVC Handle Paint Brush" style="width: 100%; height: 180px; object-fit: contain; background: #FAFAFA; border-radius: var(--radius-sm); margin-bottom: 12px;" loading="lazy" width="280" height="180">
+          <img src="/assets/images/brushes/panama-tip-top.png" alt="Panama Tip-Top PVC Handle Paint Brush" style="width: 100%; height: 180px; object-fit: contain; background: transparent; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6)); margin-bottom: 12px;" loading="lazy" width="280" height="180">
         </picture>
-        <h3 style="font-size: 1rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">Panama Tip-Top PVC Handle Paint Brush</h3>
+        <h3 style="font-size: 1rem; color: #FFFFFF; margin-bottom: 6px; font-weight: 700;">Panama Tip-Top PVC Handle Paint Brush</h3>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; flex-grow: 1;">Panama Tip-Top PVC Paint Brush with distinctive pink handle. Engineered for smooth glide, low drag, and streak...</p>
-        <a href="/products/panama-tip-top-paint-brush.html" class="btn btn-outline btn-sm" style="text-align: center;">View Specifications </a>
+        <a href="/products/panama-tip-top-paint-brush.html" class="btn btn-outline btn-sm" style="text-align: center;">View Specifications</a>
       </div>
     
-      <div style="background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-color); padding: 18px; display: flex; flex-direction: column;">
+      <div style="background: rgba(147, 112, 219, 0.04); border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.16); padding: 18px; display: flex; flex-direction: column;">
         <picture>
           <source srcset="/assets/images/brushes/panama-777-pvc.webp" type="image/webp">
-          <img src="/assets/images/brushes/panama-777-pvc.jpg" alt="Panama 777 PVC Handle Paint Brush" style="width: 100%; height: 180px; object-fit: contain; background: #FAFAFA; border-radius: var(--radius-sm); margin-bottom: 12px;" loading="lazy" width="280" height="180">
+          <img src="/assets/images/brushes/panama-777-pvc.jpg" alt="Panama 777 PVC Handle Paint Brush" style="width: 100%; height: 180px; object-fit: contain; background: transparent; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6)); margin-bottom: 12px;" loading="lazy" width="280" height="180">
         </picture>
-        <h3 style="font-size: 1rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">Panama 777 PVC Handle Paint Brush</h3>
+        <h3 style="font-size: 1rem; color: #FFFFFF; margin-bottom: 6px; font-weight: 700;">Panama 777 PVC Handle Paint Brush</h3>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; flex-grow: 1;">Panama 777 PVC Paint Brush (3&quot; and 4&quot;). Combines durable PVC handle construction with dense tufting for contra...</p>
-        <a href="/products/panama-777-pvc-paint-brush.html" class="btn btn-outline btn-sm" style="text-align: center;">View Specifications </a>
+        <a href="/products/panama-777-pvc-paint-brush.html" class="btn btn-outline btn-sm" style="text-align: center;">View Specifications</a>
       </div>
     
-      <div style="background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-color); padding: 18px; display: flex; flex-direction: column;">
+      <div style="background: rgba(147, 112, 219, 0.04); border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.16); padding: 18px; display: flex; flex-direction: column;">
         <picture>
           <source srcset="/assets/images/brushes/panama-815.webp" type="image/webp">
-          <img src="/assets/images/brushes/panama-815.jpg" alt="Panama 815 Paint Brush" style="width: 100%; height: 180px; object-fit: contain; background: #FAFAFA; border-radius: var(--radius-sm); margin-bottom: 12px;" loading="lazy" width="280" height="180">
+          <img src="/assets/images/brushes/panama-815.jpg" alt="Panama 815 Paint Brush" style="width: 100%; height: 180px; object-fit: contain; background: transparent; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6)); margin-bottom: 12px;" loading="lazy" width="280" height="180">
         </picture>
-        <h3 style="font-size: 1rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">Panama 815 Paint Brush</h3>
+        <h3 style="font-size: 1rem; color: #FFFFFF; margin-bottom: 6px; font-weight: 700;">Panama 815 Paint Brush</h3>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; flex-grow: 1;">Panama 815 4-Inch Export Quality Paint Brush. Built with extra-dense export bristles that withstand coarse san...</p>
-        <a href="/products/panama-815-paint-brush.html" class="btn btn-outline btn-sm" style="text-align: center;">View Specifications </a>
+        <a href="/products/panama-815-paint-brush.html" class="btn btn-outline btn-sm" style="text-align: center;">View Specifications</a>
       </div>
     
         </div>
@@ -490,15 +504,6 @@
       </div>
     </div>
   </footer>
-            </a>
-            <a href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow" class="wooster-social-btn" aria-label="WhatsApp">
-              <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 01-5.82 2.41h-.01c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.02.79.81-2.95-.19-.3a8.196 8.196 0 01-1.26-4.55c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <!-- Floating WhatsApp -->
   <a id="floatingWhatsApp" href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow" class="floating-whatsapp"
@@ -507,8 +512,8 @@
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script defer src="/js/site-data.js?v=4.3"></script>
-  <script defer src="/js/main.js?v=4.3"></script>
+  <script defer src="/js/site-data.js?v=4.4"></script>
+  <script defer src="/js/main.js?v=4.4"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>

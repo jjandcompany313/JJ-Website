@@ -93,12 +93,14 @@ function generateFooter() {
   return `
   <!-- Critical Footer Layout Styles -->
   <style>
-    .footer-pre-bar { background-color: #181420; padding: 24px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); width: 100%; }
+    .footer-pre-bar { background-color: #0B0414; padding: 24px 0; border-top: 1px solid rgba(147, 112, 219, 0.16); width: 100%; }
     .footer-pre-inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; width: 100%; }
     .footer-pre-heading { font-family: var(--font-heading); font-size: 1rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: #FFFFFF; margin: 0; line-height: 1.35; }
     .footer-pre-form { display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 320px; flex-shrink: 0; }
-    .footer-pre-input { background-color: #FFFFFF; color: #111827; border: 1px solid #E2E8F0; border-radius: var(--radius-sm); padding: 10px 14px; font-size: var(--font-sm); outline: none; width: 100%; box-sizing: border-box; }
-    .footer-pre-btn { align-self: flex-start; background-color: var(--primary); color: #FFFFFF; font-weight: 800; font-size: var(--font-xs); letter-spacing: 0.08em; text-transform: uppercase; padding: 9px 26px; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: var(--font-heading); }
+    .footer-pre-input { background-color: rgba(147, 112, 219, 0.08); color: #FFFFFF; border: 1px solid rgba(147, 112, 219, 0.25); border-radius: var(--radius-sm); padding: 10px 14px; font-size: var(--font-sm); outline: none; width: 100%; box-sizing: border-box; }
+    .footer-pre-input:focus { border-color: var(--deep-pink); }
+    .footer-pre-btn { align-self: flex-start; background: linear-gradient(135deg, var(--deep-pink) 0%, #D80F7B 100%); color: #FFFFFF; font-weight: 800; font-size: var(--font-xs); letter-spacing: 0.08em; text-transform: uppercase; padding: 9px 26px; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: var(--font-heading); }
+    .footer-pre-btn:hover { background: linear-gradient(135deg, var(--fuchsia) 0%, var(--deep-pink) 100%); }
     .site-footer { background-color: #140520; color: #FFFFFF; padding: 52px 0 36px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); width: 100%; }
     .wooster-footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; align-items: start; width: 100%; }
     .wooster-brand-logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #FFFFFF; }
@@ -222,8 +224,8 @@ function generateFooter() {
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script defer src="/js/site-data.js?v=4.3"></script>
-  <script defer src="/js/main.js?v=4.3"></script>
+  <script defer src="/js/site-data.js?v=4.4"></script>
+  <script defer src="/js/main.js?v=4.4"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
@@ -351,8 +353,8 @@ locationsData.forEach(loc => {
   };
 
   const faqHtml = (loc.faq || []).map(f => `
-    <div style="background: #FFFFFF; padding: 22px 24px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 14px;">
-      <h3 style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 8px; font-weight: 700;">
+    <div style="background: transparent; padding: 20px 0; border-bottom: 1px solid rgba(147, 112, 219, 0.16);">
+      <h3 style="font-size: 1.05rem; color: #FFFFFF; margin-bottom: 8px; font-weight: 700;">
         ${escapeHtml(f.q)}
       </h3>
       <p style="font-size: 0.92rem; color: var(--text-body); line-height: 1.6; margin: 0;">
@@ -365,7 +367,7 @@ locationsData.forEach(loc => {
   const otherLocationsHtml = locationsData
     .filter(other => other.slug !== loc.slug)
     .map(other => `
-      <a href="/locations/${other.slug}.html" class="spec-pill" style="text-decoration: none; padding: 10px 16px; font-size: 0.9rem; background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+      <a href="/locations/${other.slug}.html" class="spec-pill" style="text-decoration: none; padding: 10px 16px; font-size: 0.9rem; background: rgba(147, 112, 219, 0.08); border: 1px solid rgba(147, 112, 219, 0.25); border-radius: var(--radius-md); color: #FFFFFF; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
         ${SVG_PIN} ${escapeHtml(other.name)} Supply 
       </a>
     `).join('');
@@ -387,7 +389,7 @@ locationsData.forEach(loc => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.3">
+  <link rel="stylesheet" href="/css/style.css?v=4.4">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -431,15 +433,29 @@ locationsData.forEach(loc => {
   </script>
 
   <style>
-    /* Hallmark · theme: minimal · genre: modern-minimal */
     :root {
+      --fuchsia: #FF00FF;
+      --deep-pink: #FF1493;
+      --medium-purple: #9370DB;
       --accent: #FF1493;
+      --accent-hover: #FF00FF;
+      --bg-main: #08030E;
+      --text-main: #FFFFFF;
+      --text-body: #E4D9F5;
+      --text-muted: #B8A7D4;
+      --border-color: rgba(147, 112, 219, 0.18);
     }
     html, body {
+      background-color: var(--bg-main);
+      color: var(--text-body);
       overflow-x: clip;
     }
+    ::selection {
+      background-color: #FF00FF;
+      color: #FFFFFF;
+    }
     :focus-visible {
-      outline: 2px solid var(--accent);
+      outline: 2px solid #FF1493;
       outline-offset: 2px;
     }
     .btn:active, button:active, a:active {
@@ -456,13 +472,13 @@ locationsData.forEach(loc => {
   ${generateHeader('dealer')}
 
   <!-- Breadcrumbs Bar -->
-  <nav class="breadcrumb-nav" aria-label="Breadcrumbs" style="background: #F1F5F9; border-bottom: 1px solid var(--border-color); padding: 12px 0;">
+  <nav class="breadcrumb-nav" aria-label="Breadcrumbs" style="background: transparent; border-bottom: 1px solid rgba(147, 112, 219, 0.16); padding: 14px 0;">
     <div class="container" style="font-size: 0.85rem; color: var(--text-muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-      <a href="/" style="color: var(--primary); text-decoration: none;">Home</a>
+      <a href="/" style="color: var(--medium-purple); text-decoration: none;">Home</a>
       <span>&rsaquo;</span>
-      <a href="/dealer.html" style="color: var(--primary); text-decoration: none;">Dealership</a>
+      <a href="/dealer.html" style="color: var(--medium-purple); text-decoration: none;">Dealership</a>
       <span>&rsaquo;</span>
-      <span style="color: var(--text-main); font-weight: 600;">${escapeHtml(loc.name)}</span>
+      <span style="color: #FFFFFF; font-weight: 600;">${escapeHtml(loc.name)}</span>
     </div>
   </nav>
 
@@ -481,14 +497,14 @@ locationsData.forEach(loc => {
       </p>
 
       <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="${waUrl}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-lg">
+        <a href="${waUrl}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary btn-lg">
           ${SVG_WA} Get Wholesale Rates on WhatsApp
         </a>
         <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-outline btn-lg" style="display: inline-flex; align-items: center; gap: 6px;">
           ${SVG_STAR} Google Verified Profile
         </a>
         <a href="#inquiryForm" class="btn btn-secondary btn-lg">
-          <span aria-hidden="true">📝</span> Apply for Dealership
+          Apply for Dealership
         </a>
         <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-outline btn-lg">
           ${SVG_PDF} Master Catalogue (PDF)
@@ -498,29 +514,26 @@ locationsData.forEach(loc => {
   </section>
 
   <!-- Logistics & Route Snapshot Strip -->
-  <div style="background: #F8FAFC; border-bottom: 1px solid var(--border-color); padding: 20px 0;">
+  <div style="background: rgba(147, 112, 219, 0.04); border-bottom: 1px solid rgba(147, 112, 219, 0.16); padding: 20px 0;">
     <div class="container">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
         <div style="display: flex; align-items: flex-start; gap: 12px;">
-          <span style="font-size: 1.6rem;" aria-hidden="true">⏱️</span>
           <div>
-            <strong style="display: block; font-size: 0.9rem; color: var(--text-main); margin-bottom: 2px;">Transit &amp; Delivery</strong>
+            <strong style="display: block; font-size: 0.9rem; color: #FFFFFF; margin-bottom: 2px;">Transit &amp; Delivery</strong>
             <span style="font-size: 0.88rem; color: var(--text-muted);">${escapeHtml(loc.transitTime)}</span>
           </div>
         </div>
 
         <div style="display: flex; align-items: flex-start; gap: 12px;">
-          <span style="font-size: 1.6rem;" aria-hidden="true">🚚</span>
           <div>
-            <strong style="display: block; font-size: 0.9rem; color: var(--text-main); margin-bottom: 2px;">Logistics Route</strong>
+            <strong style="display: block; font-size: 0.9rem; color: #FFFFFF; margin-bottom: 2px;">Logistics Route</strong>
             <span style="font-size: 0.88rem; color: var(--text-muted);">${escapeHtml(loc.logistics)}</span>
           </div>
         </div>
 
         <div style="display: flex; align-items: flex-start; gap: 12px;">
-          <span style="font-size: 1.6rem;" aria-hidden="true">📍</span>
           <div>
-            <strong style="display: block; font-size: 0.9rem; color: var(--text-main); margin-bottom: 2px;">Key Towns Served</strong>
+            <strong style="display: block; font-size: 0.9rem; color: #FFFFFF; margin-bottom: 2px;">Key Towns Served</strong>
             <span style="font-size: 0.88rem; color: var(--text-muted);">${escapeHtml(loc.coverage)}</span>
           </div>
         </div>
@@ -537,33 +550,32 @@ locationsData.forEach(loc => {
         <article style="line-height: 1.75; color: var(--text-body);">
           
           <!-- AEO Direct Answer Block for AI Search & Featured Snippets -->
-          <section class="aeo-summary-box" style="background: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 100%); border: 1.5px solid #A7F3D0; border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 32px; box-shadow: 0 2px 6px rgba(6, 78, 59, 0.05);">
+          <section class="aeo-summary-box" style="background: rgba(147, 112, 219, 0.05); border: 1px solid rgba(147, 112, 219, 0.2); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 32px;">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-              <span style="display: inline-block; width: 10px; height: 10px; background: #10B981; border-radius: 50%;" aria-hidden="true"></span>
-              <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #065F46;">Quick Wholesale Summary • AEO &amp; AI Search Verified</span>
+              <span style="display: inline-block; width: 10px; height: 10px; background: var(--fuchsia); border-radius: 50%;" aria-hidden="true"></span>
+              <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--medium-purple);">Quick Wholesale Summary</span>
             </div>
-            <h2 style="font-size: 1.25rem; color: #064E3B; font-weight: 800; margin-bottom: 12px; line-height: 1.35;">
+            <h2 style="font-size: 1.25rem; color: #FFFFFF; font-weight: 800; margin-bottom: 12px; line-height: 1.35;">
               Paint Accessories Wholesale &amp; Depo in ${escapeHtml(loc.name)}
             </h2>
-            <p style="font-size: 0.96rem; color: #064E3B; line-height: 1.65; margin-bottom: 16px;">
+            <p style="font-size: 0.96rem; color: var(--text-body); line-height: 1.65; margin-bottom: 16px;">
               <strong>JJ &amp; Company</strong> is a direct manufacturer of <strong>Wallfin™ paint rollers</strong> (Trademark Application ID: 8027912) and wholesale supplier of <strong>Panama paint brushes</strong>, headquartered at Plot No-8, Dixit Wadi, Jalgaon, Maharashtra 425001. We supply hardware retail shops, paint stockists, and contractors in ${escapeHtml(loc.name)} with direct factory rates, zero middleman markups, and reliable ${escapeHtml(loc.transitTime)}.
             </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.85rem; color: #047857;">
-              <div><strong>✓ Brand:</strong> Wallfin™ (TM: 8027912) &amp; Panama</div>
-              <div><strong>✓ Facility:</strong> Plot No-8, Dixit Wadi, Jalgaon</div>
-              <div><strong>✓ Dispatch:</strong> ${escapeHtml(loc.transitTime)}</div>
-              <div><strong>✓ Contact:</strong> +91 94227 75429 (WhatsApp/Call)</div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.85rem; color: #D5C7ED;">
+              <div><strong>Brand:</strong> Wallfin™ (TM: 8027912) &amp; Panama</div>
+              <div><strong>Facility:</strong> Plot No-8, Dixit Wadi, Jalgaon</div>
+              <div><strong>Dispatch:</strong> ${escapeHtml(loc.transitTime)}</div>
+              <div><strong>Contact:</strong> +91 94227 75429 (WhatsApp/Call)</div>
             </div>
           </section>
 
           <!-- Verified Google Review & Local Entity Grounding Card -->
-          <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px 22px; margin-bottom: 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; box-shadow: var(--shadow-sm);">
+          <div style="background: rgba(147, 112, 219, 0.04); border: 1px solid rgba(147, 112, 219, 0.18); border-radius: var(--radius-md); padding: 18px 22px; margin-bottom: 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
             <div style="display: flex; align-items: center; gap: 14px;">
-              <span style="font-size: 2rem;" aria-hidden="true">⭐</span>
               <div>
                 <div style="display: flex; align-items: center; gap: 8px;">
-                  <strong style="color: var(--text-main); font-size: 1.02rem;">5.0 ★★★★★ Verified on Google Maps</strong>
-                  <span style="background: #E0F2FE; color: #0369A1; font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; font-weight: 700;">Verified Business</span>
+                  <strong style="color: #FFFFFF; font-size: 1.02rem;">5.0 Verified on Google Maps</strong>
+                  <span style="background: rgba(147, 112, 219, 0.18); color: var(--medium-purple); font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; font-weight: 700;">Verified Business</span>
                 </div>
                 <p style="font-size: 0.84rem; color: var(--text-muted); margin: 3px 0 0 0;">J. J. &amp; COMPANY — Trusted by hardware dealers, retail paint counters &amp; contractors.</p>
               </div>
@@ -573,13 +585,13 @@ locationsData.forEach(loc => {
                 ${SVG_STAR} Read Reviews
               </a>
               <a href="https://www.google.com/maps/place/J.+J.+%26+COMPANY/@21.0080644,75.5706007,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd90fa88342dc29:0xc574da6d83f5c10a!8m2!3d21.0080644!4d75.5706007!16s%2Fg%2F11vdgxdypk" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-outline btn-sm">
-                🗺️ Google Maps Profile
+                Google Maps Profile
               </a>
             </div>
           </div>
 
           <section style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.55rem; color: var(--text-main); font-weight: 800; margin-bottom: 14px;">
+            <h2 style="font-size: 1.55rem; color: #FFFFFF; font-weight: 800; margin-bottom: 14px;">
               Wholesale Paint Supply for ${escapeHtml(loc.name)} Hardware Dealers
             </h2>
             <p style="font-size: 1rem; margin-bottom: 16px;">
@@ -590,8 +602,8 @@ locationsData.forEach(loc => {
             </p>
           </section>
 
-          <section style="margin-bottom: 40px; background: #FFFFFF; padding: 28px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
-            <h2 style="font-size: 1.4rem; color: var(--text-main); font-weight: 800; margin-bottom: 12px;">
+          <section style="margin-bottom: 40px; background: rgba(147, 112, 219, 0.04); padding: 28px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.18);">
+            <h2 style="font-size: 1.4rem; color: #FFFFFF; font-weight: 800; margin-bottom: 12px;">
               Complete Product Portfolio Available for ${escapeHtml(loc.name)}
             </h2>
             <p style="margin-bottom: 18px; font-size: 0.95rem;">
@@ -599,28 +611,28 @@ locationsData.forEach(loc => {
             </p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px;">
-              <div style="background: #F8FAFC; padding: 14px; border-radius: var(--radius-sm); border-left: 3px solid var(--primary);">
-                <strong style="display: block; font-size: 0.9rem; color: var(--text-main);">Wallfin™ Rollers</strong>
+              <div style="background: rgba(147, 112, 219, 0.06); padding: 14px; border-radius: var(--radius-sm); border-left: 3px solid var(--deep-pink);">
+                <strong style="display: block; font-size: 0.9rem; color: #FFFFFF;">Wallfin™ Rollers</strong>
                 <span style="font-size: 0.82rem; color: var(--text-muted);">Standard 20mm &amp; 38mm core, epoxy &amp; foam fix.</span>
               </div>
-              <div style="background: #F8FAFC; padding: 14px; border-radius: var(--radius-sm); border-left: 3px solid var(--accent);">
-                <strong style="display: block; font-size: 0.9rem; color: var(--text-main);">Panama Paint Brushes</strong>
+              <div style="background: rgba(147, 112, 219, 0.06); padding: 14px; border-radius: var(--radius-sm); border-left: 3px solid var(--fuchsia);">
+                <strong style="display: block; font-size: 0.9rem; color: #FFFFFF;">Panama Paint Brushes</strong>
                 <span style="font-size: 0.82rem; color: var(--text-muted);">1" to 5" sizes, 100% epoxy potting, zero shed.</span>
               </div>
-              <div style="background: #F8FAFC; padding: 14px; border-radius: var(--radius-sm); border-left: 3px solid #0284C7;">
-                <strong style="display: block; font-size: 0.9rem; color: var(--text-main);">Finishing Accessories</strong>
+              <div style="background: rgba(147, 112, 219, 0.06); padding: 14px; border-radius: var(--radius-sm); border-left: 3px solid var(--medium-purple);">
+                <strong style="display: block; font-size: 0.9rem; color: #FFFFFF;">Finishing Accessories</strong>
                 <span style="font-size: 0.82rem; color: var(--text-muted);">Maruti thinners, Nico polish, Cumi sandpaper &amp; pata.</span>
               </div>
             </div>
 
             <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-              <a href="/products/rollers.html" class="btn btn-outline btn-sm">Browse Wallfin™ Rollers </a>
-              <a href="/products/brushes.html" class="btn btn-outline btn-sm">Browse Panama Brushes </a>
+              <a href="/products/rollers.html" class="btn btn-outline btn-sm">Browse Wallfin™ Rollers</a>
+              <a href="/products/brushes.html" class="btn btn-outline btn-sm">Browse Panama Brushes</a>
             </div>
           </section>
 
           <section style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.4rem; color: var(--text-main); font-weight: 800; margin-bottom: 14px;">
+            <h2 style="font-size: 1.4rem; color: #FFFFFF; font-weight: 800; margin-bottom: 14px;">
               Why Hardware Counters in ${escapeHtml(loc.name)} Partner with JJ &amp; Company
             </h2>
             <ul style="padding-left: 20px; margin: 0 0 20px 0; display: flex; flex-direction: column; gap: 10px;">
@@ -629,20 +641,20 @@ locationsData.forEach(loc => {
           </section>
 
           <section style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.4rem; color: var(--text-main); font-weight: 800; margin-bottom: 14px;">
+            <h2 style="font-size: 1.4rem; color: #FFFFFF; font-weight: 800; margin-bottom: 14px;">
               Packaging &amp; Transport Logistics for ${escapeHtml(loc.name)}
             </h2>
             <p style="font-size: 0.95rem; margin-bottom: 16px;">
               ${escapeHtml(loc.transportDetails)}
             </p>
-            <div style="background: #FEF9C3; border: 1px solid #FDE047; padding: 16px 20px; border-radius: var(--radius-md); font-size: 0.88rem; color: #713F12;">
+            <div style="background: rgba(147, 112, 219, 0.08); border: 1px solid rgba(147, 112, 219, 0.25); padding: 16px 20px; border-radius: var(--radius-md); font-size: 0.88rem; color: #FFFFFF;">
               <strong>Flexible Trial Consignments:</strong> We support newly onboarded hardware shops and regional stockists with flexible order quantities and mixed-carton assortments to test local painter preference before committing to bulk seasonal dispatches.
             </div>
           </section>
 
           <!-- Frequently Asked Questions -->
           <section style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.4rem; color: var(--text-main); font-weight: 800; margin-bottom: 16px;">
+            <h2 style="font-size: 1.4rem; color: #FFFFFF; font-weight: 800; margin-bottom: 16px;">
               Frequently Asked Questions for ${escapeHtml(loc.name)} Dealers
             </h2>
             <div>
@@ -652,7 +664,7 @@ locationsData.forEach(loc => {
 
           <!-- Other Supply Locations -->
           <section style="border-top: 1px solid var(--border-color); padding-top: 24px; margin-bottom: 30px;">
-            <h2 style="font-size: 1.15rem; color: var(--text-main); font-weight: 700; margin-bottom: 12px;">
+            <h2 style="font-size: 1.15rem; color: #FFFFFF; font-weight: 700; margin-bottom: 12px;">
               Connected Wholesale Hubs &amp; Transport Routes from ${escapeHtml(loc.name)}
             </h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
@@ -663,10 +675,10 @@ locationsData.forEach(loc => {
         </article>
 
         <!-- Right Column: Dealer Application Form Card -->
-        <aside id="inquiryForm" style="position: sticky; top: 90px; background: #FFFFFF; padding: 32px 28px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-card);">
+        <aside id="inquiryForm" style="position: sticky; top: 90px; background: rgba(147, 112, 219, 0.04); padding: 32px 28px; border-radius: var(--radius-lg); border: 1px solid rgba(147, 112, 219, 0.18);">
           <div style="margin-bottom: 20px;">
             <span class="section-tag" style="margin-bottom: 6px;">Wholesale Dealership</span>
-            <h2 style="font-size: 1.4rem; color: var(--text-main); font-weight: 800; margin-bottom: 6px;">
+            <h2 style="font-size: 1.4rem; color: #FFFFFF; font-weight: 800; margin-bottom: 6px;">
               Apply for Dealership in ${escapeHtml(loc.name)}
             </h2>
             <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin: 0;">

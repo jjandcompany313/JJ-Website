@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.3">
+  <link rel="stylesheet" href="/css/style.css?v=4.4">
   
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -132,15 +132,29 @@
     gtag('config', 'G-T22MWNL11C');
   </script>
   <style>
-    /* Hallmark · theme: minimal · genre: modern-minimal */
     :root {
+      --fuchsia: #FF00FF;
+      --deep-pink: #FF1493;
+      --medium-purple: #9370DB;
       --accent: #FF1493;
+      --accent-hover: #FF00FF;
+      --bg-main: #08030E;
+      --text-main: #FFFFFF;
+      --text-body: #E4D9F5;
+      --text-muted: #B8A7D4;
+      --border-color: rgba(147, 112, 219, 0.18);
     }
     html, body {
+      background-color: var(--bg-main);
+      color: var(--text-body);
       overflow-x: clip;
     }
+    ::selection {
+      background-color: #FF00FF;
+      color: #FFFFFF;
+    }
     :focus-visible {
-      outline: 2px solid var(--accent);
+      outline: 2px solid #FF1493;
       outline-offset: 2px;
     }
     .btn:active, button:active, a:active {
@@ -497,12 +511,14 @@
 
   <!-- Critical Footer Layout Styles -->
   <style>
-    .footer-pre-bar { background-color: #181420; padding: 24px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); width: 100%; }
+    .footer-pre-bar { background-color: #0B0414; padding: 24px 0; border-top: 1px solid rgba(147, 112, 219, 0.16); width: 100%; }
     .footer-pre-inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; width: 100%; }
     .footer-pre-heading { font-family: var(--font-heading); font-size: 1rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: #FFFFFF; margin: 0; line-height: 1.35; }
     .footer-pre-form { display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 320px; flex-shrink: 0; }
-    .footer-pre-input { background-color: #FFFFFF; color: #111827; border: 1px solid #E2E8F0; border-radius: var(--radius-sm); padding: 10px 14px; font-size: var(--font-sm); outline: none; width: 100%; box-sizing: border-box; }
-    .footer-pre-btn { align-self: flex-start; background-color: var(--primary); color: #FFFFFF; font-weight: 800; font-size: var(--font-xs); letter-spacing: 0.08em; text-transform: uppercase; padding: 9px 26px; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: var(--font-heading); }
+    .footer-pre-input { background-color: rgba(147, 112, 219, 0.08); color: #FFFFFF; border: 1px solid rgba(147, 112, 219, 0.25); border-radius: var(--radius-sm); padding: 10px 14px; font-size: var(--font-sm); outline: none; width: 100%; box-sizing: border-box; }
+    .footer-pre-input:focus { border-color: var(--deep-pink); }
+    .footer-pre-btn { align-self: flex-start; background: linear-gradient(135deg, var(--deep-pink) 0%, #D80F7B 100%); color: #FFFFFF; font-weight: 800; font-size: var(--font-xs); letter-spacing: 0.08em; text-transform: uppercase; padding: 9px 26px; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: var(--font-heading); }
+    .footer-pre-btn:hover { background: linear-gradient(135deg, var(--fuchsia) 0%, var(--deep-pink) 100%); }
     .site-footer { background-color: #140520; color: #FFFFFF; padding: 52px 0 36px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); width: 100%; }
     .wooster-footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; align-items: start; width: 100%; }
     .wooster-brand-logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #FFFFFF; }
@@ -626,8 +642,8 @@
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script defer src="/js/site-data.js?v=4.3"></script>
-  <script defer src="/js/main.js?v=4.3"></script>
+  <script defer src="/js/site-data.js?v=4.4"></script>
+  <script defer src="/js/main.js?v=4.4"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>

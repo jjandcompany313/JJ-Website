@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.3">
+  <link rel="stylesheet" href="/css/style.css?v=4.4">
   
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -121,15 +121,29 @@
     gtag('config', 'G-T22MWNL11C');
   </script>
   <style>
-    /* Hallmark · theme: minimal · genre: modern-minimal */
     :root {
+      --fuchsia: #FF00FF;
+      --deep-pink: #FF1493;
+      --medium-purple: #9370DB;
       --accent: #FF1493;
+      --accent-hover: #FF00FF;
+      --bg-main: #08030E;
+      --text-main: #FFFFFF;
+      --text-body: #E4D9F5;
+      --text-muted: #B8A7D4;
+      --border-color: rgba(147, 112, 219, 0.18);
     }
     html, body {
+      background-color: var(--bg-main);
+      color: var(--text-body);
       overflow-x: clip;
     }
+    ::selection {
+      background-color: #FF00FF;
+      color: #FFFFFF;
+    }
     :focus-visible {
-      outline: 2px solid var(--accent);
+      outline: 2px solid #FF1493;
       outline-offset: 2px;
     }
     .btn:active, button:active, a:active {
@@ -263,7 +277,7 @@
               <source srcset="/assets/images/jj-company-building.webp" type="image/webp">
               <img src="/assets/images/jj-company-building.jpg" alt="JJ &amp; Company Manufacturing Plant, Jalgaon" style="width: 100%; height: auto; display: block;" loading="lazy" width="800" height="600">
             </picture>
-            <div style="padding: 16px 20px; background: #FFFFFF; border-top: 1px solid var(--border-color);">
+            <div style="padding: 16px 20px; background: #0D0518; border-top: 1px solid rgba(147, 112, 219, 0.18);">
               <strong style="color: var(--text-main); font-size: 0.95rem;">J. J. &amp; Company Facility</strong>
               <p style="font-size: 0.825rem; color: var(--text-muted); margin: 2px 0 0 0;">Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd, Jalgaon, Maharashtra</p>
             </div>
@@ -313,33 +327,33 @@
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
-          <div style="background: #FFFFFF; padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-color); border-top: 4px solid var(--primary);">
-            <div style="font-size: 1.4rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">2016</div>
-            <h3 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 8px;">Depo Founded</h3>
+          <div style="background: rgba(147, 112, 219, 0.05); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.18); border-top: 3px solid var(--deep-pink);">
+            <div style="font-size: 1.4rem; font-weight: 800; color: var(--fuchsia); margin-bottom: 6px;">2016</div>
+            <h3 style="font-size: 1.1rem; color: #FFFFFF; margin-bottom: 8px;">Depo Founded</h3>
             <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.6; margin: 0;">
               Jafar Hanif Nagavadriya founded JJ &amp; Company in Jalgaon, establishing on-site paint roller winding and frame fabrication under the Wallfin™ brand.
             </p>
           </div>
 
-          <div style="background: #FFFFFF; padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-color); border-top: 4px solid var(--primary);">
-            <div style="font-size: 1.4rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">2019</div>
-            <h3 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 8px;">Panama Brush Import Line</h3>
+          <div style="background: rgba(147, 112, 219, 0.05); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.18); border-top: 3px solid var(--deep-pink);">
+            <div style="font-size: 1.4rem; font-weight: 800; color: var(--fuchsia); margin-bottom: 6px;">2019</div>
+            <h3 style="font-size: 1.1rem; color: #FFFFFF; margin-bottom: 8px;">Panama Brush Import Line</h3>
             <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.6; margin: 0;">
               Partnered with specialized manufacturers to directly import authentic Panama paint brushes with 100% computerized epoxy bristle potting to eliminate shedding.
             </p>
           </div>
 
-          <div style="background: #FFFFFF; padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-color); border-top: 4px solid var(--primary);">
-            <div style="font-size: 1.4rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">2022</div>
-            <h3 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 8px;">Capacity Scaling</h3>
+          <div style="background: rgba(147, 112, 219, 0.05); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.18); border-top: 3px solid var(--deep-pink);">
+            <div style="font-size: 1.4rem; font-weight: 800; color: var(--fuchsia); margin-bottom: 6px;">2022</div>
+            <h3 style="font-size: 1.1rem; color: #FFFFFF; margin-bottom: 8px;">Capacity Scaling</h3>
             <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.6; margin: 0;">
               Modernized manufacturing floor at Plot No-8, Dixit Wadi, scaling production capacity to 350,000+ units monthly.
             </p>
           </div>
 
-          <div style="background: #FFFFFF; padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-color); border-top: 4px solid var(--primary);">
-            <div style="font-size: 1.4rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">Present</div>
-            <h3 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 8px;">Regional Supply Network</h3>
+          <div style="background: rgba(147, 112, 219, 0.05); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.18); border-top: 3px solid var(--deep-pink);">
+            <div style="font-size: 1.4rem; font-weight: 800; color: var(--fuchsia); margin-bottom: 6px;">Present</div>
+            <h3 style="font-size: 1.1rem; color: #FFFFFF; margin-bottom: 8px;">Regional Supply Network</h3>
             <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.6; margin: 0;">
               Active wholesale supply across Jalgaon, Dhule, Nandurbar, Buldhana, and Madhya Pradesh, with freight dispatch on request.
             </p>
@@ -435,12 +449,14 @@
 
   <!-- Critical Footer Layout Styles -->
   <style>
-    .footer-pre-bar { background-color: #181420; padding: 24px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); width: 100%; }
+    .footer-pre-bar { background-color: #0B0414; padding: 24px 0; border-top: 1px solid rgba(147, 112, 219, 0.16); width: 100%; }
     .footer-pre-inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; width: 100%; }
     .footer-pre-heading { font-family: var(--font-heading); font-size: 1rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: #FFFFFF; margin: 0; line-height: 1.35; }
     .footer-pre-form { display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 320px; flex-shrink: 0; }
-    .footer-pre-input { background-color: #FFFFFF; color: #111827; border: 1px solid #E2E8F0; border-radius: var(--radius-sm); padding: 10px 14px; font-size: var(--font-sm); outline: none; width: 100%; box-sizing: border-box; }
-    .footer-pre-btn { align-self: flex-start; background-color: var(--primary); color: #FFFFFF; font-weight: 800; font-size: var(--font-xs); letter-spacing: 0.08em; text-transform: uppercase; padding: 9px 26px; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: var(--font-heading); }
+    .footer-pre-input { background-color: rgba(147, 112, 219, 0.08); color: #FFFFFF; border: 1px solid rgba(147, 112, 219, 0.25); border-radius: var(--radius-sm); padding: 10px 14px; font-size: var(--font-sm); outline: none; width: 100%; box-sizing: border-box; }
+    .footer-pre-input:focus { border-color: var(--deep-pink); }
+    .footer-pre-btn { align-self: flex-start; background: linear-gradient(135deg, var(--deep-pink) 0%, #D80F7B 100%); color: #FFFFFF; font-weight: 800; font-size: var(--font-xs); letter-spacing: 0.08em; text-transform: uppercase; padding: 9px 26px; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: var(--font-heading); }
+    .footer-pre-btn:hover { background: linear-gradient(135deg, var(--fuchsia) 0%, var(--deep-pink) 100%); }
     .site-footer { background-color: #140520; color: #FFFFFF; padding: 52px 0 36px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); width: 100%; }
     .wooster-footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; align-items: start; width: 100%; }
     .wooster-brand-logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #FFFFFF; }
@@ -564,8 +580,8 @@
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script defer src="/js/site-data.js?v=4.3"></script>
-  <script defer src="/js/main.js?v=4.3"></script>
+  <script defer src="/js/site-data.js?v=4.4"></script>
+  <script defer src="/js/main.js?v=4.4"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
 
@@ -578,7 +594,7 @@
           const container = document.getElementById("testimonialsContainer");
           if (section && container) {
             container.innerHTML = items.map(t => `
-              <div style="background: #FFFFFF; padding: 22px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <div style="background: rgba(147, 112, 219, 0.05); padding: 22px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.16);">
                 <p style="font-size: 0.95rem; color: var(--text-body); font-style: italic; margin-bottom: 12px;">"${t.quote}"</p>
                 <strong style="color: var(--text-main); font-size: 0.9rem;">${t.author}</strong>
                 <span style="display: block; font-size: 0.8rem; color: var(--text-muted);">${t.location || ""}</span>
