@@ -869,6 +869,93 @@ h1, h2, h3, h4, h5, h6 {
   font-size: var(--font-xs);
 }
 
+/* --- Wooster-Inspired 3-Category Hero Bar (Seamless, No Boxes, Only Floating Product) --- */
+.wooster-category-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 24px 0;
+  align-items: center;
+  justify-items: center;
+}
+
+.wooster-category-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 16px 20px;
+  width: 100%;
+  transition: transform 0.25s ease;
+}
+
+.wooster-category-link:hover {
+  transform: translateY(-5px);
+}
+
+.wooster-category-visual {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: transparent;
+}
+
+.wooster-category-img {
+  max-width: 240px;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+  transition: transform 0.25s ease;
+}
+
+.wooster-category-link:hover .wooster-category-img {
+  transform: scale(1.05);
+}
+
+.wooster-category-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
+.wooster-category-link:hover .wooster-category-title {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .wooster-category-bar {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 12px 0;
+  }
+  .wooster-category-visual {
+    height: 100px;
+    margin-bottom: 14px;
+  }
+  .wooster-category-img {
+    max-height: 95px;
+  }
+}
+
 /* --- Wooster-Inspired Clean Product Showcase (No Boxes, No Borders) --- */
 .wooster-products-grid {
   display: grid;
