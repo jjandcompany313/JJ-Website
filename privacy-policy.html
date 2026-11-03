@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=3.0">
+  <link rel="stylesheet" href="/css/style.css?v=4.0">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -235,6 +235,39 @@
     </div>
   </main>
 
+  <!-- Critical Footer Layout Styles -->
+  <style>
+    .footer-pre-bar { background-color: #181420; padding: 24px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); width: 100%; }
+    .footer-pre-inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; width: 100%; }
+    .footer-pre-heading { font-family: var(--font-heading); font-size: 1rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: #FFFFFF; margin: 0; line-height: 1.35; }
+    .footer-pre-form { display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 320px; flex-shrink: 0; }
+    .footer-pre-input { background-color: #FFFFFF; color: #111827; border: 1px solid #E2E8F0; border-radius: var(--radius-sm); padding: 10px 14px; font-size: var(--font-sm); outline: none; width: 100%; box-sizing: border-box; }
+    .footer-pre-btn { align-self: flex-start; background-color: var(--primary); color: #FFFFFF; font-weight: 800; font-size: var(--font-xs); letter-spacing: 0.08em; text-transform: uppercase; padding: 9px 26px; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: var(--font-heading); }
+    .site-footer { background-color: #140520; color: #FFFFFF; padding: 52px 0 36px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); width: 100%; }
+    .wooster-footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; align-items: start; width: 100%; }
+    .wooster-brand-logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #FFFFFF; }
+    .wooster-brand-name { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; letter-spacing: 0.06em; color: #FFFFFF; }
+    .wooster-tagline { margin: 10px 0 14px 0; font-size: var(--font-sm); color: #CBD5E1; font-weight: 500; line-height: 1.5; }
+    .wooster-address { font-style: normal; font-size: var(--font-xs); line-height: 1.7; color: #CBD5E1; letter-spacing: 0.02em; margin-bottom: 16px; }
+    .wooster-address strong { color: #FFFFFF; font-weight: 700; }
+    .wooster-legal-line { font-size: 0.72rem; color: #94A3B8; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; text-transform: uppercase; letter-spacing: 0.04em; font-family: var(--font-heading); }
+    .wooster-legal-line a { color: #CBD5E1; text-decoration: none; }
+    .wooster-legal-line a:hover { color: #FFFFFF; text-decoration: underline; }
+    .wooster-sep { color: #64748B; }
+    .wooster-col-title { font-family: var(--font-heading); font-size: var(--font-xs); font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #FFFFFF; margin: 0 0 16px 0; }
+    .wooster-nav-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .wooster-nav-links a { color: #CBD5E1; font-family: var(--font-heading); font-size: var(--font-xs); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; }
+    .wooster-nav-links a:hover { color: #FFFFFF; }
+    .wooster-contact-info { font-size: var(--font-xs); color: #CBD5E1; line-height: 1.6; margin-top: 16px; display: flex; flex-direction: column; gap: 6px; }
+    .wooster-contact-info a { color: #CBD5E1; text-decoration: none; }
+    .wooster-contact-info a:hover { color: #FFFFFF; text-decoration: underline; }
+    .wooster-social-icons { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+    .wooster-social-btn { width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: var(--radius-sm); color: #FFFFFF; text-decoration: none; }
+    .wooster-social-btn:hover { background: var(--primary); border-color: var(--primary); color: #FFFFFF; transform: translateY(-2px); }
+    @media (max-width: 992px) { .wooster-footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 576px) { .wooster-footer-grid { grid-template-columns: 1fr; gap: 28px; } .footer-pre-inner { flex-direction: column; align-items: flex-start; } .footer-pre-form { max-width: 100%; } }
+  </style>
+
   <!-- Pre-Footer Strip: Wholesale & Trade Updates -->
   <aside class="footer-pre-bar" aria-label="Trade Updates Subscription">
     <div class="container footer-pre-inner">
@@ -246,12 +279,12 @@
     </div>
   </aside>
 
-  <!-- Wooster-Style 5-Column Minimal Clean Footer -->
+  <!-- Wooster-Style Balanced 4-Column Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="wooster-footer-grid">
-        <!-- Col 1: Brand & Legal -->
-        <div class="wooster-col-brand">
+        <!-- Col 1: Brand & Headquarters (Left) -->
+        <div class="wooster-col">
           <a href="/" class="wooster-brand-logo" aria-label="JJ &amp; Company Home">
             <picture>
               <source srcset="/assets/images/jj-company-logo-nav.webp" type="image/webp">
@@ -260,48 +293,48 @@
             <span class="wooster-brand-name">JJ &amp; COMPANY</span>
           </a>
           <p class="wooster-tagline">Engineered for Professional Finish™</p>
+          <address class="wooster-address">
+            <strong>THE J. J. &amp; COMPANY</strong><br>
+            Plot No-8, Dixit Wadi, Pande Chowk Rd<br>
+            Jalgaon, Maharashtra 425001<br>
+            GSTIN: 27ACXPN6682N1ZC
+          </address>
           <div class="wooster-legal-line">
             <span>&copy; <span id="currentYear">2026</span> JJ &amp; COMPANY</span>
             <span class="wooster-sep">|</span>
-            <a href="/privacy-policy.html">PRIVACY POLICY</a>
+            <a href="/privacy-policy.html">PRIVACY</a>
             <span class="wooster-sep">|</span>
             <a href="/sitemap.xml">SITEMAP</a>
           </div>
         </div>
 
-        <!-- Col 2: Company Details -->
+        <!-- Col 2: Navigation & Dealership (Left-Center) -->
         <div class="wooster-col">
-          <p class="wooster-company-title">THE J. J. &amp; COMPANY</p>
-          <address class="wooster-address">
-            Plot No-8, Dixit Wadi<br>
-            Pande Chowk Road<br>
-            Jalgaon, MH 425001<br>
-            GSTIN: 27ACXPN6682N1ZC
-          </address>
-        </div>
-
-        <!-- Col 3: Navigation Links -->
-        <div class="wooster-col">
+          <p class="wooster-col-title">NAVIGATION</p>
           <ul class="wooster-nav-links">
-            <li><a href="/contact.html">CONTACT US</a></li>
+            <li><a href="/">HOME</a></li>
             <li><a href="/about.html">ABOUT US</a></li>
             <li><a href="/dealer.html">DEALERSHIP</a></li>
-            <li><a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download>RESOURCES</a></li>
+            <li><a href="/contact.html">CONTACT US</a></li>
+            <li><a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download>CATALOGUE (PDF)</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Products -->
+        <!-- Col 3: Products (Right-Center) -->
         <div class="wooster-col">
+          <p class="wooster-col-title">PRODUCTS</p>
           <ul class="wooster-nav-links">
-            <li><a href="/products/brushes.html">BRUSHES</a></li>
-            <li><a href="/products/rollers.html">ROLLERS</a></li>
-            <li><a href="/products/accessories.html">ACCESSORIES</a></li>
+            <li><a href="/products/rollers.html">WALLFIN™ ROLLERS</a></li>
+            <li><a href="/products/brushes.html">PANAMA BRUSHES</a></li>
+            <li><a href="/products/accessories.html">THINNERS &amp; POLISH</a></li>
+            <li><a href="/products/accessories.html">ABRASIVES &amp; PATA</a></li>
+            <li><a href="/products.html">ALL PRODUCTS</a></li>
           </ul>
         </div>
 
-        <!-- Col 5: Social Media -->
+        <!-- Col 4: Connect & Direct Inquiries (Right) -->
         <div class="wooster-col">
-          <p class="wooster-social-heading">CONNECT WITH US ON SOCIAL</p>
+          <p class="wooster-col-title">CONNECT WITH US</p>
           <div class="wooster-social-icons">
             <a href="https://www.instagram.com/jjandcompany313/" target="_blank" rel="noopener noreferrer nofollow" class="wooster-social-btn" aria-label="Instagram">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -316,6 +349,11 @@
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 01-5.82 2.41h-.01c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.02.79.81-2.95-.19-.3a8.196 8.196 0 01-1.26-4.55c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
             </a>
           </div>
+          <div class="wooster-contact-info">
+            <span>Direct: <a href="tel:+919422775429">+91 94227 75429</a></span>
+            <span>Office: <a href="tel:+919890003539">+91 98900 03539</a></span>
+            <span>Email: <a href="mailto:jjandcompany313@gmail.com">jjandcompany313@gmail.com</a></span>
+          </div>
         </div>
       </div>
     </div>
@@ -328,8 +366,8 @@
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script defer src="/js/site-data.js?v=3.0"></script>
-  <script defer src="/js/main.js?v=3.0"></script>
+  <script defer src="/js/site-data.js?v=4.0"></script>
+  <script defer src="/js/main.js?v=4.0"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>

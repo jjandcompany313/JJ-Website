@@ -1,4 +1,8 @@
 const fs = require('fs');
+const path = require('path');
+
+const newVersion = process.argv[2] || '4.0';
+const rootDir = path.join(__dirname, '..');
 
 const files = [
   '404.html',
@@ -13,10 +17,12 @@ const files = [
 ];
 
 files.forEach(f => {
-  if (fs.existsSync(f)) {
-    let content = fs.readFileSync(f, 'utf8');
-    content = content.replace(/\?v=2\.[0-7]/g, '?v=3.0');
-    fs.writeFileSync(f, content, 'utf8');
-    console.log('Bumped cache version in ' + f);
+  const filePath = path.join(rootDir, f);
+  if (fs.existsSync(filePath)) {
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Replace all occurrences of ?v=X.X with newVersion
+    content = content.replace(/\?v=[0-9.]+/g, `?v=${newVersion}`);
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Bumped cache version to v=${newVersion} in ${f}`);
   }
 });
