@@ -232,6 +232,90 @@ const categoryUrlMap = {
   'accessories': '/products/accessories.html'
 };
 
+// Wooster-Style Technical Application & Compatibility Matrix Generator
+function getWoosterMatrixHtml(p) {
+  let surfaces = [];
+  let coatings = [];
+  let coreInfo = '';
+
+  const name = (p.name || '').toLowerCase();
+  const cat = p.category;
+
+  if (cat === 'paint-rollers') {
+    if (name.includes('epoxy')) {
+      surfaces = ['Smooth Concrete', 'Industrial Floors', 'Metal Tanks', 'Levelled Screed'];
+      coatings = ['Solvent Epoxy', 'Polyurethane', 'Enamel Primers', 'Floor Resins'];
+      coreInfo = 'Solvent-Proof Core • Phenolic Bonded';
+    } else if (name.includes('texture')) {
+      surfaces = ['Rough Exterior Walls', 'Stucco Plaster', 'Brickwork', 'Block Surfaces'];
+      coatings = ['Texture Coatings', 'High-Build Emulsions', 'Heavy Acrylics'];
+      coreInfo = 'High-Deflection Textured Sleeve • Extreme Nap';
+    } else if (name.includes('foam')) {
+      surfaces = ['Doors & Frames', 'Cabinetry & Woodwork', 'Metal Trims', 'Ultra-Smooth Surfaces'];
+      coatings = ['Gloss Enamels', 'Lacquers', 'Urethane Stains', 'Clear Finishes'];
+      coreInfo = 'High-Density Fine Pore Foam • Mirror Finish';
+    } else if (name.includes('green') || name.includes('tiger') || name.includes('brown')) {
+      surfaces = ['Semi-Rough Plaster', 'Exterior Cement', 'Boundary Walls', 'Textured Ceilings'];
+      coatings = ['Exterior Acrylic Emulsions', 'Waterproof Coatings', 'Penta Primers'];
+      coreInfo = 'High-Capacity Acrylic Knit • Heavy Paint Pickup';
+    } else {
+      // Blue Line, Yellow Line, Standard
+      surfaces = ['Smooth Interior Putty', 'Plaster of Paris', 'Gypsum Boards', 'Drywall'];
+      coatings = ['Interior Premium Emulsions', 'Distempers', 'Wall Primers'];
+      coreInfo = 'High-Density Woven Poly • Zero-Shed Lint Free';
+    }
+  } else if (cat === 'panama-brushes') {
+    surfaces = ['Precision Trims', 'Corners & Edges', 'Window Grills', 'Woodwork & Panelling'];
+    if (name.includes('cat') || name.includes('bristol')) {
+      coatings = ['Oil-Based Enamels', 'High-Gloss Paints', 'PU Varnishes', 'Stains'];
+      coreInfo = 'Pure Natural Bristle Blend • Deep Solvent Hold';
+    } else if (name.includes('tynex') || name.includes('swan') || name.includes('222')) {
+      coatings = ['All Coatings', 'Water-Based Emulsions', 'Gloss Enamels', 'Primers'];
+      coreInfo = 'Flagged Tynex Synthetic Fibres • Epoxy Potting';
+    } else {
+      coatings = ['Interior & Exterior Emulsions', 'Enamels', 'Universal Primers'];
+      coreInfo = 'Reinforced Stainless Ferrule • Computerized Epoxy Potting';
+    }
+  } else {
+    // Accessories
+    if (name.includes('thinner')) {
+      surfaces = ['Metal Degreasing', 'Equipment Wash', 'Spray Gun Cleaning'];
+      coatings = ['Auto Gloss Thinning', 'PU Reduction', 'NC Lacquers'];
+      coreInfo = 'Virgin Grade Fast-Evaporating Solvent';
+    } else if (name.includes('polish')) {
+      surfaces = ['Natural Timber', 'Wooden Furniture', 'Doors & Plywood'];
+      coatings = ['French Wood Polish', 'Clear Shellac', 'Spirit Stains'];
+      coreInfo = 'Hand-Applied Micro-Penetrating Natural Formula';
+    } else {
+      surfaces = ['Surface Sanding', 'Putty Levelling', 'Rust Removal'];
+      coatings = ['Pre-Paint Surface Preparation'];
+      coreInfo = 'Electro-Coated Aluminum Oxide Grain';
+    }
+  }
+
+  const surfacePills = surfaces.map(s => `<span class="compat-pill compat-surface">${escapeHtml(s)}</span>`).join('');
+  const coatingPills = coatings.map(c => `<span class="compat-pill compat-coating">${escapeHtml(c)}</span>`).join('');
+
+  return `
+    <div class="wooster-matrix-card">
+      <div class="matrix-header">
+        <span class="matrix-title">🎯 Technical Application &amp; Compatibility Guide</span>
+        <span class="matrix-subtitle">${escapeHtml(coreInfo)}</span>
+      </div>
+      <div class="matrix-grid">
+        <div class="matrix-col">
+          <div class="matrix-col-lbl">Recommended Surfaces:</div>
+          <div class="matrix-pills">${surfacePills}</div>
+        </div>
+        <div class="matrix-col">
+          <div class="matrix-col-lbl">Compatible Paints &amp; Coatings:</div>
+          <div class="matrix-pills">${coatingPills}</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 // 1. Generate Individual Product Pages
 data.products.forEach(p => {
   const pageUrl = `https://jjandcompany.net/products/${p.id}.html`;
@@ -356,7 +440,7 @@ data.products.forEach(p => {
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#06392A">
+  <meta name="theme-color" content="#180D2B">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="product">
@@ -436,16 +520,18 @@ data.products.forEach(p => {
             ${escapeHtml(p.shortDesc)}
           </p>
 
-          <div style="background: var(--bg-section); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 24px;">
+          ${getWoosterMatrixHtml(p)}
+
+          <div style="background: var(--bg-section); padding: 22px; border-radius: var(--radius-md); border: 1.5px solid var(--border-color); margin-bottom: 24px;">
             <h2 style="font-size: 1.15rem; color: var(--text-main); font-weight: 700; margin-bottom: 8px;">Wholesale Supply for ${escapeHtml(shortProdLabel)}</h2>
             <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.5; margin-bottom: 16px;">
               Direct depo supply for hardware shops, paint counters, and regional stockists. Message our sales desk with your requirements for trade rates and dispatch schedules.
             </p>
             <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-              <a href="${waUrl}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-lg" style="flex: 1; text-align: center; justify-content: center;">
-                <span aria-hidden="true">💬</span> Get Dealer Rate on WhatsApp
+              <a href="${waUrl}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary btn-lg" style="flex: 1; text-align: center; justify-content: center;">
+                <span aria-hidden="true">💬</span> Get Wholesale Rates on WhatsApp
               </a>
-              <a href="/dealer.html" class="btn btn-secondary btn-lg" style="flex: 1; text-align: center; justify-content: center;">
+              <a href="/dealer.html" class="btn btn-outline btn-lg" style="flex: 1; text-align: center; justify-content: center;">
                 Apply for Dealership
               </a>
             </div>
@@ -642,7 +728,7 @@ categoriesDef.forEach(cat => {
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#06392A">
+  <meta name="theme-color" content="#180D2B">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">

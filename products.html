@@ -27,7 +27,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#06392A">
+  <meta name="theme-color" content="#180D2B">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
@@ -207,6 +207,56 @@
           </div>
         </div>
       </div>
+
+      <!-- Wooster-Inspired "Find Your Applicator" Interactive Selector Tool -->
+      <section class="applicator-tool-card" id="applicator-selector">
+        <div class="applicator-tool-header">
+          <span class="section-tag">Interactive Selection Tool</span>
+          <h2 style="font-size: var(--font-xl); color: var(--text-main); font-weight: 800; margin-bottom: 8px;">Find the Right Applicator for Your Job</h2>
+          <p style="font-size: var(--font-sm); color: var(--text-muted); margin: 0;">Select your surface and paint coating to instantly find the recommended Wallfin™ roller or Panama™ brush.</p>
+        </div>
+
+        <div class="applicator-steps-grid">
+          <!-- Step 1: Surface -->
+          <div class="applicator-step-box">
+            <span class="step-label">Step 1: Surface Texture</span>
+            <div class="step-title">What surface are you painting?</div>
+            <div class="tool-btn-group" id="surfaceButtonGroup">
+              <button type="button" class="tool-choice-btn active" data-surface="smooth">Smooth Putty &amp; Plaster</button>
+              <button type="button" class="tool-choice-btn" data-surface="semi-rough">Interior Walls &amp; Ceilings</button>
+              <button type="button" class="tool-choice-btn" data-surface="rough">Rough Exterior &amp; Brick</button>
+              <button type="button" class="tool-choice-btn" data-surface="epoxy">Floors &amp; Epoxy Screed</button>
+              <button type="button" class="tool-choice-btn" data-surface="wood">Doors, Trim &amp; Woodwork</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Coating -->
+          <div class="applicator-step-box">
+            <span class="step-label">Step 2: Coating Type</span>
+            <div class="step-title">What paint are you applying?</div>
+            <div class="tool-btn-group" id="coatingButtonGroup">
+              <button type="button" class="tool-choice-btn active" data-coating="emulsion">Interior Emulsion / Acrylic</button>
+              <button type="button" class="tool-choice-btn" data-coating="exterior">Exterior Weather Coat</button>
+              <button type="button" class="tool-choice-btn" data-coating="enamel">Oil Primer &amp; Enamel</button>
+              <button type="button" class="tool-choice-btn" data-coating="epoxy">Epoxy &amp; PU Resin</button>
+              <button type="button" class="tool-choice-btn" data-coating="polish">Wood Polish &amp; Stains</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result Box -->
+        <div class="applicator-result-box" id="applicatorResult">
+          <div>
+            <span class="result-badge" id="recBadge">★ Best for Smooth Interior Walls</span>
+            <div class="result-name" id="recTitle">Wallfin™ Blue Line Paint Roller (9" / 20mm Core)</div>
+            <p class="result-desc" id="recDesc">High-density woven poly fabric engineered for ultra-smooth lint-free emulsion finish on plaster, putty, and gypsum.</p>
+          </div>
+          <div style="display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap;">
+            <a href="/products/wallfin-blue-line-paint-roller.html" id="recLink" class="btn btn-outline btn-sm">View Full Specs &rarr;</a>
+            <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20please%20share%20wholesale%20dealer%20rates%20for%20Wallfin%20Blue%20Line." id="recWa" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary btn-sm">💬 Order Dealer Carton</a>
+          </div>
+        </div>
+      </section>
 
       <!-- Product Range Overview -->
       <div class="section-header" style="margin-bottom: 40px;">
@@ -550,6 +600,125 @@
   <script defer src="/js/main.js?v=2.7"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    // Wooster-Inspired Applicator Selector Tool Logic
+    (function() {
+      var recommendations = {
+        'smooth': {
+          'emulsion': {
+            badge: '★ Best for Smooth Interior Walls',
+            name: 'Wallfin™ Blue Line Paint Roller (9" / 20mm Core)',
+            desc: 'High-density woven poly fabric engineered for ultra-smooth lint-free emulsion finish on plaster, putty, and gypsum.',
+            link: '/products/wallfin-blue-line-paint-roller.html',
+            waText: 'Wallfin Blue Line Paint Roller'
+          },
+          'exterior': {
+            badge: '★ Best Exterior Universal',
+            name: 'Wallfin™ Yellow Line Paint Roller',
+            desc: 'Balanced paint absorption and controlled release for exterior primers and acrylic coatings.',
+            link: '/products/wallfin-yellow-line-paint-roller.html',
+            waText: 'Wallfin Yellow Line Paint Roller'
+          },
+          'enamel': {
+            badge: '★ Best for Gloss & Enamels',
+            name: 'Wallfin™ Foam Fix Roller & Refills',
+            desc: 'High-density fine-pore foam designed for streak-free gloss enamel finishes on smooth surfaces.',
+            link: '/products/wallfin-foam-fix-roller.html',
+            waText: 'Wallfin Foam Fix Roller'
+          },
+          'epoxy': {
+            badge: '★ Best for Industrial Floors',
+            name: 'Wallfin™ Epoxy Paint Roller (Phenolic Core)',
+            desc: '100% solvent-proof core resistant to aggressive resins, polyurethane, and epoxy paints.',
+            link: '/products/wallfin-epoxy-paint-roller.html',
+            waText: 'Wallfin Epoxy Paint Roller'
+          },
+          'polish': {
+            badge: '★ Best for Wood Finishing',
+            name: 'Nico Wood Polish & Panama Swan Brush',
+            desc: 'Micro-penetrating hand polish formula paired with ultra-soft flagged natural bristle brush.',
+            link: '/products/nico-wood-polish.html',
+            waText: 'Nico Wood Polish'
+          }
+        },
+        'semi-rough': {
+          'default': {
+            badge: '★ Recommended All-Rounder',
+            name: 'Wallfin™ Yellow Line 38mm Heavy Cage Roller',
+            desc: 'Expanded 38mm core with heavy-duty wire frame for fast coverage on interior and exterior walls.',
+            link: '/products/wallfin-yellow-line-38mm-paint-roller.html',
+            waText: 'Wallfin Yellow Line 38mm Roller'
+          }
+        },
+        'rough': {
+          'default': {
+            badge: '★ Maximum Coverage for Masonry',
+            name: 'Wallfin™ Green Thread 38mm Heavy Cage Roller',
+            desc: 'Heavy knit acrylic fibres built to penetrate rough masonry, stucco plaster, and exterior brick.',
+            link: '/products/wallfin-green-thread-38mm-paint-roller.html',
+            waText: 'Wallfin Green Thread 38mm Roller'
+          }
+        },
+        'epoxy': {
+          'default': {
+            badge: '★ Industrial Solvent & Floor Specialist',
+            name: 'Wallfin™ Epoxy Paint Roller (Solvent-Proof)',
+            desc: 'Heavy-duty solvent-resistant core that never dissolves or sheds on floor coatings and epoxies.',
+            link: '/products/wallfin-epoxy-paint-roller.html',
+            waText: 'Wallfin Epoxy Paint Roller'
+          }
+        },
+        'wood': {
+          'default': {
+            badge: '★ Precision Detail & Wood Applicator',
+            name: 'Panama™ Swan Paint Brush (Stainless Ferrule)',
+            desc: 'Flagged bristles with computerized epoxy potting for clean cut-in lines and zero bristle drop.',
+            link: '/products/panama-swan-paint-brush.html',
+            waText: 'Panama Swan Paint Brush'
+          }
+        }
+      };
+
+      var currentSurface = 'smooth';
+      var currentCoating = 'emulsion';
+
+      function updateRec() {
+        var sObj = recommendations[currentSurface] || recommendations['smooth'];
+        var rec = sObj[currentCoating] || sObj['default'] || recommendations['smooth']['emulsion'];
+
+        var b = document.getElementById('recBadge');
+        var t = document.getElementById('recTitle');
+        var d = document.getElementById('recDesc');
+        var l = document.getElementById('recLink');
+        var w = document.getElementById('recWa');
+
+        if (b) b.innerText = rec.badge;
+        if (t) t.innerText = rec.name;
+        if (d) d.innerText = rec.desc;
+        if (l) l.href = rec.link;
+        if (w) w.href = 'https://wa.me/919422775429?text=' + encodeURIComponent('Hello JJ & Company, please share wholesale dealer rates for ' + rec.waText + '.');
+      }
+
+      var surfaceBtns = document.querySelectorAll('#surfaceButtonGroup .tool-choice-btn');
+      surfaceBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          surfaceBtns.forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          currentSurface = btn.getAttribute('data-surface');
+          updateRec();
+        });
+      });
+
+      var coatingBtns = document.querySelectorAll('#coatingButtonGroup .tool-choice-btn');
+      coatingBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          coatingBtns.forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          currentCoating = btn.getAttribute('data-coating');
+          updateRec();
+        });
+      });
+    })();
   </script>
 </body>
 
