@@ -5,47 +5,48 @@
 
 /* Note: Google Fonts Plus Jakarta Sans is loaded via high-priority preconnected <link> tags in HTML <head> for fast non-blocking render */
 
-/* --- Root Variables / Design Tokens (Minimal Industrial Palette: Deep Plum, Medium Purple #9370DB, Deep Pink #FF1493, Magenta #FF00FF) --- */
+/* --- Root Variables / Design Tokens (Dark Industrial Palette: Deep Obsidian Plum #0D0714, Medium Purple #9370DB, Deep Pink #FF1493, Magenta #FF00FF) --- */
 :root {
   /* Company Brand Color Palette — Dedicated Palette */
-  --primary: #180D2B;           /* Midnight Deep Plum (Headers, Dark Bars, High Contrast) */
-  --primary-dark: #0E051B;      /* Deepest Obsidian Plum (Footer Base) */
+  --primary: #180D2B;           /* Midnight Deep Plum */
+  --primary-dark: #0B0414;      /* Deepest Obsidian Plum */
   --primary-light: #2D184C;     /* Medium Deep Plum */
   --primary-surface: #3D2066;   /* Elevated Plum Surface */
 
   --brand-purple: #9370DB;      /* Medium Purple #9370DB (Brand Sub-accents, Badges, Tabs) */
-  --brand-purple-soft: rgba(147, 112, 219, 0.12);
-  --brand-purple-glow: rgba(147, 112, 219, 0.28);
+  --brand-purple-soft: rgba(147, 112, 219, 0.16);
+  --brand-purple-glow: rgba(147, 112, 219, 0.35);
 
   --accent: #FF1493;            /* Vivid Deep Pink #FF1493 (Primary CTAs, High-Energy Highlights) */
   --accent-hover: #E01080;
-  --accent-soft: rgba(255, 20, 147, 0.09);
-  --accent-glow: rgba(255, 20, 147, 0.28);
+  --accent-soft: rgba(255, 20, 147, 0.18);
+  --accent-glow: rgba(255, 20, 147, 0.35);
 
-  --accent-magenta: #FF00FF;    /* Electric Magenta #FF00FF (Highlights, Gradient Touches) */
-  --accent-magenta-soft: rgba(255, 0, 255, 0.10);
+  --accent-magenta: #FF00FF;    /* Electric Magenta #FF00FF */
+  --accent-magenta-soft: rgba(255, 0, 255, 0.15);
 
   --whatsapp: #25D366;          /* Official WhatsApp Brand Green */
   --whatsapp-hover: #1EBE5D;
-  --whatsapp-soft: rgba(37, 211, 102, 0.08);
+  --whatsapp-soft: rgba(37, 211, 102, 0.15);
 
-  /* Clean, Minimal Canvas (Wooster-Inspired High Craft) */
-  --bg-main: #FFFFFF;
-  --bg-section: #FAF7FD;        /* Crisp, subtle lavender tint */
-  --bg-subtle: #F3EDF9;
-  --bg-card: #FFFFFF;
-  --bg-dark: #140A24;
+  /* Sophisticated Dark Canvas (Wooster-Inspired High Contrast) */
+  --bg-main: #0D0714;           /* Deep obsidian plum background */
+  --bg-section: #140A20;        /* Secondary layered dark ground */
+  --bg-subtle: #190D2A;         /* Tertiary subtle ground */
+  --bg-card: #160B24;           /* Card surface */
+  --bg-card-hover: #1F0F33;     /* Card hover */
+  --bg-dark: #08030D;           /* Deepest contrast */
 
   /* Crisp Borders */
-  --border-color: #EADDF5;
-  --border-subtle: #F5EDFA;
+  --border-color: rgba(147, 112, 219, 0.22);
+  --border-subtle: rgba(147, 112, 219, 0.12);
   --border-focus: #FF1493;
 
   /* Typography Colors */
-  --text-main: #180D2B;         /* Deep Plum Charcoal */
-  --text-body: #322346;         /* High-contrast readable plum slate */
-  --text-muted: #6D5C80;
-  --text-light: #9E8EAF;
+  --text-main: #FFFFFF;         /* Crisp White */
+  --text-body: #E2D9F3;         /* Soft readable lavender slate */
+  --text-muted: #A594BE;        /* Muted captions */
+  --text-light: #C4B5DC;
   --text-white: #FFFFFF;
 
   /* Typography */
@@ -416,10 +417,10 @@ h1, h2, h3, h4, h5, h6 {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(12px);
+  background-color: rgba(13, 7, 20, 0.94);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-color);
-  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .header-container {
@@ -609,7 +610,7 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Hero Section (Clean & Confident) --- */
 .hero-section {
   position: relative;
-  background: var(--bg-main);
+  background: radial-gradient(circle at 80% 20%, rgba(147, 112, 219, 0.12) 0%, transparent 60%), var(--bg-main);
   padding: 80px 0 100px 0;
   overflow: hidden;
 }
@@ -621,7 +622,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   width: 45%;
   height: 100%;
-  background: var(--bg-section);
+  background: radial-gradient(circle at 50% 50%, rgba(255, 20, 147, 0.08) 0%, transparent 70%);
   z-index: 0;
 }
 
@@ -726,13 +727,13 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Wooster-Inspired Precision Applicator Stage (Building Image Removed) --- */
 .hero-product-stage {
   position: relative;
-  background: linear-gradient(145deg, #FFFFFF 0%, #FAF4FD 100%);
+  background: linear-gradient(145deg, #170C28 0%, #10061E 100%);
   border: 1.5px solid var(--border-color);
   border-radius: var(--radius-xl);
-  padding: 28px;
-  box-shadow: var(--shadow-lg);
+  padding: 24px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .hero-product-stage:hover {
@@ -760,7 +761,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #FFFFFF;
+  background: #140822;
   border-radius: var(--radius-lg);
   padding: 12px;
   border: 1px solid var(--border-subtle);
@@ -787,7 +788,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-spec-pill {
-  background: #FFFFFF;
+  background: #1B0F2E;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   padding: 10px 12px;
@@ -842,23 +843,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category-card {
-  background-color: var(--bg-main);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: transform var(--transition-normal), background-color var(--transition-normal), border-color var(--transition-normal), color var(--transition-normal), box-shadow var(--transition-normal);
+  transition: transform var(--transition-normal), background-color var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
 .category-card:hover {
-  background-color: var(--bg-section);
+  background-color: var(--bg-card-hover);
+  border-color: var(--accent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 .category-image-wrap {
   position: relative;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
-  background-color: #F1F4F8;
+  background-color: #1A0D28;
 }
 
 .category-image-wrap img {
@@ -1007,14 +1012,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .warehouse-card {
-  background-color: #FFFFFF;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-normal), background-color var(--transition-normal), border-color var(--transition-normal), color var(--transition-normal), box-shadow var(--transition-normal);
-  display: flex;
-  flex-direction: column;
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
 }
 
 .warehouse-card:hover {
@@ -1098,11 +1101,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .warehouse-caption {
-  padding: 20px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: var(--bg-card);
 }
 
 .warehouse-caption h4 {
@@ -1266,11 +1266,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faq-accordion-item {
-  background: var(--bg-card);
+  background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  margin-bottom: 12px;
   overflow: hidden;
+  transition: border-color var(--transition-fast);
 }
 
 .faq-accordion-item:hover {
@@ -1279,8 +1280,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faq-accordion-item[open] {
-  border-color: var(--accent);
-  box-shadow: var(--shadow-md);
+  border-color: var(--brand-purple);
 }
 
 .faq-accordion-summary {
@@ -1341,11 +1341,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faq-answer {
-  padding: 20px 24px;
-  font-size: var(--font-sm);
+  padding: 18px 24px 22px 24px;
   color: var(--text-body);
-  line-height: 1.65;
-  background-color: #FFFFFF;
+  font-size: var(--font-sm);
+  line-height: 1.7;
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--bg-card);
 }
 
 .faq-answer p {
@@ -1799,12 +1800,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Interactive Applicator Selector Tool (Wooster-Inspired) --- */
 .applicator-tool-card {
-  background: linear-gradient(135deg, #FAF7FD 0%, #FFFFFF 100%);
+  background: linear-gradient(145deg, #160B26 0%, #10061E 100%);
   border: 1.5px solid var(--border-color);
   border-radius: var(--radius-xl);
   padding: 36px 32px;
-  margin-bottom: 48px;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
 }
 
 .applicator-tool-header {
@@ -1839,7 +1839,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .applicator-step-box {
-  background: #FFFFFF;
+  background: #1A0D2D;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 20px;
@@ -1868,41 +1868,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tool-choice-btn {
-  background: #FAF7FD;
-  border: 1px solid var(--border-color);
+  background: #12071E;
+  border: 1.5px solid var(--border-color);
   color: var(--text-body);
-  font-size: var(--font-xs);
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: var(--radius-sm);
-  cursor: pointer;
+  font-size: var(--font-xs);
   font-weight: 600;
-  transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.15s ease;
+  cursor: pointer;
+  text-align: left;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
 }
 
 .tool-choice-btn:hover {
+  background: #23123B;
   border-color: var(--brand-purple);
-  color: var(--primary);
-  background: var(--brand-purple-soft);
+  color: #FFFFFF;
 }
 
 .tool-choice-btn.active {
   background: var(--accent);
-  color: #FFFFFF;
   border-color: var(--accent);
-  box-shadow: 0 2px 8px rgba(255, 20, 147, 0.3);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(255, 20, 147, 0.35);
 }
 
 .applicator-result-box {
-  background: #FFFFFF;
-  border: 2px solid var(--accent);
-  border-radius: var(--radius-lg);
-  padding: 24px 28px;
+  background: #1F1037;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-md);
+  padding: 24px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 24px;
-  box-shadow: 0 8px 24px rgba(255, 20, 147, 0.1);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 640px) {
@@ -2356,12 +2356,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .perk-card {
-  display: flex;
-  gap: 14px;
-  padding: 18px;
+  background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
 }
 
 .perk-card:hover {
@@ -2394,10 +2396,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dealer-form-card {
-  background-color: #FFFFFF;
-  padding: 36px;
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border-color);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
+  padding: 32px;
   box-shadow: var(--shadow-card);
 }
 
@@ -2430,13 +2432,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-control {
   width: 100%;
-  padding: 11px 14px;
-  border: 1px solid var(--border-color);
+  padding: 12px 16px;
+  border: 1.5px solid var(--border-color);
   border-radius: var(--radius-sm);
-  background-color: var(--bg-main);
-  color: var(--text-main);
+  background-color: #12071E;
+  color: #FFFFFF;
   font-size: var(--font-sm);
-  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .form-control:focus {
@@ -2589,9 +2591,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Global Footer --- */
 .site-footer {
-  background-color: var(--primary-dark);
-  color: #8896A6;
-  padding: 64px 0 28px 0;
+  background-color: #07030C;
+  color: #FFFFFF;
+  padding: 72px 0 28px 0;
+  border-top: 1px solid var(--border-color);
 }
 
 .footer-top-grid {
@@ -2968,15 +2971,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Responsive Component Utilities (Desktop Defaults) --- */
 .master-catalog-banner {
-  margin-top: 36px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, #1C0F32 0%, #120722 100%);
+  border: 1.5px solid rgba(255, 20, 147, 0.35);
   border-radius: var(--radius-lg);
   padding: 32px 36px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: 24px;
   flex-wrap: wrap;
-  gap: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  margin-top: 36px;
 }
 
 .catalog-spotlight-card {
@@ -3796,5 +3801,101 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--brand-purple-soft);
   color: var(--brand-purple);
   flex-shrink: 0;
+}
+
+
+
+/* --- Wooster Hero Graphic Headline Banners --- */
+.wooster-headline-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.wooster-banner-pill {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 3.6vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  padding: 8px 18px;
+  border-radius: var(--radius-xs);
+  text-transform: uppercase;
+  box-shadow: 0 4px 16px rgba(255, 20, 147, 0.3);
+}
+
+.wooster-banner-pill.banner-purple {
+  background-color: var(--brand-purple);
+  box-shadow: 0 4px 16px rgba(147, 112, 219, 0.3);
+}
+
+.hero-wooster-subline {
+  font-size: 1.1rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: 32px;
+}
+
+.hero-wooster-subline strong {
+  color: #FFFFFF;
+}
+
+.hero-action-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 12px 0;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.hero-action-view:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.hero-action-view svg {
+  transition: transform var(--transition-fast);
+}
+
+.hero-action-view:hover svg {
+  transform: translateY(3px);
+}
+
+.review-box {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.review-box:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-purple);
+}
+
+.banner-title {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.banner-sub {
+  color: var(--text-body);
+  font-size: 0.95rem;
+  margin: 0;
 }
 

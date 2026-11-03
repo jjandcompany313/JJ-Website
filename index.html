@@ -26,7 +26,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#180D2B">
+  <meta name="theme-color" content="#0D0714">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
@@ -214,8 +214,12 @@
     /* Hallmark · theme: minimal · genre: modern-minimal */
     :root {
       --accent: #FF1493;
+      --bg-main: #0D0714;
+      --text-body: #E2D9F3;
     }
     html, body {
+      background-color: var(--bg-main);
+      color: var(--text-body);
       overflow-x: clip;
     }
     :focus-visible {
@@ -313,17 +317,18 @@
   <!-- Main Landmark -->
   <main id="main-content">
 
-    <!-- Hero Section: Wooster-Style (Clean Canvas, Product-First, Minimal Copy) -->
+    <!-- Hero Section: Wooster-Style Graphic Banner (Dark Canvas, Product-First) -->
     <section class="hero-section">
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-            <h1 class="hero-title">
-              Professional Paint Applicators Engineered for Trade Painters
-            </h1>
+            <div class="wooster-headline-block">
+              <h1 class="wooster-banner-pill">BETTER FINISH,</h1>
+              <div class="wooster-banner-pill banner-purple">LESS EFFORT</div>
+            </div>
 
-            <p class="hero-subline">
-              Direct Jalgaon manufacturer of Wallfin™ heavy-cage paint rollers, precision Panama brushes, and trade finishing accessories.
+            <p class="hero-wooster-subline">
+              <strong>Wallfin™</strong> (Registered TM: 8027912) offers professional heavy-cage paint rollers manufactured directly by <strong>J. J. &amp; Company</strong> at our Jalgaon Depo, giving trade painters smoother coverage with less effort, every coat, every time.
             </p>
 
             <div class="hero-metrics">
@@ -341,13 +346,16 @@
               </div>
             </div>
 
-            <div class="hero-ctas">
-              <a href="/products/rollers.html" class="btn btn-primary btn-lg">Explore Rollers</a>
-              <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-outline btn-lg">
-                <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg> <span>Download Catalogue (PDF)</span>
+            <div class="hero-ctas" style="align-items: center; margin-top: 8px;">
+              <a href="#product-categories" class="hero-action-view">
+                <span>VIEW PRODUCTS</span>
+                <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-primary btn-sm">
+                <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg> <span>Master Catalogue</span>
               </a>
               <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20please%20share%20wholesale%20dealer%20rates."
-                target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp-subtle btn-lg">
+                target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp-subtle btn-sm">
                 <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 01-5.82 2.41h-.01c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.02.79.81-2.95-.19-.3a8.196 8.196 0 01-1.26-4.55c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg> <span>Direct Depo Rates</span>
               </a>
             </div>
@@ -358,7 +366,7 @@
               <div class="hero-stage-img-wrap">
                 <picture>
                   <source srcset="/assets/images/rollers-collection.webp" type="image/webp">
-                  <img src="/assets/images/rollers-collection.jpg" alt="Wallfin Precision Paint Rollers and Panama Brushes"
+                  <img src="/assets/images/rollers-collection.jpg" alt="Wallfin Precision Paint Rollers Manufactured by JJ and Company"
                     width="800" height="450" loading="eager" fetchpriority="high">
                 </picture>
               </div>

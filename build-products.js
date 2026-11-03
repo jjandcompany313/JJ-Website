@@ -447,7 +447,7 @@ data.products.forEach(p => {
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#180D2B">
+  <meta name="theme-color" content="#0D0714">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="product">
@@ -755,7 +755,7 @@ categoriesDef.forEach(cat => {
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#180D2B">
+  <meta name="theme-color" content="#0D0714">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">

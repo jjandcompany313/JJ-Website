@@ -112,17 +112,18 @@ const newBody = `
   <!-- Main Landmark -->
   <main id="main-content">
 
-    <!-- Hero Section: Wooster-Style (Clean Canvas, Product-First, Minimal Copy) -->
+    <!-- Hero Section: Wooster-Style Graphic Banner (Dark Canvas, Product-First) -->
     <section class="hero-section">
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-            <h1 class="hero-title">
-              Professional Paint Applicators Engineered for Trade Painters
-            </h1>
+            <div class="wooster-headline-block">
+              <h1 class="wooster-banner-pill">BETTER FINISH,</h1>
+              <div class="wooster-banner-pill banner-purple">LESS EFFORT</div>
+            </div>
 
-            <p class="hero-subline">
-              Direct Jalgaon manufacturer of Wallfin™ heavy-cage paint rollers, precision Panama brushes, and trade finishing accessories.
+            <p class="hero-wooster-subline">
+              <strong>Wallfin™</strong> (Registered TM: 8027912) offers professional heavy-cage paint rollers manufactured directly by <strong>J. J. &amp; Company</strong> at our Jalgaon Depo, giving trade painters smoother coverage with less effort, every coat, every time.
             </p>
 
             <div class="hero-metrics">
@@ -140,13 +141,16 @@ const newBody = `
               </div>
             </div>
 
-            <div class="hero-ctas">
-              <a href="/products/rollers.html" class="btn btn-primary btn-lg">Explore Rollers</a>
-              <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-outline btn-lg">
-                ${SVG_PDF} <span>Download Catalogue (PDF)</span>
+            <div class="hero-ctas" style="align-items: center; margin-top: 8px;">
+              <a href="#product-categories" class="hero-action-view">
+                <span>VIEW PRODUCTS</span>
+                <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-primary btn-sm">
+                ${SVG_PDF} <span>Master Catalogue</span>
               </a>
               <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20please%20share%20wholesale%20dealer%20rates."
-                target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp-subtle btn-lg">
+                target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp-subtle btn-sm">
                 ${SVG_WA} <span>Direct Depo Rates</span>
               </a>
             </div>
@@ -157,7 +161,7 @@ const newBody = `
               <div class="hero-stage-img-wrap">
                 <picture>
                   <source srcset="/assets/images/rollers-collection.webp" type="image/webp">
-                  <img src="/assets/images/rollers-collection.jpg" alt="Wallfin Precision Paint Rollers and Panama Brushes"
+                  <img src="/assets/images/rollers-collection.jpg" alt="Wallfin Precision Paint Rollers Manufactured by JJ and Company"
                     width="800" height="450" loading="eager" fetchpriority="high">
                 </picture>
               </div>
@@ -1033,6 +1037,8 @@ const newBody = `
 </html>
 `;
 
+headContent = headContent.replace(/<meta name="theme-color" content="[^"]*">/i, '<meta name="theme-color" content="#0D0714">');
+
 const finalHtml = `<!DOCTYPE html>
 <html lang="en-IN">
 <head>
@@ -1041,8 +1047,12 @@ ${headContent}
     /* Hallmark · theme: minimal · genre: modern-minimal */
     :root {
       --accent: #FF1493;
+      --bg-main: #0D0714;
+      --text-body: #E2D9F3;
     }
     html, body {
+      background-color: var(--bg-main);
+      color: var(--text-body);
       overflow-x: clip;
     }
     :focus-visible {
