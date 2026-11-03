@@ -102,116 +102,87 @@ function getHeaderHtml(activeNav = 'products') {
 
 function getFooterHtml() {
   return `
-  <!-- Clean Footer -->
+  <!-- Pre-Footer Strip: Wholesale & Trade Updates -->
+  <aside class="footer-pre-bar" aria-label="Trade Updates Subscription">
+    <div class="container footer-pre-inner">
+      <p class="footer-pre-heading">RECEIVE THE LATEST ARTICLES, ADVICE, AND UPDATES</p>
+      <form class="footer-pre-form" action="/contact.html" method="get">
+        <input type="email" name="email" class="footer-pre-input" placeholder="Enter your email..." required aria-label="Enter your email for trade updates">
+        <button type="submit" class="footer-pre-btn">JOIN</button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- Wooster-Style 5-Column Minimal Clean Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-top-grid">
-        <div class="footer-col-brand">
-          <div class="brand-logo">
+      <div class="wooster-footer-grid">
+        <!-- Col 1: Brand & Legal -->
+        <div class="wooster-col-brand">
+          <a href="/" class="wooster-brand-logo" aria-label="JJ &amp; Company Home">
             <picture>
               <source srcset="/assets/images/jj-company-logo-nav.webp" type="image/webp">
-              <img src="/assets/images/jj-company-logo-nav.png" alt="JJ &amp; Company Logo" class="logo-img" width="44" height="44">
+              <img src="/assets/images/jj-company-logo-nav.png" alt="JJ &amp; Company Logo" class="wooster-logo-img" width="38" height="38">
             </picture>
-            <span class="brand-name">JJ &amp; COMPANY</span>
+            <span class="wooster-brand-name">JJ &amp; COMPANY</span>
+          </a>
+          <p class="wooster-tagline">Engineered for Professional Finish™</p>
+          <div class="wooster-legal-line">
+            <span>&copy; <span id="currentYear">2026</span> JJ &amp; COMPANY</span>
+            <span class="wooster-sep">|</span>
+            <a href="/privacy-policy.html">PRIVACY POLICY</a>
+            <span class="wooster-sep">|</span>
+            <a href="/sitemap.xml">SITEMAP</a>
           </div>
-          <p class="footer-desc">
-            Direct distributor & brand supplier of Wallfin™ paint rollers (TM Application ID: 8027912), direct importer of authentic Panama paint brushes, and distributor of finishing accessories at our Jalgaon Depo, Maharashtra.
-          </p>
-          <div class="gst-badge">
-            <span> GSTIN:</span>
-            <strong>27ACXPN6682N1ZC</strong>
-          </div>
-          <div class="gst-badge" style="margin-top: 6px;">
-            <span> Registered Brand:</span>
-            <strong>Wallfin (TM: 8027912)</strong>
-          </div>
-          <div style="margin-top: 14px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-  <a href="https://www.facebook.com/profile.php?id=61594625407272" target="_blank" rel="noopener noreferrer nofollow" class="footer-social-link">Facebook</a>
-  <a href="https://www.instagram.com/jjandcompany313/" target="_blank" rel="noopener noreferrer nofollow" class="footer-social-link">Instagram</a>
-  <a href="https://www.indiamart.com/kgn-works-pune/" target="_blank" rel="noopener noreferrer nofollow" class="footer-social-link">IndiaMART</a>
-  <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener noreferrer nofollow" class="footer-social-link">Google Maps</a>
-</div>
         </div>
 
-        <div>
-          <h3 class="footer-heading">Navigation</h3>
-          <ul class="footer-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/products.html">Product Catalog</a></li>
-            <li><a href="/dealer.html">Dealership</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <!-- Col 2: Company Details -->
+        <div class="wooster-col">
+          <p class="wooster-company-title">THE J. J. &amp; COMPANY</p>
+          <address class="wooster-address">
+            Plot No-8, Dixit Wadi<br>
+            Pande Chowk Road<br>
+            Jalgaon, MH 425001<br>
+            GSTIN: 27ACXPN6682N1ZC
+          </address>
+        </div>
+
+        <!-- Col 3: Navigation Links -->
+        <div class="wooster-col">
+          <ul class="wooster-nav-links">
+            <li><a href="/contact.html">CONTACT US</a></li>
+            <li><a href="/about.html">ABOUT US</a></li>
+            <li><a href="/dealer.html">DEALERSHIP</a></li>
+            <li><a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download>RESOURCES</a></li>
           </ul>
         </div>
 
-        <div>
-          <h3 class="footer-heading">Product Lines</h3>
-          <ul class="footer-links">
-            <li><a href="/products/rollers.html">1. Wallfin™ Paint Rollers</a></li>
-            <li><a href="/products/brushes.html">2. Panama Paint Brushes</a></li>
-            <li><a href="/products/accessories.html">3. Thinners, Polish &amp; Abrasives</a></li>
-            <li><a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download>${SVG_PDF} Master Catalogue (PDF)</a></li>
-            <li><a href="/assets/docs/Wall_Fin_Paint_Roller_Catalogue_2026.pdf" download>${SVG_PDF} Wall Fin Catalogue (PDF)</a></li>
-            <li><a href="/assets/docs/JJ_Company_Panama_Brush_Catalog.pdf" download>${SVG_PDF} Panama Brush Catalogue (PDF)</a></li>
+        <!-- Col 4: Products -->
+        <div class="wooster-col">
+          <ul class="wooster-nav-links">
+            <li><a href="/products/brushes.html">BRUSHES</a></li>
+            <li><a href="/products/rollers.html">ROLLERS</a></li>
+            <li><a href="/products/accessories.html">ACCESSORIES</a></li>
           </ul>
         </div>
 
-        <div>
-          <h3 class="footer-heading">Supply Locations</h3>
-          <ul class="footer-links">
-            <li><a href="/locations/jalgaon.html">Jalgaon (Central Depo)</a></li>
-            <li><a href="/locations/dhule.html">Dhule Commercial Hub</a></li>
-            <li><a href="/locations/nandurbar.html">Nandurbar &amp; Shahada</a></li>
-            <li><a href="/locations/buldhana.html">Buldhana &amp; Khamgaon</a></li>
-            <li><a href="/locations/madhya-pradesh.html">Madhya Pradesh (Burhanpur)</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="footer-heading">Depo &amp; Head Office</h3>
-          <div class="footer-contact-list">
-            <div class="footer-contact-item">
-              ${SVG_PIN}
-              <span>
-                Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd,<br>
-                Jalgaon, Maharashtra 425001, India<br>
-                <small style="color:var(--text-muted);">(Plus Code: 2H5C+678 | GPS: 21.0080644, 75.5706007)</small>
-              </span>
-            </div>
-            <div class="footer-contact-item">
-              ${SVG_PHONE}
-              <div class="footer-phone-group">
-                <a href="tel:+919422775429" class="footer-contact-link">+91 94227 75429 (Primary)</a>
-                <a href="tel:+919890003539" class="footer-contact-link">+91 98900 03539 (Office)</a>
-              </div>
-            </div>
-            <div class="footer-contact-item">
+        <!-- Col 5: Social Media -->
+        <div class="wooster-col">
+          <p class="wooster-social-heading">CONNECT WITH US ON SOCIAL</p>
+          <div class="wooster-social-icons">
+            <a href="https://www.instagram.com/jjandcompany313/" target="_blank" rel="noopener noreferrer nofollow" class="wooster-social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.indiamart.com/kgn-works-pune/" target="_blank" rel="noopener noreferrer nofollow" class="wooster-social-btn" aria-label="IndiaMART">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61594625407272" target="_blank" rel="noopener noreferrer nofollow" class="wooster-social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow" class="wooster-social-btn" aria-label="WhatsApp">
               ${SVG_WA}
-              <a href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow">WhatsApp: +91 94227 75429</a>
-            </div>
-            <div class="footer-contact-item">
-              ${SVG_MAIL}
-              <a href="mailto:jjandcompany313@gmail.com">jjandcompany313@gmail.com</a>
-            </div>
-            <div class="footer-contact-item" style="margin-top: 6px;">
-              ${SVG_STAR}
-              <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener noreferrer nofollow">Read &amp; Post Google Reviews </a>
-            </div>
-            <div class="footer-contact-item">
-              
-              <a href="https://g.page/r/CQrB9YNt2nTFEBM" target="_blank" rel="noopener noreferrer nofollow">Google Business Profile </a>
-            </div>
+            </a>
           </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>
-          &copy; <span id="currentYear">2026</span> JJ &amp; Company. All rights reserved. Direct Depo Supply.
-        </div>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-          <span>Active supply in Jalgaon, Dhule, Nandurbar, Buldhana and Madhya Pradesh; other regions by transport on request.</span>
         </div>
       </div>
     </div>

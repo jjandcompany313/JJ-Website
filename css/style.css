@@ -2589,12 +2589,230 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-/* --- Global Footer --- */
-.site-footer {
-  background-color: #07030C;
+/* --- Pre-Footer Bar (Wooster Style) --- */
+.footer-pre-bar {
+  background-color: #181420;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-pre-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.footer-pre-heading {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: #FFFFFF;
-  padding: 72px 0 28px 0;
-  border-top: 1px solid var(--border-color);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.footer-pre-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 320px;
+  flex-shrink: 0;
+}
+
+.footer-pre-input {
+  background-color: #FFFFFF;
+  color: #111827;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: var(--font-sm);
+  font-family: var(--font-body);
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-pre-input::placeholder {
+  color: #64748B;
+}
+
+.footer-pre-input:focus {
+  border-color: var(--primary);
+}
+
+.footer-pre-btn {
+  align-self: flex-start;
+  background-color: var(--primary);
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: var(--font-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 9px 26px;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  font-family: var(--font-heading);
+}
+
+.footer-pre-btn:hover {
+  background-color: #E0007A;
+  transform: translateY(-1px);
+}
+
+/* --- Global Footer (Wooster 5-Column Clean Layout) --- */
+.site-footer {
+  background-color: #140520;
+  color: #FFFFFF;
+  padding: 48px 0 32px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.wooster-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1.1fr 0.9fr 0.9fr 1.3fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.wooster-col-brand .wooster-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.wooster-logo-img {
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.wooster-brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+.wooster-tagline {
+  margin: 12px 0 20px 0;
+  font-size: var(--font-sm);
+  color: #CBD5E1;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.wooster-legal-line {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-family: var(--font-heading);
+}
+
+.wooster-legal-line a {
+  color: #CBD5E1;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.wooster-legal-line a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.wooster-sep {
+  color: #64748B;
+}
+
+.wooster-company-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-sm);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 0 10px 0;
+}
+
+.wooster-address {
+  font-style: normal;
+  font-size: var(--font-xs);
+  line-height: 1.7;
+  color: #CBD5E1;
+  letter-spacing: 0.02em;
+}
+
+.wooster-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wooster-nav-links a {
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: var(--font-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.wooster-nav-links a:hover {
+  color: var(--primary);
+}
+
+.wooster-social-heading {
+  font-family: var(--font-heading);
+  font-size: var(--font-xs);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 0 14px 0;
+}
+
+.wooster-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wooster-social-btn {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.wooster-social-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+  transform: translateY(-2px);
 }
 
 .footer-top-grid {
@@ -2959,6 +3177,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .wooster-footer-grid,
   .footer-top-grid {
     grid-template-columns: 1fr 1fr;
     gap: 28px;
@@ -3687,9 +3906,19 @@ h1, h2, h3, h4, h5, h6 {
     padding: 44px 0 24px 0;
   }
 
+  .wooster-footer-grid,
   .footer-top-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .footer-pre-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-pre-form {
+    max-width: 100%;
   }
 
   .footer-bottom {
