@@ -61,10 +61,6 @@ function getHeaderHtml(activeNav = 'products') {
 
       <div class="header-cta-group">
         <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-secondary btn-sm">${SVG_PDF} Master Catalogue</a>
-        <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20I%20am%20inquiring%20about%20your%20products."
-          target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-sm" aria-label="WhatsApp Direct Support">
-          ${SVG_WA} WhatsApp
-        </a>
         <button id="mobileToggle" class="mobile-toggle" aria-label="Open Navigation Menu">${SVG_MENU}</button>
       </div>
     </div>
@@ -242,8 +238,8 @@ function getFooterHtml() {
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script defer src="/js/site-data.js?v=4.0"></script>
-  <script defer src="/js/main.js?v=4.0"></script>
+  <script defer src="/js/site-data.js?v=4.1"></script>
+  <script defer src="/js/main.js?v=4.1"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
@@ -454,7 +450,7 @@ data.products.forEach(p => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.0">
+  <link rel="stylesheet" href="/css/style.css?v=4.1">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -762,7 +758,7 @@ categoriesDef.forEach(cat => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.0">
+  <link rel="stylesheet" href="/css/style.css?v=4.1">
 
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
