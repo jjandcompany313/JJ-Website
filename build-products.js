@@ -788,11 +788,11 @@ categoriesDef.forEach(cat => {
   <meta property="og:title" content="${escapeHtml(cat.title)}">
   <meta property="og:description" content="${escapeHtml(cat.metaDesc)}">
   <meta property="og:url" content="${pageUrl}">
-  <meta property="og:image" content="https://jjandcompany.net/assets/images/factory-hero.jpg">
+  <meta property="og:image" content="https://jjandcompany.net/assets/images/rollers/hero-roller-isolated.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(cat.title)}">
   <meta name="twitter:description" content="${escapeHtml(cat.metaDesc)}">
-  <meta name="twitter:image" content="https://jjandcompany.net/assets/images/factory-hero.jpg">
+  <meta name="twitter:image" content="https://jjandcompany.net/assets/images/rollers/hero-roller-isolated.png">
 
   <!-- Structured Data: Breadcrumbs -->
   <script type="application/ld+json">

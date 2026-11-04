@@ -283,7 +283,7 @@ locationsData.forEach(loc => {
     "url": pageUrl,
     "telephone": "+91-94227-75429",
     "priceRange": "₹₹",
-    "image": "https://jjandcompany.net/assets/images/factory-hero.jpg",
+    "image": "https://jjandcompany.net/assets/images/rollers/hero-roller-isolated.png",
     "hasMap": "https://www.google.com/maps/place/J.+J.+%26+COMPANY/@21.0080644,75.5706007,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd90fa88342dc29:0xc574da6d83f5c10a!8m2!3d21.0080644!4d75.5706007!16s%2Fg%2F11vdgxdypk",
     "address": {
       "@type": "PostalAddress",
@@ -418,11 +418,11 @@ locationsData.forEach(loc => {
   <meta property="og:title" content="${escapeHtml(loc.title)}">
   <meta property="og:description" content="${escapeHtml(loc.metaDesc)}">
   <meta property="og:url" content="${pageUrl}">
-  <meta property="og:image" content="https://jjandcompany.net/assets/images/factory-hero.jpg">
+  <meta property="og:image" content="https://jjandcompany.net/assets/images/rollers/hero-roller-isolated.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(loc.title)}">
   <meta name="twitter:description" content="${escapeHtml(loc.metaDesc)}">
-  <meta name="twitter:image" content="https://jjandcompany.net/assets/images/factory-hero.jpg">
+  <meta name="twitter:image" content="https://jjandcompany.net/assets/images/rollers/hero-roller-isolated.png">
 
   <!-- Structured Data: Breadcrumbs -->
   <script type="application/ld+json">
@@ -564,46 +564,25 @@ locationsData.forEach(loc => {
           <section class="aeo-summary-box" style="background: rgba(147, 112, 219, 0.05); border: 1px solid rgba(147, 112, 219, 0.2); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 32px;">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
               <span style="display: inline-block; width: 10px; height: 10px; background: var(--fuchsia); border-radius: 50%;" aria-hidden="true"></span>
-              <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--medium-purple);">Quick Wholesale Summary</span>
+              <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--medium-purple);">Trade Dispatch Summary</span>
             </div>
             <h2 style="font-size: 1.25rem; color: #FFFFFF; font-weight: 800; margin-bottom: 12px; line-height: 1.35;">
-              Paint Accessories Wholesale &amp; Depo in ${escapeHtml(loc.name)}
+              Wholesale Supply &amp; Transport for ${escapeHtml(loc.name)}
             </h2>
             <p style="font-size: 0.96rem; color: var(--text-body); line-height: 1.65; margin-bottom: 16px;">
-              <strong>JJ &amp; Company</strong> is a direct manufacturer of <strong>Wallfin™ paint rollers</strong> (Trademark Application ID: 8027912) and wholesale supplier of <strong>Panama paint brushes</strong>, headquartered at Plot No-8, Dixit Wadi, Jalgaon, Maharashtra 425001. We supply hardware retail shops, paint stockists, and contractors in ${escapeHtml(loc.name)} with direct factory rates, zero middleman markups, and reliable ${escapeHtml(loc.transitTime)}.
+              Direct factory supply of Wallfin™ paint rollers and imported Panama™ brushes to hardware dealers and paint stockists across ${escapeHtml(loc.name)}.
             </p>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.85rem; color: #D5C7ED;">
-              <div><strong>Brand:</strong> Wallfin™ (TM: 8027912) &amp; Panama</div>
-              <div><strong>Facility:</strong> Plot No-8, Dixit Wadi, Jalgaon</div>
-              <div><strong>Dispatch:</strong> ${escapeHtml(loc.transitTime)}</div>
-              <div><strong>Contact:</strong> +91 94227 75429 (WhatsApp/Call)</div>
+              <div><strong>Transit Time:</strong> ${escapeHtml(loc.transitTime)}</div>
+              <div><strong>Route:</strong> ${escapeHtml(loc.logistics)}</div>
+              <div><strong>Coverage:</strong> ${escapeHtml(loc.coverage)}</div>
+              <div><strong>Order Desk:</strong> +91 94227 75429</div>
             </div>
           </section>
 
-          <!-- Verified Google Review & Local Entity Grounding Card -->
-          <div style="background: rgba(147, 112, 219, 0.04); border: 1px solid rgba(147, 112, 219, 0.18); border-radius: var(--radius-md); padding: 18px 22px; margin-bottom: 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
-            <div style="display: flex; align-items: center; gap: 14px;">
-              <div>
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <strong style="color: #FFFFFF; font-size: 1.02rem;">5.0 Verified on Google Maps</strong>
-                  <span style="background: rgba(147, 112, 219, 0.18); color: var(--medium-purple); font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; font-weight: 700;">Verified Business</span>
-                </div>
-                <p style="font-size: 0.84rem; color: var(--text-muted); margin: 3px 0 0 0;">J. J. &amp; COMPANY — Trusted by hardware dealers, retail paint counters &amp; contractors.</p>
-              </div>
-            </div>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-              <a href="https://g.page/r/CQrB9YNt2nTFEBM/review" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary btn-sm">
-                ${SVG_STAR} Read Reviews
-              </a>
-              <a href="https://www.google.com/maps/place/J.+J.+%26+COMPANY/@21.0080644,75.5706007,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd90fa88342dc29:0xc574da6d83f5c10a!8m2!3d21.0080644!4d75.5706007!16s%2Fg%2F11vdgxdypk" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-outline btn-sm">
-                Google Maps Profile
-              </a>
-            </div>
-          </div>
-
           <section style="margin-bottom: 40px;">
             <h2 style="font-size: 1.55rem; color: #FFFFFF; font-weight: 800; margin-bottom: 14px;">
-              Wholesale Paint Supply for ${escapeHtml(loc.name)} Hardware Dealers
+              Wholesale Market Context for ${escapeHtml(loc.name)}
             </h2>
             <p style="font-size: 1rem; margin-bottom: 16px;">
               ${escapeHtml(loc.intro)}
@@ -613,32 +592,18 @@ locationsData.forEach(loc => {
             </p>
           </section>
 
-          <section style="margin-bottom: 40px; background: rgba(147, 112, 219, 0.04); padding: 28px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.18);">
-            <h2 style="font-size: 1.4rem; color: #FFFFFF; font-weight: 800; margin-bottom: 12px;">
-              Complete Product Portfolio Available for ${escapeHtml(loc.name)}
+          <section style="margin-bottom: 40px; background: rgba(147, 112, 219, 0.04); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.18);">
+            <h2 style="font-size: 1.3rem; color: #FFFFFF; font-weight: 800; margin-bottom: 12px;">
+              Available Catalogue Lines for ${escapeHtml(loc.name)}
             </h2>
             <p style="margin-bottom: 18px; font-size: 0.95rem;">
               ${escapeHtml(loc.productSupply)}
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px;">
-              <div style="background: rgba(147, 112, 219, 0.06); padding: 14px; border-radius: var(--radius-sm); border-left: 3px solid var(--deep-pink);">
-                <strong style="display: block; font-size: 0.9rem; color: #FFFFFF;">Wallfin™ Rollers</strong>
-                <span style="font-size: 0.82rem; color: var(--text-muted);">Standard 20mm &amp; 38mm core, epoxy &amp; foam fix.</span>
-              </div>
-              <div style="background: rgba(147, 112, 219, 0.06); padding: 14px; border-radius: var(--radius-sm); border-left: 3px solid var(--fuchsia);">
-                <strong style="display: block; font-size: 0.9rem; color: #FFFFFF;">Panama Paint Brushes</strong>
-                <span style="font-size: 0.82rem; color: var(--text-muted);">1" to 5" sizes, 100% epoxy potting, zero shed.</span>
-              </div>
-              <div style="background: rgba(147, 112, 219, 0.06); padding: 14px; border-radius: var(--radius-sm); border-left: 3px solid var(--medium-purple);">
-                <strong style="display: block; font-size: 0.9rem; color: #FFFFFF;">Finishing Accessories</strong>
-                <span style="font-size: 0.82rem; color: var(--text-muted);">Maruti thinners, Nico polish, Cumi sandpaper &amp; pata.</span>
-              </div>
-            </div>
-
-            <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-              <a href="/products/rollers.html" class="btn btn-outline btn-sm">Browse Wallfin™ Rollers</a>
-              <a href="/products/brushes.html" class="btn btn-outline btn-sm">Browse Panama Brushes</a>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="/products/rollers.html" class="btn btn-outline btn-sm">Wallfin™ Rollers</a>
+              <a href="/products/brushes.html" class="btn btn-outline btn-sm">Panama Brushes</a>
+              <a href="/products/accessories.html" class="btn btn-outline btn-sm">Thinners &amp; Prep Tools</a>
             </div>
           </section>
 
