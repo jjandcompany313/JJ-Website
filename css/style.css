@@ -14,7 +14,7 @@
 
   /* Semantic Brand Tokens */
   --primary: #9370DB;           /* Medium Purple */
-  --primary-dark: #08030E;      /* Deep Midnight Obsidian */
+  --primary-dark: #0E161A;      /* Deep Midnight Obsidian */
   --primary-light: #A78BFA;     /* Light Lavender Purple */
   --primary-surface: rgba(147, 112, 219, 0.12);
 
@@ -36,13 +36,13 @@
   --whatsapp-soft: rgba(37, 211, 102, 0.15);
 
   /* Deep Nocturnal Obsidian Canvas */
-  --bg-main: #08030E;           /* Deep obsidian-violet background */
-  --bg-section: #0D0518;        /* Subtle layered dark ground */
-  --bg-subtle: #130722;         /* Tertiary tone */
+  --bg-main: #0E161A;           /* Deep obsidian-violet background */
+  --bg-section: #131C22;        /* Subtle layered dark ground */
+  --bg-subtle: #1A262E;         /* Tertiary tone */
   --bg-card: rgba(147, 112, 219, 0.04);
   --bg-card-hover: rgba(147, 112, 219, 0.08);
   --bg-dark: #050209;
-  --bg-header: rgba(8, 3, 14, 0.94);
+  --bg-header: rgba(14, 22, 26, 0.94);
 
   /* Restrained, Non-Box Dividing Rules (Medium Purple Tint) */
   --border-color: rgba(147, 112, 219, 0.18);
@@ -51,8 +51,8 @@
 
   /* High-Contrast Editorial Typography (WCAG AAA compliant) */
   --text-main: #FFFFFF;         /* Crisp White */
-  --text-body: #E4D9F5;         /* Soft readable lavender slate */
-  --text-muted: #B8A7D4;        /* Muted captions in warm purple-slate */
+  --text-body: #E0E8ED;         /* Soft readable lavender slate */
+  --text-muted: #9BB0BA;        /* Muted captions in warm purple-slate */
   --text-light: #D5C7ED;
   --text-white: #FFFFFF;
 
@@ -144,13 +144,13 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #08030E;
+  background: #0E161A;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--medium-purple);
   border-radius: 5px;
-  border: 2px solid #08030E;
+  border: 2px solid #0E161A;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -623,7 +623,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 82%;
   max-width: 340px;
   height: 100vh;
-  background-color: #0D0518;
+  background-color: #131C22;
   border-left: 1px solid rgba(147, 112, 219, 0.2);
   z-index: 1050;
   box-shadow: -8px 0 40px rgba(0, 0, 0, 0.75);
@@ -1380,7 +1380,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 210px;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background-color: #0D0518;
+  background-color: #131C22;
 }
 
 .warehouse-img-wrap img {
@@ -3393,7 +3393,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal-card {
-  background-color: #0D0518;
+  background-color: #131C22;
   border: 1px solid rgba(147, 112, 219, 0.25);
   border-radius: var(--radius-lg);
   max-width: 460px;
@@ -4544,26 +4544,26 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 :root {
-  --bg-main: #08030E;
-  --bg-section: #0D0518;
-  --bg-subtle: #130722;
+  --bg-main: #0E161A;
+  --bg-section: #131C22;
+  --bg-subtle: #1A262E;
   --bg-card: rgba(147, 112, 219, 0.04);
   --bg-card-hover: rgba(147, 112, 219, 0.08);
   --bg-dark: #050209;
   --border-color: rgba(147, 112, 219, 0.18);
   --border-subtle: rgba(147, 112, 219, 0.10);
   --text-main: #FFFFFF;
-  --text-body: #E4D9F5;
-  --text-muted: #B8A7D4;
+  --text-body: #E0E8ED;
+  --text-muted: #9BB0BA;
 }
 
 body {
-  background-color: #08030E;
-  color: #E4D9F5;
+  background-color: #0E161A;
+  color: #E0E8ED;
 }
 
 .site-header {
-  background-color: rgba(8, 3, 14, 0.94);
+  background-color: rgba(14, 22, 26, 0.94);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-color);
 }
@@ -4575,13 +4575,16 @@ body {
 
 /* 1. Seamless Hero Section with High-Res Clean Paint Roller Background */
 .minimal-hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
   padding: 80px 0 96px 0;
   position: relative;
-  background-color: #08030E;
+  background-color: #0E161A;
   background-image:
-    linear-gradient(90deg, #08030E 0%, rgba(8, 3, 14, 0.88) 38%, rgba(8, 3, 14, 0.42) 70%, rgba(8, 3, 14, 0.18) 100%),
-    linear-gradient(180deg, transparent 70%, #08030E 100%),
-    url('/assets/images/hero-bg-painter-dark.webp');
+    linear-gradient(90deg, #0E161A 0%, rgba(14, 22, 26, 0.88) 42%, rgba(14, 22, 26, 0.30) 72%, transparent 100%),
+    linear-gradient(180deg, transparent 75%, #0E161A 100%),
+    url('/assets/images/hero-painter-flipped.webp');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -4590,11 +4593,12 @@ body {
 
 @media (max-width: 991px) {
   .minimal-hero-section {
+    min-height: auto;
     padding: 56px 0 64px 0;
     background-image:
-      linear-gradient(180deg, rgba(8, 3, 14, 0.92) 0%, rgba(8, 3, 14, 0.80) 50%, rgba(8, 3, 14, 0.35) 100%),
-      url('/assets/images/hero-bg-painter-dark.webp');
-    background-position: center top;
+      linear-gradient(180deg, rgba(14, 22, 26, 0.92) 0%, rgba(14, 22, 26, 0.75) 50%, rgba(14, 22, 26, 0.35) 100%),
+      url('/assets/images/hero-painter-flipped.webp');
+    background-position: 70% center;
   }
 }
 
@@ -4847,7 +4851,7 @@ body {
 }
 
 .page-header {
-  background-color: #0D0518 !important;
+  background-color: #131C22 !important;
   padding: 56px 0 40px 0 !important;
   border-bottom: 1px solid var(--border-color) !important;
 }
@@ -4884,10 +4888,10 @@ body {
 }
 
 .mobile-nav-drawer {
-  background-color: #0D0518 !important;
+  background-color: #131C22 !important;
   color: #FFFFFF !important;
 }
 
 .mobile-nav-links .nav-link {
-  color: #E4D9F5 !important;
+  color: #E0E8ED !important;
 }

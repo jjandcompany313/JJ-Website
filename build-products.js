@@ -463,7 +463,7 @@ data.products.forEach(p => {
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#08030E">
+  <meta name="theme-color" content="#0E161A">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="product">
@@ -500,11 +500,11 @@ data.products.forEach(p => {
       --medium-purple: #9370DB;
       --accent: #FF1493;
       --accent-hover: #FF00FF;
-      --bg-main: #08030E;
+      --bg-main: #0E161A;
       --text-main: #FFFFFF;
-      --text-body: #E4D9F5;
-      --text-muted: #B8A7D4;
-      --border-color: rgba(147, 112, 219, 0.18);
+      --text-body: #E0E8ED;
+      --text-muted: #9BB0BA;
+      --border-color: rgba(147, 112, 219, 0.22);
     }
     html, body {
       background-color: var(--bg-main);
@@ -781,7 +781,7 @@ categoriesDef.forEach(cat => {
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#08030E">
+  <meta name="theme-color" content="#0E161A">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
@@ -820,11 +820,11 @@ categoriesDef.forEach(cat => {
       --medium-purple: #9370DB;
       --accent: #FF1493;
       --accent-hover: #FF00FF;
-      --bg-main: #08030E;
+      --bg-main: #0E161A;
       --text-main: #FFFFFF;
-      --text-body: #E4D9F5;
-      --text-muted: #B8A7D4;
-      --border-color: rgba(147, 112, 219, 0.18);
+      --text-body: #E0E8ED;
+      --text-muted: #9BB0BA;
+      --border-color: rgba(147, 112, 219, 0.22);
     }
     html, body {
       background-color: var(--bg-main);
