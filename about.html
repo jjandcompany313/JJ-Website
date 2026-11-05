@@ -211,11 +211,29 @@
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/products.html" class="nav-link">Catalog</a>
+        <!-- 1. Product (with dropdown) -->
+        <div class="nav-item-dropdown">
+          <a href="/products.html" class="nav-link dropdown-link-btn" aria-haspopup="true">
+            <span>Product</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="nav-dropdown-panel" role="menu">
+            <a href="/products/rollers.html" class="nav-dropdown-item" role="menuitem">Roller</a>
+            <a href="/products/brushes.html" class="nav-dropdown-item" role="menuitem">Brush</a>
+            <a href="/products/maruti-auto-gloss-thinner.html" class="nav-dropdown-item" role="menuitem">Thinner</a>
+            <a href="/products/nico-wood-polish.html" class="nav-dropdown-item" role="menuitem">Polish</a>
+            <a href="/products/cumi-abrasives-machine-paper.html" class="nav-dropdown-item" role="menuitem">Sand Papers</a>
+            <a href="/products/wooden-steel-pata.html" class="nav-dropdown-item" role="menuitem">Scraper</a>
+          </div>
+        </div>
+        <!-- 2. Resources -->
+        <a href="/resources.html" class="nav-link">Resources</a>
+        <!-- 3. Dealership -->
         <a href="/dealer.html" class="nav-link">Dealership</a>
-        <a href="/about.html" class="nav-link active">About</a>
-        <a href="/contact.html" class="nav-link">Contact</a>
+        <!-- 4. Career -->
+        <a href="/career.html" class="nav-link">Career</a>
+        <!-- 5. Contact US -->
+        <a href="/contact.html" class="nav-link">Contact US</a>
       </nav>
 
       <div class="header-cta-group">

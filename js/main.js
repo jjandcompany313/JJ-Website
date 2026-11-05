@@ -5,6 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
+  initDropdowns();
   initWhatsAppLinks();
   initMasterInquiryForm();
   initCategoryFilter();
@@ -470,5 +471,28 @@ function initCompanyVideoModal() {
     if (e.key === "Escape" && modal.classList.contains("open")) {
       closeModal();
     }
+  });
+}
+
+/* --- Dropdown Click Toggle for Mobile & Touch --- */
+function initDropdowns() {
+  document.querySelectorAll(".hero-dropdown-wrapper, .nav-item-dropdown").forEach(wrapper => {
+    const toggle = wrapper.querySelector(".hero-dropdown-toggle, .dropdown-link-btn");
+    const menu = wrapper.querySelector(".hero-dropdown-menu, .nav-dropdown-panel");
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = wrapper.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  });
+
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".hero-dropdown-wrapper.is-open, .nav-item-dropdown.is-open").forEach(w => {
+      w.classList.remove("is-open");
+      const toggle = w.querySelector(".hero-dropdown-toggle, .dropdown-link-btn");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
   });
 }
