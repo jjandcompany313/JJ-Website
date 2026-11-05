@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.6">
+  <link rel="stylesheet" href="/css/style.css?v=4.8">
   
   <!-- Standard Favicons & Google Search Icons (Multiples of 48px as required by Google) -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -393,6 +393,7 @@
                       <span class="hero-dropdown-title">Roller</span>
                       <span class="hero-dropdown-desc">Wallfin™ cage rollers &amp; refills</span>
                     </div>
+                    <svg class="hero-dropdown-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
                   </a>
                   <a href="/products/brushes.html" class="hero-dropdown-item" role="menuitem">
                     <span class="hero-dropdown-bullet" aria-hidden="true">2</span>
@@ -400,6 +401,7 @@
                       <span class="hero-dropdown-title">Brush</span>
                       <span class="hero-dropdown-desc">Panama™ pure &amp; synthetic brushes</span>
                     </div>
+                    <svg class="hero-dropdown-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
                   </a>
                   <a href="/products/maruti-auto-gloss-thinner.html" class="hero-dropdown-item" role="menuitem">
                     <span class="hero-dropdown-bullet" aria-hidden="true">3</span>
@@ -407,6 +409,7 @@
                       <span class="hero-dropdown-title">Thinner</span>
                       <span class="hero-dropdown-desc">Maruti auto gloss solvent thinner</span>
                     </div>
+                    <svg class="hero-dropdown-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
                   </a>
                   <a href="/products/nico-wood-polish.html" class="hero-dropdown-item" role="menuitem">
                     <span class="hero-dropdown-bullet" aria-hidden="true">4</span>
@@ -414,6 +417,7 @@
                       <span class="hero-dropdown-title">Polish</span>
                       <span class="hero-dropdown-desc">Nico French &amp; wood polish</span>
                     </div>
+                    <svg class="hero-dropdown-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
                   </a>
                   <a href="/products/cumi-abrasives-machine-paper.html" class="hero-dropdown-item" role="menuitem">
                     <span class="hero-dropdown-bullet" aria-hidden="true">5</span>
@@ -421,6 +425,7 @@
                       <span class="hero-dropdown-title">Sand Papers</span>
                       <span class="hero-dropdown-desc">Cumi abrasive sheets &amp; discs</span>
                     </div>
+                    <svg class="hero-dropdown-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
                   </a>
                   <a href="/products/wooden-steel-pata.html" class="hero-dropdown-item" role="menuitem">
                     <span class="hero-dropdown-bullet" aria-hidden="true">6</span>
@@ -428,25 +433,22 @@
                       <span class="hero-dropdown-title">Scraper</span>
                       <span class="hero-dropdown-desc">Stainless steel &amp; wooden putty pata</span>
                     </div>
+                    <svg class="hero-dropdown-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
                   </a>
                 </div>
               </div>
 
-              <!-- 2. Resources -->
-              <a href="/resources.html" class="hero-option-link">Resources</a>
-
-              <!-- 3. Dealership -->
-              <a href="/dealer.html" class="hero-option-link">Dealership</a>
-
-              <!-- 4. Career -->
-              <a href="/career.html" class="hero-option-link">Career</a>
-
-              <!-- 5. Contact US -->
-              <a href="/contact.html" class="hero-option-link hero-option-primary">Contact US</a>
+              <!-- Options 2-5: Resources, Dealership, Career, Contact US (Mobile 2x2 grid, Desktop inline) -->
+              <div class="hero-sub-options-grid">
+                <a href="/resources.html" class="hero-option-link">Resources</a>
+                <a href="/dealer.html" class="hero-option-link">Dealership</a>
+                <a href="/career.html" class="hero-option-link">Career</a>
+                <a href="/contact.html" class="hero-option-link hero-option-primary">Contact US</a>
+              </div>
             </div>
           </div>
 
-          <div class="minimal-hero-visual" aria-hidden="true" style="min-height: 280px;"></div>
+          <div class="minimal-hero-visual" aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -463,7 +465,11 @@
                 <img src="/assets/images/hero-rollers.png" alt="Wallfin Paint Roller" class="wooster-category-img" loading="lazy" width="509" height="476">
               </picture>
             </div>
-            <h2 class="wooster-category-title">Roller</h2>
+            <div class="wooster-category-meta">
+              <h2 class="wooster-category-title">Roller</h2>
+              <span class="wooster-category-tagline">Wallfin™ cage rollers, refills &amp; sleeves</span>
+              <span class="wooster-category-action">Explore Rollers <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </div>
           </a>
 
           <!-- 2. Brush -->
@@ -474,7 +480,11 @@
                 <img src="/assets/images/hero-brushes.png" alt="Panama Paint Brush" class="wooster-category-img" loading="lazy" width="692" height="317">
               </picture>
             </div>
-            <h2 class="wooster-category-title">Brush</h2>
+            <div class="wooster-category-meta">
+              <h2 class="wooster-category-title">Brush</h2>
+              <span class="wooster-category-tagline">Panama™ 100% pure &amp; synthetic brushes</span>
+              <span class="wooster-category-action">Explore Brushes <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </div>
           </a>
 
           <!-- 3. Tools -->
@@ -485,7 +495,11 @@
                 <img src="/assets/images/hero-tools.png" alt="Painting Tools: Thinner, Polish, Sandpaper, Putty Pata" class="wooster-category-img" loading="lazy" width="1106" height="654">
               </picture>
             </div>
-            <h2 class="wooster-category-title">Tools</h2>
+            <div class="wooster-category-meta">
+              <h2 class="wooster-category-title">Tools</h2>
+              <span class="wooster-category-tagline">Maruti thinner, Nico polish, sandpaper &amp; pata</span>
+              <span class="wooster-category-action">Explore Tools <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </div>
           </a>
         </div>
       </div>
@@ -654,22 +668,18 @@
             GSTIN: 27ACXPN6682N1ZC
           </address>
           <div class="wooster-legal-line">
-            <span>&copy; <span id="currentYear">2026</span> JJ &amp; COMPANY</span>
+            <span>&copy; <span id="currentYear">2026</span> JJ &amp; Company</span>
             <span class="wooster-sep">|</span>
-            <a href="/privacy-policy.html">PRIVACY</a>
+            <a href="/privacy-policy.html">Privacy</a>
             <span class="wooster-sep">|</span>
-            <a href="/sitemap.xml">SITEMAP</a>
+            <a href="/sitemap.xml">Sitemap</a>
             <span class="wooster-sep">|</span>
-            <span>HUBS:</span>
-            <a href="/locations/jalgaon.html">JALGAON</a>
-            <span class="wooster-sep">&middot;</span>
-            <a href="/locations/dhule.html">DHULE</a>
-            <span class="wooster-sep">&middot;</span>
-            <a href="/locations/nandurbar.html">NANDURBAR</a>
-            <span class="wooster-sep">&middot;</span>
-            <a href="/locations/buldhana.html">BULDHANA</a>
-            <span class="wooster-sep">&middot;</span>
-            <a href="/locations/madhya-pradesh.html">MADHYA PRADESH</a>
+            <span>Hubs:</span>
+            <a href="/locations/jalgaon.html">Jalgaon</a>,
+            <a href="/locations/dhule.html">Dhule</a>,
+            <a href="/locations/nandurbar.html">Nandurbar</a>,
+            <a href="/locations/buldhana.html">Buldhana</a>,
+            <a href="/locations/madhya-pradesh.html">Madhya Pradesh</a>
           </div>
         </div>
 
@@ -732,7 +742,7 @@
   </a>
 
   <script defer src="/js/site-data.js?v=4.4"></script>
-  <script defer src="/js/main.js?v=4.6"></script>
+  <script defer src="/js/main.js?v=4.8"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
 
