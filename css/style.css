@@ -14,7 +14,7 @@
 
   /* Semantic Brand Tokens */
   --primary: #9370DB;           /* Medium Purple */
-  --primary-dark: #0E0517;      /* Deep Midnight Obsidian */
+  --primary-dark: #08030E;      /* Deep Midnight Obsidian */
   --primary-light: #A78BFA;     /* Light Lavender Purple */
   --primary-surface: rgba(147, 112, 219, 0.12);
 
@@ -24,36 +24,36 @@
 
   --accent: #FF1493;            /* Deep Pink */
   --accent-hover: #FF00FF;      /* Transitions to Fuchsia on hover */
-  --accent-soft: rgba(255, 20, 147, 0.12);
-  --accent-glow: rgba(255, 20, 147, 0.35);
+  --accent-soft: rgba(255, 20, 147, 0.16);
+  --accent-glow: rgba(255, 20, 147, 0.40);
 
   --accent-fuchsia: #FF00FF;
-  --accent-fuchsia-soft: rgba(255, 0, 255, 0.12);
-  --accent-fuchsia-glow: rgba(255, 0, 255, 0.40);
+  --accent-fuchsia-soft: rgba(255, 0, 255, 0.16);
+  --accent-fuchsia-glow: rgba(255, 0, 255, 0.45);
 
   --whatsapp: #25D366;          /* Official WhatsApp Brand Green */
   --whatsapp-hover: #1EBE5D;
   --whatsapp-soft: rgba(37, 211, 102, 0.15);
 
-  /* Architectural Alabaster Canvas (Derived from clean painter wall background) */
-  --bg-main: #F5F7FA;           /* Crisp, clean architectural alabaster */
-  --bg-section: #FFFFFF;        /* Pure white for layered surface contrast */
-  --bg-subtle: #EDF1F6;         /* Soft plaster tint */
-  --bg-card: #FFFFFF;           /* Pristine surface */
-  --bg-card-hover: #F8FAFD;
-  --bg-dark: #0E0517;           /* Deep midnight obsidian anchor for footer */
-  --bg-header: rgba(245, 247, 250, 0.94); /* Header frosted glass */
+  /* Deep Nocturnal Obsidian Canvas */
+  --bg-main: #08030E;           /* Deep obsidian-violet background */
+  --bg-section: #0D0518;        /* Subtle layered dark ground */
+  --bg-subtle: #130722;         /* Tertiary tone */
+  --bg-card: rgba(147, 112, 219, 0.04);
+  --bg-card-hover: rgba(147, 112, 219, 0.08);
+  --bg-dark: #050209;
+  --bg-header: rgba(8, 3, 14, 0.94);
 
   /* Restrained, Non-Box Dividing Rules (Medium Purple Tint) */
-  --border-color: rgba(147, 112, 219, 0.20);
+  --border-color: rgba(147, 112, 219, 0.18);
   --border-subtle: rgba(147, 112, 219, 0.10);
   --border-focus: #FF1493;
 
   /* High-Contrast Editorial Typography (WCAG AAA compliant) */
-  --text-main: #0E0517;         /* Deep Midnight Obsidian */
-  --text-body: #2C2237;         /* Rich Charcoal Plum */
-  --text-muted: #5F5270;        /* Muted Slate Purple */
-  --text-light: #7E7092;
+  --text-main: #FFFFFF;         /* Crisp White */
+  --text-body: #E4D9F5;         /* Soft readable lavender slate */
+  --text-muted: #B8A7D4;        /* Muted captions in warm purple-slate */
+  --text-light: #D5C7ED;
   --text-white: #FFFFFF;
 
   /* Typography */
@@ -4540,31 +4540,30 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ==========================================================================
-   MINIMAL SEAMLESS ARCHITECTURAL THEME (DERIVED FROM HIGH-RES BACKGROUND)
+   MINIMAL SEAMLESS ARCHITECTURAL THEME (CLEAN PAINT ROLLER BACKGROUND)
    ========================================================================== */
 
-/* Universal single seamless architectural background */
 :root {
-  --bg-main: #F5F7FA;
-  --bg-section: #FFFFFF;
-  --bg-subtle: #EDF1F6;
-  --bg-card: #FFFFFF;
-  --bg-card-hover: #F8FAFD;
-  --bg-dark: #0E0517;
-  --border-color: rgba(147, 112, 219, 0.20);
+  --bg-main: #08030E;
+  --bg-section: #0D0518;
+  --bg-subtle: #130722;
+  --bg-card: rgba(147, 112, 219, 0.04);
+  --bg-card-hover: rgba(147, 112, 219, 0.08);
+  --bg-dark: #050209;
+  --border-color: rgba(147, 112, 219, 0.18);
   --border-subtle: rgba(147, 112, 219, 0.10);
-  --text-main: #0E0517;
-  --text-body: #2C2237;
-  --text-muted: #5F5270;
+  --text-main: #FFFFFF;
+  --text-body: #E4D9F5;
+  --text-muted: #B8A7D4;
 }
 
 body {
-  background-color: #F5F7FA;
-  color: #2C2237;
+  background-color: #08030E;
+  color: #E4D9F5;
 }
 
 .site-header {
-  background-color: rgba(245, 247, 250, 0.94);
+  background-color: rgba(8, 3, 14, 0.94);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-color);
 }
@@ -4574,15 +4573,15 @@ body {
   background-color: transparent !important;
 }
 
-/* 1. Seamless Hero Section with High-Res Clean Background */
+/* 1. Seamless Hero Section with High-Res Clean Paint Roller Background */
 .minimal-hero-section {
   padding: 80px 0 96px 0;
   position: relative;
-  background-color: var(--bg-main);
+  background-color: #08030E;
   background-image:
-    linear-gradient(90deg, rgba(245, 247, 250, 0.96) 0%, rgba(245, 247, 250, 0.90) 42%, rgba(245, 247, 250, 0.38) 72%, rgba(245, 247, 250, 0.15) 100%),
-    linear-gradient(180deg, transparent 72%, var(--bg-main) 100%),
-    url('/assets/images/hero-bg-painter.webp');
+    linear-gradient(90deg, #08030E 0%, rgba(8, 3, 14, 0.88) 38%, rgba(8, 3, 14, 0.42) 70%, rgba(8, 3, 14, 0.18) 100%),
+    linear-gradient(180deg, transparent 70%, #08030E 100%),
+    url('/assets/images/hero-bg-painter-dark.webp');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -4593,8 +4592,8 @@ body {
   .minimal-hero-section {
     padding: 56px 0 64px 0;
     background-image:
-      linear-gradient(180deg, rgba(245, 247, 250, 0.96) 0%, rgba(245, 247, 250, 0.88) 55%, rgba(245, 247, 250, 0.40) 100%),
-      url('/assets/images/hero-bg-painter.webp');
+      linear-gradient(180deg, rgba(8, 3, 14, 0.92) 0%, rgba(8, 3, 14, 0.80) 50%, rgba(8, 3, 14, 0.35) 100%),
+      url('/assets/images/hero-bg-painter-dark.webp');
     background-position: center top;
   }
 }
@@ -4617,7 +4616,7 @@ body {
   font-family: var(--font-heading);
   font-size: clamp(2.4rem, 4.8vw, 4rem);
   font-weight: 800;
-  color: var(--text-main);
+  color: #FFFFFF;
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin-bottom: 20px;
@@ -4632,7 +4631,7 @@ body {
 }
 
 .minimal-hero-subline strong {
-  color: var(--text-main);
+  color: #FFFFFF;
 }
 
 .minimal-hero-actions {
@@ -4646,7 +4645,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--text-main);
+  color: #FFFFFF;
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1.05rem;
@@ -4696,7 +4695,7 @@ body {
   transform: translate(-50%, -50%);
   width: 380px;
   height: 380px;
-  background: radial-gradient(circle, rgba(255, 0, 255, 0.15) 0%, rgba(147, 112, 219, 0.12) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 0, 255, 0.22) 0%, rgba(147, 112, 219, 0.16) 40%, transparent 70%);
   z-index: 0;
   pointer-events: none;
   filter: blur(28px);
@@ -4711,13 +4710,13 @@ body {
   object-fit: contain;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.85));
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
 }
 
 .minimal-product-hero-card:hover .minimal-product-hero-img {
   transform: scale(1.04) translateY(-4px);
-  filter: drop-shadow(0 24px 45px rgba(255, 20, 147, 0.35));
+  filter: drop-shadow(0 24px 45px rgba(255, 20, 147, 0.40));
 }
 
 /* 2. Seamless Section Components */
@@ -4736,7 +4735,7 @@ body {
   font-family: var(--font-heading);
   font-size: clamp(1.85rem, 3.5vw, 2.75rem);
   font-weight: 800;
-  color: var(--text-main);
+  color: #FFFFFF !important;
   line-height: 1.15;
   letter-spacing: -0.025em;
   margin-bottom: 12px;
@@ -4744,7 +4743,7 @@ body {
 
 .minimal-section-subtitle {
   font-size: 1.05rem;
-  color: var(--text-muted);
+  color: var(--text-muted) !important;
   line-height: 1.65;
   margin: 0;
 }
@@ -4753,8 +4752,62 @@ body {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--text-main);
+  color: #FFFFFF !important;
   margin-top: 14px;
+}
+
+/* FAQ Styling: High-Contrast & Legible */
+.faq-accordion-item {
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 0;
+}
+
+.faq-accordion-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  margin: 0;
+  line-height: 1.4;
+  transition: color var(--transition-fast);
+}
+
+.faq-accordion-item[open] .faq-question {
+  color: var(--accent) !important;
+}
+
+.faq-accordion-summary svg {
+  color: var(--medium-purple);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.faq-accordion-item[open] .faq-accordion-summary svg {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+.faq-answer {
+  padding-top: 14px;
+}
+
+.faq-answer p {
+  color: var(--text-body) !important;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
 }
 
 /* 6. Minimal Dealership Section */
@@ -4782,25 +4835,25 @@ body {
   display: block;
   font-family: var(--font-heading);
   font-size: 1.05rem;
-  color: var(--text-main);
+  color: #FFFFFF !important;
   margin-bottom: 4px;
 }
 
 .minimal-point p {
   font-size: 0.92rem;
-  color: var(--text-muted);
+  color: var(--text-muted) !important;
   line-height: 1.6;
   margin: 0;
 }
 
 .page-header {
-  background-color: var(--bg-main) !important;
+  background-color: #0D0518 !important;
   padding: 56px 0 40px 0 !important;
   border-bottom: 1px solid var(--border-color) !important;
 }
 
 .page-header-title {
-  color: var(--text-main) !important;
+  color: #FFFFFF !important;
 }
 
 .page-header-sub {
@@ -4808,33 +4861,33 @@ body {
 }
 
 .dealer-form-card {
-  background-color: #FFFFFF !important;
+  background-color: rgba(147, 112, 219, 0.05) !important;
   border: 1px solid var(--border-color) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+  box-shadow: none !important;
 }
 
 .form-control {
-  background-color: #F5F7FA !important;
-  color: #0E0517 !important;
+  background-color: #12071E !important;
+  color: #FFFFFF !important;
   border: 1px solid var(--border-color) !important;
 }
 
 .form-control:focus {
-  background-color: #FFFFFF !important;
+  background-color: #160B24 !important;
   border-color: var(--accent) !important;
-  box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.15) !important;
+  box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.25) !important;
 }
 
 .contact-card-box {
-  background-color: #FFFFFF !important;
+  background-color: rgba(147, 112, 219, 0.04) !important;
   border: 1px solid var(--border-color) !important;
 }
 
 .mobile-nav-drawer {
-  background-color: #FFFFFF !important;
-  color: #0E0517 !important;
+  background-color: #0D0518 !important;
+  color: #FFFFFF !important;
 }
 
 .mobile-nav-links .nav-link {
-  color: #2C2237 !important;
+  color: #E4D9F5 !important;
 }

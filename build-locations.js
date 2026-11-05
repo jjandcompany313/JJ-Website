@@ -411,7 +411,7 @@ locationsData.forEach(loc => {
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#F5F7FA">
+  <meta name="theme-color" content="#08030E">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
@@ -450,11 +450,11 @@ locationsData.forEach(loc => {
       --medium-purple: #9370DB;
       --accent: #FF1493;
       --accent-hover: #FF00FF;
-      --bg-main: #F5F7FA;
-      --text-main: #0E0517;
-      --text-body: #2C2237;
-      --text-muted: #5F5270;
-      --border-color: rgba(147, 112, 219, 0.20);
+      --bg-main: #08030E;
+      --text-main: #FFFFFF;
+      --text-body: #E4D9F5;
+      --text-muted: #B8A7D4;
+      --border-color: rgba(147, 112, 219, 0.18);
     }
     html, body {
       background-color: var(--bg-main);
