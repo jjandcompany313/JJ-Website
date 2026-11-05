@@ -944,7 +944,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wooster-category-visual {
-  height: 120px;
+  height: 180px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -954,24 +954,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wooster-category-img {
-  max-width: 240px;
-  max-height: 110px;
+  max-width: 320px;
+  max-height: 170px;
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
   background: transparent;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.65));
   transition: transform 0.25s ease;
 }
 
 .wooster-category-link:hover .wooster-category-img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 .wooster-category-title {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -982,21 +982,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wooster-category-link:hover .wooster-category-title {
-  color: var(--accent);
+  color: var(--fuchsia);
 }
 
 @media (max-width: 768px) {
   .wooster-category-bar {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 32px;
     padding: 12px 0;
   }
   .wooster-category-visual {
-    height: 100px;
+    height: 150px;
     margin-bottom: 14px;
   }
   .wooster-category-img {
-    max-height: 95px;
+    max-height: 140px;
   }
 }
 
