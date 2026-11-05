@@ -4593,12 +4593,12 @@ body {
 
 @media (max-width: 991px) {
   .minimal-hero-section {
-    min-height: auto;
+    min-height: 70vh;
     padding: 56px 0 64px 0;
     background-image:
-      linear-gradient(180deg, rgba(14, 22, 26, 0.92) 0%, rgba(14, 22, 26, 0.75) 50%, rgba(14, 22, 26, 0.35) 100%),
+      linear-gradient(180deg, rgba(14, 22, 26, 0.60) 0%, rgba(14, 22, 26, 0.35) 40%, rgba(14, 22, 26, 0.80) 75%, #0E161A 100%),
       url('/assets/images/hero-painter-flipped.webp');
-    background-position: 70% center;
+    background-position: 85% center;
   }
 }
 
@@ -5208,30 +5208,51 @@ body {
   }
 
   .minimal-hero-section {
-    padding: 36px 0 44px 0;
-    min-height: auto;
+    padding: 38px 0 48px 0;
+    min-height: 82vh;
+    min-height: 82dvh;
+    display: flex;
+    align-items: center;
+    background-color: #0E161A;
     background-image:
-      linear-gradient(180deg, rgba(14, 22, 26, 0.96) 0%, rgba(14, 22, 26, 0.88) 55%, #0E161A 100%),
-      url('/assets/images/hero-painter-flipped.webp');
-    background-position: center top;
+      linear-gradient(180deg, rgba(14, 22, 26, 0.46) 0%, rgba(14, 22, 26, 0.22) 28%, rgba(14, 22, 26, 0.68) 68%, #0E161A 98%),
+      url('/assets/images/hero-painter-mobile.webp');
+    background-position: right top;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .minimal-hero-grid {
     gap: 0;
+    width: 100%;
   }
 
   .minimal-hero-title {
-    font-size: clamp(2.05rem, 8.5vw, 2.5rem);
+    font-size: clamp(2rem, 8.5vw, 2.5rem);
     line-height: 1.15;
     letter-spacing: -0.025em;
     margin-bottom: 12px;
+    color: #FFFFFF;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.95);
   }
 
   .minimal-hero-subline {
     font-size: 0.98rem;
     line-height: 1.55;
-    margin-bottom: 22px;
-    color: var(--text-body);
+    margin-bottom: 24px;
+    color: #E2E8F0;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 0.95);
+    max-width: 320px;
+  }
+
+  @media (max-width: 380px) {
+    .minimal-hero-title {
+      font-size: 1.85rem;
+    }
+    .minimal-hero-subline {
+      max-width: 270px;
+      font-size: 0.92rem;
+    }
   }
 
   .hero-options-bar {

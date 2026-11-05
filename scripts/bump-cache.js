@@ -7,13 +7,13 @@ const rootDir = path.join(__dirname, '..');
 const files = [
   '404.html',
   'about.html',
+  'career.html',
   'contact.html',
   'dealer.html',
   'index.html',
   'privacy-policy.html',
   'products.html',
-  'build-locations.js',
-  'build-products.js'
+  'resources.html'
 ];
 
 files.forEach(f => {
