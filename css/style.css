@@ -14,9 +14,9 @@
 
   /* Semantic Brand Tokens */
   --primary: #9370DB;           /* Medium Purple */
-  --primary-dark: #08030E;      /* Deep Nocturnal Obsidian */
+  --primary-dark: #0E0517;      /* Deep Midnight Obsidian */
   --primary-light: #A78BFA;     /* Light Lavender Purple */
-  --primary-surface: rgba(147, 112, 219, 0.10);
+  --primary-surface: rgba(147, 112, 219, 0.12);
 
   --brand-purple: #9370DB;
   --brand-purple-soft: rgba(147, 112, 219, 0.15);
@@ -24,50 +24,51 @@
 
   --accent: #FF1493;            /* Deep Pink */
   --accent-hover: #FF00FF;      /* Transitions to Fuchsia on hover */
-  --accent-soft: rgba(255, 20, 147, 0.16);
-  --accent-glow: rgba(255, 20, 147, 0.40);
+  --accent-soft: rgba(255, 20, 147, 0.12);
+  --accent-glow: rgba(255, 20, 147, 0.35);
 
   --accent-fuchsia: #FF00FF;
-  --accent-fuchsia-soft: rgba(255, 0, 255, 0.16);
-  --accent-fuchsia-glow: rgba(255, 0, 255, 0.45);
+  --accent-fuchsia-soft: rgba(255, 0, 255, 0.12);
+  --accent-fuchsia-glow: rgba(255, 0, 255, 0.40);
 
   --whatsapp: #25D366;          /* Official WhatsApp Brand Green */
   --whatsapp-hover: #1EBE5D;
   --whatsapp-soft: rgba(37, 211, 102, 0.15);
 
-  /* Deep Nocturnal Obsidian Canvas (Seamless, High Contrast, No Cards) */
-  --bg-main: #08030E;           /* Deep obsidian-violet background */
-  --bg-section: #0D0518;        /* Subtle layered dark ground */
-  --bg-subtle: #130722;         /* Tertiary tone */
-  --bg-card: transparent;       /* Anti-box design: cards are transparent by default */
-  --bg-card-hover: rgba(147, 112, 219, 0.05);
-  --bg-dark: #050209;
+  /* Architectural Alabaster Canvas (Derived from clean painter wall background) */
+  --bg-main: #F5F7FA;           /* Crisp, clean architectural alabaster */
+  --bg-section: #FFFFFF;        /* Pure white for layered surface contrast */
+  --bg-subtle: #EDF1F6;         /* Soft plaster tint */
+  --bg-card: #FFFFFF;           /* Pristine surface */
+  --bg-card-hover: #F8FAFD;
+  --bg-dark: #0E0517;           /* Deep midnight obsidian anchor for footer */
+  --bg-header: rgba(245, 247, 250, 0.94); /* Header frosted glass */
 
   /* Restrained, Non-Box Dividing Rules (Medium Purple Tint) */
-  --border-color: rgba(147, 112, 219, 0.18);
+  --border-color: rgba(147, 112, 219, 0.20);
   --border-subtle: rgba(147, 112, 219, 0.10);
   --border-focus: #FF1493;
 
-  /* Typography Colors */
-  --text-main: #FFFFFF;         /* Crisp White */
-  --text-body: #E4D9F5;         /* Soft readable lavender slate */
-  --text-muted: #B8A7D4;        /* Muted captions in warm purple-slate */
-  --text-light: #D5C7ED;
+  /* High-Contrast Editorial Typography (WCAG AAA compliant) */
+  --text-main: #0E0517;         /* Deep Midnight Obsidian */
+  --text-body: #2C2237;         /* Rich Charcoal Plum */
+  --text-muted: #5F5270;        /* Muted Slate Purple */
+  --text-light: #7E7092;
   --text-white: #FFFFFF;
 
   /* Typography */
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Typographic Scale Tokens (8-level scale, minimum 12px / 0.75rem for micro-labels) */
-  --font-xs: 0.75rem;    /* 12px - micro labels, tags, badges */
-  --font-sm: 0.875rem;   /* 14px - secondary body, meta, captions */
-  --font-base: 1rem;     /* 16px - standard body text */
-  --font-md: 1.125rem;   /* 18px - lead paragraphs, subheadings */
-  --font-lg: 1.25rem;    /* 20px - card headers, h4 */
-  --font-xl: 1.5rem;     /* 24px - section h3 */
-  --font-2xl: 2rem;      /* 32px - section h2 */
-  --font-3xl: 2.75rem;   /* 44px - hero title / h1 */
+  /* Typographic Scale Tokens */
+  --font-xs: 0.75rem;    /* 12px */
+  --font-sm: 0.875rem;   /* 14px */
+  --font-base: 1rem;     /* 16px */
+  --font-md: 1.125rem;   /* 18px */
+  --font-lg: 1.25rem;    /* 20px */
+  --font-xl: 1.5rem;     /* 24px */
+  --font-2xl: 2rem;      /* 32px */
+  --font-3xl: 2.75rem;   /* 44px */
 
   /* Spacing & Radius */
   --radius-xs: 4px;
@@ -4539,27 +4540,33 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ==========================================================================
-   MINIMAL SEAMLESS THEME (NO BOXES, NO RECTANGULAR BLOCKS, PURE WOOSTER CRAFT)
+   MINIMAL SEAMLESS ARCHITECTURAL THEME (DERIVED FROM HIGH-RES BACKGROUND)
    ========================================================================== */
 
-/* Universal single seamless background */
+/* Universal single seamless architectural background */
 :root {
-  --bg-main: #0B0612;
-  --bg-section: #0B0612;
-  --bg-subtle: #0B0612;
-  --bg-card: transparent;
-  --bg-card-hover: transparent;
-  --bg-dark: #06030A;
-  --border-color: rgba(147, 112, 219, 0.15);
-  --border-subtle: rgba(147, 112, 219, 0.08);
-  --text-main: #FFFFFF;
-  --text-body: #D4C7E8;
-  --text-muted: #9584AD;
+  --bg-main: #F5F7FA;
+  --bg-section: #FFFFFF;
+  --bg-subtle: #EDF1F6;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFD;
+  --bg-dark: #0E0517;
+  --border-color: rgba(147, 112, 219, 0.20);
+  --border-subtle: rgba(147, 112, 219, 0.10);
+  --text-main: #0E0517;
+  --text-body: #2C2237;
+  --text-muted: #5F5270;
 }
 
 body {
-  background-color: #0B0612;
-  color: #D4C7E8;
+  background-color: #F5F7FA;
+  color: #2C2237;
+}
+
+.site-header {
+  background-color: rgba(245, 247, 250, 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .section-subtle,
@@ -4567,11 +4574,29 @@ body {
   background-color: transparent !important;
 }
 
-/* 1. Seamless Hero Section */
+/* 1. Seamless Hero Section with High-Res Clean Background */
 .minimal-hero-section {
-  padding: 56px 0 72px 0;
+  padding: 80px 0 96px 0;
   position: relative;
-  background-color: transparent;
+  background-color: var(--bg-main);
+  background-image:
+    linear-gradient(90deg, rgba(245, 247, 250, 0.96) 0%, rgba(245, 247, 250, 0.90) 42%, rgba(245, 247, 250, 0.38) 72%, rgba(245, 247, 250, 0.15) 100%),
+    linear-gradient(180deg, transparent 72%, var(--bg-main) 100%),
+    url('/assets/images/hero-bg-painter.webp');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .minimal-hero-section {
+    padding: 56px 0 64px 0;
+    background-image:
+      linear-gradient(180deg, rgba(245, 247, 250, 0.96) 0%, rgba(245, 247, 250, 0.88) 55%, rgba(245, 247, 250, 0.40) 100%),
+      url('/assets/images/hero-bg-painter.webp');
+    background-position: center top;
+  }
 }
 
 .minimal-hero-grid {
@@ -4592,7 +4617,7 @@ body {
   font-family: var(--font-heading);
   font-size: clamp(2.4rem, 4.8vw, 4rem);
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-main);
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin-bottom: 20px;
@@ -4607,7 +4632,7 @@ body {
 }
 
 .minimal-hero-subline strong {
-  color: #FFFFFF;
+  color: var(--text-main);
 }
 
 .minimal-hero-actions {
@@ -4621,7 +4646,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #FFFFFF;
+  color: var(--text-main);
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1.05rem;
@@ -4671,7 +4696,7 @@ body {
   transform: translate(-50%, -50%);
   width: 380px;
   height: 380px;
-  background: radial-gradient(circle, rgba(255, 0, 255, 0.18) 0%, rgba(147, 112, 219, 0.14) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 0, 255, 0.15) 0%, rgba(147, 112, 219, 0.12) 40%, transparent 70%);
   z-index: 0;
   pointer-events: none;
   filter: blur(28px);
@@ -4686,13 +4711,13 @@ body {
   object-fit: contain;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.75));
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.25));
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
 }
 
 .minimal-product-hero-card:hover .minimal-product-hero-img {
   transform: scale(1.04) translateY(-4px);
-  filter: drop-shadow(0 24px 45px rgba(255, 0, 255, 0.30));
+  filter: drop-shadow(0 24px 45px rgba(255, 20, 147, 0.35));
 }
 
 /* 2. Seamless Section Components */
@@ -4711,7 +4736,7 @@ body {
   font-family: var(--font-heading);
   font-size: clamp(1.85rem, 3.5vw, 2.75rem);
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-main);
   line-height: 1.15;
   letter-spacing: -0.025em;
   margin-bottom: 12px;
@@ -4724,196 +4749,12 @@ body {
   margin: 0;
 }
 
-/* 3. Open Product Showcase (No Box Cards) */
-.minimal-products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-@media (max-width: 900px) {
-  .minimal-products-grid {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-}
-
-.minimal-product-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.minimal-img-anchor {
-  display: block;
-  overflow: hidden;
-  margin-bottom: 20px;
-  background-color: #12071E;
-  border-radius: var(--radius-sm);
-}
-
-.minimal-img-anchor img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.minimal-img-anchor:hover img {
-  transform: scale(1.03);
-}
-
-.minimal-product-name {
+.wooster-category-title {
   font-family: var(--font-heading);
   font-size: 1.25rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  margin-bottom: 10px;
-  letter-spacing: -0.01em;
-}
-
-.minimal-product-name a {
-  color: #FFFFFF;
-  transition: color var(--transition-fast);
-}
-
-.minimal-product-name a:hover {
-  color: var(--accent);
-}
-
-.minimal-product-text {
-  font-size: 0.95rem;
-  color: var(--text-body);
-  line-height: 1.65;
-  margin-bottom: 16px;
-  flex-grow: 1;
-}
-
-.minimal-text-link {
-  display: inline-flex;
-  align-items: center;
-  font-weight: 700;
-  font-size: 0.92rem;
-  color: var(--accent);
-  letter-spacing: 0.02em;
-  transition: color var(--transition-fast), transform var(--transition-fast);
-}
-
-.minimal-text-link:hover {
-  color: #FFFFFF;
-  transform: translateX(3px);
-}
-
-/* 4. Minimal Applicator Guide Layout */
-.minimal-tool-layout {
-  max-width: 900px;
-}
-
-.minimal-step-heading {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 12px;
-}
-
-.minimal-pill-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.minimal-pill-row .tool-choice-btn {
-  background: #140822;
-  border: 1px solid var(--border-color);
-  color: var(--text-body);
-  padding: 10px 18px;
-  border-radius: var(--radius-full);
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
-}
-
-.minimal-pill-row .tool-choice-btn:hover {
-  border-color: var(--brand-purple);
-  color: #FFFFFF;
-}
-
-.minimal-pill-row .tool-choice-btn.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #FFFFFF;
-}
-
-.minimal-result-display {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  padding: 24px 0 0 0;
-  border-top: 1px dashed var(--border-color);
-}
-
-.minimal-rec-badge {
-  display: inline-block;
-  color: var(--brand-purple);
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 6px;
-}
-
-.minimal-rec-title {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
   font-weight: 800;
-  color: #FFFFFF;
-  margin-bottom: 6px;
-}
-
-.minimal-rec-desc {
-  font-size: 0.95rem;
-  color: var(--text-body);
-  max-width: 600px;
-  margin: 0;
-}
-
-/* 5. Minimal Reviews Layout */
-.minimal-reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-@media (max-width: 860px) {
-  .minimal-reviews-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
-
-.minimal-review-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.minimal-quote {
-  font-size: 1rem;
-  color: var(--text-body);
-  line-height: 1.7;
-  margin: 0 0 16px 0;
-  font-style: normal;
-}
-
-.minimal-author {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  font-style: normal;
-  font-weight: 600;
+  color: var(--text-main);
+  margin-top: 14px;
 }
 
 /* 6. Minimal Dealership Section */
@@ -4941,7 +4782,7 @@ body {
   display: block;
   font-family: var(--font-heading);
   font-size: 1.05rem;
-  color: #FFFFFF;
+  color: var(--text-main);
   margin-bottom: 4px;
 }
 
@@ -4952,3 +4793,48 @@ body {
   margin: 0;
 }
 
+.page-header {
+  background-color: var(--bg-main) !important;
+  padding: 56px 0 40px 0 !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.page-header-title {
+  color: var(--text-main) !important;
+}
+
+.page-header-sub {
+  color: var(--text-body) !important;
+}
+
+.dealer-form-card {
+  background-color: #FFFFFF !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+.form-control {
+  background-color: #F5F7FA !important;
+  color: #0E0517 !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.form-control:focus {
+  background-color: #FFFFFF !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.15) !important;
+}
+
+.contact-card-box {
+  background-color: #FFFFFF !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.mobile-nav-drawer {
+  background-color: #FFFFFF !important;
+  color: #0E0517 !important;
+}
+
+.mobile-nav-links .nav-link {
+  color: #2C2237 !important;
+}
