@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=4.4">
+  <link rel="stylesheet" href="/css/style.css?v=4.6">
   
   <!-- Standard Favicons & Google Search Icons (Multiples of 48px as required by Google) -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -340,12 +340,12 @@
       <nav class="mobile-nav-links">
         <div style="padding: 10px 0; border-bottom: 1px solid var(--border-color); margin-bottom: 8px;">
           <a href="/products.html" class="nav-link" style="font-weight: 800; color: var(--fuchsia);">1. Product Range</a>
-          <a href="/products/rollers.html" class="nav-link" style="padding-left: 14px;">• Roller</a>
-          <a href="/products/brushes.html" class="nav-link" style="padding-left: 14px;">• Brush</a>
-          <a href="/products/maruti-auto-gloss-thinner.html" class="nav-link" style="padding-left: 14px;">• Thinner</a>
-          <a href="/products/nico-wood-polish.html" class="nav-link" style="padding-left: 14px;">• Polish</a>
-          <a href="/products/cumi-abrasives-machine-paper.html" class="nav-link" style="padding-left: 14px;">• Sand Papers</a>
-          <a href="/products/wooden-steel-pata.html" class="nav-link" style="padding-left: 14px;">• Scraper</a>
+          <a href="/products/rollers.html" class="nav-link" style="padding-left: 14px;">Roller</a>
+          <a href="/products/brushes.html" class="nav-link" style="padding-left: 14px;">Brush</a>
+          <a href="/products/maruti-auto-gloss-thinner.html" class="nav-link" style="padding-left: 14px;">Thinner</a>
+          <a href="/products/nico-wood-polish.html" class="nav-link" style="padding-left: 14px;">Polish</a>
+          <a href="/products/cumi-abrasives-machine-paper.html" class="nav-link" style="padding-left: 14px;">Sand Papers</a>
+          <a href="/products/wooden-steel-pata.html" class="nav-link" style="padding-left: 14px;">Scraper</a>
         </div>
         <a href="/resources.html" class="nav-link">2. Resources</a>
         <a href="/dealer.html" class="nav-link">3. Dealership</a>
@@ -381,18 +381,54 @@
 
             <div class="hero-options-bar" aria-label="Hero Navigation Options">
               <!-- 1. Product (with dropdown) -->
-              <div class="hero-dropdown-wrapper">
-                <button type="button" class="hero-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <div class="hero-dropdown-wrapper" id="heroProductDropdown">
+                <button type="button" class="hero-dropdown-toggle" id="heroProductToggle" aria-expanded="false" aria-haspopup="true" aria-controls="heroProductMenu">
                   <span>Product</span>
-                  <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  <svg class="chevron-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </button>
-                <div class="hero-dropdown-menu" role="menu">
-                  <a href="/products/rollers.html" class="hero-dropdown-item" role="menuitem">Roller</a>
-                  <a href="/products/brushes.html" class="hero-dropdown-item" role="menuitem">Brush</a>
-                  <a href="/products/maruti-auto-gloss-thinner.html" class="hero-dropdown-item" role="menuitem">Thinner</a>
-                  <a href="/products/nico-wood-polish.html" class="hero-dropdown-item" role="menuitem">Polish</a>
-                  <a href="/products/cumi-abrasives-machine-paper.html" class="hero-dropdown-item" role="menuitem">Sand Papers</a>
-                  <a href="/products/wooden-steel-pata.html" class="hero-dropdown-item" role="menuitem">Scraper</a>
+                <div class="hero-dropdown-menu" id="heroProductMenu" role="menu" aria-labelledby="heroProductToggle">
+                  <a href="/products/rollers.html" class="hero-dropdown-item" role="menuitem">
+                    <span class="hero-dropdown-bullet" aria-hidden="true">1</span>
+                    <div class="hero-dropdown-text">
+                      <span class="hero-dropdown-title">Roller</span>
+                      <span class="hero-dropdown-desc">Wallfin™ cage rollers &amp; refills</span>
+                    </div>
+                  </a>
+                  <a href="/products/brushes.html" class="hero-dropdown-item" role="menuitem">
+                    <span class="hero-dropdown-bullet" aria-hidden="true">2</span>
+                    <div class="hero-dropdown-text">
+                      <span class="hero-dropdown-title">Brush</span>
+                      <span class="hero-dropdown-desc">Panama™ pure &amp; synthetic brushes</span>
+                    </div>
+                  </a>
+                  <a href="/products/maruti-auto-gloss-thinner.html" class="hero-dropdown-item" role="menuitem">
+                    <span class="hero-dropdown-bullet" aria-hidden="true">3</span>
+                    <div class="hero-dropdown-text">
+                      <span class="hero-dropdown-title">Thinner</span>
+                      <span class="hero-dropdown-desc">Maruti auto gloss solvent thinner</span>
+                    </div>
+                  </a>
+                  <a href="/products/nico-wood-polish.html" class="hero-dropdown-item" role="menuitem">
+                    <span class="hero-dropdown-bullet" aria-hidden="true">4</span>
+                    <div class="hero-dropdown-text">
+                      <span class="hero-dropdown-title">Polish</span>
+                      <span class="hero-dropdown-desc">Nico French &amp; wood polish</span>
+                    </div>
+                  </a>
+                  <a href="/products/cumi-abrasives-machine-paper.html" class="hero-dropdown-item" role="menuitem">
+                    <span class="hero-dropdown-bullet" aria-hidden="true">5</span>
+                    <div class="hero-dropdown-text">
+                      <span class="hero-dropdown-title">Sand Papers</span>
+                      <span class="hero-dropdown-desc">Cumi abrasive sheets &amp; discs</span>
+                    </div>
+                  </a>
+                  <a href="/products/wooden-steel-pata.html" class="hero-dropdown-item" role="menuitem">
+                    <span class="hero-dropdown-bullet" aria-hidden="true">6</span>
+                    <div class="hero-dropdown-text">
+                      <span class="hero-dropdown-title">Scraper</span>
+                      <span class="hero-dropdown-desc">Stainless steel &amp; wooden putty pata</span>
+                    </div>
+                  </a>
                 </div>
               </div>
 
@@ -696,7 +732,7 @@
   </a>
 
   <script defer src="/js/site-data.js?v=4.4"></script>
-  <script defer src="/js/main.js?v=4.4"></script>
+  <script defer src="/js/main.js?v=4.6"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
 
