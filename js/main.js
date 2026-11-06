@@ -39,8 +39,8 @@ function initMobileNav() {
   if (closeBtn) closeBtn.addEventListener("click", closeMenu);
   if (backdrop) backdrop.addEventListener("click", closeMenu);
 
-  // Close drawer when any internal navigation link or button is clicked
-  const drawerLinks = drawer.querySelectorAll("a, button:not(#mobileClose)");
+  // Close drawer when any internal navigation link or button is clicked (excluding dropdown toggles)
+  const drawerLinks = drawer.querySelectorAll("a, button:not(#mobileClose):not(.mobile-dropdown-toggle)");
   drawerLinks.forEach(link => {
     link.addEventListener("click", closeMenu);
   });
@@ -499,6 +499,19 @@ function initDropdowns() {
         e.stopPropagation();
         const isOpen = wrapper.classList.toggle("is-open");
         toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      }
+    });
+  });
+
+  // Mobile Drawer Product Accordion Dropdown
+  document.querySelectorAll(".mobile-dropdown-toggle").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const wrapper = btn.closest(".mobile-dropdown-wrapper");
+      if (wrapper) {
+        const isOpen = wrapper.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
       }
     });
   });

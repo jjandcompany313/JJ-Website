@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=5.0">
+  <link rel="stylesheet" href="/css/style.css?v=5.1">
   
   <!-- Standard Favicons & Google Search Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -258,12 +258,66 @@
         </div>
         <button id="mobileClose" class="mobile-toggle" aria-label="Close Menu"><svg class="svg-icon-stroke" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
       </div>
-      <nav class="mobile-nav-links">
+            <nav class="mobile-nav-links">
         <a href="/" class="nav-link">Home</a>
-        <a href="/products.html" class="nav-link">Catalog</a>
-        <a href="/dealer.html" class="nav-link active">Dealership</a>
-        <a href="/about.html" class="nav-link">About</a>
-        <a href="/contact.html" class="nav-link">Contact</a>
+        <div class="mobile-dropdown-wrapper" id="mobileProductDropdown">
+          <button type="button" class="mobile-dropdown-toggle" id="mobileProductToggle" aria-expanded="false" aria-controls="mobileProductMenu">
+            <span class="mobile-dropdown-toggle-text">1. Product Range</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="mobile-dropdown-menu" id="mobileProductMenu" role="region" aria-labelledby="mobileProductToggle">
+            <a href="/products/rollers.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-bullet">1</span>
+              <div class="mobile-dropdown-item-text">
+                <span class="mobile-dropdown-item-title">Roller</span>
+                <span class="mobile-dropdown-item-desc">Wallfin™ cage rollers &amp; refills</span>
+              </div>
+            </a>
+            <a href="/products/brushes.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-bullet">2</span>
+              <div class="mobile-dropdown-item-text">
+                <span class="mobile-dropdown-item-title">Brush</span>
+                <span class="mobile-dropdown-item-desc">Panama™ pure &amp; synthetic brushes</span>
+              </div>
+            </a>
+            <a href="/products/maruti-auto-gloss-thinner.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-bullet">3</span>
+              <div class="mobile-dropdown-item-text">
+                <span class="mobile-dropdown-item-title">Thinner</span>
+                <span class="mobile-dropdown-item-desc">Maruti auto gloss solvent thinner</span>
+              </div>
+            </a>
+            <a href="/products/nico-wood-polish.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-bullet">4</span>
+              <div class="mobile-dropdown-item-text">
+                <span class="mobile-dropdown-item-title">Polish</span>
+                <span class="mobile-dropdown-item-desc">Nico French &amp; wood polish</span>
+              </div>
+            </a>
+            <a href="/products/cumi-abrasives-machine-paper.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-bullet">5</span>
+              <div class="mobile-dropdown-item-text">
+                <span class="mobile-dropdown-item-title">Sand Papers</span>
+                <span class="mobile-dropdown-item-desc">Cumi abrasive sheets &amp; discs</span>
+              </div>
+            </a>
+            <a href="/products/wooden-steel-pata.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-bullet">6</span>
+              <div class="mobile-dropdown-item-text">
+                <span class="mobile-dropdown-item-title">Scraper</span>
+                <span class="mobile-dropdown-item-desc">Stainless steel &amp; wooden putty pata</span>
+              </div>
+            </a>
+            <a href="/products.html" class="mobile-dropdown-all">
+              <span>View All Products</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+        <a href="/resources.html" class="nav-link">2. Resources</a>
+        <a href="/dealer.html" class="nav-link">3. Dealership</a>
+        <a href="/career.html" class="nav-link">4. Career</a>
+        <a href="/contact.html" class="nav-link">5. Contact US</a>
       </nav>
     </div>
     <div>
@@ -683,8 +737,8 @@
     <span class="floating-whatsapp-tooltip">Chat with Us</span>
   </a>
 
-  <script defer src="/js/site-data.js?v=5.0"></script>
-  <script defer src="/js/main.js?v=5.0"></script>
+  <script defer src="/js/site-data.js?v=5.1"></script>
+  <script defer src="/js/main.js?v=5.1"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>

@@ -5260,69 +5260,211 @@ body {
     display: none !important;
   }
 
-  /* 3 Category Pillars: Tactile Cards on Phone */
+  /* --- 3 Floating Category Pillars on Mobile (Pure Floating Products, Zero Boxes, Zero Borders) --- */
   .wooster-category-bar {
     grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 12px 0 32px 0;
+    gap: 48px;
+    padding: 24px 0 56px 0;
   }
 
   .wooster-category-link {
-    background: linear-gradient(145deg, rgba(26, 38, 46, 0.75) 0%, rgba(14, 22, 26, 0.95) 100%);
-    border: 1px solid rgba(147, 112, 219, 0.28);
-    border-radius: 16px;
-    padding: 24px 18px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 10px 0 !important;
     width: 100%;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    text-decoration: none;
+    transition: transform 0.25s ease;
   }
 
   .wooster-category-link:active {
-    transform: scale(0.98);
-    border-color: var(--fuchsia);
-    background: rgba(19, 28, 34, 0.95);
+    transform: scale(0.97);
+    background: transparent !important;
   }
 
   .wooster-category-visual {
-    height: 165px;
-    margin-bottom: 14px;
-    background: radial-gradient(circle at center, rgba(147, 112, 219, 0.16) 0%, rgba(255, 20, 147, 0.05) 50%, transparent 72%);
-    border-radius: 12px;
+    height: 180px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    background: transparent !important;
+    border-radius: 0 !important;
   }
 
   .wooster-category-img {
-    max-height: 155px;
-    max-width: 86%;
-    filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.75));
+    max-height: 165px;
+    max-width: 88%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: transparent !important;
+    filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.75));
+    transition: transform 0.25s ease;
+  }
+
+  .wooster-category-link:active .wooster-category-img {
+    transform: scale(1.04);
   }
 
   .wooster-category-title {
+    font-family: var(--font-heading);
     font-size: 1.35rem;
     font-weight: 800;
-    color: #FFFFFF;
-    margin: 4px 0 4px 0;
-    letter-spacing: 0.04em;
+    color: #FFFFFF !important;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 6px 0 0 0;
+    text-align: center;
+    transition: color 0.2s ease;
   }
 
-  .wooster-category-tagline {
-    display: block;
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    line-height: 1.45;
-    margin-bottom: 12px;
+  .wooster-category-link:active .wooster-category-title {
+    color: var(--fuchsia) !important;
   }
 
+  .wooster-category-meta,
+  .wooster-category-tagline,
   .wooster-category-action {
+    display: none !important;
+  }
+
+  /* --- Mobile Drawer Product Accordion Dropdown --- */
+  .mobile-dropdown-wrapper {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+  }
+
+  .mobile-dropdown-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    background: transparent;
+    border: none;
+    color: var(--fuchsia);
+    font-family: var(--font-heading);
+    font-size: 1.08rem;
+    font-weight: 800;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+  }
+
+  .mobile-dropdown-toggle .chevron-icon {
+    color: var(--medium-purple);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+  }
+
+  .mobile-dropdown-wrapper.is-open .mobile-dropdown-toggle .chevron-icon {
+    transform: rotate(180deg);
+    color: var(--fuchsia);
+  }
+
+  .mobile-dropdown-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px 0 12px 0;
+  }
+
+  .mobile-dropdown-wrapper.is-open .mobile-dropdown-menu {
+    display: flex;
+    animation: mobileDrawerSlide 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes mobileDrawerSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .mobile-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-body);
+    transition: background 0.15s ease, color 0.15s ease;
+    min-height: 48px;
+  }
+
+  .mobile-dropdown-item:active {
+    background: rgba(147, 112, 219, 0.18);
+    color: #FFFFFF;
+  }
+
+  .mobile-dropdown-bullet {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 0.88rem;
-    font-weight: 700;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: rgba(147, 112, 219, 0.2);
     color: var(--medium-purple);
-    letter-spacing: 0.03em;
+    font-size: 0.75rem;
+    font-weight: 800;
+    flex-shrink: 0;
   }
 
-  .wooster-category-link:active .wooster-category-action {
+  .mobile-dropdown-item:active .mobile-dropdown-bullet {
+    background: var(--fuchsia);
+    color: #FFFFFF;
+  }
+
+  .mobile-dropdown-item-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-dropdown-item-title {
+    font-family: var(--font-heading);
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.25;
+  }
+
+  .mobile-dropdown-item-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.35;
+    margin-top: 2px;
+  }
+
+  .mobile-dropdown-all {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 14px;
+    margin-top: 4px;
+    border-radius: 8px;
+    background: rgba(255, 0, 255, 0.08);
+    border: 1px solid rgba(255, 0, 255, 0.3);
     color: var(--fuchsia);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .mobile-dropdown-all:active {
+    background: rgba(255, 0, 255, 0.18);
   }
 }
