@@ -560,7 +560,7 @@ data.products.forEach(p => {
           </div>
           <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
             ${p.inHouseManufactured ? '<span class="topbar-badge" style="background: rgba(255, 20, 147, 0.15); color: #FF1493; border: 1px solid rgba(255, 20, 147, 0.35); font-weight:700;">IN-HOUSE MANUFACTURED • JALGAON PLANT</span>' : ''}
-            ${p.trademarkAppId ? '<span class="topbar-badge" style="background: rgba(255, 0, 255, 0.15); color: #FF00FF; border: 1px solid rgba(255, 0, 255, 0.35); font-weight:700;">REGISTERED TRADEMARK: ' + p.trademarkAppId + '</span>' : ''}
+            ${(p.category === "paint-rollers" || p.brand === "Wallfin" || p.brand === "Wall Fin") ? '<span class="topbar-badge" style="background: rgba(255, 0, 255, 0.15); color: #FF00FF; border: 1px solid rgba(255, 0, 255, 0.35); font-weight:700;">OFFICIAL REGISTERED BRAND ®</span>' : ''}
             ${p.category === 'panama-brushes' ? '<span class="topbar-badge" style="background: rgba(147, 112, 219, 0.18); color: #9370DB; border: 1px solid rgba(147, 112, 219, 0.35); font-weight:700;">AUTHENTIC DIRECT IMPORT</span>' : ''}
           </div>
         </div>
@@ -650,13 +650,13 @@ data.products.forEach(p => {
 const categoriesDef = [
   {
     id: 'paint-rollers',
-    name: 'Wallfin™ Paint Rollers',
+    name: 'Wall Fin® Paint Rollers',
     fileName: 'rollers.html',
-    title: 'Paint Rollers & Refills Factory Price | Wallfin™',
+    title: 'Paint Rollers & Refills Factory Price | Wall Fin®',
     metaDesc: 'Different types of paint rollers, long handle rollers & epoxy floor roller refills at factory price. Direct manufacturer supply from Jalgaon.',
-    h1: 'Wallfin™ Paint Rollers &amp; Refills Range',
-    badge: 'In-House Manufactured • TM: 8027912',
-    intro: 'Manufactured directly at our Jalgaon plant under registered brand <strong>Wallfin™</strong> (Trademark Application ID: <strong>8027912</strong>). Built with solvent-proof polypropylene cores, high-density microfiber, and heavy-gauge cage frames across standard 20mm and heavy 38mm diameters.',
+    h1: 'Wall Fin® Paint Rollers &amp; Refills Range',
+    badge: 'In-House Manufactured • Official Registered Brand ®',
+    intro: 'Manufactured directly at our Jalgaon plant under official registered brand <strong>Wall Fin®</strong>. Built with solvent-proof polypropylene cores, high-density microfiber, and heavy-gauge cage frames across standard 20mm and heavy 38mm diameters.',
     filterCat: 'paint-rollers',
     catalogDownload: '/assets/docs/Wall_Fin_Paint_Roller_Catalogue_2026.pdf',
     catalogName: 'Wall Fin Paint Roller Catalogue (PDF)'
@@ -896,7 +896,7 @@ categoriesDef.forEach(cat => {
       <div style="background: rgba(147, 112, 219, 0.04); padding: 28px; border-radius: var(--radius-md); border: 1px solid rgba(147, 112, 219, 0.18); text-align: center;">
         <h2 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 12px; font-weight: 700;">Explore Categories Outside ${escapeHtml(cat.name)}</h2>
         <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-          <a href="/products/rollers.html" class="btn btn-outline btn-sm">1. Wallfin™ Paint Rollers</a>
+          <a href="/products/rollers.html" class="btn btn-outline btn-sm">1. Wall Fin® Paint Rollers</a>
           <a href="/products/brushes.html" class="btn btn-outline btn-sm">2. Panama Paint Brushes</a>
           <a href="/products/accessories.html" class="btn btn-outline btn-sm">3. Thinners &amp; Polish</a>
           <a href="/products.html" class="btn btn-secondary btn-sm">View Full Catalog Hub</a>

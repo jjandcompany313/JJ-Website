@@ -123,7 +123,7 @@ const newBody = `
             </div>
 
             <p class="hero-wooster-subline">
-              <strong>Wallfin™</strong> (Registered TM: 8027912) offers professional heavy-cage paint rollers manufactured directly by <strong>J. J. &amp; Company</strong> at our Jalgaon Depo, giving trade painters smoother coverage with less effort, every coat, every time.
+              <strong>Wallfin™</strong> (Registered Official Registered Brand ®) offers professional heavy-cage paint rollers manufactured directly by <strong>J. J. &amp; Company</strong> at our Jalgaon Depo, giving trade painters smoother coverage with less effort, every coat, every time.
             </p>
 
             <div class="hero-metrics">
@@ -205,7 +205,7 @@ const newBody = `
                 <source srcset="/assets/images/rollers-collection.webp" type="image/webp">
                 <img src="/assets/images/rollers-collection.jpg" alt="Wallfin Paint Rollers and Refills" loading="lazy" width="800" height="450">
               </picture>
-              <span class="category-badge">Wallfin™ (TM: 8027912)</span>
+              <span class="category-badge">Wallfin™ (Official Registered Brand ®)</span>
             </div>
             <div class="category-content">
               <h3 class="category-title">1. Paint Rollers &amp; Refills</h3>
@@ -498,7 +498,7 @@ const newBody = `
             </summary>
             <div class="faq-answer">
               <p>
-                <strong>J. J. &amp; Company</strong> (established in 2016) is a direct manufacturer of <strong>Wallfin™ paint rollers</strong> (Trademark Application ID: 8027912) and wholesale supplier of authentic <strong>Panama paint brushes</strong>, operating from Plot No-8, Dixit Wadi, Jalgaon, Maharashtra 425001. We supply hardware retail shops, paint stockists, and painting contractors directly with wholesale rates.
+                <strong>J. J. &amp; Company</strong> (established in 2016) is a direct manufacturer of <strong>Wallfin™ paint rollers</strong> (Trademark Application ID: Official Registered Brand) and wholesale supplier of authentic <strong>Panama paint brushes</strong>, operating from Plot No-8, Dixit Wadi, Jalgaon, Maharashtra 425001. We supply hardware retail shops, paint stockists, and painting contractors directly with wholesale rates.
               </p>
             </div>
           </details>
@@ -611,13 +611,13 @@ const newBody = `
             <span class="brand-name">JJ &amp; COMPANY</span>
           </div>
           <p class="footer-desc">
-            Direct manufacturer of Wallfin™ paint rollers (TM Application ID: 8027912), direct importer of authentic Panama paint brushes, and distributor of finishing accessories in Jalgaon, Maharashtra.
+            Direct manufacturer of Wallfin™ paint rollers (Official Registered Brand ®), direct importer of authentic Panama paint brushes, and distributor of finishing accessories in Jalgaon, Maharashtra.
           </p>
           <div class="gst-badge">
             <span>GSTIN:</span> <strong>27ACXPN6682N1ZC</strong>
           </div>
           <div class="gst-badge" style="margin-top: 6px;">
-            <span>Registered Brand:</span> <strong>Wallfin (TM: 8027912)</strong>
+            <span>Registered Brand:</span> <strong>Wallfin (Official Registered Brand ®)</strong>
           </div>
           <div style="margin-top: 14px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
             <a href="https://www.facebook.com/profile.php?id=61594625407272" target="_blank" rel="noopener noreferrer nofollow" class="footer-social-link">Facebook</a>

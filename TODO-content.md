@@ -6,7 +6,7 @@ This document tracks items that require owner confirmation, official records, or
 
 ## 1. Company & Factory Facts
 - [x] **Founding Year**: Confirmed **2016** (10+ Years experience).
-- [x] **Registered Brand / Trademark**: Confirmed **Wallfin™** (Trademark Application ID: **8027912**).
+- [x] **Registered Brand / Trademark**: Confirmed **Wallfin™** (Trademark Application ID: **Registered Brand**).
 - [x] **Factory Address**: Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd, Jalgaon, Maharashtra 425001.
 - [x] **Factory Coordinates**: `21.007972, 75.570611`.
 - [x] **GSTIN**: `27ACXPN6682N1ZC`.
@@ -19,7 +19,7 @@ This document tracks items that require owner confirmation, official records, or
 ## 2. Sourcing, Manufacturing Scope & Commercial Terms
 - [x] **Primary Active Supply Scope**: Jalgaon, Dhule, Nandurbar, Buldhana (Maharashtra), and Madhya Pradesh. Other regions dispatched via transport on request.
 - [x] **Product Sourcing & Manufacturing Classification**:
-  - **In-House Manufactured**: Wallfin™ paint rollers and refills (18mm, 20mm, 38mm, epoxy, foam fix, texture) under registered trademark Application ID: `8027912`.
+  - **In-House Manufactured**: Wallfin™ paint rollers and refills (18mm, 20mm, 38mm, epoxy, foam fix, texture) under registered trademark Application ID: `Registered Brand`.
   - **Directly Imported**: Authentic Panama paint brushes (13 models imported directly from specialized manufacturing partner).
   - **Available Traded / Partner Products**: Maruti Auto Gloss thinners, Nico wood polish, Cumi abrasive sheets & machine paper, steel & wooden pata.
 - [x] **Minimum Order Quantity (MOQ)**: Per owner confirmation ("There is no MOQ right now do not mention it"), all MOQ mentions and tables have been omitted across all pages. Flexible order sizes and mixed carton assortments supported.

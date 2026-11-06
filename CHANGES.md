@@ -62,7 +62,7 @@ Each page also includes synchronized `og:type`, `og:title`, `og:description`, `o
    - Relabeled `"350,000+ units monthly"` from "standing ready stock" to `"Production capacity"`.
 4. **Manufacturing Line Classification & Registered Trademark:**
    - Renamed `"Three Core Manufacturing Lines"` to `"Our Product Range"`.
-   - **Wallfin™ Registered Trademark**: Formally integrated **Wallfin™** as the registered brand name for in-house manufactured paint rollers and refills (**Trademark Application ID: 8027912**). Added official trademark badges, schema tags, and product labels across all pages.
+   - **Wallfin™ Registered Trademark**: Formally integrated **Wallfin™** as the registered brand name for in-house manufactured paint rollers and refills (**Trademark Application ID: Official Registered Brand**). Added official trademark badges, schema tags, and product labels across all pages.
    - **Panama Paint Brushes**: Corrected manufacturing claim &mdash; Panama brushes are **directly imported** from specialized manufacturing partners with 100% epoxy potting, supplied at wholesale direct distributor rates.
    - Clarified that **Maruti thinners**, **Nico polish**, **Cumi abrasives**, and **wooden/steel pata** are companion available ranges.
 5. **Roller Sizing Consistency:**
@@ -152,7 +152,7 @@ Each page also includes synchronized `og:type`, `og:title`, `og:description`, `o
 3. **Dedicated Individual Product Pages (29 pages):**
    - **12 Wallfin™ Roller Pages** (`/products/wallfin-*.html`):
      - Blue Line, Yellow Line, Brown Line, Green, Green Thread 38mm, Yellow Line 38mm, Tiger 38mm, Texture 38mm, Epoxy, Foam Fix (Standard), Foam Fix (38mm), Yellow Line 18mm Fixed.
-     - Brand clearly stated: `Wallfin™ (Registered Brand • TM App ID: 8027912)`.
+     - Brand clearly stated: `Wallfin™ (Registered Brand • Official Registered Brand ®)`.
      - In-house manufactured at Jalgaon factory with high-resolution page extracts from the official 2026 catalogue (`assets/images/rollers/`).
    - **13 Panama Paint Brush Pages** (`/products/panama-*.html`):
      - Swan, 222, 996 PVC, Tip Top, Winner, Honda, 815, 777 PVC, Apex PVC, Deluxe Long Hair, Tynex Wooden, CAT Pure Bristol, RRR.

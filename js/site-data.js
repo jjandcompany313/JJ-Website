@@ -15,10 +15,10 @@ const SITE_CONFIG = {
   monthlyProductionCapacity: "350,000+ Units/Mo",
   
   // --- Trademark & Brand Registrations ---
-  registeredBrand: "Wallfin",
-  trademarkAppId: "8027912",
+  registeredBrand: "Wall Fin®",
+  brandStatus: "Official Registered Brand ®",
   brandDetails: {
-    rollers: "Wallfin™ (Registered Brand, Trademark Application ID: 8027912 — In-House Manufactured)",
+    rollers: "Wall Fin® (Official Registered Brand — In-House Manufactured)",
     brushes: "Panama Paint Brushes (Directly Imported from specialized manufacturer)"
   },
   
@@ -100,7 +100,7 @@ const PANAMA_BRUSH_COLLECTION = [
   { no: "13", name: "Panama RRR Black & White Brush", sizes: ["4\""], handle: "Black RRR Branded Handle", type: "Export Pure Bristle (Black & White)", use: "High-solvent industrial coatings" }
 ];
 
-// --- Official WALLFIN Paint Roller Collection (12 Families / 33 Variants — In-House Manufactured • TM App No. 8027912) ---
+// --- Official Wall Fin® Paint Roller Collection (12 Families / 33 Variants — In-House Manufactured • Official Registered Brand ®) ---
 const WALL_FIN_ROLLER_COLLECTION = [
   { no: "01", name: "Wall Fin Blue Line Paint Roller", sizes: ["2\"", "4\"", "6\"", "9\""], construction: "Standard • 20 mm diameter" },
   { no: "02", name: "Wall Fin Yellow Line Paint Roller", sizes: ["2\"", "4\"", "6\"", "9\""], construction: "Standard • 20 mm diameter" },

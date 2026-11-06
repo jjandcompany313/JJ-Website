@@ -170,7 +170,7 @@ const html = `<!DOCTYPE html>
         ctx.fill();
         ctx.font = 'bold 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
         ctx.fillStyle = '#E8A317';
-        ctx.fillText('★ WALLFIN™ ROLLERS (TM: 8027912)', 76, 55);
+        ctx.fillText('★ WALLFIN™ ROLLERS (Official Registered Brand ®)', 76, 55);
 
         // Right Badge
         ctx.fillStyle = '#0F172A';

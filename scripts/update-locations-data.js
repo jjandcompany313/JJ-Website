@@ -9,13 +9,13 @@ const locations = [
     title: "Paint Accessories Manufacturer & Wholesale in Jalgaon | JJ & Company",
     metaDesc: "Direct paint accessories manufacturer in Jalgaon. Wholesale Wallfin paint rollers, roller refills, Panama paint brushes & painting tools. Fast local tempo delivery.",
     h1: "Paint Accessories Manufacturer &amp; Wholesale Dealer in Jalgaon",
-    subtitle: "Direct manufacturer of Wallfin™ paint rollers (TM: 8027912) and wholesale supplier of authentic Panama paint brushes, roller refills, and professional painting tools across Jalgaon.",
+    subtitle: "Direct manufacturer of Wallfin™ paint rollers (Official Registered Brand) and wholesale supplier of authentic Panama paint brushes, roller refills, and professional painting tools across Jalgaon.",
     transitTime: "Fast Local Delivery / Tempo Dispatch",
     coverage: "Jalgaon City (Golani Market, Navi Peth, MIDC), Bhusawal, Chalisgaon, Pachora, Amalner, Yawal, Raver, Jamner, Erandol, Parola & Chopda",
     logistics: "Dispatched directly from Dixit Wadi depo via local delivery and commercial tempo service across Jalgaon city and taluka counters.",
     intro: "As our central operating headquarters and manufacturing depo in Dixit Wadi, Jalgaon, JJ & Company is your direct source for painting tools, paint roller refills, paint roller handles and frames, and professional painting accessories. Local hardware retailers, paint shops, civil contractors, and painter teams eliminate distributor commissions and middlemen by buying directly from our Jalgaon Depo.",
     marketContext: "Jalgaon's growing construction, industrial MIDC projects, and rural housing demand dependable, durable paint application tools. Paint stockists and retail hardware shops across Golani Market, Navi Peth, and surrounding talukas rely on JJ & Company for continuous, bulk supply of high-turnover Wallfin™ paint rollers, replacement sleeves, and shed-free Panama paint brushes.",
-    productSupply: "We manufacture professional-grade Wallfin™ paint rollers (Trademark Application ID: 8027912) across standard 20mm and heavy 38mm diameters, replacement roller refills, textured painting rollers, and directly supply authentic Panama paint brushes with computerized epoxy potting, Maruti Auto Gloss thinners, Nico wood polish, precision putty pata, and Cumi abrasive paper.",
+    productSupply: "We manufacture professional-grade Wallfin™ paint rollers (Trademark Application ID: Registered Brand) across standard 20mm and heavy 38mm diameters, replacement roller refills, textured painting rollers, and directly supply authentic Panama paint brushes with computerized epoxy potting, Maruti Auto Gloss thinners, Nico wood polish, precision putty pata, and Cumi abrasive paper.",
     tradeAdvantages: [
       "Direct manufacturer wholesale rates without multi-tier middleman markups",
       "Fast commercial tempo dispatches direct to your shop counter across Jalgaon district",
@@ -32,7 +32,7 @@ const locations = [
       },
       {
         q: "Are you a direct paint roller manufacturer or a middleman trader in Jalgaon?",
-        a: "We are the direct in-house manufacturer of Wallfin™ paint rollers, roller refills, and roller handles (Trademark Application ID: 8027912) produced at our Jalgaon plant, and the direct importer of authentic Panama paint brushes."
+        a: "We are the direct in-house manufacturer of Wallfin™ paint rollers, roller refills, and roller handles (Trademark Application ID: Registered Brand) produced at our Jalgaon plant, and the direct importer of authentic Panama paint brushes."
       },
       {
         q: "What types of paint roller refills and frames do you manufacture?",
@@ -148,7 +148,7 @@ const locations = [
       "Convenient transit distance from our Jalgaon Depo",
       "Regular regional transport parcel services ensuring steady delivery",
       "Direct depo trade rates that protect healthy counter margins",
-      "Registered brand credibility (Wallfin™ TM: 8027912)",
+      "Registered brand credibility (Wallfin™ Official Registered Brand)",
       "Flexible order quantities enabling frequent stock rotation without capital lockup"
     ],
     transportDetails: "Shipments for Buldhana district are routed through regular regional transport parcel services connecting Jalgaon with Malkapur, Khamgaon, and Shegaon. Goods typically arrive at receiving parcel godowns within 2 to 3 days depending on the destination town.",

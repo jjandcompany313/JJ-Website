@@ -101,7 +101,7 @@ const html = `<!DOCTYPE html>
         // 3. Top Branding Header & Badges
         ctx.save();
         // Registered Trademark Badge
-        const badgeText = 'REGISTERED BRAND • TM APP NO. 8027912';
+        const badgeText = 'REGISTERED BRAND • OFFICIAL REGISTERED BRAND ®';
         ctx.font = 'bold 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
         const badgeW = ctx.measureText(badgeText).width + 30;
         const badgeX = 50;
