@@ -4788,7 +4788,7 @@ body {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 700;
-  color: #FFFFFF !important;
+  color: var(--text-heading) !important;
   margin: 0;
   line-height: 1.4;
   transition: color var(--transition-fast);
@@ -5479,57 +5479,156 @@ body {
    Hallmark Trade Architectural Components (Anti-AI Floor)
    ========================================================================== */
 
-/* 1. Open Architectural Trade Q&A Ledger (No Collapsible AI Boxes) */
-.trade-qa-ledger {
+/* 1. Architectural Dropdown FAQ Ledger (Interactive Dropdown Under Question) */
+.faq-dropdown-list {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 960px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
-.trade-qa-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
-  gap: 32px;
-  padding: 32px 0;
+.faq-dropdown-item {
   border-bottom: 1px solid var(--border-hairline);
-  align-items: start;
+  background: transparent;
+  transition: border-color var(--transition-fast);
 }
 
-.trade-qa-row:first-child {
+.faq-dropdown-item:first-child {
   border-top: 1px solid var(--border-hairline);
 }
 
-.trade-qa-question {
+.faq-dropdown-item[open] {
+  border-bottom-color: rgba(147, 112, 219, 0.32);
+}
+
+.faq-dropdown-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: color var(--transition-fast);
+}
+
+.faq-dropdown-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.faq-dropdown-trigger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: var(--radius-xs);
+}
+
+.faq-dropdown-question {
   font-family: var(--font-heading);
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--text-heading);
   line-height: 1.4;
   margin: 0;
+  flex: 1;
+  transition: color var(--transition-fast);
 }
 
-.trade-qa-answer {
+.faq-dropdown-trigger:hover .faq-dropdown-question {
+  color: var(--accent-hover);
+}
+
+.faq-dropdown-item[open] .faq-dropdown-question {
+  color: var(--accent);
+}
+
+.faq-dropdown-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-hairline);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--medium-purple);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.faq-dropdown-trigger:hover .faq-dropdown-icon {
+  color: var(--accent-hover);
+  border-color: rgba(255, 0, 255, 0.35);
+  background: rgba(255, 0, 255, 0.06);
+}
+
+.faq-dropdown-item[open] .faq-dropdown-icon {
+  transform: rotate(180deg);
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(255, 20, 147, 0.12);
+}
+
+.faq-dropdown-body {
+  padding: 0 0 28px 0;
   color: var(--text-body);
   font-size: 0.95rem;
-  line-height: 1.65;
-  margin: 0;
+  line-height: 1.68;
 }
 
-.trade-qa-answer p {
-  margin: 0 0 8px 0;
+.faq-dropdown-item[open] .faq-dropdown-body {
+  animation: faqFadeSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.trade-qa-answer p:last-child {
+@keyframes faqFadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-dropdown-body p {
+  margin: 0 0 12px 0;
+}
+
+.faq-dropdown-body p:last-child {
   margin-bottom: 0;
 }
 
+.faq-dropdown-body a {
+  color: var(--primary-light);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.faq-dropdown-body a:hover {
+  color: var(--accent-hover);
+}
+
 @media (max-width: 768px) {
-  .trade-qa-row {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
-    padding: 24px 0;
+  .faq-dropdown-trigger {
+    padding: 20px 0;
+    gap: 16px;
+  }
+
+  .faq-dropdown-question {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .faq-dropdown-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .faq-dropdown-body {
+    padding: 0 0 20px 0;
+    font-size: 0.9rem;
   }
 }
 
