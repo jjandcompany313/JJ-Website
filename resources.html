@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources &amp; Catalogues | JJ &amp; Company</title>
+  <title>Trade Resources &amp; Catalogues | JJ &amp; Company</title>
   <meta name="description"
-    content="Download official master catalogues, roller sleeve selection guides, brush bristle charts, and dealer resources from JJ &amp; Company Jalgaon.">
+    content="Download official master catalogues, Wall Fin® roller guides, Panama brush charts, and dealer rate cards from JJ &amp; Company Jalgaon.">
 
   <link rel="canonical" href="https://jjandcompany.net/resources.html">
   <link rel="alternate" hreflang="en-IN" href="https://jjandcompany.net/resources.html">
@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300..900;1,300..900&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=5.7">
+  <link rel="stylesheet" href="/css/style.css?v=5.8">
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -30,18 +30,18 @@
   <meta name="theme-color" content="#0E161A">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Resources &amp; Catalogues | JJ &amp; Company Paint Applicators">
+  <meta property="og:title" content="Trade Resources &amp; Catalogues | JJ &amp; Company Paint Applicators">
   <meta property="og:description"
-    content="Download official master catalogues, roller sleeve selection guides, brush bristle charts, and dealer resources from JJ &amp; Company Jalgaon.">
+    content="Download official master catalogues, Wall Fin® roller guides, Panama brush charts, and dealer rate cards from JJ &amp; Company Jalgaon.">
   <meta property="og:url" content="https://jjandcompany.net/resources.html">
   <meta property="og:image" content="https://jjandcompany.net/assets/images/hero-tools.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Resources &amp; Catalogues | JJ &amp; Company">
+  <meta name="twitter:title" content="Trade Resources &amp; Catalogues | JJ &amp; Company">
   <meta name="twitter:description"
-    content="Download official master catalogues, roller sleeve selection guides, brush bristle charts, and dealer resources from JJ &amp; Company Jalgaon.">
+    content="Download official master catalogues, Wall Fin® roller guides, Panama brush charts, and dealer rate cards from JJ &amp; Company Jalgaon.">
   <meta name="twitter:image" content="https://jjandcompany.net/assets/images/hero-tools.png">
 
-  <!-- Structured Data -->
+  <!-- Structured Data: Breadcrumbs -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -64,6 +64,7 @@
   </script>
 
   <style>
+    /* Hallmark · theme: trade-architectural · genre: modern-minimal · built: JJ & Company */
     :root {
       --fuchsia: #FF00FF;
       --deep-pink: #FF1493;
@@ -73,15 +74,33 @@
       --bg-main: #0E161A;
       --bg-section: #131C22;
       --bg-subtle: #1A262E;
-      --text-main: #FFFFFF;
+      --color-paper: #F4F6F8;
+      --text-heading: #F4F6F8;
+      --text-main: #F4F6F8;
       --text-body: #E0E8ED;
       --text-muted: #9BB0BA;
+      --border-hairline: rgba(255, 255, 255, 0.08);
       --border-color: rgba(147, 112, 219, 0.22);
     }
     html, body {
       background-color: var(--bg-main);
       color: var(--text-body);
       overflow-x: clip;
+    }
+    ::selection {
+      background-color: var(--fuchsia);
+      color: var(--color-paper);
+    }
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    :active {
+      transform: translateY(1px);
+    }
+    :disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
   </style>
 </head>
@@ -150,7 +169,7 @@
           <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </div>
-            <nav class="mobile-nav-links">
+      <nav class="mobile-nav-links">
         <a href="/" class="nav-link">Home</a>
         <div class="mobile-dropdown-wrapper" id="mobileProductDropdown">
           <button type="button" class="mobile-dropdown-toggle" id="mobileProductToggle" aria-expanded="false" aria-controls="mobileProductMenu">
@@ -206,7 +225,7 @@
             </a>
           </div>
         </div>
-        <a href="/resources.html" class="nav-link">2. Resources</a>
+        <a href="/resources.html" class="nav-link active">2. Resources</a>
         <a href="/dealer.html" class="nav-link">3. Dealership</a>
         <a href="/career.html" class="nav-link">4. Career</a>
         <a href="/contact.html" class="nav-link">5. Contact US</a>
@@ -222,84 +241,335 @@
     </div>
   </aside>
 
-  <!-- Main Content -->
+  <!-- Main Landmark -->
   <main id="main-content">
-    <section class="minimal-section" style="padding: 72px 0 48px 0; border-bottom: 1px solid var(--border-color);">
+
+    <!-- Page Header (Architectural Clean Layout) -->
+    <section class="architect-page-header">
       <div class="container">
-        <h1 class="minimal-hero-title" style="font-size: 2.4rem; margin-bottom: 16px;">
-          Trade Resources &amp; Downloads
+        <h1 class="architect-page-title">
+          Trade Resources &amp; Catalogues
         </h1>
-        <p class="minimal-hero-subline" style="max-width: 720px;">
-          Direct access to official product catalogues, technical specification sheets, applicator selection charts, and wholesale rate guidelines for paint dealers and trade contractors.
+        <p class="architect-page-sub">
+          Official master catalogues, technical specification sheets, and applicator selection matrices direct from JJ &amp; Company’s Jalgaon manufacturing facility.
         </p>
-      </div>
-    </section>
-
-    <section class="minimal-section" style="padding: 64px 0;">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
-
-          <!-- Resource 1 -->
-          <div style="background: var(--bg-section); padding: 32px; border-radius: 12px; border: 1px solid var(--border-color);">
-            <div style="color: var(--fuchsia); font-size: 0.85rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Master Download</div>
-            <h2 style="font-size: 1.4rem; color: #FFFFFF; font-weight: 800; margin: 0 0 12px 0;">2026 Master Product Catalogue</h2>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
-              Comprehensive 40+ page trade reference containing full technical specs, dimensions, case pack quantities, and photos for Wall Fin® rollers, Panama™ brushes, and companion chemicals.
-            </p>
-            <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-primary btn-sm">
-              <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
-              <span>Download PDF (Direct)</span>
-            </a>
-          </div>
-
-          <!-- Resource 2 -->
-          <div style="background: var(--bg-section); padding: 32px; border-radius: 12px; border: 1px solid var(--border-color);">
-            <div style="color: var(--medium-purple); font-size: 0.85rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Application Guide</div>
-            <h2 style="font-size: 1.4rem; color: #FFFFFF; font-weight: 800; margin: 0 0 12px 0;">Paint Roller Selection Chart</h2>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
-              Recommendation matrix pairing interior emulsion, exterior acrylic, epoxy enamel, and textured coatings with Wall Fin® microfiber, woven poly, and sponge sleeves.
-            </p>
-            <a href="/products/rollers.html" class="btn btn-outline btn-sm">
-              <span>View Roller Range &rarr;</span>
-            </a>
-          </div>
-
-          <!-- Resource 3 -->
-          <div style="background: var(--bg-section); padding: 32px; border-radius: 12px; border: 1px solid var(--border-color);">
-            <div style="color: var(--deep-pink); font-size: 0.85rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Trade Support</div>
-            <h2 style="font-size: 1.4rem; color: #FFFFFF; font-weight: 800; margin: 0 0 12px 0;">Wholesale Depo Rate Card</h2>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
-              Request the official wholesale pricing card for verified hardware retailers, paint shops, and distributors across Maharashtra and Madhya Pradesh.
-            </p>
-            <a href="/dealer.html" class="btn btn-secondary btn-sm">
-              <span>Request Rate Card &rarr;</span>
-            </a>
-          </div>
-
+        <div class="architect-page-actions">
+          <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-primary btn-sm">
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+            <span>Download 2026 Master Catalogue (PDF)</span>
+          </a>
+          <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20please%20send%20the%20latest%20trade%20price%20sheet." target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-sm">
+            <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 01-5.82 2.41h-.01c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.02.79.81-2.95-.19-.3a8.196 8.196 0 01-1.26-4.55c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+            <span>Request Trade Rate Card</span>
+          </a>
         </div>
       </div>
     </section>
+
+    <!-- Section 1: Official Catalogues & Technical PDFs -->
+    <section class="architect-section">
+      <div class="container">
+        <div class="architect-section-header">
+          <h2 class="architect-section-title">Official Product Catalogues &amp; Technical PDFs</h2>
+          <p class="architect-section-desc">
+            Primary commercial reference documentation for verified paint stockists, hardware counters, and commercial painting contractors.
+          </p>
+        </div>
+
+        <div class="trade-index-list">
+          <!-- Item 1: Master Catalogue -->
+          <article class="trade-index-item">
+            <div class="trade-index-info">
+              <h3 class="trade-index-heading">2026 Master Product Catalogue (Complete Line)</h3>
+              <p class="trade-index-text">
+                Complete trade reference detailing dimensions, master carton pack quantities, and photos for Wall Fin® paint rollers, Panama™ brushes, thinners, polish, sandpaper, and scrapers.
+              </p>
+              <div class="trade-index-meta">
+                <span>PDF Document</span>
+                <span>40+ Pages</span>
+                <span>Official Depo Reference</span>
+              </div>
+            </div>
+            <div class="trade-index-actions">
+              <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="btn btn-primary btn-sm">
+                <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                <span>Download PDF</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 2: Wall Fin Rollers -->
+          <article class="trade-index-item">
+            <div class="trade-index-info">
+              <h3 class="trade-index-heading">Wall Fin® Paint Rollers &amp; Refills Catalogue</h3>
+              <p class="trade-index-text">
+                Technical guide for our in-house manufactured roller collection: standard 20mm and heavy-duty 38mm polypropylene cores, solvent-proof cage frames, and nap guides.
+              </p>
+              <div class="trade-index-meta">
+                <span>PDF Document</span>
+                <span>20mm &amp; 38mm Core Systems</span>
+                <span>Official Registered Brand ®</span>
+              </div>
+            </div>
+            <div class="trade-index-actions">
+              <a href="/assets/docs/Wall_Fin_Paint_Roller_Catalogue_2026.pdf" download class="btn btn-secondary btn-sm">
+                <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                <span>Download PDF</span>
+              </a>
+              <a href="/products/rollers.html" class="btn btn-outline btn-sm">
+                <span>Browse Rollers</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 3: Panama Brushes -->
+          <article class="trade-index-item">
+            <div class="trade-index-info">
+              <h3 class="trade-index-heading">Panama™ Paint Brush Collection Catalogue</h3>
+              <p class="trade-index-text">
+                Direct imported trade range from 1" to 5" sizes: 100% computerized epoxy bristle potting, shed-free guarantee, stainless steel ferrules, and pure bristle formulations.
+              </p>
+              <div class="trade-index-meta">
+                <span>PDF Document</span>
+                <span>100% Epoxy Bristle Potting</span>
+                <span>Direct Import Range</span>
+              </div>
+            </div>
+            <div class="trade-index-actions">
+              <a href="/assets/docs/JJ_Company_Panama_Brush_Catalog.pdf" download class="btn btn-secondary btn-sm">
+                <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                <span>Download PDF</span>
+              </a>
+              <a href="/products/brushes.html" class="btn btn-outline btn-sm">
+                <span>Browse Brushes</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 4: Surface Finishing Lines -->
+          <article class="trade-index-item">
+            <div class="trade-index-info">
+              <h3 class="trade-index-heading">Surface Preparation, Solvents &amp; Abrasives Reference</h3>
+              <p class="trade-index-text">
+                Dealer carton pack specifications and coverage notes for Maruti auto gloss thinners, Nico French wood polish, Cumi waterproof machine paper, and stainless steel putty pata.
+              </p>
+              <div class="trade-index-meta">
+                <span>Wholesale Line</span>
+                <span>Maruti, Nico and Cumi</span>
+                <span>Surface Finishing</span>
+              </div>
+            </div>
+            <div class="trade-index-actions">
+              <a href="/products/accessories.html" class="btn btn-outline btn-sm">
+                <span>Browse Accessories</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Applicator Selection Matrix Table -->
+    <section class="architect-section">
+      <div class="container">
+        <div class="architect-section-header">
+          <h2 class="architect-section-title">Applicator Selection Matrix</h2>
+          <p class="architect-section-desc">
+            Direct counter guide for hardware store retailers to match wall coatings, paint types, and primers to the optimal roller sleeve, brush bristle, and prep tool.
+          </p>
+        </div>
+
+        <div class="trade-matrix-wrap">
+          <table class="trade-matrix-table">
+            <thead>
+              <tr>
+                <th scope="col" style="width: 25%;">Coating / Surface Type</th>
+                <th scope="col" style="width: 25%;">Recommended Wall Fin® Roller</th>
+                <th scope="col" style="width: 25%;">Recommended Panama™ Brush</th>
+                <th scope="col" style="width: 25%;">Surface Prep &amp; Solvent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Interior Emulsion &amp; Acrylic Primer</strong><br><span style="font-size: 0.82rem; color: var(--text-muted);">Smooth plastered interior walls &amp; ceilings</span></td>
+                <td>Wall Fin® Blue Line (20mm core microfiber, zero-shed)</td>
+                <td>Panama™ 815 or Panama™ Tip Top (synthetic filament)</td>
+                <td>Cumi Silicon Carbide 220/320 Grit Sandpaper</td>
+              </tr>
+              <tr>
+                <td><strong>Exterior Weathercoat &amp; Acrylic Masonry</strong><br><span style="font-size: 0.82rem; color: var(--text-muted);">Rough sand-faced plaster &amp; boundary walls</span></td>
+                <td>Wall Fin® Yellow Line (38mm heavy core, high paint pickup)</td>
+                <td>Panama™ 996 or Panama™ Honda (durable PVC ferrule)</td>
+                <td>Stainless Steel Putty Pata (scraping loose coat)</td>
+              </tr>
+              <tr>
+                <td><strong>Epoxy Floor Coating &amp; High-Solvent Resin</strong><br><span style="font-size: 0.82rem; color: var(--text-muted);">Industrial factory floors, warehouses &amp; commercial ramps</span></td>
+                <td>Wall Fin® Epoxy White (solvent-resistant bonded polypropylene)</td>
+                <td>Panama™ RRR (black &amp; white solvent-resistant bristle)</td>
+                <td>Maruti Auto Gloss Thinner (equipment cleanup &amp; dilution)</td>
+              </tr>
+              <tr>
+                <td><strong>Enamel, Luster &amp; High-Gloss Metal/Wood</strong><br><span style="font-size: 0.82rem; color: var(--text-muted);">Doors, window grills, wood cabinetry &amp; trims</span></td>
+                <td>Wall Fin® Brown Line or Foam Fix (lint-free mirror finish)</td>
+                <td>Panama™ Cat Pure Bristol (100% natural bristle)</td>
+                <td>Nico Wood Polish &amp; Cumi Waterproof Abrasive Paper</td>
+              </tr>
+              <tr>
+                <td><strong>Exterior Texture, Putty &amp; Heavy Slurry</strong><br><span style="font-size: 0.82rem; color: var(--text-muted);">Patterned decorative exterior finishes &amp; base coats</span></td>
+                <td>Wall Fin® Texture 38mm or Green Thread Roller</td>
+                <td>Panama™ 777 PVC Brush</td>
+                <td>Precision Steel &amp; Wooden Putty Blade (leveling)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Dealer Terms & Rate Card Request -->
+    <section class="architect-section" style="border-bottom: none;">
+      <div class="container">
+        <div class="split-architect-grid">
+          <div>
+            <h2 class="architect-section-title">Direct Trade Terms &amp; Dispatch Logistics</h2>
+            <p class="architect-section-desc" style="margin-bottom: 20px;">
+              JJ &amp; Company supplies verified hardware retail shops, paint stockists, and painting contractors directly with manufacturer wholesale rate cards.
+            </p>
+            <div class="clean-point-list">
+              <div class="clean-point-item">
+                <h3 class="clean-point-title">Direct Plant Output</h3>
+                <p class="clean-point-text">Manufactured on-site in Jalgaon, eliminating middleman trading markups and protecting dealer margins.</p>
+              </div>
+              <div class="clean-point-item">
+                <h3 class="clean-point-title">Regular Transport Dispatches</h3>
+                <p class="clean-point-text">Steady transport parcel services across Jalgaon, Dhule, Nandurbar, Buldhana, and Madhya Pradesh within 2 to 3 days.</p>
+              </div>
+              <div class="clean-point-item">
+                <h3 class="clean-point-title">Flexible Trial Quantities</h3>
+                <p class="clean-point-text">Mixed-carton assortments allowing counters to test high-turnover models without large capital commitment.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="clean-form-block">
+            <div class="clean-form-header">
+              <h3 class="clean-form-title">Request Official Wholesale Rate Card</h3>
+              <p class="clean-form-desc">Connect directly with our Jalgaon Depo desk for current volume rate cards, GST billing terms, or trial sample packs.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+              <a href="/dealer.html" class="btn btn-primary btn-block">
+                <span>Apply for Authorized Dealership</span>
+              </a>
+              <a href="https://wa.me/919422775429?text=Hello%20JJ%20%26%20Company,%20I%20am%20requesting%20the%20wholesale%20dealer%20rate%20card." target="_blank" rel="noopener noreferrer nofollow" class="btn btn-whatsapp btn-block">
+                <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 01-5.82 2.41h-.01c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.02.79.81-2.95-.19-.3a8.196 8.196 0 01-1.26-4.55c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+                <span>Instant WhatsApp Inquiry (+91 94227 75429)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer" style="background-color: #0E161A; border-top: 1px solid var(--border-color); padding: 48px 0 24px 0;">
+  <!-- Manufacturer Colophon -->
+  <footer class="site-footer">
     <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 24px;">
-        <div style="color: #FFFFFF; font-weight: 800; font-family: var(--font-heading);">JJ &amp; COMPANY</div>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-          <a href="/products.html" style="color: var(--text-muted); text-decoration: none;">Products</a>
-          <a href="/resources.html" style="color: var(--text-muted); text-decoration: none;">Resources</a>
-          <a href="/dealer.html" style="color: var(--text-muted); text-decoration: none;">Dealership</a>
-          <a href="/career.html" style="color: var(--text-muted); text-decoration: none;">Career</a>
-          <a href="/contact.html" style="color: var(--text-muted); text-decoration: none;">Contact US</a>
+      <div class="footer-colophon-grid">
+        <!-- Col 1: Identity & Legal -->
+        <div class="footer-colophon-identity">
+          <a href="/" class="footer-brand-mark" aria-label="JJ &amp; Company Home">
+            <picture>
+              <source srcset="/assets/images/jj-company-logo-nav.webp" type="image/webp">
+              <img src="/assets/images/jj-company-logo-nav.png" alt="JJ &amp; Company Logo" class="footer-logo-img" width="36" height="36">
+            </picture>
+            <span class="footer-brand-name">JJ &amp; Company</span>
+          </a>
+          <p class="footer-descriptor">Commercial paint applicators, Wall Fin® rollers, and trade finishing tools.</p>
+          <address class="footer-address">
+            The J. J. &amp; Company<br>
+            Plot No-8, Dixit Wadi, Pande Chowk Rd<br>
+            Jalgaon, Maharashtra 425001<br>
+            <span class="footer-gstin">GSTIN: 27ACXPN6682N1ZC</span>
+          </address>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="footer-colophon-col">
+          <h3 class="footer-col-heading">Navigation</h3>
+          <ul class="footer-col-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About the manufacturer</a></li>
+            <li><a href="/dealer.html">Dealership network</a></li>
+            <li><a href="/career.html">Careers</a></li>
+            <li><a href="/contact.html">Contact desk</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Product Range -->
+        <div class="footer-colophon-col">
+          <h3 class="footer-col-heading">Product range</h3>
+          <ul class="footer-col-list">
+            <li><a href="/products/rollers.html">Wall Fin® rollers</a></li>
+            <li><a href="/products/brushes.html">Panama™ brushes</a></li>
+            <li><a href="/products/maruti-auto-gloss-thinner.html">Maruti thinners</a></li>
+            <li><a href="/products/nico-wood-polish.html">Nico polish</a></li>
+            <li><a href="/products/cumi-abrasives-machine-paper.html">Abrasives &amp; sandpaper</a></li>
+            <li><a href="/products/wooden-steel-pata.html">Putty pata &amp; scrapers</a></li>
+            <li><a href="/products.html">All products</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Logistics & Dispatch -->
+        <div class="footer-colophon-col">
+          <h3 class="footer-col-heading">Direct trade dispatch</h3>
+          <p class="footer-col-text">Daily regional logistics dispatching across Maharashtra and Madhya Pradesh.</p>
+          <a href="/assets/docs/JJ_Company_Master_Catalogue_2026.pdf" download class="footer-catalog-link">
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+            <span>Catalogue (PDF)</span>
+          </a>
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/jjandcompany313/" target="_blank" rel="noopener noreferrer nofollow" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.indiamart.com/kgn-works-pune/" target="_blank" rel="noopener noreferrer nofollow" class="footer-social-link" aria-label="IndiaMART">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61594625407272" target="_blank" rel="noopener noreferrer nofollow" class="footer-social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow" class="footer-social-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 01-5.82 2.41h-.01c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.02.79.81-2.95-.19-.3a8.196 8.196 0 01-1.26-4.55c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div style="color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; text-align: center;">
-        &copy; 2026 J. J. &amp; Company. All Rights Reserved. Plot No-8, Dixit Wadi, Jalgaon, Maharashtra.
+
+      <div class="footer-colophon-bottom">
+        <p class="footer-copyright">&copy; <span id="currentYear">2026</span> The J. J. &amp; Company. Commercial paint applicators &amp; trade tools.</p>
+        <div class="footer-meta-links">
+          <a href="/privacy-policy.html">Privacy policy</a>
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/dealer.html">Trade terms</a>
+        </div>
+        <p class="footer-regional-hubs">
+          Regional trade hubs: <a href="/locations/jalgaon.html">Jalgaon</a>, <a href="/locations/dhule.html">Dhule</a>, <a href="/locations/nandurbar.html">Nandurbar</a>, <a href="/locations/buldhana.html">Buldhana</a>, <a href="/locations/madhya-pradesh.html">Madhya Pradesh</a>
+        </p>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js?v=5.7"></script>
+  <!-- Floating WhatsApp -->
+  <a id="floatingWhatsApp" href="https://wa.me/919422775429" target="_blank" rel="noopener noreferrer nofollow" class="floating-whatsapp"
+    aria-label="Chat on WhatsApp">
+    <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 01-5.82 2.41h-.01c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.02.79.81-2.95-.19-.3a8.196 8.196 0 01-1.26-4.55c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+    <span class="floating-whatsapp-tooltip">Chat with Us</span>
+  </a>
+
+  <script defer src="/js/site-data.js?v=5.8"></script>
+  <script defer src="/js/main.js?v=5.8"></script>
+  <script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
