@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "clean-css": "^5.3.3"
   }
 }
