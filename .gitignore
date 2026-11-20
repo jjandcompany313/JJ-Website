@@ -21,5 +21,9 @@ package-lock.json
 /JJ_Company_Panama_Brush_Catalog.pdf
 /Panama Brushes/
 .agents/
+tools/
+*.json.key
+client_secrets.json
+service_account.json
 scratch/
 .system_generated/

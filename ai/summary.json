@@ -1,0 +1,25 @@
+{
+  "name": "JJ & Company",
+  "brand": "Wall Fin®",
+  "tagline": "Paint Accessories Manufacturer & Wholesale Depo",
+  "url": "https://jjandcompany.net",
+  "description": "Direct manufacturer of Wall Fin® paint rollers (official registered brand) and importer of authentic Panama brushes, thinners, and paint accessories based in Jalgaon, Maharashtra.",
+  "founded": 2016,
+  "headquarters": {
+    "address": "Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd",
+    "city": "Jalgaon",
+    "state": "Maharashtra",
+    "postalCode": "425001",
+    "country": "India"
+  },
+  "contact": {
+    "phone": "+91-94227-75429",
+    "email": "jjandcompany313@gmail.com",
+    "whatsapp": "https://wa.me/919422775429"
+  },
+  "catalogs": {
+    "masterPdf": "https://jjandcompany.net/assets/docs/JJ_Company_Master_Catalogue_2026.pdf",
+    "rollersPdf": "https://jjandcompany.net/assets/docs/Wall_Fin_Paint_Roller_Catalogue_2026.pdf",
+    "brushesPdf": "https://jjandcompany.net/assets/docs/JJ_Company_Panama_Brush_Catalog.pdf"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "gsc": {
+      "command": "C:\\Users\\Mazhar\\.local\\bin\\uv.exe",
+      "args": [
+        "tool",
+        "run",
+        "mcp-search-console"
+      ],
+      "env": {
+        "GSC_CREDENTIALS_PATH": "d:\\JJ & Company\\Website\\service_account.json",
+        "GSC_OAUTH_CLIENT_SECRETS_FILE": "d:\\JJ & Company\\Website\\client_secrets.json",
+        "GSC_DATA_STATE": "all"
+      }
+    }
+  }
+}
