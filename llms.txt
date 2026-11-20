@@ -34,6 +34,14 @@
 - [Dealership & Wholesale Application](https://jjandcompany.net/dealer.html): Direct factory rates and regional stockist criteria
 - [Download Master Catalogue 2026 (PDF)](https://jjandcompany.net/assets/docs/JJ_Company_Master_Catalogue_2026.pdf): Comprehensive 2026 trade catalogue
 
+## Machine-Readable AI & RSS Endpoints
+
+- [RSS 2.0 Feed](https://jjandcompany.net/feed.xml): Live product and catalog publication updates
+- [AI Service Manifest](https://jjandcompany.net/ai/service.json): B2B services, MOQs, and distribution zones
+- [AI Brand Summary](https://jjandcompany.net/ai/summary.json): Company profile and catalog endpoints
+- [AI FAQ Knowledge Base](https://jjandcompany.net/ai/faq.json): Factual Q&A for answer engines
+- [AI Agent Directives](https://jjandcompany.net/.well-known/ai.txt): Crawler and agent permissions
+
 ## Company & Depo Contact
 
 - **Legal Entity**: The J. J. & Company

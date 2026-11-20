@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://jjandcompany.net/sitemap.xml
+LLMs-Txt: https://jjandcompany.net/llms.txt

@@ -1,0 +1,62 @@
+{
+  "serviceProvider": {
+    "name": "J. J. & Company",
+    "legalName": "J. J. & Company",
+    "brand": "Wall Fin®",
+    "website": "https://jjandcompany.net",
+    "gstin": "27ACXPN6682N1ZC",
+    "founded": 2016,
+    "headquarters": {
+      "address": "Plot No-8, Dixit Wadi, Swatantrya Chowk - Pande Chowk Rd",
+      "city": "Jalgaon",
+      "state": "Maharashtra",
+      "postalCode": "425001",
+      "country": "India"
+    },
+    "contact": {
+      "phone": "+91-94227-75429",
+      "altPhone": "+91-98900-03539",
+      "email": "jjandcompany313@gmail.com",
+      "whatsapp": "https://wa.me/919422775429"
+    }
+  },
+  "services": [
+    {
+      "id": "roller-manufacturing",
+      "name": "Wall Fin® Paint Roller & Refill Manufacturing",
+      "type": "B2B Manufacturing & Wholesale Supply",
+      "description": "Direct factory production of registered Wall Fin® paint rollers including 9-inch fixed cage, 38mm industrial core, 18mm slim fix, epoxy floor rollers, foam rollers, and textured wall finish applicators.",
+      "moq": "1 Master Carton (50-100 units depending on model)",
+      "targetBuyers": ["Hardware Retailers", "Paint Stockists", "Commercial Contractors", "Distributors"]
+    },
+    {
+      "id": "brush-wholesale",
+      "name": "Panama® Paint Brushes Wholesale Distribution",
+      "type": "Authorized Import & Stockist Distribution",
+      "description": "Bulk supply of genuine Panama paint brushes: Panama Swan, Panama 222, Panama 996 PVC, Panama Tip Top, Panama Winner, Panama Honda, Panama 815, Panama 777, Panama Apex, and Deluxe Long Hair Brushes across all inch sizes (1/2\" to 4\").",
+      "moq": "1 Box (12 to 24 pieces per size)",
+      "targetBuyers": ["Hardware Shops", "Paint Stores", "Professional Painting Contractors"]
+    },
+    {
+      "id": "paint-accessories",
+      "name": "Paint Ancillaries & Surface Preparation Wholesale",
+      "type": "Wholesale Depo Distribution",
+      "description": "Wholesale distribution of Maruti 2000 & Auto Gloss thinners, Nico NC wood polish, CUMI abrasives & sanding machine paper, and steel/wooden putty patta blades.",
+      "moq": "Standard wholesale packing",
+      "targetBuyers": ["Hardware Counters", "Automotive Painters", "Carpentry & Finishing Workshops"]
+    },
+    {
+      "id": "dealer-program",
+      "name": "Authorized Regional Dealer & Stockist Program",
+      "type": "B2B Partnership",
+      "description": "Territory-protected wholesale supply, factory pricing margin, marketing materials, and priority transport dispatch for hardware and paint stores.",
+      "applicationUrl": "https://jjandcompany.net/dealer.html"
+    }
+  ],
+  "deliveryCoverage": {
+    "primaryDistricts": ["Jalgaon", "Dhule", "Nandurbar", "Buldhana"],
+    "interstateCoverage": ["Madhya Pradesh (Burhanpur, Khandwa, Khargone)"],
+    "nationwideCoverage": "Pan-India dispatch via commercial transport lines",
+    "dispatchTurnaround": "Same-day to 48 hours upon order confirmation"
+  }
+}
